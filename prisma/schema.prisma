@@ -1,0 +1,34 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Job {
+  id                  String  @id @default(auto()) @map("_id") @db.ObjectId
+  email               String?
+  company_name        String?
+  company_url         String?
+  job_position        String?
+  logo                String?
+  job_category        String?
+  postedat            String?
+  job_type            String?
+  location            String?
+  city                String?
+  company_description String?
+  job_description     String?
+  job_requirements    String?
+  application_url     String?
+}
+
+model Email {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  email String
+}
