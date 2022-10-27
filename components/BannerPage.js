@@ -1,5 +1,5 @@
 import React from "react"
-import Email from "./EmailBar"
+
 
 
 const BannerPage = () => {
