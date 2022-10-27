@@ -16,7 +16,7 @@ const NavBar = () => {
 
       return (
 
-            <nav class="mt-4 relative border-[#B9C4C2]" >
+            <nav class="mt-4 mx-4 relative border-[#B9C4C2]" >
                   <div class="container py-2 mx-auto">
                         <Link href="../">
                               <a  onClick={() => {setClicked(false)}} 
