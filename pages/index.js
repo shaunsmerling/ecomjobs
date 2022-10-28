@@ -43,19 +43,23 @@ export default function HomePage() {
                 </div>
                
               
-                <div className="w-max  flex mx-auto mb-12 text-center drop-shadow lg:align-center ">
+                <div className=" mt-10 px-2 drop-shadow w-max mb-10 mx-auto lg:w-max  lg:flex lg:mx-auto lg:mb-12 lg:text-center lg:drop-shadow lg:align-center ">
+                <div className="mb-4 ">
                 <FacetDropdown  closeOnChange={() => window.innerWidth >= 375} 
               buttonText={({ refinements }) => {
                               return `Job Type (${refinements.length}) `;  }}>
               <RefinementList attribute="job_type" />
               </FacetDropdown>
+              </div>
+              <div className="-ml-4 mb-4">
               <FacetDropdown  
               closeOnChange={() => window.innerWidth >= 375} 
               buttonText={({ refinements }) => {
                               return `Job Category (${refinements.length}) `;  }}>
               <RefinementList attribute="job_category" />
               </FacetDropdown>
-               
+               </div>
+               <div className="mb-4">
                <FacetDropdown 
               closeOnChange={() => window.innerWidth >= 375} 
               classNames={{ root: 'my-LocDropdown' }}
@@ -63,6 +67,7 @@ export default function HomePage() {
                               return `Location (${refinements.length}) `;  }}>
               <RefinementList attribute="location" />
               </FacetDropdown>
+              </div>
               </div>
            
               <div class="text-center mx-20 lg:mx-0 -mt-6 mb-6 py-4 lg:px-4">

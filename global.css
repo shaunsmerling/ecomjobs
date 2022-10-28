@@ -90,6 +90,7 @@ body {
 }
 
 @media only screen and (max-width: 375px) {
+
   .ais-Dropdown.ais-Dropdown--opened .ais-Panel-body {
     position: fixed;
     inset: 0;
@@ -119,6 +120,11 @@ body {
   .ais-Dropdown-mobileTitle {
     display: block;
   }
+
+  .ais-Dropdown {
+    height: 50px;
+  }
+
 }
 
 .ais-SearchBox-input{
@@ -140,6 +146,7 @@ border-color: white
   
 .ais-RefinementList-list {
 
+  overflow: auto;
   left:-1em;
   right: auto;
   text-align:left;
