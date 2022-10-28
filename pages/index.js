@@ -6,6 +6,7 @@ import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, RefinementList, SearchBox, Hits} from 'react-instantsearch-hooks-web';
 import Hit from "../components/Hit"
 import {FacetDropdown} from "/components/FacetDropdown"
+import Email from "../components/email"
 
 
 
@@ -43,25 +44,25 @@ export default function HomePage() {
                 </div>
                
               
-                <div className=" mt-10 px-2 drop-shadow w-max mb-10 mx-auto lg:w-max  lg:flex lg:mx-auto lg:mb-12 lg:text-center lg:drop-shadow lg:align-center ">
+                <div className="flex mt-10 px-2 drop-shadow -ml-2 w-max -mr-2 mb-10  lg:w-max  lg:flex lg:mx-auto lg:mb-12 lg:text-center lg:drop-shadow lg:align-center ">
                 <div className="mb-4 ">
-                <FacetDropdown  closeOnChange={() => window.innerWidth >= 375} 
+                <FacetDropdown  closeOnChange={() => window.innerWidth >= 400} 
               buttonText={({ refinements }) => {
                               return `Job Type (${refinements.length}) `;  }}>
               <RefinementList attribute="job_type" />
               </FacetDropdown>
               </div>
-              <div className="-ml-4 mb-4 lg:ml-0">
+              <div className="mb-4 ">
               <FacetDropdown  
-              closeOnChange={() => window.innerWidth >= 375} 
+              closeOnChange={() => window.innerWidth >= 400} 
               buttonText={({ refinements }) => {
-                              return `Job Category (${refinements.length}) `;  }}>
+                              return `Category (${refinements.length}) `;  }}>
               <RefinementList attribute="job_category" />
               </FacetDropdown>
                </div>
                <div className="mb-4">
                <FacetDropdown 
-              closeOnChange={() => window.innerWidth >= 375} 
+              closeOnChange={() => window.innerWidth >= 400} 
               classNames={{ root: 'my-LocDropdown' }}
               buttonText={({ refinements }) => {
                               return `Location (${refinements.length}) `;  }}>
@@ -79,7 +80,7 @@ export default function HomePage() {
   
   
 </div>
-
+  <Email/>
 
                 <div className="ml-2 mr-2 mb-2 -mt-2">
                 <Hits hitComponent={Hit}/>

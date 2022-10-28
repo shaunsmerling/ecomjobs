@@ -35,7 +35,7 @@ const Email = () => {
 
 <div id="emailhead" className="fixed opacity-90 bottom-0 w-full text-white ">
       <div className=" ml-16 justify-center pt-2 text-sm lg:ml-0 flex ">
-      <p className=" text-xs -ml-12 mr-2 flex lg:text-lg my-auto lg:-ml-20 lg:mr-4 ">New jobs sent to: </p>
+      <p className=" text-xs -ml-12 mr-2 flex lg:text-lg my-auto lg:-ml-20 lg:mr-4 ">Get new ecommerce jobs sent to: </p>
       <form  class=" content-center py-2 align-center  " onSubmit={handleSubmit}>   
       <div class="flex md:block" >
           
@@ -58,7 +58,7 @@ const Email = () => {
     type="submit" 
     value="Submit" 
     id="emailbtn" 
-    class=" mr-2 px-3 pt-1 pb-1 lg:px-3 lg:pt-3 lg:pb-3 ml-2 text-md bg-[#17614A]  text-white rounded-lg border border-white ">Subscribe
+    class=" ml-4 mr-2 px-3 pt-1 pb-1 lg:px-3 lg:pt-2 lg:pb-2  text-md bg-[#17614A]  text-white rounded-lg border border-white ">Subscribe
     </button>
     </div>
     </form>

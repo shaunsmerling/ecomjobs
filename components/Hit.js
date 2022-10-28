@@ -58,7 +58,7 @@ function Hit({ hit }) {
             
             <p className=" ml-2 -mb-2 z-1 text-xl text-[#17614A] z-0 font-bold pb-2 pr-20">{hit.job_position}</p>
 
-            <p className="float-right mr-4 -mt-10 bold font-bold text-xs lg:text-sm">{hit.job_type} | {hit.location}</p>
+            <p className="float-right mr-4 text-[8px] -mt-10 bold font-bold lg:text-sm">{hit.job_type} | {hit.location}</p>
               
           </li>
         </ul>
