@@ -35,7 +35,7 @@ const Email = () => {
 
 <div id="emailhead" className="fixed opacity-90 bottom-0 w-full text-white ">
       <div className=" ml-16 justify-center pt-2 text-sm lg:ml-0 flex ">
-      <p className=" text-xs -ml-12 mr-2 flex lg:text-lg my-auto lg:-ml-20 lg:mr-4 ">Get new ecom jobs sent to </p>
+      <p className=" text-xs -ml-12 mr-2 flex lg:text-lg my-auto lg:-ml-20 lg:mr-4 ">New jobs sent to: </p>
       <form  class=" content-center py-2 align-center  " onSubmit={handleSubmit}>   
       <div class="flex md:block" >
           

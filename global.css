@@ -92,7 +92,7 @@ body {
 @media only screen and (max-width: 375px) {
 
   .ais-Dropdown.ais-Dropdown--opened .ais-Panel-body {
-    position: fixed;
+    height: 70%;
     inset: 0;
     margin: 0;
     background: #fff;
