@@ -51,7 +51,7 @@ export default function HomePage() {
               <RefinementList attribute="job_type" />
               </FacetDropdown>
               </div>
-              <div className="-ml-4 mb-4">
+              <div className="-ml-4 mb-4 lg:ml-0">
               <FacetDropdown  
               closeOnChange={() => window.innerWidth >= 375} 
               buttonText={({ refinements }) => {

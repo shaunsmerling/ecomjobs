@@ -92,7 +92,7 @@ body {
 @media only screen and (max-width: 375px) {
 
   .ais-Dropdown.ais-Dropdown--opened .ais-Panel-body {
-    height: 70%;
+    position: fixed;
     inset: 0;
     margin: 0;
     background: #fff;
@@ -100,6 +100,11 @@ body {
     overflow-y: auto;
     z-index: 10;
   }
+
+
+#emailhead {
+  display: none;
+}
 
   .ais-Dropdown.ais-Dropdown--opened .ais-Panel-footer {
     position: fixed;
@@ -121,9 +126,7 @@ body {
     display: block;
   }
 
-  .ais-Dropdown {
-    height: 50px;
-  }
+
 
 }
 
