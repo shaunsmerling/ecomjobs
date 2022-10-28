@@ -44,7 +44,7 @@ export default function HomePage() {
                 </div>
                
               
-                <div className="flex mt-10 px-2 drop-shadow -ml-2 w-max -mr-2 mb-10  lg:w-max  lg:flex lg:mx-auto lg:mb-12 lg:text-center lg:drop-shadow lg:align-center ">
+                <div className="flex mt-10 px-2 drop-shadow - w-max  mb-10  lg:w-max  lg:flex lg:mx-auto lg:mb-12 lg:text-center lg:drop-shadow lg:align-center ">
                 <div className="mb-4 ">
                 <FacetDropdown  closeOnChange={() => window.innerWidth >= 400} 
               buttonText={({ refinements }) => {
