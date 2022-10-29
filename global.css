@@ -282,41 +282,6 @@ h1 {
   font-weight: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-
-.App-header {
-  
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .spinner-wrapper {
   height: 100vh; 
@@ -329,37 +294,6 @@ h1 {
   left: 0;
   background-color: white;
   z-index: 10;
-}
-
-.spinner {
-  height: 100px;
-  width: 100px;
-  margin: 0px auto;
-  -webkit-animation: rotation .5s infinite linear;
-  -moz-animation: rotation .5s infinite linear;
-  -o-animation: rotation .5s infinite linear;
-  animation: rotation .5s infinite linear;
-  border: 6px solid rgba (0,174,239,.15)
-
-}
-
-@-webkit-keyframes rotation {
-  from {-webkit-transform: rotate(0deg);}
-  to {-webkit-transform: rotate(359deg);}
-}
-
-@-moz-keyframes rotation {
-  from {-moz-transform: rotate(0deg);}
-  to {-moz-transform: rotate(359deg);}
-}
-@-o-keyframes rotation {
-  from {-o-transform: rotate(0deg);}
-  to {-o-transform: rotate(359deg);}
-}
-
-@keyframes rotation {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(359deg);}
 }
 
 @keyframes ldio-xrw7g30hrkj {
