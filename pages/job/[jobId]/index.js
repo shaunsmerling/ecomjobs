@@ -93,7 +93,7 @@ function Jobs() {
       <div className="">
       <br></br>
       <br></br>
-        <img className="mx-auto border-2 border-[#17614A] h-20 w-20 " src={`.${jobData.logo}`}></img>
+        <img className="mx-auto border-2 rounded-full border-[#17614A] h-28 w-28 " src={`.${jobData.logo}`}></img>
         <br></br>
         <br></br>
         <p><span className="font-bold text-[#17614A]">{jobData.company_name}</span> <span className="italic">is hiring a</span></p>
