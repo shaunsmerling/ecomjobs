@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import {Helmet} from "react-helmet";
 
+
 function Jobs() {
   const [jobData, setJobData] = useState({
     company_name: "",
@@ -81,9 +82,6 @@ function Jobs() {
   
   
 
-  console.log(jobData);
-  console.log(data)
-
   return (
     <div className="text-center items-center">
       <Helmet>
@@ -97,11 +95,11 @@ function Jobs() {
         <br></br>
         <br></br>
         <p><span className="font-bold text-[#17614A]">{jobData.company_name}</span> <span className="italic">is hiring a</span></p>
-        <h2 className="text-3xl my-2 bold">{jobData.job_position}</h2>
+        <h2 className="text-3xl my-2 text-[#17614A] font-bold">{jobData.job_position}</h2>
         <div className="my-2">
-        <h3 className="my-1">Category: <span className="font-bold text-[#17614A]">{jobData.job_category}</span></h3>
-        <h3 className="my-1">Location: <span className="font-bold text-[#17614A]">{jobData.city}, {jobData.location}</span></h3>
-        <h3 className="my-1">Type: <span className="font-bold text-[#17614A]">{jobData.job_type}</span></h3>
+        <h3 className="my-1">Category: <span className="text-[#17614A]">{jobData.job_category}</span></h3>
+        <h3 className="my-1">Location: <span className="text-[#17614A]">{jobData.city}, {jobData.location}</span></h3>
+        <h3 className="my-1">Type: <span className="text-[#17614A]">{jobData.job_type}</span></h3>
         {jobData.salary ? <h3 className="my-1">Salary: <span className="font-bold">{jobData.job_salary}</span></h3> : <p className="hidden">no salary</p>}
         <p className="my-1"> {getDate()}</p>
         </div>
