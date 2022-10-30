@@ -26,9 +26,9 @@ function featured() {
               <div id="featuredStart" className="mb-4  ">
               <Link href="https://www.linkedin.com/company/cole-haan/jobs/" >
               <div className="flex flex-col mx-1 lg:mx-10 pb-2">
-              <ul className={`  rounded-lg text-left mb-2  flex  bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
+              <ul className={`  rounded-lg text-left mb-2  flex hover:text-white bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-[#17614A] border-2 " src="./images/harrys.jpeg" ></img>
-                <li className="w-full ml-6 mt-8 mb-4 box-border hover:text-white ">
+                <li className="w-full ml-6 mt-8 mb-4 box-border">
                 <h3 className="text-2xl font-semibold pb-2 ">Harrys</h3>
                 
                 <p className="my-auto text-lg mr-4 ">Creating things more people like. </p>
@@ -40,9 +40,9 @@ function featured() {
               <div id="featuredStart" className="mb-4 ">
               <Link href="https://www.linkedin.com/company/burch-barrel/jobs/" >
               <div  className="flex flex-col mx-1 lg:mx-10 pb-2">
-              <ul className={`  rounded-lg text-left mb-2  flex  bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
+              <ul className={`  rounded-lg text-left mb-2 hover:text-white flex  bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-[#17614A] border-2 " src="./images/burchbarrel.jpeg" ></img>
-                <li className="w-full ml-6 mt-8 mb-4 box-border hover:text-white ">
+                <li className="w-full ml-6 mt-8 mb-4 box-border ">
                 <h3 className="text-2xl font-semibold pb-2 ">Burch Barrel</h3>
                 
                 <p className="my-auto text-lg">Savor the moment. </p>
@@ -54,9 +54,9 @@ function featured() {
                <div id="featuredStart" className="mb-4">
                <Link href="https://www.linkedin.com/company/cole-haan/jobs/" >
               <div  className="flex flex-col mx-1 lg:mx-10 pb-2">
-              <ul className={`  rounded-lg text-left mb-2  flex  bg-white hover:bg-[#17614A] h-40 w-80  bg-white  shadow-lg `}>
+              <ul className={`  rounded-lg text-left mb-2  flex  bg-white hover:text-white hover:bg-[#17614A] h-40 w-80  bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-[#17614A]  border-2 " src="./images/colehaan.jpeg" ></img>
-              <li className="w-full ml-6 mt-8 mb-4 box-border hover:text-white ">
+              <li className="w-full ml-6 mt-8 mb-4 box-border  ">
                 <h3 className="text-2xl font-semibold pb-2 ">Cole Haan</h3>
                 
                 <p className="my-auto text-lg ">We are advocates of the extraordinary. </p>
