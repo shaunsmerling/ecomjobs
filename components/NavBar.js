@@ -32,11 +32,11 @@ const NavBar = () => {
 
                         <div id="navdrop" className={`${clicked ? `bg-[#F5F6F7] w-full mb-6 float-right lg:inline-flex lg:bg-transparent lg:w-auto mt-2 lg:mt-0` : `hidden w-full float-right lg:inline-flex  lg:w-auto mt-2 lg:mt-0`}`}>
                               <ul className=" flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2">
-                                    <li onClick={handleClick}  className="  flex px-4 py-4 lg:border-none font-medium hover:text-[#22A956]  border-b-2 border-slate-200 lg:border-none">
+                              {/**}<li onClick={handleClick}  className="  flex px-4 py-4 lg:border-none font-medium hover:text-[#22A956]  border-b-2 border-slate-200 lg:border-none">
                                           <Link href="../">
                                                 <p>Home</p>
                                           </Link>
-                                    </li>
+                                    </li> */}
                                     <li onClick={handleClick}  className="border-b-2 border-slate-200 flex px-4 py-4 font-medium hover:text-[#22A956] lg:border-none">
                                           <Link href="/blog">
                                                 <p>Blog</p>
