@@ -1,6 +1,7 @@
 
 import { checkout } from "../checkout.js";
 import { useState } from "react";
+import Preview from "../components/preview";
 
 
 
@@ -330,6 +331,7 @@ function PostAJob() {
         </a>
         <br></br>
         <br></br>
+        
         <div className="mx-2 border border-[#17614A] rounded-lg pb-4 lg:mx-32 mb-4">
           <div className="mx-4 my-2">
             <h3>
@@ -361,10 +363,12 @@ function PostAJob() {
             </a>
           </div>
             </div>
+            
             </div>
         </div>
-  
+      
         </div>
+        <Preview/>
         </div>
    
   );
