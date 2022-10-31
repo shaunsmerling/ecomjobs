@@ -38,7 +38,7 @@ function featured() {
               </Link>
               </div>
               <div id="featuredStart" className="mb-4 ">
-              <Link href="/company/63462adc6d053043be20c064" >
+              <Link href="/company/63412e340cae287e0797c83d" >
               <div  className="flex flex-col mx-1 lg:mx-10 pb-2">
               <ul className={`  rounded-lg text-left mb-2 hover:text-white flex  bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-[#17614A] border-2 " src="./images/bose.jpeg" ></img>
@@ -52,7 +52,7 @@ function featured() {
               </Link>
                </div>
                <div id="featuredStart" className="mb-4">
-               <Link href="/company/63412e340cae287e0797c83d" >
+               <Link href="/company/634f75a39f621dc748de274d" >
               <div  className="flex flex-col mx-1 lg:mx-10 pb-2">
               <ul className={`  rounded-lg text-left mb-2  flex  bg-white hover:text-white hover:bg-[#17614A] h-40 w-80  bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-[#17614A]  border-2 " src="./images/colehaan.jpeg" ></img>
