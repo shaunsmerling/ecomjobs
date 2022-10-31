@@ -41,7 +41,10 @@
     "build:prod": "npm run prisma:update && npm run build"
   },
   "eslintConfig": {
-    "extends": []
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
@@ -60,7 +63,6 @@
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.8",
     "eslint": "^8.24.0",
-    "eslint-config-react-app": "^7.0.1",
     "parcel": "2.5.0",
     "postcss": "^8.4.16",
     "prisma": "^4.3.1",
