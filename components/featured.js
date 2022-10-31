@@ -41,7 +41,7 @@ function featured() {
               <Link href="/company/63462adc6d053043be20c064" >
               <div  className="flex flex-col mx-1 lg:mx-10 pb-2">
               <ul className={`  rounded-lg text-left mb-2 hover:text-white flex  bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
-              <img className="z-1 mt-10 ml-4 w-14 h-14 border border-[#17614A] border-2 " src="./bose.jpeg" ></img>
+              <img className="z-1 mt-10 ml-4 w-14 h-14 border border-[#17614A] border-2 " src="./images/bose.jpeg" ></img>
                 <li className="w-full ml-6 mt-8 mb-4 box-border ">
                 <h3 className="text-2xl font-semibold pb-2 ">Bose</h3>
                 
