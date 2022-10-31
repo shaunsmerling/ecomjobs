@@ -20,7 +20,7 @@ const NavBar = () => {
                   <div class="container py-2 mx-auto">
                         <Link href="../">
                               <a  onClick={() => {setClicked(false)}} 
-                              className="inline-flex p-2 -pb-10 tracking-wider"><img src="/logo.png" class=" h-10 w-40 " /></a>
+                              className="inline-flex p-2 -pb-10 tracking-wider"><img src="/logo.png" class=" h-12 w-46 " /></a>
                         </Link>
                         <button onClick={handleClick} className="inline-flex border-2 border-[#17614A] float-right mr-6 mt-2 item-center justify-center h-10 w-10 rounded-md lg:hidden">
 
@@ -37,7 +37,12 @@ const NavBar = () => {
                                                 <p>Home</p>
                                           </Link>
                                     </li> */}
-                                    <li onClick={handleClick}  className="border-b-2 border-slate-200 flex px-4 py-4 font-medium hover:text-[#22A956] lg:border-none">
+                                    <li onClick={handleClick}  className="border-b-2 border-slate-200 flex px-4 py-4 font-medium  lg:border-none">
+                                          <Link href="/company">
+                                                <p>Company List</p>
+                                          </Link>
+                                    </li>
+                                    <li onClick={handleClick}  className="border-b-2 border-slate-200 flex px-4 py-4 font-medium  lg:border-none">
                                           <Link href="/blog">
                                                 <p>Blog</p>
                                           </Link>

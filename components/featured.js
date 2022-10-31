@@ -24,7 +24,7 @@ function featured() {
             </div> 
     <div className="hidden lg:flex mt-10 px-2 drop-shadow - w-max  mb-10  lg:w-max  lg:flex lg:mx-auto lg:mb-12 lg:text-center lg:drop-shadow lg:align-center ">
               <div id="featuredStart" className="mb-4  ">
-              <Link href="https://www.linkedin.com/company/cole-haan/jobs/" >
+              <Link href="/company/634f75a39f621dc748de2771" >
               <div className="flex flex-col mx-1 lg:mx-10 pb-2">
               <ul className={`  rounded-lg text-left mb-2  flex hover:text-white bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-[#17614A] border-2 " src="./images/harrys.jpeg" ></img>
@@ -38,21 +38,21 @@ function featured() {
               </Link>
               </div>
               <div id="featuredStart" className="mb-4 ">
-              <Link href="https://www.linkedin.com/company/burch-barrel/jobs/" >
+              <Link href="/company/63462adc6d053043be20c064" >
               <div  className="flex flex-col mx-1 lg:mx-10 pb-2">
               <ul className={`  rounded-lg text-left mb-2 hover:text-white flex  bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
-              <img className="z-1 mt-10 ml-4 w-14 h-14 border border-[#17614A] border-2 " src="./images/burchbarrel.jpeg" ></img>
+              <img className="z-1 mt-10 ml-4 w-14 h-14 border border-[#17614A] border-2 " src="./images/Gymshark.jpeg" ></img>
                 <li className="w-full ml-6 mt-8 mb-4 box-border ">
-                <h3 className="text-2xl font-semibold pb-2 ">Burch Barrel</h3>
+                <h3 className="text-2xl font-semibold pb-2 ">Gymshark</h3>
                 
-                <p className="my-auto text-lg">Savor the moment. </p>
+                <p className="my-auto text-lg">Be a Visionary. </p>
                 </li>
               </ul>
               </div>
               </Link>
                </div>
                <div id="featuredStart" className="mb-4">
-               <Link href="https://www.linkedin.com/company/cole-haan/jobs/" >
+               <Link href="/company/634f75a39f621dc748de274d" >
               <div  className="flex flex-col mx-1 lg:mx-10 pb-2">
               <ul className={`  rounded-lg text-left mb-2  flex  bg-white hover:text-white hover:bg-[#17614A] h-40 w-80  bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-[#17614A]  border-2 " src="./images/colehaan.jpeg" ></img>

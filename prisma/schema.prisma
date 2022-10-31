@@ -26,6 +26,25 @@ model Job {
   job_description     String?
   job_requirements    String?
   application_url     String?
+  company_id          String?
+}
+
+model Company {
+  id                  String  @id @default(auto()) @map("_id") @db.ObjectId
+  email               String?
+  company_name        String?
+  company_url         String?
+  job_position        String?
+  logo                String?
+  job_category        String?
+  postedat            String?
+  job_type            String?
+  location            String?
+  city                String?
+  company_description String?
+  job_description     String?
+  job_requirements    String?
+  application_url     String?
 }
 
 model Email {
