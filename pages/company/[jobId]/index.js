@@ -1,24 +1,12 @@
 import EmailCompany from "/components/emailcompany";
 import { useState, useEffect } from "react";
 import {useRouter} from 'next/router'
-import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, Highlight, Hits} from 'react-instantsearch-hooks-web';
-import Hit from "/components/Hit"
 import Link from "next/link";
 import Helmet from "react-helmet";
 
 
 function companies() {
-  const searchClient = algoliasearch('RCW293MLIV', 'bc44fb196bcec6b9602b254bc96f6e71');
-
-
-// Using items and results
-const transformItems = (items, { results }) => {
-  return items.map((item, index) => ({
-    ...item,
-    position: { index, page: results.page },
-  }));
-};
+ 
 
   const [jobData, setJobData] = useState({
     company_name: "",

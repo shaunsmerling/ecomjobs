@@ -3,8 +3,7 @@ import React from 'react';
 import '../global.css'
 import Navbartwo from "../components/NavBarTwo"
 import Script from "next/script"
-import {useRouter} from "next/router"
-import { useState, useEffect} from "react"
+
 
 
 
