@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from 'react';
 import '../global.css'
-import Navbar from "../components/NavBar"
+import Navbartwo from "../components/NavBarTwo"
 import Script from "next/script"
 import {useRouter} from "next/router"
 import { useState, useEffect} from "react"
@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
     `,
   }}
 />
-      <Navbar/>
+      <Navbartwo/>
       <Component {...pageProps} />
      
    </div>

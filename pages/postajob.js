@@ -1,6 +1,7 @@
 
 import { checkout } from "../checkout.js";
 import { useState } from "react";
+import {useEffect} from "react"
 import Preview from "../components/preview";
 
 
@@ -81,6 +82,32 @@ function PostAJob() {
     applicationUrl,
   } = fields;
 
+  const [selectedFile, setSelectedFile] = useState()
+    const [preview, setPreview] = useState()
+
+    // create a preview as a side effect, whenever selected file is changed
+    useEffect(() => {
+        if (!selectedFile) {
+            setPreview(undefined)
+            return
+        }
+
+        const objectUrl = URL.createObjectURL(selectedFile)
+        setPreview(objectUrl)
+
+        // free memory when ever this component is unmounted
+        return () => URL.revokeObjectURL(objectUrl)
+    }, [selectedFile])
+
+    const onSelectFile = e => {
+        if (!e.target.files || e.target.files.length === 0) {
+            setSelectedFile(undefined)
+            return
+        }
+
+        // I've kept this example simple by using the first image instead of multiple
+        setSelectedFile(e.target.files[0])
+    }
 
 
   return (
@@ -99,7 +126,7 @@ function PostAJob() {
               type="text"
          
               required
-              className=" mt-2 mb-4 border-none rounded-lg pr-14"
+              className=" mt-2 mb-4 border-1 rounded-lg pr-14"
               placeholder="elonmusk@spacex"
               value={email}
               name="email"
@@ -113,7 +140,7 @@ function PostAJob() {
               type="text"
           
               required
-              className=" mt-2 mb-4 border-none rounded-lg pr-14"
+              className=" mt-2 mb-4 border-1 rounded-lg pr-14"
               placeholder="Space X"
               value={companyName}
               name="companyName"
@@ -126,7 +153,7 @@ function PostAJob() {
               type="text"
             
               required
-              className="  mt-2 mb-4 border-none rounded-lg pr-14"
+              className="  mt-2 mb-4 border-1 rounded-lg pr-14"
               placeholder="www.spacex.com"
               value={companyUrl}
               name="companyUrl"
@@ -139,7 +166,7 @@ function PostAJob() {
               type="text"
               required
       
-              className=" mt-2 mb-4 border-none rounded-lg pr-14"
+              className=" mt-2 mb-4 border-1 rounded-lg pr-14"
               placeholder="PPC Specalist "
               value={jobPosition}
               name="jobPosition"
@@ -161,6 +188,8 @@ function PostAJob() {
                     class=" input absolute block py-2  w-full opacity-0"
                     type="file"
                     name="logo"
+                    onChange={onSelectFile}
+                    
                     accept="image/png, image/jpeg"
                     required
                 />
@@ -171,7 +200,7 @@ function PostAJob() {
               Category:<img src="/reddot.svg"></img>
             </label>
       
-            <select  className=" mt-2 mb-6 pl-4 border-none rounded-lg pr-14" value={jobCategory} onChange={handleChange} placeholder="Pick One" required name="jobCategory">
+            <select  className=" mt-2 mb-6 pl-4 border-1 rounded-lg pr-14" value={jobCategory} onChange={handleChange} placeholder="Pick One" required name="jobCategory">
             <option name="Null" value="Null">Pick an option</option>
               <option name="Marketing" value="Marketing">Marketing</option>
               <option name="Customer Service"  value="Customer Service">Customer Service</option>
@@ -189,7 +218,7 @@ function PostAJob() {
             <input
               type="date"
               required
-              className="mt-2 mb-6 border-none rounded-lg "
+              className="mt-2 mb-6 border-1 rounded-lg "
               placeholder="Mars"
               value={postedat}
               name="postedat"
@@ -199,7 +228,7 @@ function PostAJob() {
             <label className="flex" htmlFor="contract">
              Remote/Hybrid/In-Office:<img src="/reddot.svg"></img>
             </label>
-            <select  className=" mt-2 mb-6 pl-4 border-none rounded-lg pr-14" value={jobType} onChange={handleChange} placeholder="Pick One" required name="jobType">
+            <select  className=" mt-2 mb-6 pl-4 border-1 rounded-lg pr-14" value={jobType} onChange={handleChange} placeholder="Pick One" required name="jobType">
             <option name="Null" value="Null">Pick an option</option>
               <option  name="Remote" value="Remote">Remote</option>
               <option  name="Hybrid" value="Hybrid">Hybrid</option>
@@ -211,7 +240,7 @@ function PostAJob() {
             <input
               type="text"
               required
-              className=" mt-2 mb-4 border-none rounded-lg pr-14"
+              className=" mt-2 mb-4 border-1 rounded-lg pr-14"
               placeholder="USA"
               value={location}
               name="location"
@@ -223,7 +252,7 @@ function PostAJob() {
             <input
               type="text"
               required
-              className=" mt-2 mb-4 border-none rounded-lg pr-14"
+              className=" mt-2 mb-4 border-1 rounded-lg pr-14"
               placeholder="New York"
               value={city}
               name="city"
@@ -235,7 +264,7 @@ function PostAJob() {
             <input
               type="text"
               required
-              className="mt-2 mb-4 border-none rounded-lg pr-14"
+              className="mt-2 mb-4 border-1 rounded-lg pr-14"
               placeholder="SpaceX is a..."
               value={companyDescription}
               name="companyDescription"
@@ -247,7 +276,7 @@ function PostAJob() {
             <input
               type="text"
               required
-              className="mt-2 mb-4 border-none rounded-lg pr-14"
+              className="mt-2 mb-4 border-1 rounded-lg pr-14"
               placeholder="A PPC Specialist..."
               value={jobDescription}
               name="jobDescription"
@@ -259,7 +288,7 @@ function PostAJob() {
             <input
               type="text"
               required
-              className="mt-2 mb-4 border-none rounded-lg pr-14"
+              className="mt-2 mb-4 border-1 rounded-lg pr-14"
               placeholder="3+ years of... "
               value={jobRequirements}
               name="jobRequirements"
@@ -271,7 +300,7 @@ function PostAJob() {
             <input
               type="text"
               required
-              className="mt-2 mb-4 border-none rounded-lg pr-14"
+              className="mt-2 mb-4 border-1 rounded-lg pr-14"
               placeholder="www.applyhere.com"
               value={applicationUrl}
               name="applicationUrl"

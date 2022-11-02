@@ -2,16 +2,23 @@ import EmailCompany from "/components/emailcompany";
 import { useState, useEffect } from "react";
 import {useRouter} from 'next/router'
 import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, RefinementList, SearchBox, Hits} from 'react-instantsearch-hooks-web';
+import { InstantSearch, Highlight, Hits} from 'react-instantsearch-hooks-web';
 import Hit from "/components/Hit"
 import Link from "next/link";
+import Helmet from "react-helmet";
 
 
 function companies() {
   const searchClient = algoliasearch('RCW293MLIV', 'bc44fb196bcec6b9602b254bc96f6e71');
-  const name = "Cole Haan";
 
-  const [emailName, setEmailName] = useState(name)
+
+// Using items and results
+const transformItems = (items, { results }) => {
+  return items.map((item, index) => ({
+    ...item,
+    position: { index, page: results.page },
+  }));
+};
 
   const [jobData, setJobData] = useState({
     company_name: "",
@@ -69,8 +76,14 @@ function companies() {
 
 
 
+
   return (
+    
    <div id="hero" className="border-t-4">
+    <Helmet>
+      (<script className='structured-data-list' type="application/ld+json">{JSON.stringify(data)}</script>)
+      </Helmet> 
+    
    <div className="mt-20">
   
       <div>
@@ -96,6 +109,9 @@ function companies() {
 <p  className="hidden lg:block mt-10 text-center text-3xl  "><span className="underline decoration-[#22A956] decoration-4 underline-offset-8 ">Available Jobs</span> </p>
 
 </div>
+
+
+
       <Link href="/job/634f75a39f621dc748de274d">
       <div className={`flex flex-col mx-1 my-10 lg:mx-20 pb-2 `}>
         <ul className={`  rounded-lg text-left mb-2  flex  bg-white hover:bg-gray-100  bg-white  shadow-lg `}>

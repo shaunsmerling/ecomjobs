@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react'
-import BannerPage from "../components/BannerPage"
+import HeroBanner from "../components/Herobanner"
 import "@stripe/stripe-js"
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, RefinementList, SearchBox, Hits} from 'react-instantsearch-hooks-web';
@@ -24,36 +24,19 @@ export default function HomePage() {
     <Head>
         <title>The #1 eCommerce Job Board</title>
     </Head>
-          <BannerPage />
+          <HeroBanner />
             <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
-                <div className=" mt-12 md:grid-cols-3 divide-y md:divide-x md:divide-y-0 divide-gray-200 rounded-lg align-center drop-shadow my-10 mb-10 mx-4 lg:ml-20 lg:mr-16 ">
-                <div className="rounded-lg bg-white border border-black/10 overflow-hidden">
-                <div className="ml-2 -mr-6">
-                <p className="mt-2 ml-1">What Job Are You Looking For?</p>
-                <div className="mt-2 mr-10 mb-2">
-                <SearchBox 
-                  autofocus={true}
-                  placeholder="Search..."
-                  
-        
-                /> 
-  
-               
-                </div>
-                </div>
-                </div>
-                </div>
-               
+           
                 <Featured/>
-                <div className="flex mt-10 px-2 drop-shadow - w-max  mb-10  lg:w-max  lg:flex lg:mx-auto lg:mb-12 lg:text-center lg:drop-shadow lg:align-center ">
-                <div className="mb-4 ">
+                <div className="flex mt-10 mx-auto px-2 drop-shadow   mb-10  lg:w-max lg:flex lg:mx-auto lg:mb-10 lg:text-center lg:drop-shadow lg:align-center ">
+                <div className="mb-4 px-4">
                 <FacetDropdown  closeOnChange={() => window.innerWidth >= 400} 
               buttonText={({ refinements }) => {
                               return `Job Type (${refinements.length}) `;  }}>
               <RefinementList attribute="job_type" />
               </FacetDropdown>
               </div>
-              <div className="mb-4 ">
+              <div className="mb-4 px-4  ">
               <FacetDropdown  
               closeOnChange={() => window.innerWidth >= 400} 
               buttonText={({ refinements }) => {
@@ -61,7 +44,7 @@ export default function HomePage() {
               <RefinementList attribute="job_category" />
               </FacetDropdown>
                </div>
-               <div className="mb-4">
+               <div className="mb-4 px-4">
                <FacetDropdown 
               closeOnChange={() => window.innerWidth >= 400} 
               classNames={{ root: 'my-LocDropdown' }}
@@ -72,18 +55,8 @@ export default function HomePage() {
               </div>
               </div>
            
-              <div class="text-center mx-20 lg:mx-0 -mt-6 mb-6 py-4 lg:px-4">
-  <div class="p-2 bg-[#17614A] items-center text-white text-sm leading-none rounded-full flex lg:inline-flex" role="alert">
-    <span class="flex rounded-full bg-[#26EB6B] uppercase px-3 py-1 text-xs text-black font-bold mr-3">New</span>
-    <span class="font-semibold mr-1 -ml-1 text-left flex-auto"> 97 jobs have been recently added</span>
 
-  </div>
-  
-  
-</div>
-  <Email/>
-
-                <div className="ml-2 mr-2 mb-2 -mt-2">
+                <div className="">
                 <Hits hitComponent={Hit}/>
                 </div>
             </InstantSearch>
