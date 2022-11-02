@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import React from 'react'
-import {HeroBanner} from "../components/Herobanner"
+import HeroBanner from "../components/Herobanner"
 import "@stripe/stripe-js"
 import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, RefinementList, SearchBox, Hits} from 'react-instantsearch-hooks-web';
+import { InstantSearch, RefinementList, Hits} from 'react-instantsearch-hooks-web';
 import Hit from "../components/Hit"
 import {FacetDropdown} from "/components/FacetDropdown"
 import Featured from "../components/featured"
