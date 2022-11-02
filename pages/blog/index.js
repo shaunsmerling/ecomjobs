@@ -3,21 +3,21 @@ import Link from 'next/link';
 
 const Blog = () => {        
     return (
-         <section className="py-12 bg-gray-50 sm:py-16 lg:py-20">
+         <section className="py-12 sm:py-16 lg:py-20">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center sm:flex sm:items-end sm:space-x-16 sm:text-left">
           <h2 className="max-w-xs text-3xl font-bold text-gray-900 sm:text-4xl shrink-0">
             Get Insights About The eCommerce Industry
           </h2>
           <p className="max-w-xs mt-5 text-sm font-normal leading-6 text-gray-500 sm:mt-0">
-            Your A-Z guide to the $27,000,000,000,000+ industry
+
           </p>
         </div>
              
         <div className="grid grid-cols-1 gap-6 px-8 mt-12 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:px-0">
         <Link href="/blog/first">
           <div
-            className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg hover:border-[#17614A] hover:border-2 hover:-translate-y-1">
+            className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg   hover:border-2 hover:-translate-y-1">
                
               <img className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
                 src="/googleshop.png" alt="">
@@ -64,7 +64,7 @@ const Blog = () => {
 
           <Link href="/blog/second">
           <div
-            className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg hover:border-[#17614A] hover:border-2 hover:-translate-y-1">
+            className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg   hover:border-2 hover:-translate-y-1">
                
               <img className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
                 src="/shopblog.jpeg" alt="">
@@ -110,7 +110,7 @@ const Blog = () => {
           </Link>
           <Link href="/blog/third">
           <div
-            className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg hover:border-[#17614A] hover:border-2 hover:-translate-y-1">
+            className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg   hover:border-2 hover:-translate-y-1">
                
               <img className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
                 src="/dropship.jpeg" alt="">

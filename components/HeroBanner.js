@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Herobanner = () => {        
+const HeroBanner = () => {        
     return (
 <div className=''>
 
@@ -11,9 +11,9 @@ const Herobanner = () => {
 
         <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="max-w-xl mx-auto text-center">
-                <h1 class="text-4xl bg-blue font-bold text-gray-900  lg:text-5xl">Helping brand builders get their dream job</h1>
+                <h1  class="leading-10 text-4xl font-bold text-gray-900  lg:text-5xl">Hand-picked Jobs For The eCommerce Industry</h1>
                
-                <p class="max-w-md mx-auto mt-6 text-base font-normal leading-7 text-gray-500">Join an eCommerce brand. Help share the future by working with some of the fastest growing D2C companies. </p>
+                <p class="max-w-md mx-auto mt-6 text-base font-normal leading-7 text-gray-500">Join an eCommerce brand. Help shape the future by working with some of the fastest growing D2C companies. </p>
 
                 <form action="#" method="POST" class="max-w-md mx-auto mt-8 space-y-4 sm:space-x-4 sm:flex sm:space-y-0 sm:items-end">
                     <div class="flex-1">
@@ -73,4 +73,4 @@ const Herobanner = () => {
 </div>
 
     )};
-export default Herobanner;
+export default HeroBanner;

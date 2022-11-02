@@ -23,7 +23,7 @@ const Navbartwo = () => {
               Blog
             </a>
 
-            <a href="#" title=""
+            <a href="/contactus" title=""
               className="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
               Contact Us
             </a>
