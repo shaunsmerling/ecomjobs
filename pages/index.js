@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react'
-import HeroBanner from "../components/Herobanner"
+import HeroBanner from "../components/HeroBanner"
 import "@stripe/stripe-js"
 import algoliasearch from 'algoliasearch/lite';
 import { InstantSearch, RefinementList, Hits} from 'react-instantsearch-hooks-web';
