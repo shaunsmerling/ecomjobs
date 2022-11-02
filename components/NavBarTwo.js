@@ -13,7 +13,7 @@ const Navbartwo = () => {
           </div>
 
           <div className="hidden lg:flex lg:items-center lg:space-x-4 lg:justify-center">
-            <a href="#" title=""
+            <a href="/companylist" title=""
               className="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
               Companies
             </a>
