@@ -116,209 +116,301 @@ function PostAJob() {
 
       <div className="">
         <form onSubmit={handleSubmit} className=" ">
-          <div className="mx-6 my-10 flex flex-col items-center ">
+          <div className="mx-6 my-10 flex flex-col ">
 
-      
-            <label className="flex" htmlFor="email">
-              Email:<img src="/reddot.svg"></img>
-            </label>
-            <input
-              type="text"
+          <div class="py-8 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+            <div>
+                <label for="" class="block text-sm font-bold text-gray-900">Email </label>
+                <div class="mt-2">
+                    <input type="email" required name="email" placeholder="elonmusk@spacex"
+                    value={email}
+                    onChange={handleChange}
+                    class="block w-full pr-14  py-3 placeholder-gray-500 border-gray-300 
+                    border-2 rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pb-8 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+            <div>
+                <label for="" class="block text-sm font-medium text-gray-600"> Company Name </label>
+                <div class="relative mt-2">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+
+                    <input type="text" required name="companyName"  placeholder="Space X"
+                    value={companyName}
+                    onChange={handleChange}
+                    class="block w-full pl-10 pr-4 py-3 placeholder-gray-500 border-gray-300 
+                    border-2 rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="pb-8 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+            <div>
+                <label for="" class="block text-sm font-bold text-gray-900"> Company URL: </label>
+                <div class="relative flex mt-2">
+                    <div class="inline-flex items-center px-3 text-gray-900 border border-r-0 border-gray-300 rounded-l-lg bg-gray-50 sm:text-sm">https://</div>
+
+                    <input type="url" required name="companyUrl"
+                      placeholder="www.spacex.com"
+                      value={companyUrl}
+                      onChange={handleChange}
+                    class="flex-1 border block w-full min-w-0 px-4 py-3 placeholder-gray-500 
+                    border-gray-300 border-2 rounded-none rounded-r-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pb-8 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+            <div>
+                <label for="" class="block text-sm font-bold text-gray-900">Job Position:</label>
+                <div class="mt-2">
+                    <input type="text" required name="jobPosition"  placeholder="Social Media Manager"
+                    value={jobPosition}
+                    onChange={handleChange}
+                    class="block w-full pr-14  py-3 placeholder-gray-500 border-gray-300 
+                    border-2 rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
          
-              required
-              className=" mt-2 mb-4 border-1 rounded-lg pr-14"
-              placeholder="elonmusk@spacex"
-              value={email}
-              name="email"
-              onChange={handleChange}
-            />
+           
+         <div class="pb-8 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+            <div class="sm:flex sm:items-center sm:space-x-8">
+                <label for="" class="block text-sm font-bold text-gray-900"> Upload a logo: </label>
+                <div class="relative mt-2 sm:mt-0 sm:flex-1">
+                    <input type="file" name="logo" accept="image/*" required onChange={onSelectFile}
+                     class="block w-full px-4 border py-3 placeholder-gray-500 border border-gray-300 
+                     rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pb-8 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+            <div>
+                <label for="" class="block text-sm font-medium text-black">Category</label>
+                <div class="relative mt-2">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+
+                    <select value={jobCategory} onChange={handleChange} required name="jobCategory" class="block w-full py-3 pl-12 pr-10 border-gray-300 border rounded-lg focus:outline-none focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm">
+                        <option name="null" value="null">Pick an option</option>
+                        <option name="Customer Service"  value="Customer Service">Customer Service</option>
+                        <option name="Creative" value="Creative">Creative</option>
+                        <option name="Web Development" value="Web Development">Web Development</option>
+                        <option name="People & HR" value="People & HR">People & HR</option>
+                        <option name="Sales" value="Sales">Sales</option>
+                        <option name="Biz Ops" value="Biz Ops">Biz Ops</option>
+                        <option name="Product" value="Product">Product</option>
+                        <option name="Finance" value="Finance">Finance</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="pb-8 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+            <div>
+                <label for="" class="block text-sm font-bold text-gray-900">Date Of Posting:</label>
+                <div class="mt-2">
+                    <input type="date" required name="postedat"  
+                    value={postedat}
+                    onChange={handleChange}
+                    class="block w-full  py-3 placeholder-gray-500 border-gray-300 
+                    border-2 rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
          
-            <label className="flex" htmlFor="companyname">
-              Company Name:<img src="/reddot.svg"></img>
-            </label>
-            <input
-              type="text"
-          
-              required
-              className=" mt-2 mb-4 border-1 rounded-lg pr-14"
-              placeholder="Space X"
-              value={companyName}
-              name="companyName"
-              onChange={handleChange}
-            />
-            <label className="flex" htmlFor="companyurl">
-              Company URL:<img src="/reddot.svg"></img>
-            </label>
-            <input
-              type="text"
+         <div class="pb-8 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+            <div>
+                <label for="" class="block text-sm font-medium text-black">Job Type:</label>
+                <div class="relative mt-2">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+
+                    <select value={jobType} onChange={handleChange} required name="jobType" class="block w-full py-3 pl-12 pr-10 border-gray-300 border rounded-lg focus:outline-none focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm">
+                       <option name="Null" value="Null">Pick an option</option>
+                      <option  name="Remote" value="Remote">Remote</option>
+                      <option  name="Hybrid" value="Hybrid">Hybrid</option>
+                      <option  name="In-Office" value="In-Office">In-Office</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
             
-              required
-              className="  mt-2 mb-4 border-1 rounded-lg pr-14"
-              placeholder="www.spacex.com"
-              value={companyUrl}
-              name="companyUrl"
-              onChange={handleChange}
-            />
-             <label className="flex" htmlFor="jobposition">
-              Position:<img src="/reddot.svg"></img>
-            </label>
-            <input
-              type="text"
-              required
-      
-              className=" mt-2 mb-4 border-1 rounded-lg pr-14"
-              placeholder="PPC Specalist "
-              value={jobPosition}
-              name="jobPosition"
-              onChange={handleChange}
-            />
-            <label className="flex" htmlFor="logo">
-              Logo:<img src="/reddot.svg"></img>
-            </label>
-            <p className="italic text-grey opacity-50">.jpg or .png</p>
-            <div class=" relative w-64 mt-4 mb-4">
-              <button class=" bg-[#26EB6B] border border-black rounded-full py-2 pl-14 w-full inline-flex items-center">
-                  <svg fill="#FFF" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/>
-                    </svg>
-                    <span class="ml-2">Upload Logo</span>
-                    <input
-                    id="logo"
-                    class=" input absolute block py-2  w-full opacity-0"
-                    type="file"
-                    name="logo"
-                    onChange={onSelectFile}
-                    
-                    accept="image/png, image/jpeg"
-                    required
-                />
-                </button>
-               
-              </div>
-              <label className="flex" htmlFor="jobcategory">
-              Category:<img src="/reddot.svg"></img>
-            </label>
-      
-            <select  className=" mt-2 mb-6 pl-4 border-1 rounded-lg pr-14" value={jobCategory} onChange={handleChange} placeholder="Pick One" required name="jobCategory">
-            <option name="Null" value="Null">Pick an option</option>
-              <option name="Marketing" value="Marketing">Marketing</option>
-              <option name="Customer Service"  value="Customer Service">Customer Service</option>
-              <option name="Creative" value="Creative">Creative</option>
-              <option name="Web Development" value="Web Development">Web Development</option>
-              <option name="People & HR" value="People & HR">People & HR</option>
-              <option name="Sales" value="Sales">Sales</option>
-              <option name="Biz Ops" value="Biz Ops">Biz Ops</option>
-              <option name="Product" value="Product">Product</option>
-              <option name="Finance" value="Finance">Finance</option>
-            </select>
-               <label className="flex" htmlFor="postedat">
-              Date Of Posting:<img src="/reddot.svg"></img>
-            </label>
-            <input
-              type="date"
-              required
-              className="mt-2 mb-6 border-1 rounded-lg "
-              placeholder="Mars"
-              value={postedat}
-              name="postedat"
-              onChange={handleChange}
-            />
-        
-            <label className="flex" htmlFor="contract">
-             Remote/Hybrid/In-Office:<img src="/reddot.svg"></img>
-            </label>
-            <select  className=" mt-2 mb-6 pl-4 border-1 rounded-lg pr-14" value={jobType} onChange={handleChange} placeholder="Pick One" required name="jobType">
-            <option name="Null" value="Null">Pick an option</option>
-              <option  name="Remote" value="Remote">Remote</option>
-              <option  name="Hybrid" value="Hybrid">Hybrid</option>
-              <option  name="In-Office" value="In-Office">In-Office</option>
-            </select>
-            <label className="flex" >
-              Location:<img src="/reddot.svg"></img>
-            </label>
-            <input
-              type="text"
-              required
-              className=" mt-2 mb-4 border-1 rounded-lg pr-14"
-              placeholder="USA"
-              value={location}
-              name="location"
-              onChange={handleChange}
-            />
-            <label className="flex" htmlFor="jobposition">
-             City:<img src="/reddot.svg"></img>
-            </label>
-            <input
-              type="text"
-              required
-              className=" mt-2 mb-4 border-1 rounded-lg pr-14"
-              placeholder="New York"
-              value={city}
-              name="city"
-              onChange={handleChange}
-            />
-            <label className="flex" htmlFor="compdesc">
-              Company Description<img src="/reddot.svg"></img>
-            </label>
-            <input
-              type="text"
-              required
-              className="mt-2 mb-4 border-1 rounded-lg pr-14"
-              placeholder="SpaceX is a..."
-              value={companyDescription}
-              name="companyDescription"
-              onChange={handleChange}
-            />
-            <label className="flex" htmlFor="jobdesc">
-              Job Description<img src="/reddot.svg"></img>
-            </label>
-            <input
-              type="text"
-              required
-              className="mt-2 mb-4 border-1 rounded-lg pr-14"
-              placeholder="A PPC Specialist..."
-              value={jobDescription}
-              name="jobDescription"
-              onChange={handleChange}
-            />
-            <label className="flex" htmlFor="jobreq">
-              Job Requirements<img src="/reddot.svg"></img>
-            </label>
-            <input
-              type="text"
-              required
-              className="mt-2 mb-4 border-1 rounded-lg pr-14"
-              placeholder="3+ years of... "
-              value={jobRequirements}
-              name="jobRequirements"
-              onChange={handleChange}
-            />
-            <label className="flex" htmlFor="applicationurl">
-              Application URL<img src="/reddot.svg"></img>
-            </label>
-            <input
-              type="text"
-              required
-              className="mt-2 mb-4 border-1 rounded-lg pr-14"
-              placeholder="www.applyhere.com"
-              value={applicationUrl}
-              name="applicationUrl"
-              onChange={handleChange}
-            />
+       
+
+<div class="pb-8 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+            <div>
+                <label for="" class="block text-sm font-bold text-gray-900">Country:</label>
+                <div class="mt-2">
+                    <input type="text" required name="location"  placeholder="USA"
+                    value={location}
+                    onChange={handleChange}
+                    class="block w-full pr-14  py-3 placeholder-gray-500 border-gray-300 
+                    border-2 rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pb-8 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+            <div>
+                <label for="" class="block text-sm font-bold text-gray-900">City:</label>
+                <div class="mt-2">
+                    <input type="text" required name="city"  placeholder="New York"
+                    value={city}
+                    onChange={handleChange}
+                    class="block w-full pr-14  py-3 placeholder-gray-500 border-gray-300 
+                    border-2 rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+           
+           <div class="pb-8 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+            <div>
+                <label for="" class="block text-sm font-medium text-black">Company Description </label>
+                <div class="relative mt-2">
+                    <div class="absolute top-0 left-0 flex items-center pt-4 pl-4 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                        </svg>
+                    </div>
+
+                    <textarea name="companyDescription" id="" placeholder="Describe your company..."   onChange={handleChange} value={companyDescription} rows="3" class="border-2 block w-full py-3 pl-12 pr-4 placeholder-gray-500 border-gray-300 rounded-lg resize-y focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pb-8 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+            <div>
+                <label for="" class="block text-sm font-medium text-black">Job Description </label>
+                <div class="relative mt-2">
+                    <div class="absolute top-0 left-0 flex items-center pt-4 pl-4 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                        </svg>
+                    </div>
+
+                    <textarea name="jobDescription" placeholder="A Social Media Manager knows how to schedule creatives..."   onChange={handleChange}   value={jobDescription} rows="3" class="border-2 block w-full py-3 pl-12 pr-4 placeholder-gray-500 border-gray-300 rounded-lg resize-y focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pb-8 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+            <div>
+                <label for="" class="block text-sm font-medium text-black">Job Requirements </label>
+                <div class="relative mt-2">
+                    <div class="absolute top-0 left-0 flex items-center pt-4 pl-4 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                        </svg>
+                    </div>
+
+                    <textarea name="jobRequirements" placeholder="-3+ years experience in managing 100k+ account followers...."   onChange={handleChange}   value={jobRequirements} rows="3" class="border-2 block w-full py-3 pl-12 pr-4 placeholder-gray-500 border-gray-300 rounded-lg resize-y focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="pb-8 bg-white">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="max-w-xl mx-auto">
+            <div>
+                <label for="" class="block text-sm font-bold text-gray-900"> Application URL: </label>
+                <div class="relative flex mt-2">
+                    <div class="inline-flex items-center px-3 text-gray-900 border border-r-0 border-gray-300 rounded-l-lg bg-gray-50 sm:text-sm">https://</div>
+
+                    <input type="url" required name="applicationUrl"
+                      placeholder="www.applyhere.com"
+                      value={applicationUrl}
+                      onChange={handleChange}
+                    class="flex-1 border block w-full min-w-0 px-4 py-3 placeholder-gray-500 
+                    border-gray-300 border-2 rounded-none rounded-r-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        
+
+                        <button
+                            type="submit"
+                            class="flex relative items-center justify-center w-full sm:w-auto mx-auto px-40 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg hover:bg-[#22A956] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+                        >
+                           Post Your Job
+                        </button>
+                   
             
-            <button
-              type="submit"
-             
-              className="bg-[#26EB6B] text-black border border-black text-sm mb-10 w-1/2 rounded-full py-2 text-center content-center mt-6 hover:rounded-full"
-              id="jobbtn"
-              value="Submit"
-            >
-              Post Your Job
-            </button>
            
           </div>
         </form>
+        <div className="hidden lg:block">
         <div className="text-center my-6">
         <p className="font-bold text-3xl my-2 text-[#17614A]">Preview </p>
         <p>Here's a preview of how your job post will look like</p>
@@ -396,6 +488,7 @@ function PostAJob() {
             </div>
         </div>
       
+        </div>
         </div>
         <Preview/>
         </div>
