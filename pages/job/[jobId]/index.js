@@ -12,7 +12,7 @@ function Jobs() {
     job_position: "",
     job_category: "",
     logo: "",
-    postedat: "",
+
     location: "",
   });
 
@@ -83,12 +83,14 @@ function Jobs() {
   
 
   return (
-    <div className="text-center items-center">
+    
+    <div className="text-center bg-gray-100 py-10 items-center">
       <Helmet>
       (<script className='structured-data-list' type="application/ld+json">{JSON.stringify(data)}</script>)
       </Helmet> 
     
-      <div className="">
+      <div className="border-2 mx-20 bg-white">
+      <div className>
       <br></br>
       <br></br>
         <img className="mx-auto border-2 rounded-full border-[#17614A] h-28 w-28 " src={`.${jobData.logo}`}></img>
@@ -102,6 +104,7 @@ function Jobs() {
         <h3 className="my-1">Type: <span className="text-[#17614A]">{jobData.job_type}</span></h3>
         {jobData.salary ? <h3 className="my-1">Salary: <span className="font-bold">{jobData.job_salary}</span></h3> : <p className="hidden">no salary</p>}
         <p className="my-1"> {getDate()}</p>
+        </div>
         </div>
         <br></br>
         <a

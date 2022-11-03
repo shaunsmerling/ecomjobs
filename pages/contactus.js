@@ -11,7 +11,7 @@ const contactus = () => {
                 Love to hear from you, Get in touch 👋
               </h2>
               <p className="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8">
-                Feel free to reach out if you have any questions regarding job posting, recruiting, company profiles, talent acquisition, etc.
+                Feel free to reach out if you have any questions regarding job posting, recruiting, company profiles, talent acquisition.
               </p>
             </div>
 
