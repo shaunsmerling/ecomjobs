@@ -104,11 +104,11 @@ function Company() {
   <section class="relative">
     <div class="container mx-auto  px-4">
       <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-96">
-        <div class="">
+        <div class="mx-40 lg:mx-0">
           <div class="flex flex-wrap justify-center">
             <div class="w-full lg:w-3/12  lg:order-2 flex justify-center">
               <div class="relative">
-                <img src={`.${jobData.logo}`}  class="  p-10 border-2 border-gray-100 bg-white rounded-full  -mt-16 "/>
+                <img src={`.${jobData.logo}`}  class=" p-10 lg:p-10 border-2 border-gray-100 bg-white rounded-full  -mt-16 "/>
               </div>
             </div>
             <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
@@ -142,7 +142,7 @@ function Company() {
               {jobData.city} {jobData.location}
             </div>
 
-       <p className="text-xl px-10 mx-auto mt-10 mb-8 ">      {jobData.mission ? jobData.mission : jobData.company_description }</p>
+       <p className="text-xl lg:px-10 mx-auto mt-10 mb-8 ">      {jobData.mission ? jobData.mission : jobData.company_description }</p>
             <div class="mb-2 text-blueGray-600 mt-10">
               <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i><a href={jobData.company_url} className="text-sky-400">{jobData.company_url}</a>
             </div>
@@ -162,8 +162,8 @@ function Company() {
 
                
               <Link href="/job/634f75a39f621dc748de274d">
-      <div className={`flex flex-col mx-1 my-10 lg:mx-20 pb-2 `}>
-        <ul className={`  rounded-lg text-left mb-2  flex  bg-white hover:bg-gray-100  bg-white  shadow-lg `}>
+      <div className={`flex flex-col my-10 lg:mx-20 pb-2 `}>
+        <ul className={`   rounded-lg text-left mb-2  flex  bg-white hover:bg-gray-100  bg-white  shadow-lg `}>
         <img className="z-1 mt-4 ml-4 w-14 h-14 rounded-full border border-[#17614A] border-2 "  src={`.${jobData.logo}`}  ></img>
           <li className="w-full ml-2 mt-2 mb-4 box-border ">
             <p className=" ml-2 mt-2 z-1 text-sm text-[#17614A] pb-1">

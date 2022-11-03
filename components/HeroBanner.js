@@ -11,7 +11,7 @@ const HeroBanner = () => {
 
         <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="max-w-xl mx-auto text-center">
-                <h1  class="leading-normal font-bold lg:leading-normal   lg:text-5xl">Hand-picked Jobs For The eCommerce Industry</h1>
+                <h2  class="leading-normal text-4xl font-bold lg:leading-normal   lg:text-5xl">Hand-picked Jobs For The eCommerce Industry</h2>
                
                 <p class="max-w-md mx-auto mt-6 text-base font-normal leading-7 text-gray-500">Join an eCommerce brand. Help shape the future by working with some of the fastest growing D2C companies. </p>
 
