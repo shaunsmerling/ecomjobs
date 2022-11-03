@@ -174,7 +174,7 @@ function Company() {
             <p className=" ml-2 -mb-2 z-1 text-xl text-[#17614A] z-0 font-bold pb-2 pr-20">{jobData.job_position}</p>
 
             
-              
+            <p className="ml-2 ">{getDate()}</p>
           </li>
         </ul>
      </div>
