@@ -142,7 +142,7 @@ function Company() {
             </div>
           </div>
           <div className="text-center">
-          <h2 className="text-2xl lg:text-5xl my-4 mx-auto font-bold underline ">{jobData.job_position}</h2>
+          <h2 className="sm:text-2xl lg:text-5xl my-4 mx-auto font-bold underline ">{jobData.job_position}</h2>
           <h3 className="my-1 text-md lg:text-xl text-[#6879a5]">  {jobData.job_category}  •   {jobData.job_type} • {getDate()}</h3>
           </div>
           <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
