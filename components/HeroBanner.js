@@ -1,6 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const HeroBanner = () => {        
+const HeroBanner = () => { 
+    
+    
+    const [emails, setEmails] = useState({
+        email: "",
+      });
+  
+      const handleChange = ({ target }) => {
+        setEmails({...emails, [target.name]: target.value })
+      };
+  
+      const handleSubmit = e => {
+        e.preventDefault();
+  
+        fetch("/api/emails", {
+          method: "POST",
+          body: JSON.stringify({
+            email: email,
+          })
+        })
+      }
+  
+      const {
+        email,
+      } = emails
+  
+
+
+
+
     return (
 <div className=''>
 
@@ -15,11 +44,15 @@ const HeroBanner = () => {
                
                 <p class="max-w-md mx-auto mt-6 text-base font-normal leading-7 text-gray-500">Join an eCommerce brand. Help shape the future by working with some of the fastest growing D2C companies. </p>
 
-                <form action="#" method="POST" class="max-w-md mx-auto mt-8 space-y-4 sm:space-x-4 sm:flex sm:space-y-0 sm:items-end">
+                <form action="#" onSubmit={handleSubmit} method="POST" class="max-w-md mx-auto mt-8 space-y-4 sm:space-x-4 sm:flex sm:space-y-0 sm:items-end">
                     <div class="flex-1">
                         <label for="" class="sr-only"> Email address </label>
                         <div>
-                            <input type="email" name="" id="" class="block w-full px-4 py-3 sm:py-3.5 text-base font-medium text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg sm:text-sm focus:ring-gray-900 focus:border-gray-900" placeholder="Email address" />
+                            <input  
+              type="email" name="email"  value={email}
+            onChange={handleChange} class="block w-full px-4 py-3 sm:py-3.5 text-base 
+            font-medium text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg 
+            sm:text-sm focus:ring-gray-900 focus:border-gray-900" placeholder="Email address" />
                         </div>
                     </div>
 
@@ -27,7 +60,9 @@ const HeroBanner = () => {
                         <div class="absolute transitiona-all duration-1000 opacity-70 inset-0 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:duration-200"></div>
 
                         <button
-                            type="button"
+                            type="submit"
+                            value="Submit"
+                            onClick={() => alert("Thank you for your  submission. Please check your inbox for a confirmation email") ? "" : location.reload()}
                             class="inline-flex relative items-center justify-center w-full sm:w-auto px-8 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg  hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
                         >
                            Subscribe
