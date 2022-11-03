@@ -39,10 +39,8 @@ model Company {
   company_id          String  @id @default(auto()) @map("_id") @db.ObjectId
   company_name        String?
   company_url         String?
-  mission             String?
   logo                String?
   location            String?
   city                String?
   company_description String?
-  job_description     String?
 }
