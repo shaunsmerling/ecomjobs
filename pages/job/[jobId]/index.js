@@ -1,18 +1,22 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import {Helmet} from "react-helmet";
+import Link from "next/link";
 
 
-function Jobs() {
+
+function Company() {
   const [jobData, setJobData] = useState({
     company_name: "",
     company_url: "",
+    company_description: "",
     city: "",
     postedat: "",
     job_position: "",
     job_category: "",
     logo: "",
-
+    job_type: "",
+    mission: "",
     location: "",
   });
 
@@ -84,74 +88,103 @@ function Jobs() {
 
   return (
     
-    <div className="text-center bg-gray-100 py-10 items-center">
+    <div className="bg-gray-100 pb-10">
       <Helmet>
       (<script className='structured-data-list' type="application/ld+json">{JSON.stringify(data)}</script>)
       </Helmet> 
+      <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"/>
+<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"/>
+
+<main class="profile-page">
+  <section class="relative block  h-500-px">
+    <div class="absolute top-0 w-full h-full bg-center bg-cover" >
+      
+    </div>
     
-      <div className="border-2 mx-20 bg-white">
-      <div className>
-      <br></br>
-      <br></br>
-        <img className="mx-auto border-2 rounded-full border-[#17614A] h-28 w-28 " src={`.${jobData.logo}`}></img>
-        <br></br>
-        <br></br>
-        <p><span className="font-bold text-[#17614A]">{jobData.company_name}</span> <span className="italic">is hiring a</span></p>
-        <h2 className="text-3xl my-2 text-[#17614A] font-bold">{jobData.job_position}</h2>
-        <div className="my-2">
-        <h3 className="my-1">Category: <span className="text-[#17614A]">{jobData.job_category}</span></h3>
-        <h3 className="my-1">Location: <span className="text-[#17614A]">{jobData.city}, {jobData.location}</span></h3>
-        <h3 className="my-1">Type: <span className="text-[#17614A]">{jobData.job_type}</span></h3>
-        {jobData.salary ? <h3 className="my-1">Salary: <span className="font-bold">{jobData.job_salary}</span></h3> : <p className="hidden">no salary</p>}
-        <p className="my-1"> {getDate()}</p>
-        </div>
-        </div>
-        <br></br>
-        <a
-          id="applybtn"
-          target="_blank"
-          href={jobData.application_url}
-          className=" text-black border border-black bg-[#26EB6B] font-medium rounded-lg text-sm px-20 py-2 text-center  content-center hover:rounded-full"
-        >
-          {" "}
-          Apply Now{" "}
-        </a>
-        <br></br>
-        <br></br>
-        <div className="mx-2 border border-[#17614A] rounded-lg pb-4 lg:mx-32 mb-4">
-          <div className="mx-4 my-2">
-            <h3>
-              <b className="bold">Who We Are:</b>
-            </h3>
-            <p>{jobData.company_description}</p>
+  </section>
+  <section class="relative">
+    <div class="container mx-auto  px-4">
+      <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-96">
+        
+          <div>
+            
+        
+          
+         
+          <div class="mt-4 ml-6">
+
+          <img src={`.${jobData.logo}`} alt="..." class="my-10  max-w-120-px"/>
+          
+          <a
+                          target="_blank"
+                          href={jobData.application_url}
+                            class="flex float-right  justify-center sm:w-auto text-xl px-10 -mt-32 rounded-full  mr-10 lg:px-20 py-6 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+                        >
+                           Apply Now
+                        </a>
+                   
+       
+
+          <h2 class="text-3xl my-4 text-black font-bold">{jobData.company_name}</h2>
+       
+
+            <div class="text-sm leading-normal  text-blueGray-400 font-bold uppercase">
+              <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
+             {jobData.city} {jobData.location}
+            </div>
+            
+
+ 
+            <div class=" text-blueGray-600 my-2">
+              <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i><a href={jobData.company_url} className="text-sky-400">{jobData.company_url}</a>
+            </div>
+          
+            </div>
+          </div>
+          <div className="text-center">
+          <h2 className="sm:text-3xl lg:text-5xl my-4 mx-auto font-bold underline ">{jobData.job_position}</h2>
+          <h3 className="my-1 text-xl text-[#6879a5]">  {jobData.job_category}  •   {jobData.job_type} • {getDate()}</h3>
+          </div>
+          <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
+         
+            <div class="flex flex-wrap justify-center">
+              <div class="w-full lg:w-9/12 px-4">
+              
+
+              <p>{jobData.company_description}</p>
             <br></br>
             <br></br>
-            <h3>
-              <b className="bold">Job Description:</b>
-            </h3>
+           
             <p>{jobData.job_description}</p>
             <br></br>
             <br></br>
-            <h3 className="">
-              <b className="bold">Candidate Requirements:</b>
-            </h3>
+           
             <p>{jobData.job_requirements}</p>
             <br></br>
             <br></br>
-            <a
-              id="applybtn"
-              target="_blank"
-              href={jobData.application_url}
-              className=" text-black border border-black bg-[#26EB6B] font-medium rounded-lg text-sm px-20 py-2 text-center  content-center hover:rounded-full"
-            >
-              {" "}
-              Apply Now{" "}
-            </a>
+            
+
+<a
+     target="_blank"
+    href={jobData.application_url}
+    class="inline-flex relative items-center justify-center w-full sm:w-auto px-8 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg  hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+>
+   Apply Now
+</a>
+
+
+            
+               
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+  </section>
+</main>
     </div>
   );
 }
 
-export default Jobs;
+export default Company;

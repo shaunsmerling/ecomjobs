@@ -401,7 +401,7 @@ function PostAJob() {
 
                         <button
                             type="submit"
-                            class="flex relative items-center justify-center w-full sm:w-auto mx-auto px-40 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg hover:bg-[#22A956] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+                            class="flex relative items-center justify-center w-full sm:w-auto mx-auto px-40 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg  hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
                         >
                            Post Your Job
                         </button>
