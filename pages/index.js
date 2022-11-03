@@ -3,7 +3,7 @@ import React from 'react'
 import HeroBanner from "../components/HeroBanner"
 import "@stripe/stripe-js"
 import algoliasearch from 'algoliasearch/lite';
-import { InstantSearch, RefinementList, Hits} from 'react-instantsearch-hooks-web';
+import { InstantSearch, RefinementList, SearchBox, Hits} from 'react-instantsearch-hooks-web';
 import Hit from "../components/Hit"
 import {FacetDropdown} from "/components/FacetDropdown"
 import Featured from "../components/featured"
@@ -24,12 +24,12 @@ export default function HomePage() {
         <title>The #1 eCommerce Job Board</title>
     </Head>
           <HeroBanner />
+          <Featured/>
             <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
-            
-           { /*<div className=" mt-12 md:grid-cols-3 divide-y md:divide-x md:divide-y-0 divide-gray-200 rounded-lg align-center drop-shadow my-10 mb-10 mx-4 lg:ml-20 lg:mr-16 ">
+            <h2 className="mx-auto text-center text-3xl font-bold">Search Job Titles or Company Names</h2>
+           <div className=" mt-12 md:grid-cols-3 divide-y md:divide-x md:divide-y-0 divide-gray-200 rounded-lg align-center drop-shadow my-10 mb-10 mx-4 lg:ml-20 lg:mr-16 ">
                 <div className="rounded-lg bg-white border border-black/10 overflow-hidden">
                 <div className="ml-2 -mr-6">
-                <p className="mt-2 ml-1">What Job Are You Looking For?</p>
                 <div className="mt-2 mr-10 mb-2">
                 <SearchBox 
                   autofocus={true}
@@ -42,9 +42,9 @@ export default function HomePage() {
                 </div>
                 </div>
                 </div>
-                </div> */}
+                </div> 
                
-                <Featured/>
+               
                 <div className="flex mt-10 px-2 drop-shadow - w-max  mb-10  lg:w-max  lg:flex lg:mx-auto lg:mb-12 lg:text-center lg:drop-shadow lg:align-center ">
                 <div className="mb-4 ">
                 <FacetDropdown  closeOnChange={() => window.innerWidth >= 400} 

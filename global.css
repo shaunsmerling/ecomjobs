@@ -12,7 +12,6 @@
 /* Button */
 .ais-Dropdown-button {
   padding: 20px;
-  font-weight: bold;
   margin-left: 8px;
   margin-right: 8px;
   cursor: pointer;
@@ -52,6 +51,7 @@
 .ais-Dropdown.ais-Panel {
   margin: 0;
 
+
 }
 
 .ais-Dropdown .ais-Panel-body {
@@ -61,15 +61,18 @@
   padding: 0.8rem;
   margin-top: 0.5rem;
   background-color: #fff;
+  
 }
 
 
 .ais-Dropdown .ais-Panel-header {
   margin-bottom: 0;
+  
 }
 
 .ais-Dropdown .ais-Panel-body {
   display: none;
+  
 }
 
 .ais-Dropdown .ais-Panel-footer {
@@ -90,6 +93,7 @@
 .ais-Dropdown-mobileTitle {
   display: none;
   margin-top: 0;
+  
 }
 
 @media only screen and (max-width: 375px) {
@@ -162,6 +166,7 @@ border-color: white
   left:-1em;
   right: auto;
   text-align:left;
+  
 }
 
 
@@ -178,7 +183,7 @@ border-color: white
 .ais-RefinementList-labelText {
 padding-left: 5px;
 padding-right: 5px;
-font-size: 10px;
+font-size: 14px;
 font-weight: 500;
 
 
@@ -191,7 +196,7 @@ font-weight: 500;
 .ais-RefinementList-count {
   color: #254790;
   background-color: #f3f3f3;
-  font-size: 8px;
+  font-size: 10px;
   border-radius: 6px;
   padding: 0 3px;
   padding-right: 3px;
