@@ -8,12 +8,14 @@ function Company() {
   const [jobData, setJobData] = useState({
     company_name: "",
     company_url: "",
+    company_description: "",
     city: "",
     postedat: "",
     job_position: "",
     job_category: "",
     logo: "",
-
+    job_type: "",
+    mission: "",
     location: "",
   });
 
@@ -85,7 +87,7 @@ function Company() {
 
   return (
     
-    <div className="bg-gray-100">
+    <div className="bg-gray-100 pb-10">
       <Helmet>
       (<script className='structured-data-list' type="application/ld+json">{JSON.stringify(data)}</script>)
       </Helmet> 
@@ -93,7 +95,7 @@ function Company() {
 <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"/>
 
 <main class="profile-page">
-  <section class="relative block -pt-10 h-500-px">
+  <section class="relative block  h-500-px">
     <div class="absolute top-0 w-full h-full bg-center bg-cover" >
       
     </div>
@@ -145,7 +147,7 @@ function Company() {
               <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i><a href={jobData.company_url} className="text-sky-400">{jobData.company_url}</a>
             </div>
             <div class="mb-2 text-blueGray-600">
-              <i class="fas fa-university mr-2 text-lg text-blueGray-400"></i>{jobData.type}
+              <i class="fas fa-university mr-2 text-lg text-blueGray-400"></i>{jobData.job_type}
             </div>
           </div>
           <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
