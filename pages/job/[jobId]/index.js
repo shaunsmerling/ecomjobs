@@ -113,12 +113,12 @@ function Company() {
          
           <div class="mt-4 ml-6">
 
-          <img src={`.${jobData.logo}`} alt="..." class="my-10  max-w-120-px"/>
+          <img src={`.${jobData.logo}`} alt="..." class="my-10 border-4  max-w-120-px"/>
           
           <a
                           target="_blank"
                           href={jobData.application_url}
-                            class="flex float-right  justify-center sm:w-auto text-sm px-4 lg:text-lg -mt-32 rounded-full  mr-10 lg:px-20 py-6 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+                            class="flex float-right  justify-center sm:w-auto text-sm sm:px-4 lg:text-lg -mt-20 rounded-full  mr-10 lg:px-20 py-6 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
                         >
                            Apply Now
                         </a>

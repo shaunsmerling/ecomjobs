@@ -17,10 +17,32 @@ function Company() {
     job_type: "",
     mission: "",
     location: "",
+    company_id: "",
   });
 
   const router = useRouter();
   const { jobId } = router.query;
+
+
+const [companyData, setCompanyData] = useState({
+  company_name: "",
+  company_url: "",
+  company_description: "",
+  city: "",
+  logo: "",
+  location: "",
+
+
+
+})
+  // useEffect( () => {
+   // if (companyId) {
+   //  fetch("/api/company?id=" + companyId, {
+   //     method: "GET",
+   //   })
+     //   .then((res) => res.json())
+     //   .then((jsonResponse) => setCompanyData(jsonResponse));
+// }}, [companyId]);
 
   useEffect( () => {
       if (jobId) {
