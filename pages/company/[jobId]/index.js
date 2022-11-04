@@ -184,7 +184,7 @@ const [companyData, setCompanyData] = useState({
 </div>
 
                
-              <Link href={jobData.application_url}>
+              <a href={jobData.application_url} target="_blank">
       <div className={`flex flex-col my-10 lg:mx-20 pb-2 `}>
         <ul className={`   rounded-lg text-left mb-2  flex  bg-white hover:bg-gray-100  bg-white  shadow-lg `}>
         <img className="z-1 mt-4 ml-4 w-14 h-14 rounded-full border border-[#17614A] border-2 "  src={`.${jobData.logo}`}  ></img>
@@ -201,7 +201,7 @@ const [companyData, setCompanyData] = useState({
           </li>
         </ul>
      </div>
-     </Link>
+     </a>
               </div>
             </div>
           </div>
