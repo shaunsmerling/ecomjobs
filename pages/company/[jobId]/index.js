@@ -14,6 +14,7 @@ function Company() {
     job_position: "",
     job_category: "",
     logo: "",
+    application_url: "",
     job_type: "",
     mission: "",
     location: "",
@@ -183,7 +184,7 @@ const [companyData, setCompanyData] = useState({
 </div>
 
                
-              <Link href="/job/634f75a39f621dc748de274d">
+              <Link href={jobData.application_url}>
       <div className={`flex flex-col my-10 lg:mx-20 pb-2 `}>
         <ul className={`   rounded-lg text-left mb-2  flex  bg-white hover:bg-gray-100  bg-white  shadow-lg `}>
         <img className="z-1 mt-4 ml-4 w-14 h-14 rounded-full border border-[#17614A] border-2 "  src={`.${jobData.logo}`}  ></img>
