@@ -1,6 +1,44 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Helmet from 'react-helmet';
 
-const contactus = () => {        
+const contactus = () => {  
+
+const [name, setName] = useState('')
+const [email, setEmail] = useState('')
+const [message, setMessage] = useState('')
+const [submitted, setSubmitted] = useState(false)
+  
+const handleSubmit = (e) => { 
+  e.preventDefault()
+  console.log('Sending')
+  let data = {
+    name,
+    email,
+    message
+  }
+
+
+  fetch('/api/contact', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json, text/plain, */*',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  }).then((res) => {
+    console.log('Response received')
+    if (res.status === 200) {
+      console.log('Response succeeded!')
+      setSubmitted(true)
+      setName('')
+      setEmail('')
+      setBody('')
+    }
+  }).then(alert("Thank you for your submission. We will get back to your inquiry as soon as possible!") ? "" : location.reload() )
+
+}
+
+
     return (
 <section className="py-12 sm:py-16 lg:py-20 xl:py-24">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -75,13 +113,13 @@ const contactus = () => {
               <h3 className="text-2xl font-semibold tracking-tight text-gray-900 sm:text-3xl">
                 Send us a message
               </h3>
-              <form action="#" method="POST" className="mt-8 space-y-6">
+              <form action="#" method="POST" className="mt-8 space-y-6" >
                 <div>
                   <label for="fullName" className="sr-only">
                     Your name
                   </label>
                   <div>
-                    <input type="text" name="fullName" id="fullName" placeholder="Your name"
+                    <input type="text" name="fullName" id="name" placeholder="Your name" required onChange={(e)=>{setName(e.target.value)}} 
                       className="block w-full px-2 py-4 text-base text-gray-900 placeholder-gray-600 bg-white border-b-2 focus:outline-none focus:border-blue-600 focus:ring-0">
                       </input>
                   </div>
@@ -92,7 +130,7 @@ const contactus = () => {
                     Email address
                   </label>
                   <div>
-                    <input type="email" name="email" id="email" placeholder="Email address"
+                    <input type="email" name="email" id="email" placeholder="Email address" required onChange={(e)=>{setEmail(e.target.value)}} 
                       className="block w-full px-2 py-4 text-base text-gray-900 placeholder-gray-600 bg-white border-b-2 focus:outline-none focus:border-blue-600 focus:ring-0">
                         </input>
                   </div>
@@ -103,16 +141,17 @@ const contactus = () => {
                     Write your message
                   </label>
                   <div>
-                    <textarea name="email" id="email" placeholder="Write your message" rows="4"
+                    <textarea type="text" name="message" id="message" placeholder="Write your message" rows="4" required onChange={(e)=>{setMessage(e.target.value)}} 
                       className="block w-full px-2 py-4 text-base text-gray-900 placeholder-gray-600 bg-white border-b-2 focus:outline-none focus:border-blue-600 focus:ring-0"></textarea>
                   </div>
                 </div>
 
-                <button type="submit"
+                <button type="submit" onClick={(e)=>{handleSubmit(e)}}
                   className="inline-flex items-center justify-center w-full px-12 py-4 text-base font-medium text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700">
                   Send message
                 </button>
               </form>
+             
             </div>
           </div>
         </div>

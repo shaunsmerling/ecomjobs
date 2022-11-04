@@ -47,13 +47,13 @@ export default async function handler(req, res) {
   try {
     switch (req.method) {
       case "POST": {
-        // Create a new job
+        // Create a new company
         const body = JSON.parse(req.body);
         const company = await createCompany(body);
         return res.json(company);
       }
       case "GET": {
-        // Get a single job if id is provided is the query
+        // Get a single company if id is provided is the query
         // api/jobs?id=1
         const query = req.query;
         if (query.id) {
@@ -61,7 +61,7 @@ export default async function handler(req, res) {
           return res.json(company);
         }
 
-        // Otherwise, fetch all jobs
+        // Otherwise, fetch all companies
         const companies = await getAllCompanies();
         return res.json(companies);
       }

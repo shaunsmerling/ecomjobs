@@ -5,7 +5,7 @@ import Link from "next/link";
 
 
 
-function Company() {
+function Job() {
   const [jobData, setJobData] = useState({
     company_name: "",
     company_url: "",
@@ -187,4 +187,4 @@ function Company() {
   );
 }
 
-export default Company;
+export default Job;
