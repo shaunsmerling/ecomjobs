@@ -4,6 +4,7 @@ import {
   getJobById,
   updateJob,
   deleteJob,
+  getJobsByCompanyId
 } from "../../prisma/job";
 
 
@@ -59,6 +60,11 @@ export default async function handler(req, res) {
         if (query.id) {
           const job = await getJobById(query.id);
           return res.json(job);
+        }
+
+        if (query.companyId) {
+          const jobs = await getJobsByCompanyId(query.companyId);
+          return res.json(jobs);
         }
 
         // Otherwise, fetch all jobs
