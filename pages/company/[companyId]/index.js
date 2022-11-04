@@ -147,7 +147,7 @@ function Company() {
                                   <p className=" ml-2 -mb-2 z-1 text-2xl text-[#17614A] z-0 font-bold pb-2 pr-20 ">
                                     {job?.job_position}
                                   </p>
-
+                              <p>hi </p> 
                                   <p className="float-right mr-4 text-[12px] -mt-10 bold  text-sky-200 lg:text-xl">
                                     {job?.job_type} | {job?.location}
                                   </p>
