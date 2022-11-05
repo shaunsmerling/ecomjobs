@@ -66,7 +66,7 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link  href="/company/63573aebbb24674cc4615049" >
+                    <Link  href="/company/6365c517a1e5cfc099f83bcc" >
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
@@ -84,7 +84,7 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/634f75a39f621dc748de2770">
+                    <Link href="/company/6365c80aa1e5cfc099f83bd5">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
@@ -102,7 +102,7 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/63573aebbb24674cc4615048">
+                    <Link href="/company/6365ca58a1e5cfc099f83bdf">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
@@ -122,6 +122,127 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
+                    <Link href="/company/6365cd5da1e5cfc099f83be5">
+                    <div className="py-5 hover:bg-gray-100">
+                        <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
+                            <div className="flex items-center flex-1 min-w-0">
+                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/marimekko.jpeg" alt="" />
+                                <div className="flex-1 min-w-0 ml-4">
+                                    <p className=" text-xl font-bold text-gray-900 truncate">Marimekko</p>
+                                    <p className="mt-1  text-xl font-medium text-gray-500 truncate">Empowering people to be happy.</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
+                                <a href="/company/63573aebbb24674cc4615048" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+
+                             
+                             
+                            </div>
+                        </div>
+                    </div>
+                    </Link>
+                    <Link href="/company/6365d237a1e5cfc099f83bf0">
+                    <div className="py-5 hover:bg-gray-100">
+                        <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
+                            <div className="flex items-center flex-1 min-w-0">
+                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/thehundreds.jpeg" alt="" />
+                                <div className="flex-1 min-w-0 ml-4">
+                                    <p className=" text-xl font-bold text-gray-900 truncate">Hundreds</p>
+                                    <p className="mt-1  text-xl font-medium text-gray-500 truncate">The Hundreds is Huge.</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
+                                <a href="/company/63573aebbb24674cc4615048" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+
+                             
+                             
+                            </div>
+                        </div>
+                    </div>
+                    </Link>
+                    <Link href="/company/6365d478a1e5cfc099f83bf6">
+                    <div className="py-5 hover:bg-gray-100">
+                        <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
+                            <div className="flex items-center flex-1 min-w-0">
+                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/bose.jpeg" alt="" />
+                                <div className="flex-1 min-w-0 ml-4">
+                                    <p className=" text-xl font-bold text-gray-900 truncate">Bose</p>
+                                    <p className="mt-1  text-xl font-medium text-gray-500 truncate">Sound is Power.</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
+                                <a href="/company/63573aebbb24674cc4615048" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+
+                             
+                             
+                            </div>
+                        </div>
+                    </div>
+                    </Link>
+                    <Link href="/company/6365d74ea1e5cfc099f83bfd">
+                    <div className="py-5 hover:bg-gray-100">
+                        <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
+                            <div className="flex items-center flex-1 min-w-0">
+                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/colehaan.jpeg" alt="" />
+                                <div className="flex-1 min-w-0 ml-4">
+                                    <p className=" text-xl font-bold text-gray-900 truncate">Cole Haan</p>
+                                    <p className="mt-1  text-xl font-medium text-gray-500 truncate">We are advocates of the extraordinary.</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
+                                <a href="/company/63573aebbb24674cc4615048" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+
+                             
+                             
+                            </div>
+                        </div>
+                    </div>
+                    </Link>
+                    <Link href="/company/6365d9e8a1e5cfc099f83c03">
+                    <div className="py-5 hover:bg-gray-100">
+                        <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
+                            <div className="flex items-center flex-1 min-w-0">
+                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/amazonia.jpeg" alt="" />
+                                <div className="flex-1 min-w-0 ml-4">
+                                    <p className=" text-xl font-bold text-gray-900 truncate">Amazonia</p>
+                                    <p className="mt-1  text-xl font-medium text-gray-500 truncate">Australian Owned & Operated Health Food Business.</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
+                                <a href="/company/63573aebbb24674cc4615048" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+
+                             
+                             
+                            </div>
+                        </div>
+                    </div>
+                    </Link>
+                    <Link href="/company/6365dad2a1e5cfc099f83c08">
+                    <div className="py-5 hover:bg-gray-100">
+                        <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
+                            <div className="flex items-center flex-1 min-w-0">
+                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/casetify.jpeg" alt="" />
+                                <div className="flex-1 min-w-0 ml-4">
+                                    <p className=" text-xl font-bold text-gray-900 truncate">Casetify</p>
+                                    <p className="mt-1  text-xl font-medium text-gray-500 truncate">Show Your Colors.</p>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
+                                <a href="/company/63573aebbb24674cc4615048" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+
+                             
+                             
+                            </div>
+                        </div>
+                    </div>
+                    </Link>
+
                 </div>
             </div>
         </div>

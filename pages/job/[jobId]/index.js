@@ -113,7 +113,7 @@ function Job() {
          
           <div class="mt-4 ml-6">
 
-          <img src={`.${jobData.logo}`} alt="..." class="my-10 border-4  max-w-120-px"/>
+          <img src={`/images/${jobData.logo}`} alt="..." class="my-10 border-4  max-w-120-px"/>
           
           <a
                           target="_blank"
@@ -125,7 +125,7 @@ function Job() {
                    
        
 
-          <h2 class="text-3xl my-4 text-black font-bold">{jobData.company_name}</h2>
+          <a href={`/company/${jobData.company_id}`}><h2 class="text-3xl my-4 text-black font-bold">{jobData.company_name}</h2></a>
        
 
             <div class="text-sm leading-normal  text-blueGray-400 font-bold uppercase">
