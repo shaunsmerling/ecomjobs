@@ -32,7 +32,7 @@ const first = () => {
                     <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
                   </svg>
                   <a href="#" title="" className="ml-2 text-base font-medium text-gray-500">
-                    Five Pizza Tips
+                    What Is Google Shopping?
                   </a>
                 </div>
               </li>
@@ -40,45 +40,33 @@ const first = () => {
           </nav>
 
           <h1 className="mt-6 text-4xl font-bold text-gray-900 sm:text-5xl">
-            Five pizza tips you need to learn now
+           What Is Google Shopping & How Does It Work?
           </h1>
 
           <div className="flex items-center justify-center mt-8 space-x-2">
             <p className="text-base font-medium text-gray-900">
               <a href="#" title="" className="">
-                Food
+                Marketing
               </a>
             </p>
             <span className="text-base font-medium text-gray-500">
               •
             </span>
             <p className="text-base font-medium text-gray-500">
-              November 22, 2021
+              November 2, 2022
             </p>
           </div>
         </div>
 
         <div className="mt-8 sm:mt-12 lg:mt-16 aspect-w-16 aspect-h-9 lg:aspect-h-6">
-          <img className="object-cover w-full h-full" src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/blog-content/1/cover.png" alt="">
+          <img className="object-cover w-full h-full" src="/googleshop.png" alt="">
           </img>
         </div>
 
         <div className="grid grid-cols-1 mt-8 sm:mt-12 lg:mt-16 lg:grid-cols-12 lg:gap-x-12 gap-y-8">
           <div className="lg:col-span-2 lg:self-start lg:sticky lg:top-6 lg:order-last">
             <ul className="flex space-x-3 lg:space-x-0 lg:space-y-4 lg:flex-col lg:items-center">
-              <li>
-                <a href="#" ti0tle=""
-                  className="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 border border-gray-200 rounded-full hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
-                  <span className="sr-only">
-                    Discord
-                  </span>
-                  <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1 14.66 14.66 0 0 0-4.58 0 10.14 10.14 0 0 0-.53-1.1 16 16 0 0 0-4.13 1.3 17.33 17.33 0 0 0-3 11.59 16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83 3.39 3.39 0 0 0 .42-.33 11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84 12.41 12.41 0 0 0 1.08 1.78 16.44 16.44 0 0 0 5.06-2.59 17.22 17.22 0 0 0-3-11.59 16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.93 1.93 0 0 1 1.8 2 1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.92 1.92 0 0 1 1.8 2 1.92 1.92 0 0 1-1.8 2z">
-                    </path>
-                  </svg>
-                </a>
-              </li>
+        
 
               <li>
                 <a href="#" title=""
@@ -94,19 +82,7 @@ const first = () => {
                 </a>
               </li>
 
-              <li>
-                <a href="#" title=""
-                  className="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 border border-gray-200 rounded-full hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
-                  <span className="sr-only">
-                    Telegram
-                  </span>
-                  <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                      d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z">
-                    </path>
-                  </svg>
-                </a>
-              </li>
+            
 
               <li>
                 <a href="#" title=""
@@ -129,20 +105,19 @@ const first = () => {
           <article
             className="prose lg:col-span-8 max-w-none prose-gray prose-blockquote:px-8 prose-blockquote:py-3 prose-blockquote:lg:text-xl prose-blockquote:font-medium prose-blockquote:text-gray-900 prose-blockquote:border-gray-900 prose-blockquote:border-l-2 prose-blockquote:lg:leading-9 prose-blockquote:not-italic prose-blockquote:bg-gray-100 prose-blockquote:text-lg prose-blockquote:leading-8">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id pellentesque ut pellentesque varius amet
-              mauris.
-              Tempor,
-              risus, congue gravida nulla tincidunt nec diam. Tincidunt magnis eu, vitae dictumst commodo dolor in.
-              Aenean
-              dictumst
-              risus posuere a at id fermentum nibh. Luctus nunc bibendum duis egestas scelerisque.
-            </p>
-            <p>
-              Maecenas in pharetra hendrerit neque, tellus eu. Arcu tempus, vel blandit adipiscing a sed cursus. Augue
-              vestibulum
-              tempus lectus gravida condimentum mauris iaculis. Sodales imperdiet id maecenas molestie id.
-            </p>
+            When most hear the word “Google,” their immediate first thought is a verb. To "Google" is to search for information online. While looking up the best recipes and becoming an overnight DIY medical professional is a large part of the traditional Google experience, Google is far more than a simple search engine.
 
+            In particular, Google Shopping is playing an increasingly important role in the overall Google ecosystem for businesses and entrepreneurs looking to sell more products and grow their brand.
+            </p>
+            <br></br>
+            <p>
+            While not all experiments at Google have panned out (Google+, anyone?), consumers are increasingly turning to the Google Shopping interface to make purchases online—and business owners are beginning to pay attention to the incredible value it can provide.
+
+How does Google Shopping work? And why are so many ecommerce retailers and entrepreneurs using Google Shopping to sell products and grow their brands?
+
+In this brief guide, we will cover what Google Shopping is, and why its important for many businesses across a variety of industries.
+            </p>
+            <br></br>
             <blockquote>
               <p>
                 Tincidunt magnis eu, vitae dictumst commodo dolor in. Aen ean dictumst risus posuere a at id fermentum
