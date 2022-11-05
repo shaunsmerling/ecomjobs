@@ -28,7 +28,7 @@ const companylist = () => {
 
             <div className="flow-root mt-8">
                 <div className="-my-5 divide-y divide-gray-200">
-                <Link href="/company/634f75a39f621dc748de274d" >
+                <Link href="/company/6365d74ea1e5cfc099f83bfd" >
                     <div className="py-5  hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0 ">
@@ -40,14 +40,14 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/634f75a39f621dc748de274d"  className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/6365d74ea1e5cfc099f83bfd"  className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
                                     
                            
                             </div>
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/634f75a39f621dc748de2771" >
+                    <Link href="/company/6363a3a6d20d4aec518386c6" >
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
@@ -59,7 +59,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/634f75a39f621dc748de2771" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/6363a3a6d20d4aec518386c6" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                                
                             </div>
@@ -78,7 +78,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/63573aebbb24674cc4615049" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/6365c517a1e5cfc099f83bcc" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                             </div>
                         </div>
@@ -96,7 +96,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/634f75a39f621dc748de2770" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/6365c80aa1e5cfc099f83bd5" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                             </div>
                         </div>
@@ -114,7 +114,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/63573aebbb24674cc4615048" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/6365ca58a1e5cfc099f83bdf" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                              
                              
@@ -134,7 +134,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/63573aebbb24674cc4615048" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/6365cd5da1e5cfc099f83be5" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                              
                              
@@ -154,7 +154,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/63573aebbb24674cc4615048" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/6365d237a1e5cfc099f83bf0" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                              
                              
@@ -174,7 +174,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/63573aebbb24674cc4615048" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/6365d478a1e5cfc099f83bf6" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                              
                              
@@ -194,7 +194,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/63573aebbb24674cc4615048" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/6365d74ea1e5cfc099f83bfd" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                              
                              
@@ -214,7 +214,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/63573aebbb24674cc4615048" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/6365d9e8a1e5cfc099f83c03" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                              
                              
@@ -234,7 +234,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/63573aebbb24674cc4615048" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/6365dad2a1e5cfc099f83c08" title="" className=" text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                              
                              

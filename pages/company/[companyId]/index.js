@@ -63,8 +63,6 @@ function Company() {
     }
   }
 
-  console.log(jobs.type)
-
 
   return (
     <div className="bg-gray-100 pb-10">
