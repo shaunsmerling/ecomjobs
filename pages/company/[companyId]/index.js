@@ -82,15 +82,15 @@ function Company() {
         <section class="relative">
           <div class="container mx-auto  px-4">
             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-96">
-              <div class="mx-40 lg:mx-0">
+              <div class="mx-10 lg:mx-0">
                 <div class="flex flex-wrap justify-center">
-                  <div class="w-full lg:w-3/12  lg:order-2 flex justify-center">
+                  <div class=" lg:w-3/12  lg:order-2 flex justify-center">
                     <div class="relative">
                       <img class=" p-10 lg:p-10 border-2 border-gray-100 bg-white rounded-full  -mt-16 " src={`/images/${companyData.logo}`}/>
                     </div>
                   </div>
                   <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
-                    <div class="py-6 px-3 mt-32 sm:mt-0"></div>
+                    <div class="py-6 px-3 lg:mt-32 sm:mt-0"></div>
                   </div>
                   <div class="w-full lg:w-4/12 px-4 lg:order-1">
                     <div class="flex justify-center py-4 lg:pt-4 pt-8">
@@ -112,17 +112,17 @@ function Company() {
                     </div>
                   </div>
                 </div>
-                <div class="text-center mt-4">
-                  <h3 class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+                <div class="px-0 lg:mx-0 text-center mt-4">
+                  <h3 class="text-xl lg:text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
                     {companyData.company_name}
                   </h3>
 
-                  <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
+                  <div class="text-sm leading-normal  mb-2 text-blueGray-400 font-bold uppercase">
                     <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
                     {companyData.city} {companyData.location}
                   </div>
 
-                  <p className="text-xl lg:px-10 mx-auto mt-10 mb-8 ">
+                  <p className="text-md lg:text-xl lg:px-10 mx-auto mt-10 mb-8 ">
                     {" "}
                     {companyData.mission
                       ? companyData.mission
@@ -152,17 +152,17 @@ function Company() {
 
 
              
-                  <div className={`flex flex-col -mx-32 lg:mx-20 pb-2`}>
+                  <div className={`flex flex-col lg:mx-20 pb-2`}>
                   <a href={`/job/${job?.id}`} target="_blank">
-                <ul className={`  text-left mt-4  border-4 rounded-lg flex hover:bg-gray-100   hover:underline`}>
-                <img className="z-1 mt-2 ml-4 w-20 h-20 rounded-full border border-[#17614A] border-2 " src={`/images/${job?.logo}`} ></img>
+                <ul className={`  -mx-10 lg:-mx-0 text-left mt-4  border-4 rounded-lg flex hover:bg-gray-100   hover:underline`}>
+                <img className="z-1 mt-6 ml-4 w-12 h-12 lg:w-20 lg:h-20 rounded-full border border-[#17614A] border-2 " src={`/images/${job?.logo}`} ></img>
                   <li className="w-full ml-2 my-4 box-border ">
                    
                     
-                    <p className=" ml-2 mr-10 -mb-2 z-1 mt-2 text-2xl text-[#17614A] z-0 font-bold pb-2 pr-20 ">{job?.job_position}</p>
-                    <span className=" ml-2">{getDate(job?.postedat)}</span>
+                    <p className=" ml-2 mr-2 lg:mr-10 -mb-2 z-1 text-md lg:text-2xl text-[#17614A] z-0 font-bold pb-2 pr-20 ">{job?.job_position}</p>
+                    <span className=" text-xs ml-2">{getDate(job?.postedat)}</span>
 
-                    <p className="float-right mr-4 text-[12px] -mt-6 bold  text-sky-200 lg:text-xl">{job?.job_type} | {job?.location}</p>
+                    <p className="float-right mr-4 text-[10px] -mt-6 bold  text-sky-200 lg:text-xl">{job?.job_type} | {job?.location}</p>
                       
                   </li>
                 </ul>
