@@ -108,52 +108,7 @@ const Blog = () => {
             </div>
           </div>
           </Link>
-          <Link href="/blog/third">
-          <div
-            className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg   hover:border-2 hover:-translate-y-1">
-               
-              <img className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
-                src="/dropship.jpeg" alt="">
-                </img>
-            <div className="flex-1 px-4 py-5 sm:p-6">
-                <p className="text-lg font-bold text-gray-900">
-                    What Is Dropshipping and How Does It Work? (2022)
-                </p>
-                <p className="mt-3 text-sm font-normal leading-6 text-gray-500 line-clamp-3">
-                Here is everything you need to know about the benefits of dropshipping for online store owners, and how you can start today.
-                </p>
-                </div>
-           
-            <div className="px-4 py-5 mt-auto border-t border-gray-100 sm:px-6">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-2">
-                  <p className="text-sm font-medium text-gray-900">
-                    <a>
-                     Logistics
-                    </a>
-                  </p>
-                  <span className="text-sm font-medium text-gray-900">
-                    •
-                  </span>
-                  <p className="text-sm font-medium text-gray-900">
-                    6 Mins Read
-                  </p>
-               
-                </div>
-
-                <a href="/blog/third" title="" className="" role="button">
-                  <svg className="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-[#17614A]"
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <line x1="17" y1="7" x2="7" y2="17"></line>
-                    <polyline points="8 7 17 7 17 16"></polyline>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          </Link>
+          
         </div>
       </div>
     </section>

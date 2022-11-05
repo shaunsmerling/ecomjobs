@@ -103,14 +103,14 @@ const first = () => {
           <div className="hidden lg:block lg:col-span-2"></div>
 
           <article
-            className="prose lg:col-span-8 max-w-none prose-gray prose-blockquote:px-8 prose-blockquote:py-3 prose-blockquote:lg:text-xl prose-blockquote:font-medium prose-blockquote:text-gray-900 prose-blockquote:border-gray-900 prose-blockquote:border-l-2 prose-blockquote:lg:leading-9 prose-blockquote:not-italic prose-blockquote:bg-gray-100 prose-blockquote:text-lg prose-blockquote:leading-8">
-            <p>
+            className="prose lg:col-span-8 max-w-none prose-gray prose-blockquote:px-8 prose-blockquote:py-3 prose-blockquote:lg:text-xl prose-blockquote:font-medium prose-blockquote:text-gray-900 prose-blockquote:border-gray-900 prose-blockquote:border-l-2 prose-blockquote:lg:leading-9 prose-blockquote:not-italic prose-blockquote:bg-gray-100 prose-blockquote:text-2xl prose-blockquote:leading-8">
+            <p className="text-xl">
             When most hear the word “Google,” their immediate first thought is a verb. To "Google" is to search for information online. While looking up the best recipes and becoming an overnight DIY medical professional is a large part of the traditional Google experience, Google is far more than a simple search engine.
 
             In particular, Google Shopping is playing an increasingly important role in the overall Google ecosystem for businesses and entrepreneurs looking to sell more products and grow their brand.
             </p>
             <br></br>
-            <p>
+            <p className="text-xl">
             While not all experiments at Google have panned out (Google+, anyone?), consumers are increasingly turning to the Google Shopping interface to make purchases online—and business owners are beginning to pay attention to the incredible value it can provide.
 
 How does Google Shopping work? And why are so many ecommerce retailers and entrepreneurs using Google Shopping to sell products and grow their brands?
@@ -119,66 +119,88 @@ In this brief guide, we will cover what Google Shopping is, and why its importan
             </p>
             <br></br>
             <blockquote>
-              <p>
-                Tincidunt magnis eu, vitae dictumst commodo dolor in. Aen ean dictumst risus posuere a at id fermentum
-                nibh. Luctus
-                nunc bibendum duis egestas scelerisque.
+            <h2 className="text-3xl font-bold"> What Is Google Shopping? </h2>
+            <br></br>
+              <p className="text-xl">
+              From a consumer perspective, Google Shopping is a specialized part of Google, where users can discover and purchase products from local businesses and other online retailers. As Google itself notes, “When you use Google Shopping, youre browsing products from advertisers and sellers who have chosen to feature their products on Google Shopping.” Merchants accepted into Google Shopping generally are seen as higher quality than brands that might not make the cut.
+
+On the business side, Google Shopping is powered by two platforms: Googles Ads and Google Merchant Center. Google Merchant Center is where your product feed lives. Here you can customize your offerings and optimize your product listings to drive more sales and grab a larger part of the market share pie in your industry. Having your products listed on the Google Shopping tab is often an immediate trust builder. Because you have to be accepted into the Google Shopping platform, not every brand or product will be listed.
               </p>
             </blockquote>
-
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id pellentesque ut pellentesque varius amet
-              mauris.
-              Tempor,
-              risus, congue gravida nulla tincidunt nec diam. Tincidunt magnis eu, vitae dictumst commodo dolor in.
-              Aenean
-              dictumst
-              risus posuere a at id fermentum nibh. Luctus nunc bibendum duis egestas scelerisque.
+            
+            <img className="object-cover w-full py-10" src="/googleshoppage.jpeg" alt=""/>
+            <br></br>
+            <p className="text-xl">
+            Whether you are a marketer or business owner, you can apply for a Google Shopping account, and its free to join. However, like with traditional Google Ads, you can also run paid advertising through Google Shopping. With Google Shopping you can run targeted local inventory ads, or run a promotion for your best selling product. Similar to Google Ads, youre only charged when a prospective customer clicks your products, and theres no fee to list products if accepted into the Google Shopping platform.
             </p>
-
-            <p>
-              Maecenas in pharetra hendrerit neque, tellus eu. Arcu tempus, vel blandit adipiscing a sed cursus. Augue
-              vestibulum
-              tempus lectus gravida condimentum mauris iaculis. Sodales imperdiet id maecenas molestie id.
+            <br></br>
+            <h2 className="text-3xl font-bold"> Four benefits of using Google Shopping as a business owner: </h2>
+            <br></br>
+            <h2 className="text-xl font-bold"> 1. Trust by association </h2>
+            <br></br>
+            <p className="text-xl">
+            One of the biggest benefits to a brand of joining Google Shopping is that your products and services will be seen alongside other big name brands (think Walmart and Target, for example) on the Google Shopping feed, which naturally gives your brand some authority. Because Google Shopping is by application, the quality of products and brands in the shopping tab tend to be higher. This of course doesn’t mean you’re going to sell as much as a big brand retailer might, but it does naturally provide strong social proof for online stores.
             </p>
-
-            <ul className="marker:text-gray-900">
-              <li>
-                Id pellentesque ut pellentesque varius amet mauris.
-              </li>
-
-              <li>
-                Tempor, risus, congue gravida nulla tincidunt.
-              </li>
-
-              <li>
-                Tincidunt magnis eu, vitae dictumst.
-              </li>
-
-              <li>
-                Aenean dictumst risus posuere a at id fermentum nibh.
-              </li>
-            </ul>
-
-            <img className="object-cover w-full" src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/blog-content/1/image.png" alt="">
-            </img>
-            <h2>
-              How to start the process?
-            </h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id pellentesque ut pellentesque varius amet
-              mauris.
-              Tempor,
-              risus, congue gravida nulla tincidunt nec diam. Tincidunt magnis eu, vitae dictumst commodo dolor in.
-              Aenean
-              dictumst
-              risus posuere a at id fermentum nibh. Luctus nunc bibendum duis egestas scelerisque.
+            <br></br>
+            <h2 className="text-xl font-bold"> 2. Better Qualified Leads </h2>
+            <br></br>
+            <p className="text-xl">
+            Unlike the traditional Google search, where users might not actually be looking to purchase anything as the result of their search, when a user goes to shopping.google.com that’s usually a sign they’re looking to make a purchase at that point or in the very near future. Getting exposure on Google Shopping can often lead to increased sales, simply due to the fact that those using Google Shopping are actively looking to purchase a product. Not everyone using Google Shopping will make a purchase, but in general users are more intent on making a purchase than a random individual browsing Google Search.
             </p>
-            <p>
-              Maecenas in pharetra hendrerit neque, tellus eu. Arcu tempus, vel blandit adipiscing a sed cursus. Augue
-              vestibulum
-              tempus lectus gravida condimentum mauris iaculis. Sodales imperdiet id maecenas molestie id.
+            <br></br>
+            <h2 className="text-xl font-bold"> 3. Designed with shoppers in mind </h2>
+            <br></br>
+            <p className="text-xl">
+            Another benefit of Google Shopping is the shopping tab interface was designed specifically to highlight quality product photos and product descriptions and make it easier for consumers to compare and contrast products.
+
+While the interface feels similar to the traditional Google Search, Google Shopping is optimized for images and quickly highlighting product features, especially when using the platform on a mobile device.
+
+For example, if you are looking for a tablet, the Google Shopping results might look like this.
             </p>
+            
+            <img className="object-cover w-full py-10" src="/googleshopprod.jpeg" alt=""/>
+            <p className="text-xl">Here you can see high-level features, reviews, and additional images to help you make the right choice. No unnecessary clutter or steps throughout the entire purchasing process for the user.</p>
+            <br></br>
+            <h2 className="text-xl font-bold"> 4. Excellent reporting and metrics with Google Shopping Ads</h2>
+            <br></br>
+            <p className="text-xl">
+            Another benefit of Google Shopping is that Google has really invested in making reporting and metrics easy to track when running Google Shopping ads. Google ultimately wants the businesses accepted into their platform to succeed, as that means users are being exposed to quality businesses and products.
+
+While Google Shopping is a newer product of Google’s, many businesses are seemingly getting a very high ROI from investing in the platform. Although different from Google Ads the overall process is quite similar to how experienced marketers are used to.
+            </p>
+            <br></br>
+            <h2 className="text-3xl font-bold"> Getting started with Google Shopping ads</h2>
+            <br></br>
+            <p className="text-xl">
+            Shopping ads on Google is where your actual shopping campaigns live and where you’ll set your budget, manage your bids, gain insights, and make optimizations based on performance.
+
+The setup and management of Shopping ads on Google is quite a bit different from setting up traditional text ads. With text ads, you’re creating campaigns, ad groups and ads that are focused around keywords that you choose.
+
+With Google Shopping, Google determines when your product listing ads show up. They consider your feed, your site, and your bids to determine what search queries trigger your ads. Because of this, setting up shopping ads has some strong similarities to SEO. Google is constantly tweaking its algorithm to ensure only the most relevant and quality products show up in search for its users, so it pays to invest in putting your best foot forward when getting started.
+
+Success with Google Shopping boils down mainly to three main areas:
+            </p>
+            <br></br>
+            <p className="text-xl"><span className="font-bold">1. Feed & Creative Optimization: </span>
+           
+            Or, as we like to call it, feed mastery. This covers a lot of ground, including your product data, product images, and price.
+            </p>
+            <br></br>
+            <p className="text-xl"><span className="font-bold">2. Bidding: </span>
+           
+            There are several ways to bid successfully and the best techniques are constantly changing. We’ve seen shifts in bidding strategies double the return on ad spend for different campaigns.
+            </p>
+            <br></br>
+            <p className="text-xl"><span className="font-bold">3. Monitoring and Optimization: </span>
+           
+            One of the great benefits of Google Shopping is the ability to see granular performance data and to make granular optimizations. Proper monitoring and optimization can take a good campaign and make it great.
+            </p>
+            <br></br>
+            <p className="text-xl">There’s certainly more that goes into finding success with Google Shopping ads, but for those that are looking for another avenue to drive traffic and sales, it’s wise to consider giving Google Shopping a try</p>
+            
+      
+
+            
           </article>
         </div>
       </div>
