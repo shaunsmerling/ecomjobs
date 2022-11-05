@@ -18,11 +18,11 @@ function featured() {
                 
             
          
-              <div id="scroll-element" className="hidden px-2 drop-shadow w-max  lg:flex lg:text-center lg:drop-shadow lg:align-center ">
+              <div id="scroll-element" className=" px-2 drop-shadow w-full lg:flex lg:text-center lg:drop-shadow lg:align-center ">
                 
               <Link href="/company/6363a3a6d20d4aec518386c6" >
-              <div  className=" mx-6 lg:mx-10 pb-2">
-              <ul  className={`  rounded-lg text-left mb-2  flex hover:text-white bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
+              <div  className="  lg:mx-10 pb-2">
+              <ul  className={`  rounded-lg text-left mb-2  mx-auto flex hover:text-white bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-none border-2 " src="./images/harrys.jpeg" ></img>
                 <li className="w-full ml-6 mt-8 mb-4 box-border">
                 <h3 className="text-2xl font-semibold pb-2 ">Harrys</h3>

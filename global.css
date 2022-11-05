@@ -110,8 +110,11 @@
 
 .ais-Dropdown-button {
   width: 100px;
-  height: 30px;
-  font-size: 12px;
+  height: 60px;
+  font-size: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 20px;
   
 }
 
@@ -318,5 +321,38 @@ h1 {
   to {
     left: -100%;
   }
+}
+
+@media only screen and (max-width: 375px) {
+
+#scroll-parent {
+  position: relative;
+  width: 100vw;
+  height: 20rem;
+  overflow-x: hidden;
+
+}
+
+#scroll-element {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  display: flex;
+  align-items: center;
+  animation: primary 30s linear infinite;
+  
+}
+
+
+@keyframes primary {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
 }
 
