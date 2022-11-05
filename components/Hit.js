@@ -47,7 +47,7 @@ function Hit({ hit }) {
     <Link href={`/job/${hit._id}`} hit={hit} >
     <div className={`flex flex-col mx-1 lg:mx-20 pb-2  ${hit.featured && 'text-xs '}`}>
         <ul className={`  text-left mb-2  flex hover:bg-gray-100   hover:underline`}>
-        <img className="z-1 mt-4 ml-4 w-20 h-20 rounded-full border border-[#17614A] border-2 " src={hit.logo} ></img>
+        <img className="z-1 mt-4 ml-4 w-20 h-20 rounded-full border border-[#17614A] border-2 " src={`./images/${hit.logo}`} ></img>
           <li className="w-full ml-2 mt-2 mb-4 box-border ">
             <p className=" ml-2 mt-2 z-1 text-xl text-[#17614A] pb-1 hover:no-underline">
               {hit.company_name} 
