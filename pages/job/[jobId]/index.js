@@ -118,7 +118,7 @@ function Job() {
           <a
                           target="_blank"
                           href={jobData.application_url}
-                            class="flex float-right  justify-center w-auto text-xs px-6 mr-4 lg:text-lg  -mt-20 rounded-full lg:px-10   lg:mr-10  py-4  text-base  font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+                            class="flex float-right w-auto text-xs px-10 mr-4 lg:text-lg  -mt-20 rounded-full lg:pr-20 lg:pl-20   py-4  text-base  font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
                         >
                            Apply Now
                         </a>

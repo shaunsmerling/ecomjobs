@@ -39,7 +39,7 @@ function PostAJob() {
         company_name: companyName,
         company_url: companyUrl,
         job_position: jobPosition,
-        logo: logo,
+        logo: companyLogo,
         job_category: jobCategory,
         postedat: postedat,
         job_type: jobType,
@@ -82,32 +82,9 @@ function PostAJob() {
     applicationUrl,
   } = fields;
 
-  const [selectedFile, setSelectedFile] = useState()
-    const [preview, setPreview] = useState()
-
-    // create a preview as a side effect, whenever selected file is changed
-    useEffect(() => {
-        if (!selectedFile) {
-            setPreview(undefined)
-            return
-        }
-
-        const objectUrl = URL.createObjectURL(selectedFile)
-        setPreview(objectUrl)
-
-        // free memory when ever this component is unmounted
-        return () => URL.revokeObjectURL(objectUrl)
-    }, [selectedFile])
-
-    const onSelectFile = e => {
-        if (!e.target.files || e.target.files.length === 0) {
-            setSelectedFile(undefined)
-            return
-        }
-
-        // I've kept this example simple by using the first image instead of multiple
-        setSelectedFile(e.target.files[0])
-    }
+  
+    const [companyLogo, setCompanyLogo] = useState()
+ 
 
 
   return (
@@ -134,6 +111,8 @@ function PostAJob() {
         </div>
     </div>
 </div>
+
+
 
 <div class="pb-8 bg-white">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -203,9 +182,31 @@ function PostAJob() {
             <div class="sm:flex sm:items-center sm:space-x-8">
                 <label for="" class="block text-sm font-bold text-gray-900"> Upload a logo: </label>
                 <div class="relative mt-2 sm:mt-0 sm:flex-1">
-                    <input type="file" name="logo" accept="image/*" required onChange={onSelectFile}
-                     class="block w-full px-4 border py-3 placeholder-gray-500 border border-gray-300 
-                     rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600" />
+                    <input 
+                    type="file" 
+                    name="logo" 
+                    accept="image/*" 
+                
+                    required 
+                    onChange={(e) => {
+                        if (e?.target?.files?.[0]) {
+                            const file = e.target.files[0]
+                            const reader = new FileReader();
+                            reader.onloadend = () => {
+                                setCompanyLogo(reader.result)
+                            }
+                            reader.readAsDataURL(file)
+                            handleChange
+                        }
+                     
+                    }}
+                    
+                    class="block w-full px-4 border py-3 placeholder-gray-500 border border-gray-300 
+                     rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600"
+                      /> 
+                     
+                      {companyLogo && <img src={companyLogo}  className="mt-4 object-cover" />}
+
                 </div>
             </div>
         </div>
@@ -227,6 +228,7 @@ function PostAJob() {
                     <select value={jobCategory} onChange={handleChange} required name="jobCategory" class="block w-full py-3 pl-12 pr-10 border-gray-300 border rounded-lg focus:outline-none focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm">
                         <option name="null" value="null">Pick an option</option>
                         <option name="Customer Service"  value="Customer Service">Customer Service</option>
+                        <option name="Marketing"  value="Marketing">Marketing</option>
                         <option name="Creative" value="Creative">Creative</option>
                         <option name="Web Development" value="Web Development">Web Development</option>
                         <option name="People & HR" value="People & HR">People & HR</option>
@@ -401,7 +403,7 @@ function PostAJob() {
 
                         <button
                             type="submit"
-                            class="flex relative items-center justify-center w-full sm:w-auto mx-auto px-40 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg  hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+                            class="flex relative items-center justify-center  sm:w-auto mx-auto w-1/2 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg  hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
                         >
                            Post Your Job
                         </button>
@@ -410,7 +412,122 @@ function PostAJob() {
            
           </div>
         </form>
-        <div className="hidden lg:block">
+<div className="hidden lg:block bg-gray-100 pb-10">
+        
+        <div className="text-center mt-10 pt-10 mx-48">
+            <div className=" mx-28">
+              <ul className="rounded-lg text-left  pl-10 py-4 flex  bg-white hover:bg-gray-100  bg-white  shadow-lg">
+              <img 
+              className="mx-auto ml-10 border-2 rounded-full border-[#17614A] my-auto h-14 w-14 " 
+              src={companyLogo ? `${companyLogo}` : "/mock.png"}
+              name="image"
+
+              ></img>
+              <li className="w-full ml-2 mt-2 mb-4 box-border ">
+                <p className=" ml-2 mt-2 z-1 text-sm text-[#17614A] pb-1">
+                {companyName? `${companyName}` : "Company"}
+                </p>
+                <p className=" ml-2 -mb-2 z-1 text-xl text-[#17614A] z-0 font-bold pb-2 pr-20">{jobPosition ? `${jobPosition}` : "Position"}</p>
+                <p className="float-right mr-4 text-[8px] -mt-10 bold font-bold lg:text-sm">{jobType ? `${jobType}` : "Remote"} | {location ? `${location}` : "USA"}</p>
+              </li>
+            </ul>
+            </div>
+            </div>
+            <br></br>
+<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"/>
+<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"/>
+
+<main class="profile-page">
+  <section class="relative block  h-500-px">
+    <div class="absolute top-0 w-full h-full bg-center bg-cover" >
+      
+    </div>
+    
+  </section>
+  <section class="relative">
+    <div class="container mx-auto  px-4">
+      <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-96">
+        
+          <div>
+            
+        
+          
+         
+          <div class="mt-4 ml-6">
+
+          <img src={companyLogo ? `${companyLogo}` : "/mock.png"}alt="..." class="my-10 border-4  max-w-120-px"/>
+          
+          <a
+                          target="_blank"
+                          href={applicationUrl}
+                            class="flex float-right  justify-center w-auto text-xs px-6 mr-4 lg:text-lg  -mt-20 rounded-full lg:px-10   lg:mr-10  py-4  text-base  font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+                        >
+                           Apply Now
+                        </a>
+                   
+       
+
+            <h2 class="text-3xl my-4 text-black font-bold">{companyName ? `${companyName} ` : "Company "}</h2>
+       
+
+            <div class="text-sm leading-normal  text-blueGray-400 font-bold uppercase">
+              <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
+              {city ? `${city}` : "Los Angeles"},  {location ? `${location}` : "USA"} 
+            </div>
+            
+
+ 
+            <div class=" text-blueGray-600 my-2">
+              <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i><a href={companyUrl} className="text-sky-400">{companyUrl ? `${companyUrl}` : "https://www.ecom-jobs.com"} </a>
+            </div>
+          
+            </div>
+          </div>
+          <div className="text-center">
+          <h2 className="sm:text-2xl lg:text-5xl my-4 mx-auto font-bold underline ">{jobPosition ? `${jobPosition}` : "Position"}</h2>
+          <h3 className="my-1 text-md lg:text-xl text-[#6879a5]">  {jobCategory ? `${jobCategory}` : "Marketing"}  •   {jobType ? `${jobType}` : "Remote"}  • 1s ago</h3>
+          </div>
+          <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
+         
+            <div class="flex flex-wrap justify-center">
+              <div class="w-full lg:w-9/12 px-4">
+              
+
+              <p>{companyDescription ? `${companyDescription} ` : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}</p>
+            <br></br>
+            <br></br>
+           
+            <p>{jobDescription ? `${jobDescription} ` : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}</p>
+            <br></br>
+            <br></br>
+           
+            <p>{jobRequirements ? `${jobRequirements} ` : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}</p>
+            <br></br>
+            <br></br>
+            
+
+<a
+     target="_blank"
+    href={applicationUrl}
+    class="inline-flex relative items-center justify-center w-full sm:w-auto px-8 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg  hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+>
+   Apply Now
+</a>
+
+
+            
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </section>
+</main>
+    </div>
+
+        {/*<div className="hidden lg:block">
         <div className="text-center my-6">
         <p className="font-bold text-3xl my-2 text-[#17614A]">Preview </p>
         <p>Here's a preview of how your job post will look like</p>
@@ -489,9 +606,9 @@ function PostAJob() {
         </div>
       
         </div>
-        </div>
-        <Preview/>
-        </div>
+        </div>*/}
+        <Preview/> 
+        </div> 
    
   );
 }
