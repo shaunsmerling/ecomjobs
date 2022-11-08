@@ -97,10 +97,10 @@ const handleSubmit = (e) => {
                     </img>
                   <div className="ml-4">
                     <p className="text-base font-semibold text-white">
-                      Josh Macari
+                      Josh Platis 
                     </p>
                     <p className="text-sm font-normal text-gray-300">
-                      Co-Founder, OmadaGolf.com
+                      Co-Founder, PurpleLotus.com
                     </p>
                   </div>
                 </div>

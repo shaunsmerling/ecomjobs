@@ -2,6 +2,17 @@ import React from 'react';
 
 const second = () => {        
     return (
+      <div>
+      <Head>
+      <title>
+   How To Build Your Own Brand From Scratch in 7 Steps | EcomJobs
+      </title>
+      <meta
+        name="description"
+        content="Whether you’ve got nothing but a business idea or want to pivot your existing branding design, here’s what you need to know about building a strong brand identity for your business."
+        key="desc"
+      />
+    </Head>
       <section className="py-12 bg-white sm:py-16 lg:py-20">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-xl mx-auto text-center">
@@ -398,6 +409,7 @@ Whether or not the best way to build a brand for you involves focusing on a miss
         </div>
       </div>
     </section>
+    </div>
     )
 }
 export default second;

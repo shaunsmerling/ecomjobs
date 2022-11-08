@@ -7,6 +7,7 @@ import Preview from "../components/preview";
 
 
 
+
 function PostAJob() {
   const [fields, setFields] = useState({
     email: "",
