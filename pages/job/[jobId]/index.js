@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import {Helmet} from "react-helmet";
-import Link from "next/link";
+import {NextSeo} from "next-seo";
 
 
 
 function Job() {
+
+
   const [jobData, setJobData] = useState({
     company_name: "",
     company_url: "",
@@ -89,6 +91,30 @@ function Job() {
   return (
     
     <div className="bg-gray-100 pb-10">
+      <NextSeo
+      title={`${jobData.job_position} | ${jobData.company_name}`}
+      description={`${jobData.job_position} available at ${jobData.company_name}`}
+      openGraph={{
+        url: 'https://www.url.ie/a',
+        title: 'Open Graph Title',
+        description: 'Open Graph Description',
+        images: [
+          {
+            url: 'https://www.example.ie/og-image-01.jpg',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          },
+        ],
+        siteName: 'SiteName',
+      }}
+      twitter={{
+        site: '@ecomjobs_',
+        cardType: 'summary',
+        image: "/logo.png"
+      }}
+    />
       <Helmet>
       (<script className='structured-data-list' type="application/ld+json">{JSON.stringify(data)}</script>)
       </Helmet> 

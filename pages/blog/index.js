@@ -1,9 +1,35 @@
 import React from 'react';
 import Link from 'next/link';
+import { NextSeo } from 'next-seo';
 
 const Blog = () => {        
     return (
+      
          <section className="py-12 sm:py-16 lg:py-20">
+           <NextSeo
+      title="Blogs | eCommerce Jobs"
+      description="Blog articles relating to marketing, logistics, product, and more." 
+      openGraph={{
+        url: 'https://www.url.ie/a',
+        title: 'Open Graph Title',
+        description: 'Open Graph Description',
+        images: [
+          {
+            url: 'https://www.example.ie/og-image-01.jpg',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          },
+        ],
+        siteName: 'SiteName',
+      }}
+      twitter={{
+        site: '@ecomjobs_',
+        cardType: 'summary',
+        image: "/logo.png"
+      }}
+    />
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center sm:flex sm:items-end sm:space-x-16 sm:text-left">
           <h2 className="max-w-xs text-3xl font-bold text-gray-900 sm:text-4xl shrink-0">
@@ -15,7 +41,7 @@ const Blog = () => {
         </div>
              
         <div className="grid grid-cols-1 gap-6 px-8 mt-12 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:px-0">
-        <Link href="/blog/first">
+        <Link href="/blog/what-is-google-shopping">
           <div
             className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg   hover:border-2 hover:-translate-y-1">
                
@@ -62,7 +88,7 @@ const Blog = () => {
           </div>
           </Link>
 
-          <Link href="/blog/second">
+          <Link href="/blog/build-a-brand-on-shopify">
           <div
             className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg   hover:border-2 hover:-translate-y-1">
                

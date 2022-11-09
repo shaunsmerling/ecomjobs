@@ -1,8 +1,8 @@
 
 import { checkout } from "../checkout.js";
 import { useState } from "react";
-import {useEffect} from "react"
 import Preview from "../components/preview";
+import { NextSeo } from "next-seo";
 
 
 
@@ -93,6 +93,30 @@ function PostAJob() {
 
 
       <div className="">
+      <NextSeo
+      title="Post A Job | eCommerce Jobs"
+      description="Post a job on the #1 eCommerce job board" 
+      openGraph={{
+        url: 'https://www.url.ie/a',
+        title: 'Open Graph Title',
+        description: 'Open Graph Description',
+        images: [
+          {
+            url: 'https://www.example.ie/og-image-01.jpg',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          },
+        ],
+        siteName: 'SiteName',
+      }}
+      twitter={{
+        site: '@ecomjobs_',
+        cardType: 'summary',
+        image: "/logo.png"
+      }}
+    />
         <form onSubmit={handleSubmit} className=" ">
           <div className="mx-6 my-10 flex flex-col ">
 

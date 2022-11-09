@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { NextSeo } from "next-seo";
 
 function Company() {
   const [companyData, setCompanyData] = useState({
@@ -66,6 +67,30 @@ function Company() {
 
   return (
     <div className="bg-gray-100 pb-10">
+      <NextSeo
+      title={`${companyData.company_name} | eCommerce Jobs `}
+      description={`${companyData.company_name} | eCommerce Jobs `}
+      openGraph={{
+        url: 'https://www.url.ie/a',
+        title: 'Open Graph Title',
+        description: 'Open Graph Description',
+        images: [
+          {
+            url: 'https://www.example.ie/og-image-01.jpg',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          },
+        ],
+        siteName: 'SiteName',
+      }}
+      twitter={{
+        site: '@ecomjobs_',
+        cardType: 'summary',
+        image: "/logo.png"
+      }}
+    />
       <link
         rel="stylesheet"
         href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"
@@ -96,7 +121,7 @@ function Company() {
                     <div class="flex justify-center py-4 lg:pt-4 pt-8">
                       <div class="mr-4 p-3 text-center">
                         <span class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">
-                          {jobs.length}
+                          {jobs.length} 
                         </span>
                         <span class="text-sm text-blueGray-400">
                           New Open Roles

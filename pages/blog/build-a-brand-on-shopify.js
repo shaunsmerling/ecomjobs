@@ -1,19 +1,33 @@
 import React from 'react';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
 const second = () => {        
     return (
       <div>
-      <Head>
-      <title>
-   How To Build Your Own Brand From Scratch in 7 Steps | EcomJobs
-      </title>
-      <meta
-        name="description"
-        content="Whether you’ve got nothing but a business idea or want to pivot your existing branding design, here’s what you need to know about building a strong brand identity for your business."
-        key="desc"
-      />
-    </Head>
+     <NextSeo
+      title="How To Build Your Own Brand From Scratch | Blogs | eCommerce Jobs"
+      description="How To Build Your Own Brand From Scratch" 
+      openGraph={{
+        url: 'https://www.url.ie/a',
+        title: 'Open Graph Title',
+        description: 'Open Graph Description',
+        images: [
+          {
+            url: 'https://www.example.ie/og-image-01.jpg',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          },
+        ],
+        siteName: 'SiteName',
+      }}
+      twitter={{
+        site: '@ecomjobs_',
+        cardType: 'summary',
+        image: "/logo.png"
+      }}
+    />
       <section className="py-12 bg-white sm:py-16 lg:py-20">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-xl mx-auto text-center">
@@ -31,7 +45,7 @@ const second = () => {
                     viewBox="0 0 20 20" aria-hidden="true">
                     <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
                   </svg>
-                  <a href="#" title="" className="ml-2 text-base font-medium text-gray-900">
+                  <a href="/blog" title="" className="ml-2 text-base font-medium text-gray-900">
                     Blog
                   </a>
                 </div>
@@ -81,7 +95,7 @@ const second = () => {
         
 
               <li>
-                <a href="#" title=""
+                <a href="http://www.twitter.com/ecomjobs_/" target="_blank" title=""
                   className="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 border border-gray-200 rounded-full hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
                   <span className="sr-only">
                     Twitter

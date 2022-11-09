@@ -1,8 +1,8 @@
-import Head from "next/head";
 import React from 'react';
 import '../global.css'
 import Navbartwo from "../components/NavBarTwo"
 import Script from "next/script"
+import { NextSeo } from 'next-seo';
 
 
 
@@ -12,15 +12,30 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div>
-      <Head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-            <meta
-            name="description"
-            content="Web site created using create-react-app"
-            />
-      </Head>
+     <NextSeo
+      title="Jobs For the eCommerce Industry"
+      description="Join an eCommerce brand. Help shape the future by working with some of the fastest growing Direct-To-Consumer companies." 
+      openGraph={{
+        url: 'https://www.url.ie/a',
+        title: 'Open Graph Title',
+        description: 'Open Graph Description',
+        images: [
+          {
+            url: 'https://www.example.ie/og-image-01.jpg',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          },
+        ],
+        siteName: 'SiteName',
+      }}
+      twitter={{
+        site: '@ecomjobs_',
+        cardType: 'summary',
+        image: "/logo.png"
+      }}
+    />
       
 <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-K7WC2T06Y5"/>
 <Script
