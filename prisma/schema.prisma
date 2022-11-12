@@ -12,6 +12,7 @@ datasource db {
 
 model Job {
   id                  String  @id @default(auto()) @map("_id") @db.ObjectId
+  jobUrl              String?
   email               String?
   company_name        String?
   company_url         String?

@@ -9,6 +9,7 @@ function Job() {
 
 
   const [jobData, setJobData] = useState({
+    jobUrl: "",
     company_name: "",
     company_url: "",
     company_description: "",
@@ -23,16 +24,17 @@ function Job() {
   });
 
   const router = useRouter();
-  const { jobId } = router.query;
+  const { jobUrl } = router.query;
+  console.log(jobUrl)
 
   useEffect( () => {
-      if (jobId) {
-       fetch("/api/jobs?id=" + jobId, {
+      if (jobUrl) {
+       fetch("/api/jobs?jobUrl=" + jobUrl, {
           method: "GET",
         })
           .then((res) => res.json())
-          .then((jsonResponse) => setJobData(jsonResponse));
-}}, [jobId]);
+          .then((jsonResponse) => setJobData(jsonResponse[0]));
+}}, [jobUrl]);
 
   let data =   
             {
@@ -62,6 +64,7 @@ function Job() {
             "responsibilities": `${jobData.job_requirements}`,
             }
 
+            
 
   function getDate() {
     let date_1 = new Date(jobData.postedat);
@@ -85,7 +88,13 @@ function Job() {
     }
   }
 
-  
+
+
+
+// For job position ("Digital Marketing Manager") at company ("Henkel") it prints henkel-digital-marketing-manager-636630c71c719c263177f82a
+
+
+
 
 
   return (
