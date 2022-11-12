@@ -8,17 +8,8 @@ const random = Math.floor(Math.random() * 100000000)
 const newUrl = job_type.replace(/\s/g, "-") + "-" + company_name.replace(/\s/g, "-") + "-" + job_position.replace(/\s/g, "-") + "-" + random;
 const jobUrl = newUrl.toLowerCase();
 
-console.log(jobUrl)
-
-// 1. Get all documents stored in Mongodb
-     fetch("/api/jobs", {
-        method: "GET",
-      })
-        .then((res) => res.json())
-        .then((jsonResponse) => console.log(jsonResponse[0]));
 
 
-console.log(jobData)
 
 
 

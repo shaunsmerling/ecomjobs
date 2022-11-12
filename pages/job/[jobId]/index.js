@@ -9,7 +9,6 @@ function Job() {
 
 
   const [jobData, setJobData] = useState({
-    jobUrl: "",
     company_name: "",
     company_url: "",
     company_description: "",
@@ -24,17 +23,18 @@ function Job() {
   });
 
   const router = useRouter();
-  const { jobUrl } = router.query;
-  console.log(jobUrl)
+  const { jobId } = router.query;
 
   useEffect( () => {
-      if (jobUrl) {
-       fetch("/api/jobs?jobUrl=" + jobUrl, {
+      if (jobId) {
+       fetch("/api/jobs?id=" + jobId, {
           method: "GET",
         })
           .then((res) => res.json())
-          .then((jsonResponse) => setJobData(jsonResponse[0]));
-}}, [jobUrl]);
+          .then((jsonResponse) => setJobData(jsonResponse));
+}}, [jobId]);
+
+console.log(jobData)
 
   let data =   
             {
