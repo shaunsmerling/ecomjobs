@@ -4,9 +4,9 @@ import {
   getJobById,
   updateJob,
   deleteJob,
-  getJobsByCompanyId
+  getJobsByCompanyId,
 } from "../../prisma/job";
-
+import { generateJobUrl } from "../../script";
 
 // fetch("/api/jobs", {
 //   method: 'POST',
@@ -44,6 +44,13 @@ import {
 //   })
 // });
 
+// Update all jobs
+
+// fetch("/api/jobs?updateAll=true", {
+//     method: "PUT",
+//     body: JSON.stringify({})
+//   })
+
 export default async function handler(req, res) {
   try {
     switch (req.method) {
@@ -72,8 +79,28 @@ export default async function handler(req, res) {
         return res.json(jobs);
       }
       case "PUT": {
-        // Update an existing job
         const body = JSON.parse(req.body);
+        const query = req.query;
+        // Update All Jobs
+        if (query.updateAll) {
+          const jobs = await getAllJobs();
+          jobs.forEach(async (job) => {
+            const jobUrl = generateJobUrl(
+              job.company_name,
+              job.job_position,
+              job.job_type
+            );
+
+            const { id, ...otherDetails } = job;
+            await updateJob(id, {
+              ...otherDetails,
+              jobUrl,
+            });
+          });
+          return res.json({ updated: true });
+        }
+
+        // Update an existing job
         const { id, ...updateData } = body;
         const user = await updateJob(id, updateData);
         return res.json(user);
