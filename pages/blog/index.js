@@ -2,7 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 
-const Blog = () => {        
+const Blog = () => {  
+  
+  
     return (
       
          <section className="py-12 sm:py-16 lg:py-20">

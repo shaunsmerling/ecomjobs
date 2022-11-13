@@ -34,7 +34,7 @@ function Job() {
           .then((jsonResponse) => setJobData(jsonResponse));
 }}, [jobId]);
 
-console.log(jobData)
+
 
   let data =   
             {

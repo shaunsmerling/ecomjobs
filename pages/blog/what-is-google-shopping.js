@@ -26,7 +26,7 @@ const first = () => {
             type: 'image/jpeg',
           },
         ],
-        siteName: 'SiteName',
+        siteName: 'SiteName', 
       }}
       twitter={{
         site: '@ecomjobs_',

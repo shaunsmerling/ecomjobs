@@ -4,8 +4,8 @@ import prisma from "./prisma";
 export const getAllJobs = () => {
   return prisma.job.findMany({});
 };
-export const getJobById = (id) => {
-  return prisma.job.findUnique({ where: { id } });
+export const getJobById = (jobUrl) => {
+  return prisma.job.findUnique({ where: { jobUrl } });
 };
 
 export const getJobsByCompanyId = (company_id) => {

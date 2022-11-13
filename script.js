@@ -1,6 +1,3 @@
-let company_name = "Hobby Craft";
-let job_position = "Janitor";
-let job_type = "Remote";
 
 export function generateJobUrl(company_name, job_position, job_type) {
   const random = Math.floor(Math.random() * 100000000);
