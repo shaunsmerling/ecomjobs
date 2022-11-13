@@ -1,7 +1,7 @@
 import {
   getAllJobs,
   createJob,
-  getJobById,
+  getJobByJobUrl,
   updateJob,
   deleteJob,
   getJobsByCompanyId,
@@ -65,8 +65,8 @@ export default async function handler(req, res) {
         // api/jobs?id=1
         const query = req.query;
         if (query.id) {
-          const job = await getJobById(query.id);
-          return res.json(job);
+          const job = await getJobByJobUrl(query.id);
+          return res.json(job[0]);
         }
 
         if (query.companyId) {
