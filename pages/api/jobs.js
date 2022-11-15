@@ -26,8 +26,10 @@ import { generateJobUrl } from "../../script";
 // })
 
 // fetch("/api/jobs")
+// "GET all jobs
 
 // fetch("/api/jobs?id=632f1aa0bfa79724cbab00f2")
+// "GET" a job by id
 
 // fetch("/api/jobs", {
 //   method: 'PUT',
