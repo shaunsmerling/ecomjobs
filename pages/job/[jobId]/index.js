@@ -103,14 +103,6 @@ function Job() {
       title={`${jobData.job_position} | ${jobData.company_name}`}
       description={`${jobData.job_position} available at ${jobData.company_name}`}
       canonical={`https://www.ecom-jobs.com/job/${jobData.jobUrl}`}
-      openGraph={{
-        type: "website",
-        url: `https://www.ecom-jobs.com/job/${jobData.jobUrl}`,
-        title: `${jobData.job_position}`,
-        description: `${jobData.job_description}`,
-        locale: 'en_EN',
-        siteName: 'EcomJobs',
-      }}
       twitter={{
         handle: '@ecomjobs_',
         site: 'ecom-jobs.com',
