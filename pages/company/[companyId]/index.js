@@ -72,7 +72,7 @@ function Company() {
       description={`${companyData.company_name} | eCommerce Jobs `}
       openGraph={{
         url: 'https://www.url.ie/a',
-        title: 'Open Graph Title',
+        title: 'Hi',
         description: 'Open Graph Description',
         images: [
           {

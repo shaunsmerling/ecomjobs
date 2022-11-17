@@ -20,16 +20,16 @@ myApps = data;
     const job= data[i]
   try {
     await rwClient.v1.tweet(
-      `${job.company_name} is hiring a ${job.job_position}! 
+`${job.company_name} is hiring a ${job.job_position}! 
 
-      📍 ${job.location}
-      💼 ${job.job_type}
+📍 ${job.location}
+💼 ${job.job_type}
 
-      Check below to apply 👇🏼
+Check below to apply 👇🏼
       
-      www.ecom-jobs.com/job/${job.jobUrl} 
+www.ecom-jobs.com/job/${job.jobUrl} 
        
-      #ecommerce #shopify #jobs #hiring`
+#ecommerce #shopify #jobs #hiring`
     );
   } catch (e) {
     console.log(e);

@@ -19,8 +19,8 @@ function MyApp({ Component, pageProps }) {
       description="Join an eCommerce brand. Help shape the future by working with some of the fastest growing Direct-To-Consumer companies." 
       openGraph={{
         url: 'https://www.url.ie/a',
-        title: 'Open Graph Title',
-        description: 'Open Graph Description',
+        title: 'Hi',
+        description: 'Hi',
         images: [
           {
             url: 'https://www.example.ie/og-image-01.jpg',
