@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import {Helmet} from "react-helmet";
-import {NextSeo} from "next-seo";
+import Head from "next/head";
 
 
 
@@ -118,8 +118,16 @@ function Job() {
             type: `images/${jobData.logo}`,
           },
         ],
+        siteName: 'ecom-jobs.com',
       }}
     />
+    <Head>
+    <meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@flickr" />
+<meta name="twitter:title" content={`${jobData.job_position}`}/>
+<meta name="twitter:description" content={`${jobData.job_description}`} />
+
+    </Head>
       <Helmet>
       (<script className='structured-data-list' type="application/ld+json">{JSON.stringify(data)}</script>)
       </Helmet> 
