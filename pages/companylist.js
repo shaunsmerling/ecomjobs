@@ -8,26 +8,6 @@ const companylist = () => {
         <NextSeo
       title="Company List | eCommerce Jobs"
       description="Search our directory of eCommerce companies." 
-      openGraph={{
-        url: 'https://www.url.ie/a',
-        title: 'Open Graph Title',
-        description: 'Open Graph Description',
-        images: [
-          {
-            url: 'https://www.example.ie/og-image-01.jpg',
-            width: 800,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          },
-        ],
-        siteName: 'SiteName',
-      }}
-      twitter={{
-        site: '@ecomjobs_',
-        cardType: 'summary',
-        image: "/logo.png"
-      }}
     />
     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">

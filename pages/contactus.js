@@ -44,26 +44,6 @@ const handleSubmit = (e) => {
 <NextSeo
       title="Contact Us | eCommerce Jobs"
       description="Contact us to find out about available ecommerce jobs, posts, and more." 
-      openGraph={{
-        url: 'https://www.url.ie/a',
-        title: 'Open Graph Title',
-        description: 'Open Graph Description',
-        images: [
-          {
-            url: 'https://www.example.ie/og-image-01.jpg',
-            width: 800,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          },
-        ],
-        siteName: 'SiteName',
-      }}
-      twitter={{
-        site: '@ecomjobs_',
-        cardType: 'summary',
-        image: "/logo.png"
-      }}
     />
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-12 lg:gap-x-16 xl:gap-x-32">

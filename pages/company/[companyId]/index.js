@@ -70,26 +70,6 @@ function Company() {
       <NextSeo
       title={`${companyData.company_name} | eCommerce Jobs `}
       description={`${companyData.company_name} | eCommerce Jobs `}
-      openGraph={{
-        url: 'https://www.url.ie/a',
-        title: 'Hi',
-        description: 'Open Graph Description',
-        images: [
-          {
-            url: 'https://www.example.ie/og-image-01.jpg',
-            width: 800,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          },
-        ],
-        siteName: 'SiteName',
-      }}
-      twitter={{
-        site: '@ecomjobs_',
-        cardType: 'summary',
-        image: "/logo.png"
-      }}
     />
       <link
         rel="stylesheet"
