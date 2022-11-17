@@ -5,6 +5,30 @@ import { NextSeo } from 'next-seo';
 
 const Blog = () => {  
 
+  // const [jobs, setJobs] = useState({
+  //   company_name: "",
+  //   job_type: "",
+  //   job_position: "",
+  //   job_url: "",
+  // })
+
+  // fetch("/api/jobs", {
+  //   method: "GET",
+  // })
+  //   .then((res) => res.json())
+  //   .then((data) => setJobs(data));
+
+  //   for (let i = 0; i < jobs.length; i++) {
+  //     const data = jobs[i]
+  //     console.log(`${data.company_name} is hiring a ${data.job_type} ${data.job_position}! Apply here: https://ecom-jobs.com/job/${jobs.job_url}`)
+  //   }
+    
+
+
+ 
+
+
+
 
     return (
       

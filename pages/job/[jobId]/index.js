@@ -104,16 +104,16 @@ function Job() {
       title={`${jobData.job_position} | ${jobData.company_name}`}
       description={`${jobData.job_position} available at ${jobData.company_name}`}
       openGraph={{
-        url: 'https://www.url.ie/a',
-        title: 'Open Graph Title',
-        description: 'Open Graph Description',
+        url: `https://www.ecom-jobs.com/job/${jobData.jobUrl}`,
+        title: `${jobData.job_position}`,
+        description: `${jobData.job_description}`,
         images: [
           {
-            url: 'https://www.example.ie/og-image-01.jpg',
+            url: `images/${jobData.logo}`,
             width: 800,
             height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
+            alt: `${jobData.company_name}`,
+            type: `images/${jobData.logo}`,
           },
         ],
         siteName: 'SiteName',
