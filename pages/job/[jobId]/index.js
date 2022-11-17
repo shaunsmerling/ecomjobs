@@ -118,8 +118,8 @@ function Job() {
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:domain" content="ecom-jobs.com"/>
 <meta name="twitter:url" content={`https://www.ecom-jobs.com/job/${jobData.jobUrl}`}/>
-<meta name="twitter:title" content={`${jobData.job_position}`}/>
-<meta name="twitter:description" content={`${jobData.job_position}`}/>
+<meta name="twitter:text:title" content={`${jobData.job_position}`}/>
+<meta name="twitter:text:description" content={`${jobData.job_position}`}/>
 <meta name="twitter:image" content={`https://www.ecom-jobs.com/job/${jobData.logo}`}/>
 </Head>
 
