@@ -23,7 +23,7 @@
     "mongodb": "^4.10.0",
     "mongoose": "^6.6.1",
     "next": "^12.3.3",
-    "next-seo": "^5.14.0",
+    "next-seo": "^5.14.1",
     "node-fetch": "^2.6.7",
     "nodemailer": "^6.8.0",
     "react": "^18.2.0",
