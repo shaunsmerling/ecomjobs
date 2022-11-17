@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import {Helmet} from "react-helmet";
 import Head from "next/head";
-import { NextSeo } from "next-seo";
 
 
 
@@ -102,12 +101,11 @@ function Job() {
   return (
     
     <div className="bg-gray-100 pb-10">
-    
     <Head>
     <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@ecomjobs_" />
-<meta name="twitter:title" content={`${jobData.job_position}`}/>
-<meta name="twitter:description" content={`${jobData.job_description}`} />
+<meta name="twitter:text:title" content={`${jobData.job_position}`}/>
+<meta name="twitter:description" content={jobData.job_description} />
 
     </Head>
       <Helmet>
