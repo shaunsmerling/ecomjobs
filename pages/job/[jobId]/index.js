@@ -115,6 +115,9 @@ function Job() {
         handle: '@ecomjobs_',
         site: 'ecom-jobs.com',
         cardType: 'summary',
+        title: `${jobData.job_position}`,
+        description: `${jobData.job_description}`,
+        image: `https://ecom-jobs.com/images/${jobData.logo}`,
       }}
   
     />
