@@ -32,11 +32,6 @@ function MyApp({ Component, pageProps }) {
         ],
         siteName: 'SiteName',
       }}
-      twitter={{
-        site: '@ecomjobs_',
-        cardType: 'summary',
-        image: "/logo.png"
-      }}
     />
       
 <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-K7WC2T06Y5"/>
