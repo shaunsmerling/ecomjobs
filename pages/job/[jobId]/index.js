@@ -104,23 +104,7 @@ function Job() {
       <NextSeo
       title={`${jobData.job_position} | ${jobData.company_name}`}
       description={`${jobData.job_position} available at ${jobData.company_name}`}
-      openGraph={{
-        type: "website",
-        url: `https://www.ecom-jobs.com/job/${jobData.jobUrl}`,
-        title: `${jobData.job_position}`,
-        description: `${jobData.job_description}`,
-        images: [
-          {
-            url: `images/${jobData.logo}`,
-            width: 800,
-            height: 600,
-            alt: `${jobData.company_name}`,
-            type: `images/${jobData.logo}`,
-          },
-        ],
-        siteName: 'ecom-jobs.com',
-      }}
-    />
+   />
     <Head>
     <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@ecomjobs_" />
