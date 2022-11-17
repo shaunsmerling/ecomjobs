@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import {Helmet} from "react-helmet";
-import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 
 
@@ -99,7 +99,31 @@ function Job() {
   return (
     
     <div className="bg-gray-100 pb-10">
-      <NextSeo
+ <Head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>{`${jobData.job_position} | ${jobData.company_name}`}</title>
+       
+       
+ 
+<meta property="og:type" content="website"/>
+<meta property="og:url" content={`https://www.ecom-jobs.com/job/${jobData.jobUrl}`}/>
+<meta property="og:title" content={`${jobData.job_position}`}/>
+<meta property="og:image" content={`https://www.ecom-jobs.com/job/${jobData.logo}`}/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:description" content={`${jobData.job_position}`}/>
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:domain" content="ecom-jobs.com"/>
+<meta name="twitter:url" content={`https://www.ecom-jobs.com/job/${jobData.jobUrl}`}/>
+<meta name="twitter:title" content={`${jobData.job_position}`}/>
+<meta name="twitter:description" content={`${jobData.job_position}`}/>
+<meta name="twitter:image" content={`https://www.ecom-jobs.com/job/${jobData.logo}`}/>
+</Head>
+
+      {/* <NextSeo
       title={`${jobData.job_position} | ${jobData.company_name}`}
       description={`${jobData.job_position} available at ${jobData.company_name}`}
       canonical={`https://www.ecom-jobs.com/job/${jobData.jobUrl}`}
@@ -107,7 +131,7 @@ function Job() {
         type: "website",
         url: `https://www.ecom-jobs.com/job/${jobData.jobUrl}`,
         title: "hello",
-        description: `this finally works`,
+        description: `this finally`,
         locale: 'en_EN',
         siteName: 'EcomJobs',
       }}
@@ -117,7 +141,7 @@ function Job() {
         cardType: 'summary_large_image',
       }}
   
-    />
+    /> */}
       <Helmet>
       (<script className='structured-data-list' type="application/ld+json">{JSON.stringify(data)}</script>)
       </Helmet> 
