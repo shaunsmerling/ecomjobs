@@ -123,7 +123,7 @@ function Job() {
     />
     <Head>
     <meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@flickr" />
+<meta name="twitter:site" content="@ecomjobs_" />
 <meta name="twitter:title" content={`${jobData.job_position}`}/>
 <meta name="twitter:description" content={`${jobData.job_description}`} />
 
