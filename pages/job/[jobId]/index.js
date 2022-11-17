@@ -118,14 +118,6 @@ function Job() {
             type: `images/${jobData.logo}`,
           },
         ],
-        siteName: 'SiteName',
-      }}
-      twitter={{
-        site: '@ecomjobs_',
-        cardType: 'summary',
-        url: `https://www.ecom-jobs.com/job/${jobData.jobUrl}`,
-        title: `${jobData.job_position}`,
-        description: `${jobData.job_description}`,
       }}
     />
       <Helmet>
