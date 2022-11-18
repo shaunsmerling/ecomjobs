@@ -115,8 +115,9 @@ function Job() {
 <meta property="og:image:height" content="630"/>
 <meta property="og:description" content={`${jobData.job_position}`}/>
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:domain" content="ecom-jobs.com"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@ecomjobs_"/>
+<meta name="twitter:domain" content="https://ecom-jobs.com"/>
 <meta name="twitter:url" content={`https://ecom-jobs.com/job/${jobData.jobUrl}`}/>
 <meta name="twitter:text:title" content={`${jobData.job_position}`}/>
 <meta name="twitter:text:description" content={`${jobData.job_position}`}/>
