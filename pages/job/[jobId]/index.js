@@ -105,23 +105,11 @@ function Job() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>{`${jobData.job_position} | ${jobData.company_name}`}</title>
        
-       
- 
-<meta property="og:type" content="website"/>
-<meta property="og:url" content={`https://ecom-jobs.com/job/${jobData.jobUrl}`}/>
-<meta property="og:title" content={`${jobData.job_position}`}/>
-<meta property="og:image" content={`https://ecom-jobs.com/job/${jobData.logo}`}/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-<meta property="og:description" content={`${jobData.job_position}`}/>
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:site" content="@ecomjobs_"/>
-<meta name="twitter:domain" content="https://ecom-jobs.com"/>
-<meta name="twitter:url" content={`https://ecom-jobs.com/job/${jobData.jobUrl}`}/>
-<meta name="twitter:text:title" content={`${jobData.job_position}`}/>
-<meta name="twitter:text:description" content={`${jobData.job_position}`}/>
-<meta name="twitter:image" content={`https://ecom-jobs.com/job/${jobData.logo}`}/>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@ecomjobs_" />
+        <meta name="twitter:text:title" content={`${jobData.company_name} is hiring for a ${jobData.job_position}!`} />
+        <meta name="twitter:text:description" content={`${jobData.job_description}`} />
+        <meta name="twitter:image:src" content={`https://ecom-jobs.com/images/${jobData.logo}`} />
 </Head>
 
       {/* <NextSeo
