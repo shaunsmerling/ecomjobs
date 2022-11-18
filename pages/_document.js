@@ -14,6 +14,7 @@ export default function Document() {
             
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/reset-min.css" integrity="sha256-QlHlZdbSVxaYkUHxhMFhAj/L3pJiW1LuomSCONXBWms=" crossorigin="anonymous"/>
 
+            <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
           
       </Head>
       <body class="">
