@@ -99,7 +99,6 @@ console.log(jobData.company_name)
   return (
     
     <div className="bg-gray-100 pb-10">
-
       {/* <NextSeo
       title={`${jobData.job_position} | ${jobData.company_name}`}
       description={`${jobData.job_position} available at ${jobData.company_name}`}
@@ -121,7 +120,9 @@ console.log(jobData.company_name)
     /> */}
       <Helmet>
       (<script className='structured-data-list' type="application/ld+json">{JSON.stringify(data)}</script>)
-      <meta charset="UTF-8"/>
+      </Helmet> 
+      <Head>
+        <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>{`${jobData.job_position} | ${jobData.company_name}`}</title>
@@ -131,7 +132,8 @@ console.log(jobData.company_name)
         <meta name="twitter:text:title" vmid="twitter:text:title" key="twtitle" content={`${jobData.company_name} is hiring for a ${jobData.job_position}!`} />
         <meta name="twitter:text:description" vmid="twitter:text:description" key="twdesc"  content={`${jobData.job_description}`} />
         <meta name="twitter:image:src" vmid="twitter:image:src"  key="twimg" content={`https://ecom-jobs.com/images/${jobData.logo}`} />
-      </Helmet> 
+</Head>
+
       <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"/>
 <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"/>
 
