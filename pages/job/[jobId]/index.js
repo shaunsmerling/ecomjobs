@@ -94,23 +94,11 @@ function Job() {
 
 // For job position ("Digital Marketing Manager") at company ("Henkel") it prints henkel-digital-marketing-manager-636630c71c719c263177f82a
 
-
+console.log(jobData.company_name)
 
   return (
     
     <div className="bg-gray-100 pb-10">
- <Head>
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>{`${jobData.job_position} | ${jobData.company_name}`}</title>
-       
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@ecomjobs_" />
-        <meta name="twitter:text:title" content={`${jobData.company_name} is hiring for a ${jobData.job_position}!`} />
-        <meta name="twitter:text:description" content={`${jobData.job_description}`} />
-        <meta name="twitter:image:src" content={`https://ecom-jobs.com/images/${jobData.logo}`} />
-</Head>
 
       {/* <NextSeo
       title={`${jobData.job_position} | ${jobData.company_name}`}
@@ -133,6 +121,16 @@ function Job() {
     /> */}
       <Helmet>
       (<script className='structured-data-list' type="application/ld+json">{JSON.stringify(data)}</script>)
+      <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>{`${jobData.job_position} | ${jobData.company_name}`}</title>
+       
+        <meta name="twitter:card" vmid="twitter:card" key="twcard" content="summary_large_image" />
+        <meta name="twitter:site" vmid="twitter:site" key="twsite"  content="@ecomjobs_" />
+        <meta name="twitter:text:title" vmid="twitter:text:title" key="twtitle" content={`${jobData.company_name} is hiring for a ${jobData.job_position}!`} />
+        <meta name="twitter:text:description" vmid="twitter:text:description" key="twdesc"  content={`${jobData.job_description}`} />
+        <meta name="twitter:image:src" vmid="twitter:image:src"  key="twimg" content={`https://ecom-jobs.com/images/${jobData.logo}`} />
       </Helmet> 
       <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"/>
 <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"/>

@@ -10,14 +10,11 @@ export default function Document() {
            
             <script src="https://cdn.tailwindcss.com"></script>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/reset-min.css" integrity="sha256-QlHlZdbSVxaYkUHxhMFhAj/L3pJiW1LuomSCONXBWms=" crossorigin="anonymous"/> 
-            <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.2/dist/flowbite.min.css" />
             <link rel="icon" href="../assets/favicon.ico" />
             
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/reset-min.css" integrity="sha256-QlHlZdbSVxaYkUHxhMFhAj/L3pJiW1LuomSCONXBWms=" crossorigin="anonymous"/>
 
-            <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
           
-            <title>Ecommerce Jobs in Marketing, Sales, Finance, Web Dev, Design, & More..</title>
       </Head>
       <body class="">
         <script src="https://cdn.jsdelivr.net/npm/react@16.8.4/umd/react.production.min.js" integrity="sha256-ctUamuIgSCQg1wsh8Iw0QbDXScmyXhjJ6lxYUscC3FA=" crossorigin="anonymous"></script>
