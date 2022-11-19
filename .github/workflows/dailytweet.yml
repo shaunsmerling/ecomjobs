@@ -4,8 +4,12 @@ on:
     - cron: '1 * * * *'
   workflow_dispatch:
 jobs:
-   cron:
+  build-node:
     runs-on: ubuntu-latest
+    container: node:16
     steps:
-      - name: first-step
-        run: node Tweet.js
+      - run: node --version
+      - run: npm --version
+      - uses: actions/checkout@v3
+      - run: npm install
+      - run: node Tweet.js
