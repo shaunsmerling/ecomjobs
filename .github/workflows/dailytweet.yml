@@ -2,6 +2,7 @@ name: daily-tweet
 on:
   schedule:
     - cron: '1 * * * *'
+  workflow_dispatch:
 jobs:
    cron:
     runs-on: ubuntu-latest
