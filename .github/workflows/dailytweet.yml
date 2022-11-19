@@ -8,5 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: first-step
-        run: |
-          node Tweet.js
+        run: node Tweet.js
