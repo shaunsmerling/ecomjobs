@@ -3,7 +3,7 @@ const CronJob = require("cron").CronJob;
 const fetch = require("node-fetch");
 
 async function fetchData(){
-  const response = await fetch("http://ecom-jobs.com/api/jobs")
+  const response = await fetch("https://ecom-jobs.com/api/jobs")
   const resData = response.json();
   console.log(resData);
   return resData; 
@@ -30,17 +30,26 @@ www.ecom-jobs.com/job/${job.jobUrl}
     );
   } catch (e) {
     console.log(e);
-  }
-} );}
+  } });
+} 
 
 
 const job = new CronJob("* * * * * *", () => {
   // seconds, mins, hour, day, month, year
 
   console.log("Tweeting...");
-  setInterval(tweet, 1000);
+  tweet()
   
 });
 
 job.start()
+
+function stopProgram() {
+  job.stop();
+  console.log("Stopped");
+}
+
+setTimeout(stopProgram, 5000)
+
+
 
