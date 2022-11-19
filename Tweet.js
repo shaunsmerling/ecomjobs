@@ -3,7 +3,7 @@ const CronJob = require("cron").CronJob;
 const fetch = require("node-fetch");
 
 async function fetchData(){
-  const response = await fetch("http://localhost:3000/api/jobs")
+  const response = await fetch("http://ecom-jobs.com/api/jobs")
   const resData = response.json();
   console.log(resData);
   return resData; 
@@ -38,7 +38,7 @@ const job = new CronJob("* * * * * *", () => {
   // seconds, mins, hour, day, month, year
 
   console.log("Tweeting...");
-  setInterval(tweet, 5000);
+  setInterval(tweet, 1000);
   
 });
 
