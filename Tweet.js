@@ -9,15 +9,12 @@ async function fetchData(){
   return resData; 
 };
 
-let myApps
 
 const tweet = async () => {
 
 fetchData().then(async (data) => {
 // the network request is completed
-myApps = data;
-  for (let i = 0; i < data.length; i++) {
-    const job= data[i]
+let job = data[data.length-1];
   try {
     await rwClient.v1.tweet(
 `${job.company_name} is hiring a ${job.job_position}! 
@@ -34,14 +31,16 @@ www.ecom-jobs.com/job/${job.jobUrl}
   } catch (e) {
     console.log(e);
   }
-} }
-)}
+} );}
+
 
 const job = new CronJob("* * * * * *", () => {
   // seconds, mins, hour, day, month, year
 
   console.log("Tweeting...");
-  tweet();
+  setInterval(tweet, 1000 * 60 * 60 * 24);
+  
 });
 
-job.start();
+job.start()
+

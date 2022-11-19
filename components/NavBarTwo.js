@@ -6,7 +6,7 @@ const Navbartwo = () => {
     <header className="py-4 bg-white sm:py-5" x-data="{expanded: false}">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between">
-          <div className=" -ml-14 -mr-20 shrink-0">
+          <div className=" -ml-14 -mr-12 shrink-0">
             <a href="../" title="" className="">
               <img className="w-auto h-24" src="/logo.png" alt=""></img>
             </a>
