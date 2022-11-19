@@ -87,17 +87,19 @@ export default async function handler(req, res) {
         if (query.updateAll) {
           const jobs = await getAllJobs();
           jobs.forEach(async (job) => {
-            const jobUrl = generateJobUrl(
-              job.company_name,
-              job.job_position,
-              job.job_type
-            );
+            if (!job?.jobUrl) {
+              const jobUrl = generateJobUrl(
+                job.company_name,
+                job.job_position,
+                job.job_type
+              );
 
-            const { id, ...otherDetails } = job;
-            await updateJob(id, {
-              ...otherDetails,
-              jobUrl,
-            });
+              const { id, ...otherDetails } = job;
+              await updateJob(id, {
+                ...otherDetails,
+                jobUrl,
+              });
+            }
           });
           return res.json({ updated: true });
         }
