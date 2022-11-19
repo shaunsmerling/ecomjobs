@@ -38,7 +38,7 @@ const job = new CronJob("* * * * * *", () => {
   // seconds, mins, hour, day, month, year
 
   console.log("Tweeting...");
-  setInterval(tweet, 1000 * 60 * 60 * 24);
+  setInterval(tweet, 5000);
   
 });
 
