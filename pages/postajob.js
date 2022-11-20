@@ -55,7 +55,7 @@ function PostAJob() {
         checkout({
           lineItems: [
             {
-              price: "price_1LeCiRJ3L3qVyujTCoNl7lpe",
+              price: "price_1M6CyrJ3L3qVyujTFalmvGtb",
               quantity: 1,
             },
           ],
@@ -236,9 +236,9 @@ function PostAJob() {
             <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
               <div class="max-w-xl mx-auto">
                 <div class="sm:flex sm:items-center sm:space-x-8">
-                  <label for="" class="block text-sm font-bold text-gray-900">
+                  <label for="" class="block text-xs font-bold text-gray-900">
                     {" "}
-                    Upload a logo:{" "}
+                    Upload a logo: <br></br>(Please upload a photo less <br></br>than 100KB. <br></br> To compress your image, <br></br> visit <a href="https://tinypng.com/"> https://tinypng.com/ </a>):{" "}
                   </label>
                   <div class="relative mt-2 sm:mt-0 sm:flex-1">
                     <input

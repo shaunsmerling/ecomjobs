@@ -81,7 +81,7 @@ export default async function handler(req, res) {
         return res.json(jobs);
       }
       case "PUT": {
-        const body = JSON.parse(req.body);
+        const body = req.body;
         const query = req.query;
         // Update All Jobs
         if (query.updateAll) {
@@ -103,6 +103,7 @@ export default async function handler(req, res) {
           });
           return res.json({ updated: true });
         }
+        // http://localhost:3000/api/jobs?updateAll=true
 
         // Update an existing job
         const { id, ...updateData } = body;
