@@ -3,18 +3,18 @@ export function generateJobUrl(company_name, job_position, job_type) {
   const random = Math.floor(Math.random() * 100000000);
   let newUrl = "";
   if(job_type) {
-    newUrl += job_type.replace(/\s/g, "-").replace("&", "and").replace(",", "and")
+    newUrl += job_type.replace(/\s/g, "-").replace("&", "and").replace(",", "and").replace(".", "-").replace("/", "-")
   } if(company_name) {
     if(job_type) {
         newUrl += "-"
     }
-    newUrl += company_name.replace(/\s/g, "-").replace("&", "and").replace(",", "and")
+    newUrl += company_name.replace(/\s/g, "-").replace("&", "and").replace(",", "and").replace(".", "-").replace("/", "-")
   }
    if(job_position) {
     if(company_name) {
         newUrl += "-"
     }
-    newUrl += job_position.replace(/\s/g, "-").replace("&", "and").replace(",", "and") +
+    newUrl += job_position.replace(/\s/g, "-").replace("&", "and").replace(",", "and").replace(".", "-").replace("/", "-") +
     "-" +
     random;
   }
