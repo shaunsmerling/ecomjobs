@@ -21,6 +21,7 @@ function Job() {
     job_type: "",
     mission: "",
     location: "",
+    emp_count: "",
   });
 
   const router = useRouter();
@@ -180,7 +181,14 @@ console.log(jobData.company_name)
             <div class=" text-blueGray-600 my-2">
               <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i><a href={jobData.company_url} className="text-sky-400">{jobData.company_url}</a>
             </div>
-          
+
+            {/* <div class="mr-4 p-3 text-center">
+                        <span class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">
+                         {jobData.emp_count}
+                        </span>
+                        <span class="text-sm text-blueGray-400">Employees</span>
+                      </div>
+           */}
             </div>
           </div>
           <div className="text-center">

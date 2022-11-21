@@ -29,6 +29,7 @@ model Job {
   job_requirements    String?
   application_url     String?
   company_id          String?
+  empcount            String?
 }
 
 model Email {
