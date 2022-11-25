@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import '../global.css'
 import Navbartwo from "../components/NavBarTwo"
 import Script from "next/script"
-import { NextSeo } from 'next-seo';
 
 
 

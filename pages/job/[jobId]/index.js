@@ -2,53 +2,66 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import {Helmet} from "react-helmet";
 import Head from "next/head";
+import { api_url } from "../../../config";
 
 
+export async function getServerSideProps(context) {
+console.log(context)
+  const { params } = context
+  const { jobId } = params
 
-function Job() {
+  const res = await fetch(`${api_url}/api/jobs?id=${jobId}`)
+  const data = await res.json()
 
-const [jobData, setJobData] = useState({
-  company_name: "",
-  company_url: "",
-  company_description: "",
-  city: "",
-  postedat: "",
-  job_position: "",
-  job_category: "",
-  logo: "",
-  job_type: "",
-  mission: "",
-  location: "",
-  emp_count: "",
-});
+  return {
+    props: { jobs: data}, // will be passed to the page component as props
+  }
+}
 
-const router = useRouter();
-const { jobId } = router.query;
+function Job({ jobs }) {
 
-useEffect( () => {
-    if (jobId) {
-     fetch("/api/jobs?id=" + jobId, {
-        method: "GET",
-      })
-        .then((res) => res.json())
-        .then((jsonResponse) => setJobData(jsonResponse));
-}}, [jobId]);
+// const [jobs, setJobData] = useState({
+//   company_name: "",
+//   company_url: "",
+//   company_description: "",
+//   city: "",
+//   postedat: "",
+//   job_position: "",
+//   job_category: "",
+//   logo: "",
+//   job_type: "",
+//   mission: "",
+//   location: "",
+//   emp_count: "",
+// });
+
+// const router = useRouter();
+// const { jobId } = router.query;
+
+// useEffect( () => {
+//     if (jobId) {
+//      fetch("/api/jobs?id=" + jobId, {
+//         method: "GET",
+//       })
+//         .then((res) => res.json())
+//         .then((jsonResponse) => setJobData(jsonResponse));
+// }}, [jobId]);
 
 
   let data =   
             {
             "@context": "https://schema.org/",
             "@type": "JobPosting",
-            "title": `${jobData.job_position}`,
-            "description": `${jobData.job_description}`,
+            "title": `${jobs.job_position}`,
+            "description": `${jobs.job_description}`,
             "hiringOrganization": {
                 "@type": "Organization",
-                "name": `${jobData.company_name}`,
-                "sameAs": `${jobData.company_url}`,
+                "name": `${jobs.company_name}`,
+                "sameAs": `${jobs.company_url}`,
             },
-            "industry": `${jobData.job_category}`,
+            "industry": `${jobs.job_category}`,
             "employmentType": "FULL_TIME",
-            "datePosted": `${jobData.postedat}`,
+            "datePosted": `${jobs.postedat}`,
             "validThrough": "",
             "jobLocation": {
                 "@type": "Place",
@@ -57,16 +70,16 @@ useEffect( () => {
                     "streetAddress": "",
                     "addressLocality": "",
                     "postalCode": "",
-                    "addressCountry": `${jobData.location}`
+                    "addressCountry": `${jobs.location}`
                 }
             },
-            "responsibilities": `${jobData.job_requirements}`,
+            "responsibilities": `${jobs.job_requirements}`,
             }
 
             
 
   function getDate() {
-    let date_1 = new Date(jobData.postedat);
+    let date_1 = new Date(jobs.postedat);
     let date_2 = new Date();
 
     let difference = date_1.getTime() - date_2.getTime();
@@ -94,12 +107,12 @@ useEffect( () => {
     
     <div className="bg-gray-100 pb-10">
       {/* <NextSeo
-      title={`${jobData.job_position} | ${jobData.company_name}`}
-      description={`${jobData.job_position} available at ${jobData.company_name}`}
-      canonical={`https://www.ecom-jobs.com/job/${jobData.jobUrl}`}
+      title={`${jobs.job_position} | ${jobs.company_name}`}
+      description={`${jobs.job_position} available at ${jobs.company_name}`}
+      canonical={`https://www.ecom-jobs.com/job/${jobs.jobUrl}`}
       openGraph={{
         type: "website",
-        url: `https://www.ecom-jobs.com/job/${jobData.jobUrl}`,
+        url: `https://www.ecom-jobs.com/job/${jobs.jobUrl}`,
         title: "hello",
         description: `this finally`,
         locale: 'en_EN',
@@ -119,13 +132,13 @@ useEffect( () => {
         <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>{`${jobData.job_position} | ${jobData.company_name}`}</title>
+        <title>{`${jobs.job_position} | ${jobs.company_name}`}</title>
        
         <meta name="twitter:card" vmid="twitter:card" key="twcard" content="summary_large_image" />
         <meta name="twitter:site" vmid="twitter:site" key="twsite"  content="@ecomjobs_" />
-        <meta name="twitter:text:title" vmid="twitter:text:title" key="twtitle" content={`${jobData.company_name} is hiring for a ${jobData.job_position}!`} />
-        <meta name="twitter:text:description" vmid="twitter:text:description" key="twdesc"  content={`${jobData.job_description}`} />
-        <meta name="twitter:image:src" vmid="twitter:image:src"  key="twimg" content={`https://ecom-jobs.com/images/${jobData.logo}`} />
+        <meta name="twitter:text:title" vmid="twitter:text:title" key="twtitle" content={`${jobs.company_name} is hiring for a ${jobs.job_position}!`} />
+        <meta name="twitter:text:description" vmid="twitter:text:description" key="twdesc"  content={`${jobs.job_description}`} />
+        <meta name="twitter:image:src" vmid="twitter:image:src"  key="twimg" content={`https://ecom-jobs.com/images/${jobs.logo}`} />
 </Head>
 
       <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"/>
@@ -149,11 +162,11 @@ useEffect( () => {
          
           <div class="mt-4 ml-6">
 
-          <img src={`/images/${jobData.logo}`} alt="..." class="my-10 border-4  max-w-120-px"/>
+          <img src={`/images/${jobs.logo}`} alt="..." class="my-10 border-4  max-w-120-px"/>
           
           <a
                           target="_blank"
-                          href={jobData.application_url}
+                          href={jobs.application_url}
                             class="flex float-right w-auto text-xs px-10 mr-4 lg:text-lg  -mt-20 rounded-full lg:pr-20 lg:pl-20   py-4  text-base  font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
                         >
                            Apply Now
@@ -161,23 +174,23 @@ useEffect( () => {
                    
        
 
-          <a href={`/company/${jobData.company_id}`}><h2 class="text-3xl my-4 text-black font-bold">{jobData.company_name}</h2></a>
+          <a href={`/company/${jobs.company_id}`}><h2 class="text-3xl my-4 text-black font-bold">{jobs.company_name}</h2></a>
        
 
             <div class="text-sm leading-normal  text-blueGray-400 font-bold uppercase">
               <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
-             {jobData.city} {jobData.location}
+             {jobs.city} {jobs.location}
             </div>
             
 
  
             <div class=" text-blueGray-600 my-2">
-              <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i><a href={jobData.company_url} className="text-sky-400">{jobData.company_url}</a>
+              <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i><a href={jobs.company_url} className="text-sky-400">{jobs.company_url}</a>
             </div>
 
             {/* <div class="mr-4 p-3 text-center">
                         <span class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">
-                         {jobData.emp_count}
+                         {jobs.emp_count}
                         </span>
                         <span class="text-sm text-blueGray-400">Employees</span>
                       </div>
@@ -185,8 +198,8 @@ useEffect( () => {
             </div>
           </div>
           <div className="text-center">
-          <h2 className="sm:text-2xl lg:text-5xl my-4 mx-auto font-bold underline ">{jobData.job_position}</h2>
-          <h3 className="my-1 text-md lg:text-xl text-[#6879a5]">  {jobData.job_category}  •   {jobData.job_type} • {getDate()}</h3>
+          <h2 className="sm:text-2xl lg:text-5xl my-4 mx-auto font-bold underline ">{jobs.job_position}</h2>
+          <h3 className="my-1 text-md lg:text-xl text-[#6879a5]">  {jobs.job_category}  •   {jobs.job_type} • {getDate()}</h3>
           </div>
           <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
          
@@ -194,22 +207,22 @@ useEffect( () => {
               <div class="w-full lg:w-9/12 px-4">
               
 
-              <p>{jobData.company_description}</p>
+              <p>{jobs.company_description}</p>
             <br></br>
             <br></br>
            
-            <p>{jobData.job_description}</p>
+            <p>{jobs.job_description}</p>
             <br></br>
             <br></br>
            
-            <p>{jobData.job_requirements}</p>
+            <p>{jobs.job_requirements}</p>
             <br></br>
             <br></br>
             
 
 <a
      target="_blank"
-    href={jobData.application_url}
+    href={jobs.application_url}
     class="inline-flex relative items-center justify-center w-full sm:w-auto px-8 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg  hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
 >
    Apply Now
