@@ -188,15 +188,13 @@ function PostAJob() {
                     Company URL:{" "}
                   </label>
                   <div class="relative flex mt-2">
-                    <div class="inline-flex items-center px-3 text-gray-900 border border-r-0 border-gray-300 rounded-l-lg bg-gray-50 sm:text-sm">
-                      https://
-                    </div>
+                    
 
                     <input
                       type="url"
                       required
                       name="companyUrl"
-                      placeholder="www.spacex.com"
+                      placeholder="https://www.spacex.com"
                       value={companyUrl}
                       onChange={handleChange}
                       class="flex-1 border block w-full min-w-0 px-4 py-3 placeholder-gray-500 
@@ -588,15 +586,12 @@ function PostAJob() {
                     Application URL:{" "}
                   </label>
                   <div class="relative flex mt-2">
-                    <div class="inline-flex items-center px-3 text-gray-900 border border-r-0 border-gray-300 rounded-l-lg bg-gray-50 sm:text-sm">
-                      https://
-                    </div>
-
+                   
                     <input
                       type="url"
                       required
                       name="applicationUrl"
-                      placeholder="www.applyhere.com"
+                      placeholder="https://www.applyhere.com"
                       value={applicationUrl}
                       onChange={handleChange}
                       class="flex-1 border block w-full min-w-0 px-4 py-3 placeholder-gray-500 
@@ -660,9 +655,9 @@ function PostAJob() {
                 <div>
                   <div class="mt-4 ml-6">
                     <img
-                      src={companyLogo ? `${companyLogo}` : "/mock.png"}
+                      src={companyLogo ? `${companyLogo}` : "/logo.png"}
                       alt="..."
-                      class="my-10 border-4  max-w-120-px"
+                      class="my-10 border-4 h-16 max-w-120-px"
                     />
 
                     <a
@@ -746,86 +741,7 @@ function PostAJob() {
         </main>
       </div>
 
-      {/*<div className="hidden lg:block">
-        <div className="text-center my-6">
-        <p className="font-bold text-3xl my-2 text-[#17614A]">Preview </p>
-        <p>Here's a preview of how your job post will look like</p>
-        </div>
-        <div className="text-center border border-black mx-48">
-            <div className="my-6 mx-28">
-              <ul className="rounded-lg text-left py-4 flex  bg-white hover:bg-gray-100  bg-white  shadow-lg">
-              <img className="mx-auto ml-4 border-2 rounded-full border-[#17614A] my-auto h-14 w-14 " src={logo ? `${logo}` : "/mock.png"}></img>
-              <li className="w-full ml-2 mt-2 mb-4 box-border ">
-                <p className=" ml-2 mt-2 z-1 text-sm text-[#17614A] pb-1">
-                  {companyName}
-                </p>
-                <p className=" ml-2 -mb-2 z-1 text-xl text-[#17614A] z-0 font-bold pb-2 pr-20">{jobPosition}</p>
-                <p className="float-right mr-4 text-[8px] -mt-10 bold font-bold lg:text-sm">{jobType || location ? `${jobType} | ${location}` : " "}</p>
-              </li>
-            </ul>
-            </div>
-            <br></br>
-            <div>
   
-                <img className="mx-auto border-2 rounded-full border-[#17614A] h-28 w-28 " src={logo ? `${logo}` : "/mock.png"}></img>
-                <br></br>
-  
-                <p classaName="font-bold text-[#17614A]">{companyName ? `${companyName} ` : "Company "}<span className="italic">is hiring a</span></p>
-                <h2 className="text-3xl  text-[#17614A] my-2 font-bold">{jobPosition ? `${jobPosition}` : "Position"}</h2>
-                <div className="my-2">
-                <h3 className="my-1">Category: <span className=" text-[#17614A]">{jobCategory}</span></h3>
-                <h3 className="my-1">Location: <span className=" text-[#17614A]">{city}, {location}</span></h3>
-                <h3 className="my-1">Type: <span className="text-[#17614A]">{jobType}</span></h3>
-                <p className="my-1">1s ago</p>
-                <br></br>
-                <a
-                id="applybtn"
-                target="_blank"
-                className=" text-black border border-black bg-[#26EB6B] font-medium rounded-lg text-sm px-20 py-2 text-center  content-center hover:rounded-full"
-              >
-       
-          Apply Now
-        </a>
-        <br></br>
-        <br></br>
-        
-        <div className="mx-2 border border-[#17614A] rounded-lg pb-4 lg:mx-32 mb-4">
-          <div className="mx-4 my-2">
-            <h3>
-              <b className="bold">Who We Are:</b>
-            </h3>
-            <p>{companyDescription ? `${companyDescription} ` : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}</p>
-            <br></br>
-            <br></br>
-            <h3>
-              <b className="bold">Job Description:</b>
-            </h3>
-            <p>{jobDescription ? `${jobDescription} ` : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}</p>
-            <br></br>
-            <br></br>
-            <h3 className="">
-              <b className="bold">Candidate Requirements:</b>
-            </h3>
-            <p>{jobRequirements ? `${jobRequirements} ` : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}</p>
-            <br></br>
-            <br></br>
-            <a
-              id="applybtn"
-              target="_blank"
-
-              className=" text-black border border-black bg-[#26EB6B] font-medium rounded-lg text-sm px-20 py-2 text-center  content-center hover:rounded-full"
-            >
-            
-              Apply Now
-            </a>
-          </div>
-            </div>
-            
-            </div>
-        </div>
-      
-        </div>
-        </div>*/}
       <Preview />
     </div>
   );

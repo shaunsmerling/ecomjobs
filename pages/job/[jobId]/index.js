@@ -5,37 +5,34 @@ import Head from "next/head";
 
 
 
-
 function Job() {
 
+const [jobData, setJobData] = useState({
+  company_name: "",
+  company_url: "",
+  company_description: "",
+  city: "",
+  postedat: "",
+  job_position: "",
+  job_category: "",
+  logo: "",
+  job_type: "",
+  mission: "",
+  location: "",
+  emp_count: "",
+});
 
-  const [jobData, setJobData] = useState({
-    company_name: "",
-    company_url: "",
-    company_description: "",
-    city: "",
-    postedat: "",
-    job_position: "",
-    job_category: "",
-    logo: "",
-    job_type: "",
-    mission: "",
-    location: "",
-    emp_count: "",
-  });
+const router = useRouter();
+const { jobId } = router.query;
 
-  const router = useRouter();
-  const { jobId } = router.query;
-
-  useEffect( () => {
-      if (jobId) {
-       fetch("/api/jobs?id=" + jobId, {
-          method: "GET",
-        })
-          .then((res) => res.json())
-          .then((jsonResponse) => setJobData(jsonResponse));
+useEffect( () => {
+    if (jobId) {
+     fetch("/api/jobs?id=" + jobId, {
+        method: "GET",
+      })
+        .then((res) => res.json())
+        .then((jsonResponse) => setJobData(jsonResponse));
 }}, [jobId]);
-
 
 
   let data =   
@@ -92,10 +89,6 @@ function Job() {
 
 
 
-
-// For job position ("Digital Marketing Manager") at company ("Henkel") it prints henkel-digital-marketing-manager-636630c71c719c263177f82a
-
-console.log(jobData.company_name)
 
   return (
     
