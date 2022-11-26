@@ -33,7 +33,7 @@ const companylist = () => {
 
             <div className="flow-root mt-8">
                 <div className="-my-5 divide-y divide-gray-200">
-                <Link href="/company/6365d74ea1e5cfc099f83bfd" >
+                <Link href="/company/cole-haan-85896455" >
                     <div className="py-5  hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0 ">
@@ -52,7 +52,7 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/6363a3a6d20d4aec518386c6" >
+                    <Link href="/company/harry's-inc-57816028" >
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
@@ -71,7 +71,7 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link  href="/company/6365c517a1e5cfc099f83bcc" >
+                    <Link  href="/company/henkel-91731948" >
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
@@ -89,7 +89,7 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/6365c80aa1e5cfc099f83bd5">
+                    <Link href="/company/garmin-25074268">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
@@ -107,7 +107,7 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/6365ca58a1e5cfc099f83bdf">
+                    <Link href="/company/marimekko-29768936">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
@@ -147,7 +147,7 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/6365d237a1e5cfc099f83bf0">
+                    <Link href="/company/the-hundreds-49944881">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
@@ -167,7 +167,7 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/6365d478a1e5cfc099f83bf6">
+                    <Link href="/company/bose-36965113">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
@@ -187,7 +187,7 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/6365d74ea1e5cfc099f83bfd">
+                    <Link href="/company/cole-haan-85896455">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
@@ -207,7 +207,7 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/6365d9e8a1e5cfc099f83c03">
+                    <Link href="/company/amazonia-57058216">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
@@ -227,7 +227,7 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/6365dad2a1e5cfc099f83c08">
+                    <Link href="/company/casetify-94845554">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
