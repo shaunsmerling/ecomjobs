@@ -1,10 +1,11 @@
 import {
   getAllCompanies,
   createCompany,
-  getCompanyById,
+  getCompanyByUrl,
   updateCompany,
   deleteCompany,
 } from "../../prisma/company";
+import { generateCompanyUrl } from "../../scriptcompany";
 
 
 // fetch("/api/jobs", {
@@ -57,8 +58,8 @@ export default async function handler(req, res) {
         // api/jobs?id=1
         const query = req.query;
         if (query.id) {
-          const company = await getCompanyById(query.id);
-          return res.json(company);
+          const company = await getCompanyByUrl(query.id);
+          return res.json(company[0]);
         }
 
         // Otherwise, fetch all companies
@@ -66,12 +67,40 @@ export default async function handler(req, res) {
         return res.json(companies);
       }
       case "PUT": {
-        // Update an existing job
-        const body = JSON.parse(req.body);
-        const { id, ...updateData } = body;
-        const user = await updateCompany(id, updateData);
-        return res.json(user);
+      //   // Update an existing company
+      //   const body = JSON.parse(req.body);
+      //   const { id, ...updateData } = body;
+      //   const user = await updateCompany(id, updateData);
+      //   return res.json(user);
+      // }
+
+      const body = req.body;
+      const query = req.query;
+      // Update All Companies
+      if (query.updateAll) {
+        const companies = await getAllCompanies();
+        companies.forEach(async (company) => {
+          if (!company?.companyUrl) {
+            const companyUrl = generateCompanyUrl(
+              company.company_name,
+            );
+
+            const { company_id, ...otherDetails } = company;
+            await updateCompany(company_id, {
+              ...otherDetails,
+              companyUrl,
+            });
+          }
+        });
+        return res.json({ updated: true });
       }
+      // http://localhost:3000/api/company?updateAll=true
+
+      // Update an existing job
+      const { company_id, ...updateData } = body;
+      const user = await updateCompany(company_id, updateData);
+      return res.json(user);
+    }
       case "DELETE": {
         // Delete an existing user
         const body = JSON.parse(req.body);

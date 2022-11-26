@@ -1,45 +1,69 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
+import { api_url } from "../../../config"
 
-function Company() {
-  const [companyData, setCompanyData] = useState({
-    company_name: "",
-    company_url: "",
-    company_description: "",
-    city: "",
-    logo: "",
-    empcount: "",
-    location: "",
-  });
+export async function getServerSideProps(context) {
 
-  const [jobs, setJobs] = useState([])
+  const { params } = context
+  const { companyId } = params
+
+  const [companyRes, jobsRes] = await Promise.all([
+    fetch(`${api_url}/api/company?id=${companyId}`), 
+    fetch(`${api_url}/api/jobs?companyUrl=${companyId}`)
+  ]);
+  const [company, jobs] = await Promise.all([
+    companyRes.json(), 
+    jobsRes.json()
+  ]);
+  return { props: { company, jobs } };
+}
+
+// Previously, our domain had the company ID
+// Therefore, when sourced company info we just took the domain company ID
+// Then, we looked for jobs with that company ID to then source that
+// Now, our domain has companyURL 
+// So if we want to source by companyUrl, the jobs under x company need to have the companyUrl in their db 
+  
+
+function Company({ company, jobs }) {
+
+  console.log(company)
+
   console.log(jobs)
+  // const [company, setCompanyData] = useState({
+  //   company_name: "",
+  //   company_url: "",
+  //   company_description: "",
+  //   city: "",
+  //   logo: "",
+  //   empcount: "",
+  //   location: "",
+  // });
 
-  const router = useRouter();
-  const { companyId } = router.query;
-
-  useEffect(() => {
-    if (companyId) {
-      fetch("/api/company?id=" + companyId, {
-        method: "GET",
-      })
-        .then((res) => res.json())
-        .then((jsonResponse) => setCompanyData(jsonResponse));
-    }
-  }, [companyId]);
-
-  useEffect(() => {
-    if (companyId) {
-      fetch("/api/jobs?companyId=" + companyId, {
-        method: "GET",
-      })
-        .then((res) => res.json())
-        .then((jsonResponse) => setJobs(jsonResponse));
-    }
-  }, [companyId]);
+  // const [jobs, setJobs] = useState([])
+  
 
 
+  // useEffect(() => {
+  //   if (companyId) {
+  //     fetch("/api/company?id=" + companyId, {
+  //       method: "GET",
+  //     })
+  //       .then((res) => res.json())
+  //       .then((jsonResponse) => setCompanyData(jsonResponse));
+  //   }
+  // }, [companyId]);
+
+  // useEffect(() => {
+  //   if (companyId) {
+  //     fetch("/api/jobs?companyId=" + companyId, {
+  //       method: "GET",
+  //     })
+  //       .then((res) => res.json())
+  //       .then((jsonResponse) => setJobs(jsonResponse));
+  //   }
+  // }, [companyId]);
 
 
 
@@ -69,8 +93,8 @@ function Company() {
   return (
     <div className="bg-gray-100 pb-10">
       <NextSeo
-      title={`${companyData.company_name} | eCommerce Jobs `}
-      description={`${companyData.company_name} | eCommerce Jobs `}
+      title={`${company.company_name} | eCommerce Jobs `}
+      description={`${company.company_name} | eCommerce Jobs `}
     />
       <link
         rel="stylesheet"
@@ -92,7 +116,7 @@ function Company() {
                 <div class="flex flex-wrap justify-center">
                   <div class=" lg:w-3/12  lg:order-2 flex justify-center">
                     <div class="relative">
-                      <img class=" p-10 lg:p-10 border-2 border-gray-100 bg-white rounded-full  -mt-16 " src={`/images/${companyData.logo}`}/>
+                      <img class=" p-10 lg:p-10 border-2 border-gray-100 bg-white rounded-full  -mt-16 " src={`/images/${company.logo}`}/>
                     </div>
                   </div>
                   <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
@@ -110,7 +134,7 @@ function Company() {
                       </div>
                       <div class="mr-4 p-3 text-center">
                         <span class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">
-                         {companyData.empcount}
+                         {company.empcount}
                         </span>
                         <span class="text-sm text-blueGray-400">Employees</span>
                       </div>
@@ -120,24 +144,24 @@ function Company() {
                 </div>
                 <div class="px-0 lg:mx-0 text-center mt-4">
                   <h3 class="text-xl lg:text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
-                    {companyData.company_name}
+                    {company.company_name}
                   </h3>
 
                   <div class="text-sm leading-normal  mb-2 text-blueGray-400 font-bold uppercase">
                     <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
-                    {companyData.city} {companyData.location}
+                    {company.city} {company.location}
                   </div>
 
                   <p className="text-md lg:text-xl lg:px-10 mx-auto mt-10 mb-8 ">
                     {" "}
-                    {companyData.mission
-                      ? companyData.mission
-                      : companyData.company_description}
+                    {company.mission
+                      ? company.mission
+                      : company.company_description}
                   </p>
                   <div class="mb-2 text-blueGray-600 mt-10">
                     <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i>
-                    <a href={companyData.company_url} className="text-sky-400">
-                      {companyData.company_url}
+                    <a href={company.company_url} className="text-sky-400">
+                      {company.company_url}
                     </a>
                   </div>
                   <div class="mb-2 text-blueGray-600">

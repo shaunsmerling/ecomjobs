@@ -5,6 +5,7 @@ import {
   updateJob,
   deleteJob,
   getJobsByCompanyId,
+  getJobsByCompanyUrl,
 } from "../../prisma/job";
 import { generateJobUrl } from "../../script";
 
@@ -71,8 +72,8 @@ export default async function handler(req, res) {
           return res.json(job[0]);
         }
 
-        if (query.companyId) {
-          const jobs = await getJobsByCompanyId(query.companyId);
+        if (query.companyUrl) {
+          const jobs = await getJobsByCompanyUrl(query.companyUrl);
           return res.json(jobs);
         }
 

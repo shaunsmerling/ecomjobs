@@ -1,4 +1,4 @@
-const rwClient = require("./TwitterClient.js");
+ const rwClient = require("./TwitterClient.js");
 const CronJob = require("cron").CronJob;
 const fetch = require("node-fetch");
 

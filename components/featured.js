@@ -20,7 +20,7 @@ function featured() {
          
               <div id="scroll-element" className=" px-2 drop-shadow w-full lg:flex lg:text-center lg:drop-shadow lg:align-center ">
                 
-              <Link href="/company/6363a3a6d20d4aec518386c6" >
+              <Link href="/company/harry's-inc-57816028" >
               <div  className="  lg:mx-10 pb-2">
               <ul  className={`  rounded-lg text-left mb-2  mx-auto flex hover:text-white bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-none border-2 " src="./images/harrys.jpeg" ></img>
@@ -34,7 +34,7 @@ function featured() {
               </Link>
           
                 
-              <Link href="/company/6365c517a1e5cfc099f83bcc" >
+              <Link href="/company/henkel-91731948" >
               <div className=" mx-6 lg:mx-10 pb-2">
               <ul className={`  rounded-lg text-left mb-2  flex hover:text-white bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-none border-2 " src="./images/henkel.jpeg" ></img>
@@ -48,7 +48,7 @@ function featured() {
               </Link>
         
                 
-              <Link href="/company/6365c80aa1e5cfc099f83bd5" >
+              <Link href="/company/garmin-25074268" >
               <div className=" mx-6  lg:mx-10 pb-2">
               <ul className={`  rounded-lg text-left mb-2  flex hover:text-white bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-none border-2 " src="./images/garmin.jpeg" ></img>
@@ -62,7 +62,7 @@ function featured() {
               </Link>
            
                 
-              <Link href="/company/6365ca58a1e5cfc099f83bdf" >
+              <Link href="/company/anthropologie-42133316" >
               <div className=" mx-6  lg:mx-10 pb-2">
               <ul className={`  rounded-lg text-left mb-2  flex hover:text-white bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-none border-2 " src="./images/anthropologie.jpeg" ></img>
@@ -76,7 +76,7 @@ function featured() {
               </Link>
              
                 
-              <Link href="/company/6365cd5da1e5cfc099f83be5" >
+              <Link href="/company/marimekko-29768936" >
               <div className="  mx-6 lg:mx-10 pb-2">
               <ul className={`  rounded-lg text-left mb-2  flex hover:text-white bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-none border-2 " src="./images/marimekko.jpeg" ></img>
@@ -90,7 +90,7 @@ function featured() {
               </Link>
            
                 
-              <Link href="/company/6365d237a1e5cfc099f83bf0" >
+              <Link href="/company/the-hundreds-49944881" >
               <div className="  mx-6 lg:mx-10 pb-2">
               <ul className={`  rounded-lg text-left mb-2  flex hover:text-white bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-none border-2 " src="./images/thehundreds.jpeg" ></img>
@@ -104,7 +104,7 @@ function featured() {
               </Link>
               
              
-              <Link href="/company/6365d478a1e5cfc099f83bf6" >
+              <Link href="/company/bose-36965113" >
               <div  className=" mx-6  lg:mx-10 pb-2">
               <ul className={`  rounded-lg text-left mb-2 hover:text-white flex  bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-none border-2 " src="./images/bose.jpeg" ></img>
@@ -118,7 +118,7 @@ function featured() {
               </Link>
              
              
-               <Link href="/company/6365d74ea1e5cfc099f83bfd" >
+               <Link href="/company/cole-haan-85896455" >
               <div  className=" mx-6  lg:mx-10 pb-2">
               <ul className={`  rounded-lg text-left mb-2  flex  bg-white hover:text-white hover:bg-[#17614A] h-40 w-80  bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-none  border-2 " src="./images/colehaan.jpeg" ></img>
@@ -130,7 +130,7 @@ function featured() {
               </ul>
               </div>
               </Link>
-              <Link href="/company/6365d9e8a1e5cfc099f83c03" >
+              <Link href="/company/amazonia-57058216" >
               <div  className=" mx-6  lg:mx-10 pb-2">
               <ul  className={`  rounded-lg text-left mb-2  flex hover:text-white bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-none border-2 " src="./images/amazonia.jpeg" ></img>
@@ -144,7 +144,7 @@ function featured() {
               </Link>
           
                 
-              <Link href="/company/6365dad2a1e5cfc099f83c08" >
+              <Link href="/company/casetify-94845554" >
               <div className=" mx-6  lg:mx-10 pb-2">
               <ul className={`  rounded-lg text-left mb-2  flex hover:text-white bg-white hover:bg-[#17614A] h-40 w-80 bg-white  shadow-lg `}>
               <img className="z-1 mt-10 ml-4 w-14 h-14 border border-none border-2 " src="./images/casetify.jpeg" ></img>
