@@ -1,9 +1,10 @@
  const rwClient = require("./TwitterClient.js");
 const CronJob = require("cron").CronJob;
 const fetch = require("node-fetch");
+const api_url = require("./config.js")
 
 async function fetchData(){
-  const response = await fetch("https://ecom-jobs.com/api/jobs")
+  const response = await fetch(`http:/localhost:3000/api/jobs`)
   const resData = response.json();
   console.log(resData);
   return resData; 
@@ -14,7 +15,13 @@ const tweet = async () => {
 
 fetchData().then(async (data) => {
 // the network request is completed
-let job = data[data.length-1];
+// take the latest job on the list, use it, and then make sure that if its 
+// still the latest job that you go to the next latest job (no duplicates)
+
+let rand = Math.floor((Math.random() * 300) + 1)
+
+let job = data[data.length - rand];
+console.log(job)
   try {
     await rwClient.v1.tweet(
 `${job.company_name} is hiring a ${job.job_position}! 
@@ -49,7 +56,7 @@ function stopProgram() {
   console.log("Stopped");
 }
 
+
+
 setTimeout(stopProgram, 5000)
-
-
 

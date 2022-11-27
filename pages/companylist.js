@@ -107,7 +107,7 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/marimekko-29768936">
+                    <Link href="/company/anthropologie-42133316">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
@@ -127,7 +127,7 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/6365cd5da1e5cfc099f83be5">
+                    <Link href="/company/marimekko-29768936">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
