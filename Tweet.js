@@ -21,7 +21,6 @@ fetchData().then(async (data) => {
 let rand = Math.floor((Math.random() * 300) + 1)
 
 let job = data[data.length - rand];
-console.log(job)
   try {
     await rwClient.v1.tweet(
 `${job.company_name} is hiring a ${job.job_position}! 
@@ -58,5 +57,5 @@ function stopProgram() {
 
 
 
-setTimeout(stopProgram, 5000)
+setTimeout(stopProgram, 10000)
 
