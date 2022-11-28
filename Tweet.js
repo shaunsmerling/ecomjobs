@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 const api_url = require("./config.js")
 
 async function fetchData(){
-  const response = await fetch(`http:/localhost:3000/api/jobs`)
+  const response = await fetch(`https://ecom-jobs.com/api/jobs`)
   const resData = response.json();
   console.log(resData);
   return resData; 
