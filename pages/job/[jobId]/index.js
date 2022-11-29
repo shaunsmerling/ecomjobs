@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import {Helmet} from "react-helmet";
 import Head from "next/head";
 import { api_url } from "../../../config";
+import { NextSEO } from "next-seo"
 
 
 export async function getServerSideProps(context) {
