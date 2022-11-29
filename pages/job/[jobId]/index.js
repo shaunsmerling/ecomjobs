@@ -108,7 +108,7 @@ function Job({ jobs }) {
   return (
     
     <div className="bg-gray-100 pb-10">
-      <NextSeo
+      <NextSEO
       title={`${jobs.job_position} | ${jobs.company_name}`}
       description={`${jobs.job_position} available at ${jobs.company_name}`}
       canonical={`https://www.ecom-jobs.com/job/${jobs.jobUrl}`}
