@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import {Helmet} from "react-helmet";
 import Head from "next/head";
 import { api_url } from "../../../config";
-import { NextSEO } from "next-seo"
 
 
 export async function getServerSideProps(context) {
@@ -108,7 +107,7 @@ function Job({ jobs }) {
   return (
     
     <div className="bg-gray-100 pb-10">
-      <NextSEO
+      {/* <NextSEO
       title={`${jobs.job_position} | ${jobs.company_name}`}
       description={`${jobs.job_position} available at ${jobs.company_name}`}
       canonical={`https://www.ecom-jobs.com/job/${jobs.jobUrl}`}
@@ -127,7 +126,7 @@ function Job({ jobs }) {
           }],
       }}
   
-    />
+    /> */}
       <Helmet>
       (<script className='structured-data-list' type="application/ld+json">{JSON.stringify(data)}</script>)
       </Helmet> 
@@ -136,7 +135,9 @@ function Job({ jobs }) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>{`${jobs.job_position} | ${jobs.company_name}`}</title>
-       
+        <meta property="og:title" content={`${jobs.job_position} | ${jobs.company_name}`} key="maintitle" />
+        <meta property="og:description" content={`${jobs.job_description}`}  key="description" />
+        <meta property="og:image" content={`https://ecom-jobs.com/images/${jobs.logo}`} key="mainimage" />
         <meta name="twitter:card" vmid="twitter:card" key="twcard" content="summary_large_image" />
         <meta name="twitter:site" vmid="twitter:site" key="twsite"  content="@ecomjobs_" />
         <meta name="twitter:text:title" vmid="twitter:text:title" key="twtitle" content={`${jobs.company_name} is hiring for a ${jobs.job_position}!`} />
