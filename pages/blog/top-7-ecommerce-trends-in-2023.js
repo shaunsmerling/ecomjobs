@@ -72,14 +72,14 @@ const second = () => {
           <div className="flex items-center justify-center mt-8 space-x-2">
             <p className="text-base font-medium text-gray-900">
               <a href="#" title="" className="">
-                Brand
+                eCommerce Trends
               </a>
             </p>
             <span className="text-base font-medium text-gray-500">
               •
             </span>
             <p className="text-base font-medium text-gray-500">
-              November 1, 2022
+              November 28, 2022
             </p>
           </div>
         </div>

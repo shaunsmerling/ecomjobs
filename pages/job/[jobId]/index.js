@@ -107,7 +107,7 @@ function Job({ jobs }) {
   return (
     
     <div className="bg-gray-100 pb-10">
-      {/* <NextSeo
+      <NextSeo
       title={`${jobs.job_position} | ${jobs.company_name}`}
       description={`${jobs.job_position} available at ${jobs.company_name}`}
       canonical={`https://www.ecom-jobs.com/job/${jobs.jobUrl}`}
@@ -116,16 +116,17 @@ function Job({ jobs }) {
         url: `https://www.ecom-jobs.com/job/${jobs.jobUrl}`,
         title: "hello",
         description: `this finally`,
-        locale: 'en_EN',
-        siteName: 'EcomJobs',
-      }}
-      twitter={{
-        handle: '@ecomjobs_',
-        site: 'ecom-jobs.com',
-        cardType: 'summary_large_image',
+        images: [
+          {
+            url: `https://ecom-jobs.com/images/${jobs.logo}`,
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          }],
       }}
   
-    /> */}
+    />
       <Helmet>
       (<script className='structured-data-list' type="application/ld+json">{JSON.stringify(data)}</script>)
       </Helmet> 

@@ -183,7 +183,7 @@ const Blog = () => {
                 <div className="flex items-center space-x-2">
                   <p className="text-sm font-medium text-gray-900">
                     <a>
-                     Marketing
+                     eCommerce Trends
                     </a>
                   </p>
                   <span className="text-sm font-medium text-gray-900">
