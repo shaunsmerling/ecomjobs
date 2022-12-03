@@ -1,22 +1,40 @@
 
+import SignIn from "./signIn"
+import SignOut from "./signOut"
+import {useSession} from "next-auth/react"
 import React from 'react';
 
+
 const Navbartwo = () => {
+
+  const { data: session } = useSession()
+
+
+  
+
+ 
+
+
+
   return (
     <header className="py-4 bg-white sm:py-5" x-data="{expanded: false}">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between">
-          <div className=" -ml-14 -mr-12 shrink-0">
+          <div className=" -ml-14 lg:-ml-20 -mr-12 shrink-0">
             <a href="../" title="" className="">
               <img className="w-auto h-24" src="/logo.png" alt=""></img>
             </a>
           </div>
 
-          <div className="hidden lg:flex lg:items-center lg:space-x-4 lg:justify-center">
-            <a href="/companylist" title=""
-              className="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
-              Companies
-            </a>
+
+          <div className="hidden lg:flex lg:items-center lg:ml-20 lg:space-x-4 lg:justify-center">
+
+
+          <a href="/companylist" title=""
+  className="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
+           Companies
+ </a> 
+
 
             <a href="/blog" title=""
               className="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
@@ -31,12 +49,43 @@ const Navbartwo = () => {
         
           </div>
 
-          <div className="hidden ml-auto sm:flex lg:ml-0">
-            <a href="/postajob" title=""
-              className="inline-flex items-center justify-center px-6 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-gray-900 rounded-full hover:bg-[#17614A] hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+
+          <div className="hidden ml-auto -mr-10 sm:flex lg:ml-0">
+
+<div className="mt-1 mr-10">
+
+          {session ?
+
+
+<SignOut/>
+:
+
+<SignIn/>
+
+}
+</div>
+
+
+          
+{session ?
+
+<a href="/employers/postajob" title=""
+              className="inline-flex items-center -mr-10 justify-center px-6 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
               role="button">
-             Post A Job $89
-            </a>
+             Post A Job 
+</a>
+
+
+:
+
+<a href="api/auth/login" title=""
+              className="inline-flex items-center -mr-10 justify-center px-6 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+              role="button">
+             Post A Job 
+</a>
+
+}
+
           </div>
 
           <div className="flex ml-2 lg:hidden">

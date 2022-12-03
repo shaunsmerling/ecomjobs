@@ -3,16 +3,23 @@ import Link from "next/link"
 import { NextSeo } from 'next-seo';
 
 const companylist = () => {        
+
+ 
+
     return (
         <div className="py-12 bg-white sm:py-16 lg:py-20">
         <NextSeo
       title="Company List | eCommerce Jobs"
       description="Search our directory of eCommerce companies." 
     />
-    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div className="-mt-20 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
             <div className="sm:flex sm:items-center sm:justify-between">
-                <div>
+            <div class=" my-8 mb-20 text-center">
+<h2 class="text-2xl text-[#17614A] md:text-4xl font-bold block md:inline text-blue-brand">Join a brand. </h2>
+<h2 class="text-xl md:text-4xl block md:inline font-normal md:font-light">Find a job at one of these ecommerce brands.</h2>
+</div>
+                {/* <div>
                     <p className="text-2xl font-bold text-gray-900">Companies List</p>
                     <p className="mt-1  text-xl font-medium text-gray-500">Search through our directory of brands hiring for roles</p>
                 </div>
@@ -28,7 +35,7 @@ const companylist = () => {
 
                         <input type="search" name="" id="" className="block w-full py-2 pl-10 border border-gray-300 rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm: text-xl" placeholder="Search App" />
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div className="flow-root mt-8">

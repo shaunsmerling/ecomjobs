@@ -48,4 +48,8 @@ model Company {
   company_description String?
   empcount            String?
   companyUrl          String?
+  user_id             String?
 }
+
+
+

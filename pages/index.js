@@ -13,7 +13,31 @@ import { FacetDropdown } from "/components/FacetDropdown";
 import Featured from "../components/featured";
 import { NextSeo } from "next-seo";
 
+
+
+
+
+
+
+
 export default function HomePage() {
+
+
+  // const {user, error, isLoading } = useUser()
+
+  // if (user) {
+  //   return (
+  //     <>
+  //       <h1>Welcome {user.name}</h1>
+  //       <a href="/api/auth/logout">Logout</a>
+  //     </>
+  //   )
+  // }
+
+  // return <a href="/api/auth/login">login</a>
+
+
+
   const searchClient = algoliasearch(
     "RCW293MLIV",
     "bc44fb196bcec6b9602b254bc96f6e71"

@@ -2,15 +2,17 @@ import React, {useState, useEffect} from 'react';
 import '../global.css'
 import Navbartwo from "../components/NavBarTwo"
 import Script from "next/script"
+import { SessionProvider } from "next-auth/react"; 
 
 
 
 
 
 
-function MyApp({ Component, pageProps }) {
-
-
+function MyApp({ 
+  Component, 
+  pageProps: { session, ...pageProps },
+}) {
   return (
     <div>
   
@@ -29,8 +31,10 @@ function MyApp({ Component, pageProps }) {
     `,
   }}
 />
+  <SessionProvider session={session}>
       <Navbartwo/>
       <Component {...pageProps} />
+  </SessionProvider>
      
    </div>
   )

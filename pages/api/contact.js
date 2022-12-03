@@ -7,14 +7,14 @@ export default function (req, res) {
     port: 465,
     host: "smtp.gmail.com",
     auth: {
-      user: 'shaun@kaizenconversion.co',
+      user: 'shaun@ecom-jobs.com',
       pass: process.env.PASSWORD,
     },
     secure: true,
    });
 
    const mailData = {
-    from: 'shaun@kaizenconversion.co',
+    from: 'shaun@ecom-jobs.com',
     to: 'shaunsmerling@gmail.com',
     subject: `EcomJobs Inquiry From ${req.body.name}`,
     text: req.body.message  + " | Sent from: " + req.body.email,
