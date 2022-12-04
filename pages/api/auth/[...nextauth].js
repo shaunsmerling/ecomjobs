@@ -11,11 +11,11 @@ export default NextAuth({
             clientId: process.env.GITHUB_ID,
             clientSecret: process.env.GITHUB_SECRET,
         }),
-        GoogleProvider({
-          clientId: process.env.GOOGLE__CLIENT_ID,
-          clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        // GoogleProvider({
+        //   clientId: process.env.GOOGLE__CLIENT_ID,
+        //   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
 
-        }),
+        // }),
   EmailProvider({
     server: {
       host: "smtp.gmail.com",//process.env.EMAIL_SERVER_HOST,
