@@ -1,10 +1,19 @@
-import { checkout } from "../checkout.js";
+
 import { useState } from "react";
+import { useRouter } from "next/router";
 import Preview from "../components/preview";
 import { NextSeo } from "next-seo";
 import { generateJobUrl } from "../script.js";
 
+
+
 function PostAJob() {
+
+  const router = useRouter()
+
+
+const [addOn, setAddOn] = useState(0)
+
   const [fields, setFields] = useState({
     email: "",
     companyName: "",
@@ -21,6 +30,20 @@ function PostAJob() {
     jobRequirements: "",
     applicationUrl: "",
   });
+
+
+  function getLink() {
+    switch (addOn) {
+      case 0:
+        return router.push("https://buy.stripe.com/7sI4joeqI5bnemQ5kp")
+      case 1:
+        return router.push("https://buy.stripe.com/6oEaHM1DW47ja6A6ou")
+      case 2:
+        return router.push("https://buy.stripe.com/dR66rw82kcDPa6AfZ5")
+      case 3:
+        return router.push("https://buy.stripe.com/aEU2bgbew33f1A4dQY")
+    }
+  }
 
   const handleChange = ({ target }) => {
     setFields({ ...fields, [target.name]: target.value });
@@ -52,19 +75,27 @@ function PostAJob() {
       .then((response) => response.json())
       .then((jsonResponse) => {
         console.log(jsonResponse, "JSON");
-        checkout({
-          lineItems: [
-            {
-              price: "price_1M6CyrJ3L3qVyujTFalmvGtb",
-              quantity: 1,
-            },
-          ],
-        });
+
+        // checkout({
+        //   lineItems: [
+        //     {
+        //       price: "price_1M6CyrJ3L3qVyujTFalmvGtb",
+        //       quantity: 1,
+        //     },
+        //   ],
+        // });
       })
       .catch((err) => {
         console.log(err, "Error");
       });
+
+      getLink()
   };
+
+  {/* https://buy.stripe.com/7sI4joeqI5bnemQ5kp (Normal Job Post, no Addons) */}
+{/* https://buy.stripe.com/6oEaHM1DW47ja6A6ou (Job Post + Highlight Addon) */}
+{/* https://buy.stripe.com/dR66rw82kcDPa6AfZ5 (Job Post + Top Pinned Addon) */}
+{/* https://buy.stripe.com/aEU2bgbew33f1A4dQY (Job Post + Top Pinned + Highlight) */}
 
   const {
     email,
@@ -111,6 +142,15 @@ function PostAJob() {
           image: "/logo.png",
         }}
       />
+
+<div class=" my-8 mb-10 text-center ">
+<h2 class="text-3xl text-[#17614A] md:text-4xl font-bold  md:inline d">Hire the best. </h2>
+<h2 class="text-3xl md:text-4xl  md:inline font-normal md:font-light">Reach thousands of job seekers in the ecommerce industry.</h2>
+</div>
+
+<div class="max-w-3xl mx-auto text-center">
+            <p class="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8">Each job listing costs $199 & will remain active for 30 days. Your job will also be sent to our active email list. If you're interested in buying job posts in bulk at a discount & saving them as pre-purchased credits, visit our <a className="text-sky-500" href="/bulkdiscounts">bulk pricing page.</a></p>
+        </div>
       <form onSubmit={handleSubmit} className=" ">
         <div className="mx-6 my-10 flex flex-col ">
           <div class="py-8 bg-white">
@@ -603,9 +643,54 @@ function PostAJob() {
             </div>
           </div>
 
+          <div class="py-12 -mt-12 bg-white">
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="max-w-sm mx-auto">
+
+            <div class="mt-6 space-y-4 -mx-28" x-data="{ selected: 3 }">
+                <div class="flex items-start">
+                    <div class="flex items-center h-5 pt-1.5">
+                        <input type="radio" name="visibility" id="public" class="w-5 h-5 text-indigo-600 border-gray-300 focus:ring-0" x-model="selected" onChange={() => setAddOn(1)} value="1" />
+                    </div>
+
+                    <div class="ml-4 mb-4">
+                        <label for="public" class="text-lg font-bold text-gray-900 cursor-pointer"> $99 | Highlight Add-on </label>
+                        <p class="mt-1 text-md font-medium text-gray-500">Make your job post stand out from the rest by making it pop with it a flashy yellow color</p>
+                    </div>
+                </div>
+
+                <div class="mt-4 flex items-start">
+                    <div class="flex items-center h-5 pt-1.5">
+                        <input type="radio" name="visibility" id="private" class="w-5 h-5 text-indigo-600 border-gray-300 focus:ring-0" x-model="selected" onChange={() => setAddOn(2)} value="2" />
+                    </div>
+
+                    <div class="ml-4 mb-4">
+                        <label for="private" class="text-lg font-bold text-gray-900 cursor-pointer"> $99 | Top Pinned </label>
+                        <p class="mt-1 text-md font-medium text-gray-500">For 30 days, we'll pin your job post to the top to get 50% more interactions</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="flex items-center h-5 pt-1.5">
+                        <input type="radio" name="visibility" id="unlisted" class="w-5 h-5 text-indigo-600 border-gray-300 focus:ring-0" x-model="selected" onChange={() => setAddOn(3) }value="3" />
+                    </div>
+
+                    <div class="ml-4">
+                        <label for="unlisted" class="text-lg font-bold text-gray-900 cursor-pointer"> $150 | Highlight Add-on + Top Pinned 🔥</label>
+                        <p class="mt-1 text-md font-medium text-gray-500">Add on both! We'll pin your post to the top & highlight it. This is our most effective addon choice for reaching all our applicants</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
           <button
             type="submit"
-            class="flex relative items-center justify-center  sm:w-auto mx-auto w-1/2 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg  hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+            href=""
+            class="flex relative items-center justify-center mb-10 sm:w-auto mx-auto w-1/2 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg  hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
           >
             Post Your Job
           </button>

@@ -31,6 +31,7 @@ model Job {
   company_id          String?
   empcount            String?
   companyUrl          String?
+  user_id             String?
 }
 
 model Email {

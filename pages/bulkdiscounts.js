@@ -9,7 +9,8 @@ export default function Pricing() {
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">Bulk Discounts</h2>
-            <p class="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8">Buy job posts in bulk, save them as pre-purchased credits, and use them throughout the year (valid for 12 months).</p>
+            <p class="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8"> Buy job posts in bulk, save them as pre-purchased credits, and use them throughout the year (valid for 12 months). Each job will be posted on our front page & sent out to our email list.</p>
+            <p class="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8">Our Highlight Addon will display your job post highlighted in yellow for extra visibility. Our Top Pinned addon will display your job post at the top of the page. Both addons are priced at $99 & are included when you purchase more than 5 jobs at once.</p>
         </div>
 
         <div class="grid grid-cols-1 gap-5 mt-12 text-center sm:grid-cols-2 xl:grid-cols-4 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 sm:mt-16 lg:mt-20">
@@ -49,14 +50,14 @@ export default function Pricing() {
                             {/* <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg> */}
-                            ❌ &nbsp; Email Blast Not Included
+                            ❌ &nbsp; Top Pinned 
                         </li>
 
                         <li class="flex items-center">
                             {/* <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg> */}
-                            ❌ &nbsp; Highlight Add-on Included
+                            ❌ &nbsp; Highlight Add-on
                         </li>
 
                         {/* <li class="flex items-center">
@@ -69,7 +70,7 @@ export default function Pricing() {
 
                     <div class="mt-8">
                         <a
-                            href="#"
+                            href="https://buy.stripe.com/14kdTYeqI47j7Ys289"
                             title=""
                             class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 border bg-[#17614A] border-gray-300 rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"
                             role="button"
@@ -127,13 +128,13 @@ export default function Pricing() {
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
-                            Email Blast Included
+                            Top Pinned  
                         </li>
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
-                            Highlight Add-On Included
+                            Highlight Add-On  
                         </li>
 
                         {/* <li class="flex items-center">
@@ -146,7 +147,7 @@ export default function Pricing() {
 
                     <div class="mt-8">
                         <a
-                            href="#"
+                            href="https://buy.stripe.com/eVabLQgyQgU55QkfZ0"
                             title=""
                             class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
                             role="button"
@@ -194,19 +195,19 @@ export default function Pricing() {
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
-                            Email Blast Included
+                            Top Pinned  
                         </li>
 
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
-                            Highlight Add-on Included
+                            Highlight Add-on  
                         </li>
                     </ul>
                     <div class="mt-8">
                         <a
-                            href="#"
+                            href="https://buy.stripe.com/bIY7vAbewavH92w7sv"
                             title=""
                             class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
                             role="button"
@@ -254,20 +255,20 @@ export default function Pricing() {
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
-                            Email Blast Included
+                            Top Pinned  
                         </li>
 
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
-                            Highlight Add-on Included
+                            Highlight Add-on  
                         </li>
                     </ul>
 
                     <div class="mt-8">
                         <a
-                            href="#"
+                            href="https://buy.stripe.com/5kAeY20zS47jdiM4gk"
                             title=""
                             class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
                             role="button"

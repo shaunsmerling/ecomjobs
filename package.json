@@ -34,6 +34,7 @@
     "react-helmet": "^6.1.0",
     "react-instantsearch-dom": "^6.32.0",
     "react-instantsearch-hooks-web": "^6.33.0",
+    "react-router-dom": "^6.4.4",
     "reactjs-popup": "^2.0.5",
     "slugify": "^1.6.5",
     "twitter-api-v2": "^1.12.9",
