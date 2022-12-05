@@ -10,6 +10,7 @@ function companyprofile() {
 
   const {data: session} = useSession()
 
+  console.log(session)
   
   const [companyData, setCompanyData] = useState({
     company_name: "",
@@ -75,6 +76,7 @@ function companyprofile() {
       });
   };
 
+
   const {
     companyName,
     company_url,
@@ -85,15 +87,22 @@ function companyprofile() {
     empcount,
   } = fields;
 
+      // for (let key in companyData) {
+    //   console.log(key)
+    //   if (companyData.hasOwnProperty(key)) {
+    //     let innerObject = companyData[key]
+    //     if (innerObject.user_id === session.user.id) {
+    //       // innerObject has a user_id key with a value of session.user.id
+    //       console.log(innerObject)
+    
   const [companyLogo, setCompanyLogo] = useState();
 
+
+
   function returnData() {
-    for (let key in companyData) {
-      if (companyData.hasOwnProperty(key)) {
-        let innerObject = companyData[key]
-        if (innerObject.hasOwnProperty('user_id') && innerObject.user_id === session.user.id) {
-          // innerObject has a user_id key with a value of session.user.id
-          console.log(innerObject)
+    for (let i = 0; i < companyData.length; i++) {
+      if (companyData[i].user_id === session.user.id) {
+       let  innerObject = companyData[i]
           return (
           <div className="bg-gray-100 pb-10 pt-20 ">
           <main className="">
@@ -230,14 +239,9 @@ function companyprofile() {
           </section>
         </main>
         </div>
-          )
-        } 
-        else {
-          return false
-        }
-      }
-    }
-  }
+          )}
+                }}
+    
 
   return (
     <div className="">
