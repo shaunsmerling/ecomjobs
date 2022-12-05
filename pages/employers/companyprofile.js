@@ -36,20 +36,6 @@ function companyprofile() {
 
 
 
-
-
-  
-  // for (let i = 0; i < companyData.length; i++) {
-  //   if (companyData[i].hasOwnProperty('user_id') && companyData[i].user_id === session.user.id) {
-  //     return 
-  //   }
-  //   if (companyData[i] == user_id) {
-  //     console.log(user_id)
-  //   }
-  //   else {
-  //     console.log("No ida")
-  //   }
-  // }
   
   const [fields, setFields] = useState({
     companyName: "",
@@ -81,8 +67,9 @@ function companyprofile() {
         city: city,
         empcount: empcount,
         companyUrl: companyUrl,
+        user_id: session.user.id
       }),
-    })
+    }).then(alert("Thank you for creating your company profile!") ? "" : location.reload() )
       .catch((err) => {
         console.log(err, "Error");
       });
@@ -91,11 +78,11 @@ function companyprofile() {
   const {
     companyName,
     company_url,
+    companyDescription,
     logo,
     location,
     city,
     empcount,
-    companyDescription,
   } = fields;
 
   const [companyLogo, setCompanyLogo] = useState();
