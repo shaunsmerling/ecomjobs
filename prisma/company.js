@@ -9,6 +9,10 @@ export const getCompanyByUrl = (companyUrl) => {
   return prisma.company.findMany({ where: { companyUrl } });
 };
 
+// CREATE
+export const createCompany = (data) => {
+  return prisma.company.create({ data });
+};
 
 export const getCompanyById = (company_id) => {
   return prisma.company.findUnique({ where: { company_id } });

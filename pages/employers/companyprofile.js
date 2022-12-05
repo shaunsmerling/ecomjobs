@@ -271,7 +271,7 @@ function companyprofile() {
       />
 
 <div class=" my-8 mb-20 text-center">
-<h2 class="text-2xl text-[#17614A] md:text-4xl font-bold block md:inline text-blue-brand">Build a profile .</h2>
+<h2 class="text-2xl text-[#17614A] md:text-4xl font-bold block md:inline text-blue-brand">Build a profile. &nbsp;</h2>
 <h2 class="text-xl md:text-4xl block md:inline font-normal md:font-light">Host all your companies jobs under one branded page.</h2>
 </div>
       <form onSubmit={handleSubmit} className=" ">
@@ -502,7 +502,7 @@ function companyprofile() {
           <button
             href="#"
             type="submit"
-            class="flex relative items-center justify-center  sm:w-auto mx-96 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg  hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+            class="flex relative items-center justify-center  sm:w-auto lg:mx-auto px-60 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg  hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
           >
            Save
           </button>
