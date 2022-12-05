@@ -271,7 +271,7 @@ function companyprofile() {
       />
 
 <div class=" my-8 mb-20 text-center">
-<h2 class="text-2xl text-[#17614A] md:text-4xl font-bold block md:inline text-blue-brand">Build a profile . {companyData.companyName}</h2>
+<h2 class="text-2xl text-[#17614A] md:text-4xl font-bold block md:inline text-blue-brand">Build a profile .</h2>
 <h2 class="text-xl md:text-4xl block md:inline font-normal md:font-light">Host all your companies jobs under one branded page.</h2>
 </div>
       <form onSubmit={handleSubmit} className=" ">
