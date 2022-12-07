@@ -5,7 +5,6 @@ import {useSession} from "next-auth/react"
 import React from 'react';
 import { useState } from 'react';
 import ModalSignIn from "./navModalSignIn"
-import ModalSignOut from "./navModalSignOut"
 
 const Navbartwo = () => {
 

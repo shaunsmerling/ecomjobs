@@ -92,7 +92,7 @@ for (let key in jobData) {
 
 
         <div className="text-center"> 
-            <h1 className="mb-10">My Jobs 💼</h1>
+            <h1 className="leading-[3rem] font-bold tracking-tighter text-black text-2xl mt-10 mb-10 ">My Jobs 💼</h1>
             {returnData() ? returnData(): <div> Currently there are no jobs posted </div>}
            
         </div>

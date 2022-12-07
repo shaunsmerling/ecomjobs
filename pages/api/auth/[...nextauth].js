@@ -6,16 +6,20 @@ import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google"
 
 export default NextAuth({
+  page: {
+    signIn: "/auth/signin",
+    signOut: "/auth/signout",
+  },
     providers: [
-       GithubProvider({
-            clientId: process.env.GITHUB_ID,
-            clientSecret: process.env.GITHUB_SECRET,
-        }),
-        // GoogleProvider({
-        //   clientId: process.env.GOOGLE__CLIENT_ID,
-        //   clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      //  GithubProvider({
+      //       clientId: process.env.GITHUB_ID,
+      //       clientSecret: process.env.GITHUB_SECRET,
+      //   }),
+        GoogleProvider({
+          clientId: process.env.GOOGLE__CLIENT_ID,
+          clientSecret: process.env.GOOGLE_CLIENT_SECRET,
 
-        // }),
+        }),
   EmailProvider({
     server: {
       host: "smtp.gmail.com",//process.env.EMAIL_SERVER_HOST,

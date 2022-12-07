@@ -50,7 +50,7 @@ function Hit({ hit }) {
         <ul className={`  text-left  flex   `}>
         <img className="z-1  ml-4 my-4 w-14 h-14 lg:w-20 lg:h-20 rounded-full border border-[#17614A] border-2 " src={`./images/${hit.logo}`} ></img>
           <li className="w-full mt-4 box-border ">
-            <p className=" font-bold tracking-tighter lg:ml-8 text-black sm:text-5xl max-w-2xl ml-4 lg:mb-4 z-1 text-xl  hover:no-underline">
+            <p className=" font-bold tracking-tighter lg:ml-8 text-black text-xl max-w-2xl ml-4 lg:mb-4 z-1 lg:text-3xl  hover:no-underline">
             {hit.job_position}
               {getNew() && <span className="text-white z-1 bg-[#17614A] border border-black text-xs  ml-4 px-2 rounded-full">
          New</span>}

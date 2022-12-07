@@ -13,6 +13,9 @@ code {
 }
 
 
+.__next-auth-theme-auto {
+  background-color: #fff !important;
+}
 
 button {
   justify-content: right;

@@ -149,7 +149,7 @@ const [addOn, setAddOn] = useState(0)
 </div>
 
 <div class="max-w-3xl mx-auto text-center">
-            <p class="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8">Each job listing costs $199 & will remain active for 30 days. Your job will also be sent to our active email list. If you're interested in buying job posts in bulk at a discount & saving them as pre-purchased credits, visit our <a className="text-sky-500" href="/bulkdiscounts">bulk pricing page.</a></p>
+            <p class="mt-4 text-base font-normal mx-4 leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8">Each job listing costs $199 & will remain active for 30 days. Your job will also be sent to our active email list. If you're interested in buying job posts in bulk at a discount & saving them as pre-purchased credits, visit our <a className="text-sky-500" href="/bulkdiscounts">bulk pricing page.</a></p>
         </div>
       <form onSubmit={handleSubmit} className=" ">
         <div className="mx-6 my-10 flex flex-col ">
@@ -647,7 +647,7 @@ const [addOn, setAddOn] = useState(0)
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="max-w-sm mx-auto">
 
-            <div class="mt-6 space-y-4 -mx-28" x-data="{ selected: 3 }">
+            <div class="mt-6 space-y-4 lg:-mx-28" x-data="{ selected: 3 }">
                 <div class="flex items-start">
                     <div class="flex items-center h-5 pt-1.5">
                         <input type="radio" name="visibility" id="public" class="w-5 h-5 text-indigo-600 border-gray-300 focus:ring-0" x-model="selected" onChange={() => setAddOn(1)} value="1" />
