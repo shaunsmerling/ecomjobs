@@ -3,7 +3,9 @@ import SignIn from "./signIn"
 import SignOut from "./signOut"
 import {useSession} from "next-auth/react"
 import React from 'react';
-
+import { useState } from 'react';
+import ModalSignIn from "./navModalSignIn"
+import ModalSignOut from "./navModalSignOut"
 
 const Navbartwo = () => {
 
@@ -12,7 +14,7 @@ const Navbartwo = () => {
 
   
 
- 
+ const [button, setButton] = useState(true)
 
 
 
@@ -87,30 +89,50 @@ const Navbartwo = () => {
 }
 
           </div>
-
+         
           <div className="flex ml-2 lg:hidden">
-            <button type="button"
-              className="inline-flex items-center p-2.5 text-gray-900 duration-200 border border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transiton-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 focus:bg-gray-900 focus:text-white"
-              >
-              <span x-show="!expanded" aria-hidden="true">
-                <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </span>
+          
+          <button type="button" onClick={() => setButton(!button)}
+          
+            className="inline-flex items-center p-2.5 text-gray-900 duration-200 border border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transiton-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 focus:bg-gray-900 focus:text-white"
+            >
+              {button  ?
+              <div>
+                
+            <span x-show="!expanded" aria-hidden="true">
+              <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </span>
+            </div>
+:
+<div>
+ 
+  <ModalSignIn/>
+            <span x-show="expanded" aria-hidden="true">
+              <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </span> 
+            </div>
+              
+          }
 
-              <span x-show="expanded" aria-hidden="true">
-                <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </span>
-            </button>
+
+          </button>
+
+           
+        </div> 
+        
           </div>
-        </div>
       </div>
     </header>
+
   );
 }
 
 export default Navbartwo;
+
+ 
