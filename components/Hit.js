@@ -66,6 +66,7 @@ function Hit({ hit }) {
      </div>
      </a>
      </Link>
+     
 
    );
  }
