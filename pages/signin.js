@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const signin = () => {        
     return (
-        <section className="py-12 bg-gray-50 sm:py-16 lg:py-20">
+        <section className=" bg-gray-50 sm:py-16 lg:py-20">
     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="relative max-w-md mx-auto lg:max-w-lg">
             <div className="absolute -inset-2">

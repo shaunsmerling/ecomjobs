@@ -6,6 +6,12 @@ import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google"
 
 export default NextAuth({
+  theme: {
+    colorScheme: "light",
+    logo: "https://ecom-jobs.com/logo.png",
+    brandColor: "#17614A",
+
+  },
   page: {
     signIn: "/auth/signin",
     signOut: "/auth/signout",
