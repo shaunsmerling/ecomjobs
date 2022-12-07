@@ -52,9 +52,10 @@ export default function HomePage() {
       <HeroBanner />
       <Featured />
       <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
-        <h2 className="mx-auto text-center text-3xl font-bold">
+        {/* <h2 className="mx-auto text-center text-3xl font-bold "> */}
+        <h3 class="leading-[3rem] font-bold  mx-auto text-center text-4xl tracking-tighter text-black max-w-2xl ">
           Search Job Titles or Company Names
-        </h2>
+        </h3>
         <div className=" mt-12 md:grid-cols-3 divide-y md:divide-x md:divide-y-0 divide-gray-200 rounded-lg align-center drop-shadow my-10 mb-10 mx-4 lg:ml-20 lg:mr-16 ">
           <div className="rounded-lg bg-white border-2 border-black/10 overflow-hidden">
             <div className="ml-2 -mr-6">

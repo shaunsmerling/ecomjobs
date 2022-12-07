@@ -46,21 +46,21 @@ function Hit({ hit }) {
    return (
     <Link href={`/job/${hit.jobUrl}`} hit={hit} passHref>
       <a target="_blank">
-    <div className={`flex flex-col mx-1 lg:mx-20 pb-2  ${hit.featured && 'text-xs '}`}>
-        <ul className={`  text-left mb-2  flex hover:bg-gray-100   hover:underline`}>
-        <img className="z-1 mt-4 ml-4 w-20 h-20 rounded-full border border-[#17614A] border-2 " src={`./images/${hit.logo}`} ></img>
-          <li className="w-full ml-2 mt-2 mb-4 box-border ">
-            <p className=" ml-2 mt-2 z-1 text-xl text-[#17614A] pb-1 hover:no-underline">
-              {hit.company_name} 
-              {getNew() && <span className="text-white z-1 bg-[#17614A] border border-black text-xs mt-2 mb-2 ml-4 py-1 px-2 rounded-full">
+    <div className={`flex flex-col border-2 rounded-lg mb-4 lg:mx-20 hover:bg-gray-100  lg:my-6 lg:py-6 pb-2  m${hit.featured && 'text-xs '}`}>
+        <ul className={`  text-left  flex   `}>
+        <img className="z-1  ml-4 my-4 w-14 h-14 lg:w-20 lg:h-20 rounded-full border border-[#17614A] border-2 " src={`./images/${hit.logo}`} ></img>
+          <li className="w-full mt-4 box-border ">
+            <p className=" font-bold tracking-tighter lg:ml-8 text-black sm:text-5xl max-w-2xl ml-4 lg:mb-4 z-1 text-xl text-[#17614A]  hover:no-underline">
+            {hit.job_position}
+              {getNew() && <span className="text-white z-1 bg-[#17614A] border border-black text-xs  ml-4 px-2 rounded-full">
          New</span>}
              
             </p>
             
-            <p className=" ml-2 -mb-2 z-1 text-2xl text-[#17614A] z-0 font-bold pb-2 pr-20 ">{hit.job_position}</p>
-
-            <p className="float-right mr-4 text-[12px] -mt-10 bold  text-sky-200 lg:text-xl">{hit.job_type} | {hit.location}</p>
-              
+            <p className=" ml-4 lg:ml-8 z-1 text-md lg:text-2xl lg:-mt-2 text-[#17614A] z-0 font-bold pb-2 pr-20 ">  {hit.company_name} </p>
+      
+            <p className="hidden lg:bg-green-200 lg:px-2 lg:py-2 lg:rounded-lg lg:float-right lg:-mt-20 lg:flex lg:mr-10 lg:text-[20px]  lg:text-green-700 lg:text-xl">{hit.city} {hit.location}</p>
+            
           </li>
         </ul>
      </div>
