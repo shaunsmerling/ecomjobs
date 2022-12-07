@@ -48,9 +48,9 @@ const HeroBanner = () => {
                
                 <p class="max-w-md mx-auto mt-6 text-base font-normal leading-7 text-gray-500">Join an eCommerce brand. Help shape the future by working with some of the fastest growing D2C companies. </p> */}
 <div className="mb-10">
-<h1 class="leading-[3rem] font-bold tracking-tighter text-black sm:text-5xl max-w-2xl ">
+<h3 class="leading-[3rem] font-bold tracking-tighter text-black text-6xl max-w-2xl ">
           Hand-picked Jobs For The  <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">eCommerce Industry</span>
-        </h1>
+        </h3>
         </div>
                 <form action="#" onSubmit={handleSubmit} method="POST" class="max-w-md mx-auto mt-8 space-y-4 sm:space-x-4 sm:flex sm:space-y-0 sm:items-end">
                     <div class="flex-1">
