@@ -46,7 +46,7 @@ function Hit({ hit }) {
    return (
     <Link href={`/job/${hit.jobUrl}`} hit={hit} passHref>
       <a target="_blank">
-    <div className={`flex flex-col border-2 rounded-lg mb-4 lg:mx-20 hover:bg-gray-100  lg:my-6 lg:py-6 pb-2  m${hit.featured && 'text-xs '}`}>
+    <div className={`flex flex-col border-2 rounded-lg mb-4 lg:mx-20 hover:bg-gray-100  lg:my-6 lg:py-2 pb-2  m${hit.featured && 'text-xs '}`}>
         <ul className={`  text-left  flex   `}>
         <img className="z-1  ml-4 my-4 w-14 h-14 lg:w-20 lg:h-20 rounded-full border border-[#17614A] border-2 " src={`./images/${hit.logo}`} ></img>
           <li className="w-full mt-4 box-border ">
@@ -59,7 +59,7 @@ function Hit({ hit }) {
             
             <p className=" ml-4 lg:ml-8 z-1 text-md lg:text-2xl lg:-mt-2 text-[#17614A] z-0 font-bold pb-2 pr-20 ">  {hit.company_name} </p>
       
-            <p className="hidden lg:bg-green-200 lg:px-2 lg:py-2 lg:rounded-lg lg:float-right lg:-mt-20 lg:flex lg:mr-10 lg:text-[20px]  lg:text-green-700 lg:text-xl">{hit.city} {hit.location}</p>
+            <p className="hidden lg:bg-green-200 lg:px-2 lg:rounded-lg lg:float-right lg:-mt-20 lg:flex lg:mr-10 lg:text-[20px]  lg:text-green-700 lg:text-xl">{hit.city} {hit.location}</p>
             
           </li>
         </ul>
