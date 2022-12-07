@@ -198,7 +198,7 @@ Sign In
 </div>
 </div>
 </a>
-<div className=" border-t-2 mb-10 -mt- mx-auto">
+<div className=" border-t-2 mb-10 -mt-4 mx-auto">
 <a href="/postajob" title=""
               className="inline-flex items-center justify-center px-20 mt-4 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
               role="button">
