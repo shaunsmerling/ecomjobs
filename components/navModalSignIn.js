@@ -6,7 +6,7 @@ import React from "react"
 function Modal() {
   return (
     <div className="fixed top-0  left-0 w-full h-full bg-black bg-opacity-50 z-50 flex items-center justify-center">
-      <div className="bg-white mt-10 mb-10 w-11/12 h-5/6 md:max-w-md mx-auto rounded shadow-lg text-left px-6">
+      <div className="bg-white  w-11/12 h-5/6 md:max-w-md mx-auto rounded shadow-lg text-left px-6">
         <div class="flex items-center justify-between">
           <div>
             <a href="../">
