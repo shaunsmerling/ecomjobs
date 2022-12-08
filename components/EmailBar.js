@@ -32,7 +32,7 @@ function EmailBar() {
 
     const handleSubmit = e => {
       e.preventDefault();
-
+      window.lintrk('track', { conversion_id: 10364860 });
       fetch("/api/emails", {
         method: "POST",
         body: JSON.stringify({

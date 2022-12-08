@@ -52,7 +52,7 @@ function Hit({ hit }) {
           <li className="w-full mt-4 box-border ">
             <p className=" font-bold tracking-tighter lg:ml-8 text-black text-xl max-w-2xl ml-4 lg:mb-4 z-1 lg:text-3xl  hover:no-underline">
             {hit.job_position}
-              {getNew() && <span className="text-white z-1 bg-[#17614A] border border-black text-xs  ml-4 px-2 rounded-full">
+              {getNew() && <span className="text-white z-1 bg-[#17614A] border border-black text-xs  ml-4 px-2 py-1 rounded-full">
          New</span>}
              
             </p>
