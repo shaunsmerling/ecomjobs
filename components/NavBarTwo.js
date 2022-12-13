@@ -5,6 +5,7 @@ import {useSession} from "next-auth/react"
 import React from 'react';
 import { useState } from 'react';
 import ModalSignIn from "./navModalSignIn"
+import Learn from "./Learn"
 
 const Navbartwo = () => {
 
@@ -21,9 +22,9 @@ const Navbartwo = () => {
     <header className="py-4 bg-white sm:py-5" x-data="{expanded: false}">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between">
-          <div className=" -ml-14 lg:-ml-20 -mr-12 shrink-0">
+          <div className=" lg:-ml-14 lg:-ml-20 -mr-12 shrink-0">
             <a href="../" title="" className="">
-              <img className="w-auto h-24" src="/logo.png" alt=""></img>
+              <img className="w-auto h-20 -ml-2 lg:h-28 lg:-ml-0" src="/logo.png" alt=""></img>
             </a>
           </div>
 
@@ -36,11 +37,11 @@ const Navbartwo = () => {
            Companies
  </a> 
 
-
-            <a href="/blog" title=""
+<Learn/>
+            {/* <a href="/blog" title=""
               className="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
-              Blog
-            </a>
+              
+            </a> */}
 
             <a href="/contactus" title=""
               className="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">

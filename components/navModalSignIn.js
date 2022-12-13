@@ -16,10 +16,10 @@ function Modal() {
         <div class="flex items-center justify-between">
           <div>
             <a href="../">
-        <img href="../" className="w-48 h-14 mt-4 -ml-8 " src="../logo.png" alt=""></img>
+        <img href="../" className="w-auto h-10 mt-4 -ml-2 mb-4 " src="../logo.png" alt=""></img>
         </a>
         </div>
-        <div className=" -mr-28 mt-4">
+        <div className=" -mr-36 mb-4 mt-4">
         <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" data-action="transition#hide">
 <span class="sr-only">Close menu</span>
 
@@ -114,11 +114,13 @@ Sign out
 </div>
 </a>
 <div className=" border-t-2 mx-auto">
+  <div className="mt-4">
 <a href="/postajob" title=""
               className="inline-flex items-center justify-center px-20 mt-6 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
               role="button">
              Post A Job 
 </a>
+</div>
 </div>
 
 </nav>

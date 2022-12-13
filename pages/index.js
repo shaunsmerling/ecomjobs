@@ -50,7 +50,7 @@ export default function HomePage() {
         description="Join an eCommerce brand. Help shape the future by working with some of the fastest growing Direct-To-Consumer companies."
       />
       <HeroBanner />
-      <Featured />
+      {/* <Featured /> */}
       <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
         {/* <h2 className="mx-auto text-center text-3xl font-bold "> */}
         <h3 class="leading-[3rem] font-bold  mx-auto text-center text-4xl tracking-tighter text-black max-w-2xl ">
