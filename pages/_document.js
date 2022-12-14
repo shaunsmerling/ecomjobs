@@ -18,7 +18,7 @@ export default function Document() {
             <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
           
       </Head>
-      <body class="">
+      <body >
         <script src="https://cdn.jsdelivr.net/npm/react@16.8.4/umd/react.production.min.js" integrity="sha256-ctUamuIgSCQg1wsh8Iw0QbDXScmyXhjJ6lxYUscC3FA=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/react-dom@16.8.4/umd/react-dom.production.min.js" integrity="sha256-8uWWG/7CB3OS89Cw67+B++t6w0EMGfQE9C6OGps+Wd8=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/react-instantsearch-dom@6.7.0/dist/umd/ReactInstantSearchDOM.min.js" integrity="sha256-wggJgvcPaPOJnfujGmGMq7LzJgc7/EqEtLCW/BPZy7E=" crossorigin="anonymous"></script>
