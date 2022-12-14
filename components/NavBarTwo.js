@@ -19,10 +19,10 @@ const Navbartwo = () => {
 
 
   return (
-    <header className="py-4 sm:py-5" x-data="{expanded: false}">
-      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+    <header className="py-4 sm:py-5 " x-data="{expanded: false}">
+      <div className="px-4  sm:px-6 lg:px-8 mx-auto max-w-7xl">
         <div className="flex items-center justify-between">
-          <div className=" lg:-ml-14 lg:-ml-16 -mr-12 shrink-0">
+          <div className=" -mr-12 shrink-0">
             <a href="../" title="" className="">
               <img className="w-auto h-16 -ml-2 lg:h-20 lg:-ml-0" src="/logo.png" alt=""></img>
             </a>
@@ -72,7 +72,7 @@ const Navbartwo = () => {
 {session ?
 
 <a href="/employers/postajob" title=""
-              className="inline-flex items-center -mr-10 justify-center px-6 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+              className="inline-flex items-center  justify-center px-6 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
               role="button">
              Post A Job 
 </a>
@@ -81,7 +81,7 @@ const Navbartwo = () => {
 :
 
 <a href="/postajob" title=""
-              className="inline-flex items-center -mr-10 justify-center px-6 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+              className="inline-flex items-center  justify-center px-6 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
               role="button">
              Post A Job 
 </a>

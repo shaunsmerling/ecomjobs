@@ -57,7 +57,8 @@ function Hit({ hit }) {
              
             </p>
             
-            <p className=" ml-4 lg:ml-8 z-1 text-md lg:text-2xl lg:-mt-2 text-[#17614A] z-0 font-bold pb-2 pr-20 ">  {hit.company_name} </p>
+            <p className=" ml-4 lg:ml-8 z-1 text-md lg:text-2xl lg:-mt-2 text-[#17614A] z-0 font-bold pb-2 pr-20 ">  {hit.company_name} {hit.salary ? "• " + hit.salary : ""}</p>
+
       
             <p className="hidden lg:bg-green-200 lg:px-2 lg:rounded-lg lg:float-right lg:-mt-20 lg:flex lg:mr-10 lg:text-[20px]  lg:text-green-700 lg:text-xl">{hit.city} {hit.location}</p>
             
