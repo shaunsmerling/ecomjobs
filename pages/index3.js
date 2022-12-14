@@ -13,7 +13,7 @@ import { FacetDropdown } from "/components/FacetDropdown";
 import Featured from "../components/featured";
 import { NextSeo } from "next-seo";
 import Features from "../components/features"
-
+import Hit2 from "../components/hit2"
 
 
 
@@ -107,6 +107,7 @@ export default function HomePage() {
         </div> */}
 
         <div className="ml-2 mr-2 mb-2 -mt-2">
+
           <Hits hitComponent={Hit} />
         </div>
         

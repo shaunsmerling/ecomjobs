@@ -134,5 +134,3 @@ const Navbartwo = () => {
 }
 
 export default Navbartwo;
-
- 
