@@ -30,7 +30,7 @@ let job = data[data.length - rand];
 
 Check below to apply 👇🏼
       
-www.ecom-jobs.com/job/${job.jobUrl} 
+www.ecomportal.co/job/${job.jobUrl} 
        
 #ecommerce #shopify #jobs #hiring`
     );
