@@ -24,7 +24,7 @@ import {useSession} from "next-auth/react"
 export default function HomePage() {
 
 
-  const { data: session } = useSession()
+  const { data: session, status } = useSession()
 
 
   // const {user, error, isLoading } = useUser()
@@ -53,7 +53,7 @@ export default function HomePage() {
         title="Jobs For the eCommerce Industry"
         description="Join an eCommerce brand. Help shape the future by working with some of the fastest growing Direct-To-Consumer companies."
       />
-      {session ?    <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
+      {session || status === "loading" ?   <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
       <h3 class="leading-[3rem] mx-auto  text-center font-bold tracking-tighter text-black text-5xl max-w-2xl ">
         Search by Job Titles or Company Name
         </h3>
