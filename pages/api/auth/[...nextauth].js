@@ -17,7 +17,7 @@ export default NextAuth({
 
   },
   page: {
-    signIn: "/signin",
+    signIn: "/signup",
     signOut: "/auth/signout",
     verifyRequest: '/auth/verify-request',
   },
