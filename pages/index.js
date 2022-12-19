@@ -53,64 +53,7 @@ export default function HomePage() {
         title="Jobs For the eCommerce Industry"
         description="Join an eCommerce brand. Help shape the future by working with some of the fastest growing Direct-To-Consumer companies."
       />
-      {session || status === "loading" ?   <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
-      <h3 class="leading-[3rem] mx-auto  text-center font-bold tracking-tighter text-black text-5xl max-w-2xl ">
-        Search by Job Titles or Company Name
-        </h3>
-   
-        <div className=" mt-12 md:grid-cols-3 divide-y md:divide-x md:divide-y-0 divide-gray-200 rounded-lg align-center drop-shadow my-10 mb-10 mx-4 lg:mx-52  ">
-          <div className="rounded-lg bg-white border-2 border-black/10 overflow-hidden">
-            <div className="ml-2 -mr-6">
-              <div className="mt-2 mr-10 mb-2">
-                <SearchBox autofocus={true} placeholder="Search..." />
-                {/* <Search/> */}
-              </div>
-            </div>
-            
-          </div>
-        </div>
-        
-
-        <div className="flex flex-wrap w-100 justify-center  mt-10 px-2 drop-shadow -  mb-10 mx-auto lg:w-max  lg:flex lg:mx-auto lg:mb-12 lg:text-center lg:drop-shadow lg:align-center ">
-          <div className="mb-4 ">
-            <FacetDropdown
-              closeOnChange={() => window.innerWidth >= 400}
-              buttonText={({ refinements }) => {
-                return `Job Type (${refinements.length}) `;
-              }}
-            >
-              <RefinementList attribute="job_type" />
-            </FacetDropdown>
-          </div>
-          <div className="mb-4 ">
-            <FacetDropdown
-              closeOnChange={() => window.innerWidth >= 400}
-              buttonText={({ refinements }) => {
-                return `Category (${refinements.length}) `;
-              }}
-            >
-              <RefinementList attribute="job_category" />
-            </FacetDropdown>
-          </div>
-          <div className="mb-4">
-            <FacetDropdown
-              closeOnChange={() => window.innerWidth >= 400}
-              classNames={{ root: "my-LocDropdown" }}
-              buttonText={({ refinements }) => {
-                return `Location (${refinements.length}) `;
-              }}
-            >
-              <RefinementList attribute="location" />
-            </FacetDropdown>
-          </div>
-        </div>
-
-        <div className="ml-2 mr-2 mb-2 -mt-2">
-          <Hits hitComponent={Hit} />
-        </div> 
-   
-      </InstantSearch> : 
-      <div>
+      {!session || status === "loading" ?  <div>
       <HeroBanner />
       <Featured />
       <div className="mt-10 mb-20">
@@ -173,7 +116,64 @@ export default function HomePage() {
         </div> 
    
       </InstantSearch>
-      </div>
+      </div>  : <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
+      <h3 class="leading-[3rem] mx-auto  text-center font-bold tracking-tighter text-black text-5xl max-w-2xl ">
+        Search by Job Titles or Company Name
+        </h3>
+   
+        <div className=" mt-12 md:grid-cols-3 divide-y md:divide-x md:divide-y-0 divide-gray-200 rounded-lg align-center drop-shadow my-10 mb-10 mx-4 lg:mx-52  ">
+          <div className="rounded-lg bg-white border-2 border-black/10 overflow-hidden">
+            <div className="ml-2 -mr-6">
+              <div className="mt-2 mr-10 mb-2">
+                <SearchBox autofocus={true} placeholder="Search..." />
+                {/* <Search/> */}
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+
+        <div className="flex flex-wrap w-100 justify-center  mt-10 px-2 drop-shadow -  mb-10 mx-auto lg:w-max  lg:flex lg:mx-auto lg:mb-12 lg:text-center lg:drop-shadow lg:align-center ">
+          <div className="mb-4 ">
+            <FacetDropdown
+              closeOnChange={() => window.innerWidth >= 400}
+              buttonText={({ refinements }) => {
+                return `Job Type (${refinements.length}) `;
+              }}
+            >
+              <RefinementList attribute="job_type" />
+            </FacetDropdown>
+          </div>
+          <div className="mb-4 ">
+            <FacetDropdown
+              closeOnChange={() => window.innerWidth >= 400}
+              buttonText={({ refinements }) => {
+                return `Category (${refinements.length}) `;
+              }}
+            >
+              <RefinementList attribute="job_category" />
+            </FacetDropdown>
+          </div>
+          <div className="mb-4">
+            <FacetDropdown
+              closeOnChange={() => window.innerWidth >= 400}
+              classNames={{ root: "my-LocDropdown" }}
+              buttonText={({ refinements }) => {
+                return `Location (${refinements.length}) `;
+              }}
+            >
+              <RefinementList attribute="location" />
+            </FacetDropdown>
+          </div>
+        </div>
+
+        <div className="ml-2 mr-2 mb-2 -mt-2">
+          <Hits hitComponent={Hit} />
+        </div> 
+   
+      </InstantSearch>
+      
       }
     </>
   );
