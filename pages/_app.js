@@ -3,6 +3,7 @@ import '../global.css'
 import Navbartwo from "../components/NavBarTwo"
 import Script from "next/script"
 import { SessionProvider } from "next-auth/react"; 
+import { useRouter } from "next/router";
 
 
 
@@ -13,6 +14,8 @@ function MyApp({
   Component, 
   pageProps: { session, ...pageProps },
 }) {
+  const router = useRouter();
+const showHeader = router.pathname === '/signup' || router.pathname === "/createaccount" ? false : true;
   return (
     <div>
   
@@ -55,7 +58,8 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
 </noscript>
 
   <SessionProvider session={session}>
-      <Navbartwo/>
+  {showHeader && <Navbartwo/> }
+    
       <Component {...pageProps} />
   </SessionProvider>
      
