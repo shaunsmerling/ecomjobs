@@ -79,7 +79,7 @@ function Hit({ hit }) {
       <div class="hidden sm:flex sm:ml-auto lg:ml-4">
                 <a
                   //   href={session ? `/job/${hit.jobUrl}` : "/api/auth/signin"}
-                  href="/signup"
+                  href={session ? "" : "/signup"}
                   
                     title=""
                     class="inline-flex items-center justify-center px-32 py-2.5 text-base font-medium text-black transition-all duration-200 bg-white border border-2 rounded-full hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"

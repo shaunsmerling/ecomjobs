@@ -15,19 +15,25 @@ export default function NavBarTwo() {
 
     const router = useRouter()
 
-    const { data: session } = useSession()
+  
 
+
+    const { data: session, status } = useSession()
+
+    console.log(status)
+
+  
     return (
 
 <header class="py-4 bg-white sm:py-5 " x-data="{expanded: false}">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="flex items-center justify-between">
-            <div class="shrink-0 -ml-60">
+            <div class="shrink-0  -ml-60">
                 <a href="../" title="" class="">
-                    <img class="w-auto h-24" src="logo.png" alt="" />
+                    <img class="w-auto h-24" src="/logo.png" alt="" />
                 </a>
             </div>
-        <div className="-mr-52 flex">
+        <div className={`-mr-52 flex`}>
             <div class="hidden lg:flex lg:items-center lg:space-x-4 lg:justify-end lg:ml-auto ">
             <Menu as="div" className="relative inline-block text-left">
       <div className="-ml-4">
@@ -351,8 +357,10 @@ export default function NavBarTwo() {
 
             </div>
            
-
-       {session ?  <Menu as="div" className="relative inline-block text-left">
+      
+          
+       
+       {session ?  <Menu as="div" className={`relative inline-block text-left ${ status === "loading" ? "loading" : "loaded"}`}>
       <div>
         <Menu.Button className="inline-flex w-full text-lg justify-center px-4 py-2 font-medium text-gray-700   ">
         <img src={session.user.image} alt="Avatar" className="h-10 w-10 mx-10 rounded-full" /> 
@@ -387,7 +395,20 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                onClick={() => { signOut()}}
+                  href="/privacy"
+                  className={classNames(
+                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  Privacy Policy
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                onClick={() => { signOut({ redirect: false, callbackUrl: "/"})}}
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -405,7 +426,7 @@ export default function NavBarTwo() {
     </Menu>
        
     : 
-     <div className="flex">
+     <div className={`flex ${ status === "loading" ? "loading" : "loaded"}`}>
             <div class="hidden sm:flex sm:ml-auto lg:mr-4 lg:ml-4">
                 <a
                     href="/signup"
@@ -450,6 +471,7 @@ export default function NavBarTwo() {
                     </span>
                 </button>
             </div>
+            
         </div>
     </div>
 </header>
