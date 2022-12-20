@@ -2,7 +2,7 @@ import {
   createUser,
   getUserByEmail,
 } from "../../prisma/users";
-import bcrypt from "bcrypt"
+
 
 
 // fetch("/api/jobs", {

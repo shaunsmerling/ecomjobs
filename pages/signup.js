@@ -172,7 +172,7 @@ export async function getServerSideProps(context) {
                     </svg>
 
 
-                    {/* <div>
+                    <div>
                         
                     {Object.values(providers).map((provider) => {
 
@@ -231,7 +231,7 @@ export async function getServerSideProps(context) {
         )
     }
  } )}
-                                </div> */}
+                                </div>
 
                   
   
