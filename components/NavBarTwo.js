@@ -20,7 +20,7 @@ export default function NavBarTwo() {
 
     const { data: session, status } = useSession()
 
-    console.log(status)
+
 
   
     return (
