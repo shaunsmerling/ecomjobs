@@ -209,10 +209,11 @@ export default function NavBarTwo() {
                 </a>
               )}
             </Menu.Item>
-            {/* <Menu.Item>
+            <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/googleads"
+                  // href="/blog/googleads"
+                  href="" 
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -225,7 +226,8 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/facebookads"
+                  // href="/blog/facebookads"
+                  href="" 
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -238,7 +240,8 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/instagram"
+                  // href="/blog/instagram"
+                  href="" 
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -251,7 +254,8 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/amazon"
+                  // href="/blog/amazon"
+                  href="" 
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -264,7 +268,8 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/tiktok"
+                  // href="/blog/tiktok"
+                  href="" 
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -277,7 +282,8 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/snapchat"
+                  // href="/blog/snapchat"
+                  href="" 
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -290,7 +296,8 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/emailmarketing"
+                  // href="/blog/emailmarketing"
+                  href="" 
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -303,7 +310,8 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/smsmarketing"
+                  // href="/blog/smsmarketing"
+                  href="" 
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -316,7 +324,8 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/SEO"
+                  // href="/blog/SEO"
+                  href="" 
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -329,7 +338,8 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/cro"
+                  // href="/blog/cro"
+                  href=""
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -342,7 +352,8 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/influencermarketing"
+                  // href="/blog/influencermarketing"
+                  href=""
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -355,7 +366,8 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/ugc"
+                  // href="/blog/ugc"
+                  href=""
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -368,7 +380,8 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/creative"
+                  // href="/blog/creative"
+                  href=""
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -381,7 +394,8 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/ios14"
+                  // href="/blog/ios14"
+                  href=""
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -394,7 +408,8 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/blog/landingpages"
+                  // href="/blog/landingpages"
+                  href=""
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -404,7 +419,7 @@ export default function NavBarTwo() {
                 </a>
               )}
             </Menu.Item>
-            <Menu.Item>
+            {/* <Menu.Item>
               {({ active }) => (
                 <a
                   href="/blog/hiring"
@@ -416,8 +431,8 @@ export default function NavBarTwo() {
                  Hiring
                 </a>
               )}
-            </Menu.Item>
-            <Menu.Item>
+            </Menu.Item> */}
+            {/* <Menu.Item>
               {({ active }) => (
                 <a
                   href="/blog/blackfridaycybermonday"
@@ -540,7 +555,7 @@ export default function NavBarTwo() {
           
        
        {session ?  <Menu as="div" className={`relative inline-block text-left `}>
-      <div >
+      <div>
         <Menu.Button className={`inline-flex w-full text-lg justify-center px-4 py-2 font-medium text-gray-700`} >
         <img src={session.user.image} alt="Avatar" className="h-10 w-10 mx-10 rounded-full" /> 
           <ChevronDownIcon className="mt-3 -ml-6 h-5 w-5" aria-hidden="true" />
