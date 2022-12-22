@@ -39,6 +39,147 @@ export default function NavBarTwo() {
       <div className="-ml-4">
         <Menu.Button className="inline-flex w-full text-lg justify-center px-4 py-2 font-medium text-gray-700   ">
         <a href="" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
+                    Salaries <span className="text-white z-1 bg-[#17614A] border border-black text-[10px]  ml-4 px-1  rounded-full">
+         Coming soon</span>
+                </a>
+        </Menu.Button>
+      </div>
+
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+      >
+        <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div className="py-1">
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                href=""
+                  // href="/salaries/highest-paying-ecommerce-jobs"
+                  className={classNames(
+                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  Highest Paying Jobs 
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                href=""
+                  // href="/salaries/lowest-paying-ecommerce-jobs"
+                  className={classNames(
+                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  Lowest Paying Jobs
+                </a>
+              )}
+            </Menu.Item>
+           
+
+           
+          
+           
+          </div>
+        </Menu.Items>
+      </Transition>
+    </Menu>
+          
+  
+    <Menu as="div" className="relative inline-block text-left">
+      <div className="-ml-10">
+        <Menu.Button className="inline-flex w-full text-lg justify-center px-4 py-2 font-medium text-gray-700   ">
+        <a href="" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
+                    Internships <span className="text-white z-1 bg-[#17614A] border border-black text-[10px]  ml-4 px-1  rounded-full">
+         Coming soon</span>
+                </a>
+        </Menu.Button>
+      </div>
+
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+      >
+        <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div className="py-1">
+          <Menu.Item>
+              {({ active }) => (
+                <a
+                  href=""
+                  className={classNames(
+                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                 Top Internships 
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                href=""
+                  className={classNames(
+                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                 Marketing Internships 
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                href=""
+                  className={classNames(
+                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  Creative Internships
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                href=""
+                  className={classNames(
+                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  Technical Internships
+                </a>
+              )}
+            </Menu.Item>
+
+           
+          
+           
+          </div>
+        </Menu.Items>
+      </Transition>
+    </Menu>
+    <Menu as="div" className="relative inline-block text-left">
+      <div className="-ml-4">
+        <Menu.Button className="inline-flex w-full text-lg justify-center px-4 py-2 font-medium text-gray-700   ">
+        <a href="" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
                     Blog
                 </a>
         </Menu.Button>
@@ -58,20 +199,20 @@ export default function NavBarTwo() {
           <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/postajob"
+                  href="/blog"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                 Salaries
+                  General 
                 </a>
               )}
             </Menu.Item>
-            <Menu.Item>
+            {/* <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/googleads"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -84,7 +225,7 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/facebookads"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -97,7 +238,7 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/instagram"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -110,7 +251,7 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/amazon"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -123,7 +264,7 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/tiktok"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -136,7 +277,7 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/snapchat"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -149,20 +290,33 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/emailmarketing"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                  Email & SMS
+                  Email Marketing
                 </a>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/smsmarketing"
+                  className={classNames(
+                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  SMS Marketing
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="/blog/SEO"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -175,7 +329,7 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/cro"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -188,20 +342,33 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/influencermarketing"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                  Influencer/UGC
+                  Influencer Marketing
                 </a>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/ugc"
+                  className={classNames(
+                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  UGC
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="/blog/creative"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -214,7 +381,7 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/ios14"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -227,20 +394,20 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/landingpages"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
                   )}
                 >
-                  Landing Page
+                  Landing Pages
                 </a>
               )}
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/hiring"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -253,7 +420,7 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/blackfridaycybermonday"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -266,7 +433,7 @@ export default function NavBarTwo() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/bulkdiscounts"
+                  href="/blog/community"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -275,7 +442,7 @@ export default function NavBarTwo() {
                  Community
                 </a>
               )}
-            </Menu.Item>
+            </Menu.Item> */}
 
            
           
@@ -293,9 +460,9 @@ export default function NavBarTwo() {
                 </a>
 
 
-                <a href="/contactus" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
+                {/* <a href="/contactus" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
                     Contact Us
-                </a>
+                </a> */}
                 <Menu as="div" className="relative inline-block text-left">
       <div className="-ml-4">
         <Menu.Button className="inline-flex w-full text-lg justify-center px-4 py-2 font-medium text-gray-700   ">
@@ -342,9 +509,21 @@ export default function NavBarTwo() {
                 </a>
               )}
             </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="/contactus"
+                  className={classNames(
+                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                   Contact Us
+                </a>
+              )}
+            </Menu.Item>
            
-          
-           
+            
           </div>
         </Menu.Items>
       </Transition>
@@ -382,7 +561,7 @@ export default function NavBarTwo() {
           <Menu.Item>
               {({ active }) => (
                 <a
-                  href=""
+                  href="/users/editprofile"
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'

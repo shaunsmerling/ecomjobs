@@ -64,6 +64,7 @@ function Job({ jobs }) {
             "industry": `${jobs.job_category}`,
             "employmentType": "FULL_TIME",
             "datePosted": `${jobs.postedat}`,
+            "baseSalary": `${jobs.salary}`,
             "validThrough": "",
             "jobLocation": {
                 "@type": "Place",

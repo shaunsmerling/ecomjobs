@@ -92,7 +92,7 @@ const handleSubmit = (e) => {
                 </div>
                 <blockquote className="mt-8">
                   <p className="text-xl font-normal text-white">
-                    "EcomJobs has helped us find really high quality candidates for our open positions. We've been able to sift through all the other generic job boards like Linkedin or Indeed & get right to the industries-finest."
+                    "ecomportal has helped us find really high quality candidates for our open positions. We've been able to sift through all the other generic job boards like Linkedin or Indeed & get right to the industries-finest."
                   </p>
                 </blockquote>
                 <div className="flex items-center mt-6">

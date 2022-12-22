@@ -61,14 +61,14 @@ export default function HomePage() {
       </div>
       <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
       <h3 class="leading-[3rem] mx-auto  text-center font-bold tracking-tighter text-black text-5xl max-w-2xl ">
-        Search by Job Titles or Company Name
+        Search Over 2,369+ Brands Hiring
         </h3>
    
         <div className=" mt-12 md:grid-cols-3 divide-y md:divide-x md:divide-y-0 divide-gray-200 rounded-lg align-center drop-shadow my-10 mb-10 mx-4 lg:mx-52  ">
           <div className="rounded-lg bg-white border-2 border-black/10 overflow-hidden">
             <div className="ml-2 -mr-6">
               <div className="mt-2 mr-10 mb-2">
-                <SearchBox autofocus={true} placeholder="Search..." />
+                <SearchBox autofocus={true} placeholder="Search by job titles, companies, or keywords...." />
                 {/* <Search/> */}
               </div>
             </div>
