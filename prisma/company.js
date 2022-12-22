@@ -25,6 +25,12 @@ export const updateCompany = (company_id, updateData) => {
     data: { ...updateData },
   });
 };
+
+// DELETE
+export const deleteCompany = (id) => {
+  return prisma.company.delete({ where: { id } });
+};
+
  /// Create script for GenerateCompanyURL
  // Mimic API for JobURL
  // Make sure to not forget to generate companyURL when profile is made 
