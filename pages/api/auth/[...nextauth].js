@@ -65,11 +65,11 @@ export default NextAuth({
       host: "smtp.gmail.com",//process.env.EMAIL_SERVER_HOST,
       port: 465,// process.env.EMAIL_SERVER_PORT,
       auth: {
-        user: 'shaun@ecom-jobs.com',//process.env.EMAIL_SERVER_USER,
-        pass: 'rosalina2898133',// process.env.EMAIL_SERVER_PASSWORD
+        user: 'shaun@ecomportal.co',//process.env.EMAIL_SERVER_USER,
+        pass: process.env.EMAIL_PWA,// process.env.EMAIL_SERVER_PASSWORD
       }
     },
-    from: 'shaun@ecom-jobs.com'
+    from: 'shaun@ecomportal.co'
   }),
     ],
     adapter: MongoDBAdapter(clientPromise, {
