@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { NextSeo } from 'next-seo';
+import api_url from '../config.js'
 
 const contactus = () => {  
 
@@ -18,7 +19,7 @@ const handleSubmit = (e) => {
   }
 
 
-  fetch('/api/contact', {
+  fetch(`${api_url}/api/contact`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json, text/plain, */*',
