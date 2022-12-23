@@ -19,7 +19,7 @@ const handleSubmit = (e) => {
   }
 
 
-  fetch(`${api_url}/api/contact`, {
+  fetch(`api/contact`, {
     method: 'POST',
     headers: {
       'Accept': 'application/json, text/plain, */*',

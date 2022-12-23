@@ -8,7 +8,7 @@ export default async (req, res) => {
     host: "smtp.gmail.com",
     auth: {
       user: 'shaun@ecomportal.co',
-      pass: "rosalina2898",
+      pass: process.env.EMAIL_PW,
     },
     secure: true,
    });
