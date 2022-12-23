@@ -18,7 +18,7 @@ export default function (req, res) {
     to: 'shaunsmerling@gmail.com',
     subject: `EcomPortal Inquiry From ${req.body.name}`,
     text: req.body.message  + " | Sent from: " + req.body.email,
-    html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
+    html: `<div>${req.body.message}</div><p>sent from: ${req.body.email}</p>`
    }
 
    transporter.sendMail(mailData, function (err, info) {
