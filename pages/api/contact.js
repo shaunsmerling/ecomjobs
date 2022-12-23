@@ -1,4 +1,4 @@
-export default function (req, res) {
+export default async (req, res) => {
 
    
 
@@ -21,12 +21,18 @@ export default function (req, res) {
     html: `<div>${req.body.message}</div><p>sent from: ${req.body.email}</p>`
    }
 
+
+await new Promise((resolve, reject) => {
    transporter.sendMail(mailData, function (err, info) {
-    if(err)
+    if(err) {
       console.log(err)
-    else
+      reject(err)
+     } else {
       console.log(info)
+      resolve(err)
+     }
   })
+})
 
   res.status(200)
   console.log(req.body)
