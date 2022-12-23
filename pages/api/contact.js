@@ -22,17 +22,17 @@ export default async (req, res) => {
    }
 
 
-await new Promise((resolve, reject) => {
+
    transporter.sendMail(mailData, function (err, info) {
-    if(err) {
-      console.log(err)
-      reject(err)
-     } else {
-      console.log(info)
-      resolve(info)
-     }
+    if (err) {
+      console.log(err);
+      res.send("error" + JSON.stringify(err));
+    } else {
+      console.log("mail send");
+      res.send("success");
+    }
   })
-})
+
 
   res.status(200)
   console.log(req.body)
