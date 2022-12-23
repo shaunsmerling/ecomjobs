@@ -29,7 +29,7 @@ await new Promise((resolve, reject) => {
       reject(err)
      } else {
       console.log(info)
-      resolve(err)
+      resolve(info)
      }
   })
 })
