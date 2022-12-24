@@ -47,6 +47,15 @@ function Hit({ hit }) {
        } 
    }
 
+   function ifSalary() {
+    if (hit.salary === "null") {
+       return ""
+    } else {
+       return "•" + " " + hit.salary
+    }
+   }
+   console.log(hit.salary)
+
    return (
     <Link href={`/job/${hit.jobUrl}`} hit={hit} passHref>
       <a target="_blank">
@@ -72,7 +81,7 @@ function Hit({ hit }) {
                <circle cx="3" cy="1.75" r="1.75"></circle></g></svg>
                <p className=" ml-2 font-bold -mt-2 text-lg">5-100 EMPLOYEES</p>
             </div>
-            <p className=" ml-4 lg:ml-8 z-1 lg:mt-1 text-md lg:text-xl  text-black z-0 pb-2 pr-20 ">  {getDate()} • {hit.city} • {hit.location}  {hit.salary ? "•" + " " + hit.salary : ""}</p>
+            <p className=" ml-4 lg:ml-8 z-1 lg:mt-1 text-md lg:text-xl  text-black z-0 pb-2 pr-20 ">  {getDate()} • {hit.city} • {hit.location}  {ifSalary()}</p>
     
 
 <div className="flex mt-4 ml-2">
