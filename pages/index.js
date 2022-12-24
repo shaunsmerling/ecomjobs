@@ -60,9 +60,9 @@ export default function HomePage() {
       {/* <Step /> */}
       </div>
       <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
-      <h3 class="leading-[3rem] mx-auto  text-center font-bold tracking-tighter text-black text-5xl max-w-2xl ">
-        Search Over 2,369+ Brands Hiring
-        </h3>
+      <h1 class="leading-[3rem] mx-auto  text-center font-bold tracking-tighter text-black text-4xl max-w-2xl ">
+        Search the most curated list of  <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">DTC jobs available </span>
+        </h1>
    
         <div className=" mt-12 md:grid-cols-3 divide-y md:divide-x md:divide-y-0 divide-gray-200 rounded-lg align-center drop-shadow my-10 mb-10 mx-4 lg:mx-52  ">
           <div className="rounded-lg bg-white border-2 border-black/10 overflow-hidden">

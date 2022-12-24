@@ -47,12 +47,15 @@ const HeroBanner = () => {
                 <h2  class="leading-normal text-4xl font-bold lg:leading-normal   lg:text-5xl">Hand-picked Jobs For The eCommerce Industry</h2>
                
                 <p class="max-w-md mx-auto mt-6 text-base font-normal leading-7 text-gray-500">Join an eCommerce brand. Help shape the future by working with some of the fastest growing D2C companies. </p> */}
-<div className="mb-10">
-<h3 class="leading-[3rem] font-bold tracking-tighter text-black text-6xl max-w-2xl ">
-         Hand-picked Jobs Across The <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">eCommerce Industry</span>
-        </h3>
+<div className="mb-2">
+<h1 class="leading-[3rem] font-bold tracking-tighter text-black text-6xl max-w-2xl ">
+         Find a job in the <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">eCommerce Industry</span>
+        </h1>
+        <h2 class="leading-[3rem] mt-2 tracking-tighter text-black text-xl max-w-2xl ">
+         Join thousands of people getting weekly alerts from brands hiring
+        </h2>
         </div>
-                <form action="#" onSubmit={handleSubmit} method="POST" class="max-w-md mx-auto mt-8 space-y-4 sm:space-x-4 sm:flex sm:space-y-0 sm:items-end">
+                <form action="#" onSubmit={handleSubmit} method="POST" class="max-w-md mx-auto  space-y-4 sm:space-x-4 sm:flex sm:space-y-0 sm:items-end">
                     <div class="flex-1">
                         <label for="" class="sr-only"> Email address </label>
                         <div>
@@ -60,7 +63,7 @@ const HeroBanner = () => {
               type="email" name="email"  value={email}
             onChange={handleChange} class="block w-full px-4 py-3 sm:py-3.5 text-base 
             font-medium text-gray-900 placeholder-gray-500 border border-gray-300 rounded-lg 
-            sm:text-sm focus:ring-gray-900 focus:border-gray-900" placeholder="Email address" />
+            sm:text-sm focus:ring-gray-900 focus:border-gray-900" placeholder="Type your email..." />
                         </div>
                     </div>
 
