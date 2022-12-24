@@ -176,15 +176,15 @@ export default function NavBarTwo() {
         </Menu.Items>
       </Transition>
     </Menu>
-    <Menu as="div" className="relative inline-block text-left">
-      <div className="-ml-4">
-        <Menu.Button className="inline-flex w-full justify-center px-4 py-2 font-medium text-gray-700   ">
-        <a href="" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-[12px] text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
+    {/* <Menu as="div" className="relative inline-block text-left"> */}
+      <div className="">
+        {/* <Menu.Button className="inline-flex w-full justify-center px-4 py-2 font-medium text-gray-700   "> */}
+        <a href="/blog" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-[12px] text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
                     Blog
                 </a>
-        </Menu.Button>
+        {/* </Menu.Button> */}
       </div>
-
+{/* 
       <Transition
         as={Fragment}
         enter="transition ease-out duration-100"
@@ -193,8 +193,8 @@ export default function NavBarTwo() {
         leave="transition ease-in duration-75"
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
-      >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+      > */}
+        {/* <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
           <Menu.Item>
               {({ active }) => (
@@ -206,6 +206,19 @@ export default function NavBarTwo() {
                   )}
                 >
                   General 
+                </a>
+              )}
+            </Menu.Item>
+            <Menu.Item>
+              {({ active }) => (
+                <a
+                  href="/interviewquestions"
+                  className={classNames(
+                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                    'block px-4 py-2 text-sm'
+                  )}
+                >
+                  Interview Questions 
                 </a>
               )}
             </Menu.Item>
@@ -419,53 +432,15 @@ export default function NavBarTwo() {
                 </a>
               )}
             </Menu.Item>
-            {/* <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="/blog/hiring"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                 Hiring
-                </a>
-              )}
-            </Menu.Item> */}
-            {/* <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="/blog/blackfridaycybermonday"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                 BF/CM
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="/blog/community"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                 Community
-                </a>
-              )}
-            </Menu.Item> */}
+        
 
            
           
            
           </div>
-        </Menu.Items>
-      </Transition>
-    </Menu>
+        </Menu.Items> */}
+      {/* </Transition> */}
+    {/* </Menu> */}
                 {/* <a href="/blog" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
                     Blog
                 </a> */}
@@ -620,12 +595,12 @@ export default function NavBarTwo() {
     </Menu>
        
     : 
-     <div className={`flex ${ status === "loading" ? "loading" : "loaded"}`}>
-            <div class="hidden sm:flex sm:ml-auto lg:mr-4 lg:ml-4">
+     <div className={`flex  ${ status === "loading" ? "loading" : "loaded"}`}>
+            <div class="hidden sm:flex sm:ml-auto lg:py-2 lg:mr-4 lg:ml-4">
                 <a
                     href="/signup"
                     title=""
-                    class="inline-flex items-center justify-center px-4 text-[12px] font-medium text-white transition-all duration-200 bg-[#17614A] border border-2 rounded-lg hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
+                    class="inline-flex items-center justify-center px-4 -pt-4 text-[12px] font-medium text-white transition-all duration-200 bg-[#17614A] border border-2 rounded-lg hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
                     role="button"
                 >
                     Log In

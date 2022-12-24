@@ -58,18 +58,18 @@ export async function getServerSideProps(context) {
     }
 
       return (
-          <section className="py-12 bg-white sm:py-16 lg:pb-20 ">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:pt-24 lg:px-8">
+          <section className=" bg-white sm:py-16 lg:pb-20 ">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6  lg:px-8">
           <div className="">
             <a href="../">
-              <img className="w-auto h-24 mx-auto" src="/logo.png" alt="" />
+              <img className="w-auto h-16 mx-auto mb-20 mt-0" src="/logo.png" alt="" />
               </a>
           </div>
   
-          <div className="grid max-w-lg grid-cols-1 mx-auto mt-8 gap-y-12 lg:mt-10 lg:max-w-none lg:grid-cols-2">
+          <div className="grid max-w-lg grid-cols-1 mx-auto  gap-y-12 lg:mt-10 lg:max-w-none lg:grid-cols-2">
               <div className="lg:px-12 xl:px-16">
                   <div className="text-center">
-                      <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj">Sign in with email</h1>
+                      <h1 className="font-bold text-gray-900 text-4xl font-pj">Sign in with email</h1>
   
                       <div className="flex justify-center flex-shrink-0 mt-8 -space-x-4 overflow-hidden">
                           <img className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-male-1.png" alt="" />
