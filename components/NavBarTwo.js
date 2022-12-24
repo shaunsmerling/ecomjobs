@@ -28,17 +28,17 @@ export default function NavBarTwo() {
 <header class="py-4 bg-white sm:py-5 " x-data="{expanded: false}">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="flex items-center justify-between">
-            <div class="shrink-0  -ml-60">
+            <div class="shrink-0  -ml-10">
                 <a href="../" title="" class="">
-                    <img class="w-auto h-24" src="/logo.png" alt="" />
+                    <img class="w-auto h-14" src="/logo.png" alt="" />
                 </a>
             </div>
-        <div className={`-mr-52 flex`}>
+        <div className={`-mr-20 flex`}>
             <div class="hidden lg:flex lg:items-center lg:space-x-4 lg:justify-end lg:ml-auto ">
             <Menu as="div" className="relative inline-block text-left">
       <div className="-ml-4">
-        <Menu.Button className="inline-flex w-full text-lg justify-center px-4 py-2 font-medium text-gray-700   ">
-        <a href="" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
+        <Menu.Button className="inline-flex w-full text-sm justify-center px-4 py-2 font-medium text-gray-700   ">
+        <a href="" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-[12px] font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
                     Salaries <span className="text-white z-1 bg-[#17614A] border border-black text-[10px]  ml-4 px-1  rounded-full">
          Coming soon</span>
                 </a>
@@ -97,8 +97,8 @@ export default function NavBarTwo() {
   
     <Menu as="div" className="relative inline-block text-left">
       <div className="-ml-10">
-        <Menu.Button className="inline-flex w-full text-lg justify-center px-4 py-2 font-medium text-gray-700   ">
-        <a href="" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
+        <Menu.Button className="inline-flex w-full justify-center px-4 py-2 font-medium text-gray-700   ">
+        <a href="" title="" class="inline-flex items-center justify-center px-4 py-2.5  text-[12px] text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
                     Internships <span className="text-white z-1 bg-[#17614A] border border-black text-[10px]  ml-4 px-1  rounded-full">
          Coming soon</span>
                 </a>
@@ -178,8 +178,8 @@ export default function NavBarTwo() {
     </Menu>
     <Menu as="div" className="relative inline-block text-left">
       <div className="-ml-4">
-        <Menu.Button className="inline-flex w-full text-lg justify-center px-4 py-2 font-medium text-gray-700   ">
-        <a href="" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
+        <Menu.Button className="inline-flex w-full justify-center px-4 py-2 font-medium text-gray-700   ">
+        <a href="" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-[12px] text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
                     Blog
                 </a>
         </Menu.Button>
@@ -470,7 +470,7 @@ export default function NavBarTwo() {
                     Blog
                 </a> */}
 
-                <a href="/companylist" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
+                <a href="/companylist" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-[12px]  text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
                     Company List
                 </a>
 
@@ -480,8 +480,8 @@ export default function NavBarTwo() {
                 </a> */}
                 <Menu as="div" className="relative inline-block text-left">
       <div className="-ml-4">
-        <Menu.Button className="inline-flex w-full text-lg justify-center px-4 py-2 font-medium text-gray-700   ">
-        <a href="" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
+        <Menu.Button className="inline-flex w-full justify-center px-4 py-2 font-medium text-gray-700   ">
+        <a href="" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-gray-900 text-[12px] transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
                     For Companies
                 </a>
         </Menu.Button>
@@ -556,7 +556,7 @@ export default function NavBarTwo() {
        
        {session ?  <Menu as="div" className={`relative inline-block text-left `}>
       <div>
-        <Menu.Button className={`inline-flex w-full text-lg justify-center px-4 py-2 font-medium text-gray-700`} >
+        <Menu.Button className={`inline-flex w-full text-[12px] justify-center px-4 py-2 font-medium text-gray-700`} >
         <img src={session.user.image} alt="Avatar" className="h-10 w-10 mx-10 rounded-full" /> 
           <ChevronDownIcon className="mt-3 -ml-6 h-5 w-5" aria-hidden="true" />
         </Menu.Button>
@@ -625,7 +625,7 @@ export default function NavBarTwo() {
                 <a
                     href="/signup"
                     title=""
-                    class="inline-flex items-center justify-center px-6 py-2.5 text-base font-medium text-white transition-all duration-200 bg-[#17614A] border border-2 rounded-lg hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
+                    class="inline-flex items-center justify-center px-4 text-[12px] font-medium text-white transition-all duration-200 bg-[#17614A] border border-2 rounded-lg hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
                     role="button"
                 >
                     Log In
