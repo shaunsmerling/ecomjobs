@@ -139,12 +139,12 @@ function Job({ jobs }) {
         <title>{`${jobs.job_position} | ${jobs.company_name}`}</title>
         <meta property="og:title" content={`${jobs.job_position} | ${jobs.company_name}`} key="maintitle" />
         <meta property="og:description" content={`${jobs.job_description}`}  key="description" />
-        <meta property="og:image" content={`https://ecom-jobs.com/images/${jobs.logo}`} key="mainimage" />
+        <meta property="og:image" content={`https://ecomportal.co/images/${jobs.logo}`} key="mainimage" />
         <meta name="twitter:card" vmid="twitter:card" key="twcard" content="summary_large_image" />
-        <meta name="twitter:site" vmid="twitter:site" key="twsite"  content="@ecomjobs_" />
+        <meta name="twitter:site" vmid="twitter:site" key="twsite"  content="@ecomprtal" />
         <meta name="twitter:text:title" vmid="twitter:text:title" key="twtitle" content={`${jobs.company_name} is hiring for a ${jobs.job_position}!`} />
         <meta name="twitter:text:description" vmid="twitter:text:description" key="twdesc"  content={`${jobs.job_description}`} />
-        <meta name="twitter:image:src" vmid="twitter:image:src"  key="twimg" content={`https://ecom-jobs.com/images/${jobs.logo}`} />
+        <meta name="twitter:image:src" vmid="twitter:image:src"  key="twimg" content={`https://ecomportal.co/images/${jobs.logo}`} />
 </Head>
 
       <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"/>
