@@ -85,7 +85,7 @@ function Hit({ hit }) {
     
 
 <div className="flex mt-4 ml-2">
-      <div class="hidden sm:flex sm:ml-auto lg:ml-4">
+      {/* <div class="hidden sm:flex sm:ml-auto lg:ml-4">
                 <a
                   //   href={session ? `/job/${hit.jobUrl}` : "/api/auth/signin"}
                   href={session ? "" : "/signup"}
@@ -96,7 +96,7 @@ function Hit({ hit }) {
                 >
                   Save 
                 </a>
-            </div>
+            </div> */}
        
             <div class="hidden sm:flex sm:ml-auto lg:ml-4">
                 <a
