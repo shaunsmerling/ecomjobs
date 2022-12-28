@@ -15,6 +15,8 @@ export default function NavBarTwo() {
 
     const router = useRouter()
 
+    const noBorder = router.pathname === "/job" ? false : true
+
   
 
 
@@ -536,7 +538,7 @@ export default function NavBarTwo() {
       
           
        
-       {session ?  <Menu as="div" className={`relative inline-block text-left `}>
+       {/* <Menu as="div" className={`relative inline-block text-left `}>
       <div>
         <Menu.Button className={`inline-flex w-full text-[12px] justify-center px-4 py-2 font-medium text-gray-700`} >
         <img src={session.user.image} alt="Avatar" className="h-10 w-10 mx-10 rounded-full" /> 
@@ -601,8 +603,8 @@ export default function NavBarTwo() {
       </Transition>
     </Menu>
        
-    : 
-     <div className={`flex  ml-36 ${ status === "loading" ? "loading" : "loaded"}`}>
+    :  */}
+     <div className={`flex  ml-36 `}>
             <div class="hidden sm:flex sm:ml-auto lg:py-2 ">
                 <a
                     href="/postajob"
@@ -625,7 +627,7 @@ export default function NavBarTwo() {
                 </a>
             </div> */}
             </div>
-            }
+            
  </div>
 
             <div class="flex  lg:hidden">
