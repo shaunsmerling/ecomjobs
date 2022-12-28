@@ -360,3 +360,12 @@ transition: all 0.1s ease-in;
 opacity: 1;
 transition: all 0.1s ease-in;
 }
+
+#card {
+  width: 175px;
+  font-size: 12px;
+  flex: 0 0 auto;         /* ADD */
+  display: flex;          /* ADD */
+  flex-direction: column; /* ADD */
+  position: relative;
+}

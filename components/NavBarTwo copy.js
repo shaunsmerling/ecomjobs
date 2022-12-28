@@ -25,23 +25,24 @@ export default function NavBarTwo() {
   
     return (
 
-<header class="mx-40 border-b-2  py-4 bg-white sm:py-5 " x-data="{expanded: false}">
-    <div class="px-4  sm:px-6 lg:px-8 max-w-7xl">
-        <div class="flex">
-            <div class="shrink-0  ">
+<header class="py-4 bg-white sm:py-5 " x-data="{expanded: false}">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="flex items-center justify-between">
+            <div class="shrink-0  -ml-10">
                 <a href="../" title="" class="">
                     <img class="w-auto h-14" src="/logo.png" alt="" />
                 </a>
             </div>
-        <div className={`ml-40 flex`}>
-            <div class="hidden lg:flex lg:items-center lg:space-x-4 lg:justify-end ">
+        <div className={`-mr-20 flex`}>
+            <div class="hidden lg:flex lg:items-center lg:space-x-4 lg:justify-end lg:ml-auto ">
            
-{/*   
-    <Menu as="div" className="relative inline-block">
-      <div className="">
+  
+    <Menu as="div" className="relative inline-block text-left">
+      <div className="-ml-10">
         <Menu.Button className="inline-flex w-full justify-center px-4 py-2 font-medium text-gray-700   ">
         <a href="" title="" class="inline-flex items-center justify-center px-4 py-2.5  text-[12px] text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
-                    Internships 
+                    Internships <span className="text-white z-1 bg-[#17614A] border border-black text-[10px]  ml-4 px-1  rounded-full">
+         Coming soon</span>
                 </a>
         </Menu.Button>
       </div>
@@ -116,14 +117,14 @@ export default function NavBarTwo() {
           </div>
         </Menu.Items>
       </Transition>
-    </Menu> */}
-    {/* <Menu as="div" className="relative inline-block text-left"> */}
-      <div className="">
-        {/* <Menu.Button className="inline-flex w-full text-sm justify-center px-4 py-2 font-medium text-gray-700   "> */}
-        <a href="/salaries" title="" class="inline-flex font-bold items-center justify-center px-4 py-2.5 text-[14px]  text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
+    </Menu>
+    <Menu as="div" className="relative inline-block text-left">
+      <div className="-ml-8">
+        <Menu.Button className="inline-flex w-full text-sm justify-center px-4 py-2 font-medium text-gray-700   ">
+        <a href="/salaries" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-[12px] font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
                     Salaries 
                 </a>
-        {/* </Menu.Button> */}
+        </Menu.Button>
       </div>
 
       {/* <Transition
@@ -173,21 +174,13 @@ export default function NavBarTwo() {
           {/* </div> */}
         {/* </Menu.Items>  */}
       {/* </Transition> */}
-    {/* </Menu>
-     */}
+    </Menu>
           
     {/* <Menu as="div" className="relative inline-block text-left"> */}
       <div className="">
         {/* <Menu.Button className="inline-flex w-full justify-center px-4 py-2 font-medium text-gray-700   "> */}
-        <a href="/blog" title="" class="inline-flex items-center  font-bold justify-center px-4 py-2.5 text-[14px] text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
+        <a href="/blog" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-[12px] text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
                     Blog
-                </a>
-        {/* </Menu.Button> */}
-      </div>
-      <div className="">
-        {/* <Menu.Button className="inline-flex w-full justify-center px-4 py-2 font-medium text-gray-700   "> */}
-        <a href="/internships" title="" class="inline-flex items-center  font-bold justify-center px-4 py-2.5 text-[14px] text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
-                    Internships
                 </a>
         {/* </Menu.Button> */}
       </div>
@@ -461,10 +454,10 @@ export default function NavBarTwo() {
                     Contact Us
                 </a> */}
                 <Menu as="div" className="relative inline-block text-left">
-      <div className="">
-        <Menu.Button className="inline-flex w-full justify-center py-2 font-medium text-gray-700   ">
-        <a href="" title="" class="inline-flex items-center -ml-4 font-bold justify-center px-6 py-2.5 text-gray-900 text-[14px] transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
-                   Companies
+      <div className="-ml-4">
+        <Menu.Button className="inline-flex w-full justify-center px-4 py-2 font-medium text-gray-700   ">
+        <a href="" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-gray-900 text-[12px] transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
+                    For Companies
                 </a>
         </Menu.Button>
       </div>
@@ -602,15 +595,15 @@ export default function NavBarTwo() {
     </Menu>
        
     : 
-     <div className={`flex  ml-36 ${ status === "loading" ? "loading" : "loaded"}`}>
-            <div class="hidden sm:flex sm:ml-auto lg:py-2 ">
+     <div className={`flex  ${ status === "loading" ? "loading" : "loaded"}`}>
+            <div class="hidden sm:flex sm:ml-auto lg:py-2 lg:mr-4 lg:ml-4">
                 <a
-                    href="/postajob"
+                    href="/signup"
                     title=""
-                    class="   px-10 pt-2 text-[14px] font-medium text-white transition-all duration-200 bg-[#17614A] border border-2 rounded-full hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
+                    class="inline-flex items-center justify-center px-4 -pt-4 text-[12px] font-medium text-white transition-all duration-200 bg-[#17614A] border border-2 rounded-lg hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
                     role="button"
                 >
-                    Post A Job
+                    Log In
                 </a>
             </div>
 {/* 
@@ -628,7 +621,7 @@ export default function NavBarTwo() {
             }
  </div>
 
-            <div class="flex  lg:hidden">
+            <div class="flex ml-4 lg:hidden">
                 <button
                     type="button"
                     class="inline-flex items-center p-2.5 text-white duration-200 bg-blue-600 border border-transparent rounded-full hover:bg-blue-700 transiton-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"

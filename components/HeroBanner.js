@@ -33,13 +33,13 @@ const HeroBanner = () => {
     return (
 <div className=''>
 
-    <section class="relative py-12 bg-white sm:py-16 lg:py-20">
+    <section class="relative py-12  bg-white sm:py-16 lg:py-20">
         <div class="absolute inset-0">
             <img class="object-cover w-full h-full" src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/5/grid-pattern.png" alt="" />
         </div>
 
         <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-            <div class="max-w-xl mx-auto text-center">
+            <div class=" mx-auto text-center">
 
                 <img src=""/>
 {/* 
@@ -48,10 +48,10 @@ const HeroBanner = () => {
                
                 <p class="max-w-md mx-auto mt-6 text-base font-normal leading-7 text-gray-500">Join an eCommerce brand. Help shape the future by working with some of the fastest growing D2C companies. </p> */}
 <div className="mb-2">
-<h1 class="leading-[3rem] font-bold tracking-tighter text-black text-6xl max-w-2xl ">
+<h1 class=" font-bold text-black text-8xl  ">
          Find a job in the <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">eCommerce Industry</span>
         </h1>
-        <h2 class="leading-[3rem] mt-2 tracking-tighter text-black text-xl max-w-2xl ">
+        <h2 class="leading-[3rem] mt-2 mx-auto tracking-tighter text-black text-xl max-w-2xl ">
          Join thousands of people getting weekly alerts from brands hiring
         </h2>
         </div>
@@ -101,7 +101,7 @@ const HeroBanner = () => {
                         <svg class="w-5 h-5 mr-2 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span class="text-xs font-medium text-gray-900 sm:text-sm"> Over 2000+ Industry-Specific Jobs </span>
+                        <span class="text-xs font-medium text-gray-900 sm:text-sm"> Over 2763+ DTC Jobs Available</span>
                     </li>
                 </ul>
             </div>

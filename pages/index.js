@@ -13,6 +13,8 @@ import { FacetDropdown } from "/components/FacetDropdown";
 import Featured from "../components/featured";
 import { NextSeo } from "next-seo";
 import {useSession} from "next-auth/react"
+import LogoBanner from "../components/logobanner"
+import JobsByCompany from "../components/jobsByCompany"
 
 
 
@@ -55,21 +57,21 @@ export default function HomePage() {
       />
       {!session || status === "loading" ?  <div>
       <HeroBanner />
-      <Featured />
-      <div className="mt-10 mb-20">
-      {/* <Step /> */}
+      {/* <Featured /> */}
+      <div className="mb-10">
+      <LogoBanner/>
+
       </div>
       <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
-      <h1 class="leading-[3rem] mx-auto  text-center font-bold tracking-tighter text-black text-4xl max-w-2xl ">
-        Search the most curated list of  <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">DTC jobs available </span>
-        </h1>
-   
-        <div className=" mt-12 md:grid-cols-3 divide-y md:divide-x md:divide-y-0 divide-gray-200 rounded-lg align-center drop-shadow my-10 mb-10 mx-4 lg:mx-52  ">
+      <h1 className="text-center -mb-20 font-bold text-[30px]"> Search Our List Of  <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700"> Over 2000+ Brands Hiring</span> </h1>
+        <div className=" mt-32 md:grid-cols-3 divide-y md:divide-x md:divide-y-0 divide-gray-200 rounded-lg align-center drop-shadow my-10 mb-10 mx-4 lg:mx-52  ">
+          
           <div className="rounded-lg bg-white border-2 border-black/10 overflow-hidden">
             <div className="ml-2 -mr-6">
               <div className="mt-2 mr-10 mb-2">
+              
                 <SearchBox autofocus={true} placeholder="Search by job titles, companies, or keywords...." />
-                {/* <Search/> */}
+            
               </div>
             </div>
             
@@ -116,6 +118,7 @@ export default function HomePage() {
         </div> 
    
       </InstantSearch>
+      {/* <JobsByCompany /> */}
       </div>  : <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
       <h3 class="leading-[3rem] mx-auto  text-center font-bold tracking-tighter text-black text-5xl max-w-2xl ">
         Search by Job Titles or Company Name
@@ -174,7 +177,9 @@ export default function HomePage() {
    
       </InstantSearch>
       
+      
       }
+     
     </>
   );
 }

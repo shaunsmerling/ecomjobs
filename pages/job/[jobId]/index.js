@@ -20,7 +20,6 @@ console.log(context)
 
 function Job({ jobs }) {
 
-  console.log(jobs)
   
 // const [jobs, setJobData] = useState({
 //   company_name: "",

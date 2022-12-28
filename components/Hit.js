@@ -54,7 +54,7 @@ function Hit({ hit }) {
        return "•" + " " + hit.salary
     }
    }
-   console.log(hit.salary)
+
 
    return (
     <Link href={`/job/${hit.jobUrl}`} hit={hit} passHref>

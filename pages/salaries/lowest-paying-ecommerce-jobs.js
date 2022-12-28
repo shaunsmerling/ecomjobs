@@ -59,7 +59,7 @@ const data = [
  
 ]
 
-function MyComponent() {
+function lowestSalaries() {
     return (
         <div>
             <h1 className="text-center font-bold mb-10"> Lowest Paying DTC Jobs in 2022</h1>
@@ -71,4 +71,4 @@ function MyComponent() {
     );
 };
 
-export default MyComponent
+export default lowestSalaries
