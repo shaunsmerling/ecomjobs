@@ -48,7 +48,7 @@ const HeroBanner = () => {
                
                 <p class="max-w-md mx-auto mt-6 text-base font-normal leading-7 text-gray-500">Join an eCommerce brand. Help shape the future by working with some of the fastest growing D2C companies. </p> */}
 <div className="mb-2">
-<h1 class=" font-bold text-black text-8xl  ">
+<h1 class=" font-bold text-black text-6xl lg:text-8xl  ">
          Find a job in the <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">eCommerce Industry</span>
         </h1>
         <h2 class="leading-[3rem] mt-2 mx-auto tracking-tighter text-black text-xl max-w-2xl ">
