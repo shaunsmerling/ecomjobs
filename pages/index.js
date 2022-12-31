@@ -28,10 +28,6 @@ export default function HomePage() {
     "bc44fb196bcec6b9602b254bc96f6e71"
   );
 
-  const hitComponent = () => {
-    return;
-  };
-
   return (
     <>
       <NextSeo
@@ -47,35 +43,33 @@ export default function HomePage() {
       </div>
       <div className="flex flex-row justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
         <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
-          <Configure hitsPerPage={5} />
+          <Configure hitsPerPage={50} />
 
           {/* Filter Section */}
           <div className="max-w-xs w-full hidden lg:block">
             <Filter />
           </div>
 
-          {/* View Data Section */}
           <div className="flex flex-col w-full gap-4">
             <div className="p-4 border rounded-md border-lightGray-100 searchBox mb-0.5">
-              <div className="flex flex-row items-center justify-between w-full gap-5">
-                <SearchBox placeholder="Search by Title, Company or any jobs keyword..." />
-                <button className="flex flex-row gap-2 bg-lightGreen-200 rounded-md py-4 px-9 w-auto">
-                  <Search />
-                  <span className="font-Poppins font-medium text-sm text-white leading-30">
-                    Find
-                  </span>
-                </button>
+              <div>
+                {/* Search Box */}
+                <SearchBox
+                  placeholder="Search by Title, Company or any jobs keyword..."
+                  submitIconComponent={() => (
+                    <button className="flex flex-row gap-2 bg-lightGreen-200 rounded-md py-4 px-9 w-auto">
+                      <Search />
+                      <span className="font-Poppins font-medium text-sm text-white leading-30">
+                        Find
+                      </span>
+                    </button>
+                  )}
+                />
               </div>
             </div>
-            <div className="border border-lightGray-100 rounded-md p-6 flex flex-col gap-7">
-              {/* <Hits hitComponent={hitComponent} /> */}
-
-              <CompanyData />
-              <CompanyData />
-              <CompanyData />
-              <CompanyData />
-              <CompanyData />
-              <CompanyData />
+            {/* View Data Section */}
+            <div className="border border-lightGray-100 rounded-md p-6">
+              <Hits hitComponent={CompanyData} />
             </div>
           </div>
         </InstantSearch>

@@ -360,10 +360,37 @@
 .searchBox .ais-SearchBox {
   @apply p-0 w-full;
 }
+.searchBox .ais-SearchBox .ais-SearchBox-form {
+  @apply flex flex-row items-center justify-between w-full gap-5;
+}
 .searchBox .ais-SearchBox .ais-SearchBox-form .ais-SearchBox-input {
   @apply outline-none border rounded-md border-lightGray-100 px-5 py-2.5 font-normal text-sm leading-30 tracking-common font-Poppins;
 }
 
+.searchBox .ais-SearchBox .ais-SearchBox-form .ais-SearchBox-reset {
+  @apply hidden;
+}
+.searchBox .ais-SearchBox .ais-SearchBox-form .ais-SearchBox-loadingIndicator {
+  @apply hidden;
+}
+
+.locationModel
+  .ais-Menu
+  .ais-Menu-list
+  .ais-Menu-item
+  .ais-Menu-link
+  .ais-Menu-label {
+  @apply font-Poppins font-normal text-sm leading-7 tracking-common opacity-70 cursor-pointer  hover:font-semibold;
+}
+
+.locationModel
+  .ais-Menu
+  .ais-Menu-list
+  .ais-Menu-item
+  .ais-Menu-link
+  .ais-Menu-count {
+  @apply hidden;
+}
 .filter-checkbox {
   display: block;
   position: relative;

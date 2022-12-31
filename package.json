@@ -12,6 +12,7 @@
     "@next-auth/mongodb-adapter": "^1.1.1",
     "@prisma/client": "^4.3.1",
     "@stripe/stripe-js": "^1.35.0",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
