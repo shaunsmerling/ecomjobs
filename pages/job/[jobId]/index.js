@@ -1,251 +1,124 @@
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import {Helmet} from "react-helmet";
-import Head from "next/head";
+import PublicLayout from "../../../layouts/PublicLayout";
+import styles from "./styles.module.css";
+import Footer from "../../../components/Footer";
 import { api_url } from "../../../config";
-
+import Link from "next/link";
 
 export async function getServerSideProps(context) {
-console.log(context)
-  const { params } = context
-  const { jobId } = params
+  const { params } = context;
+  const { jobId } = params;
 
-  const res = await fetch(`${api_url}/api/jobs?id=${jobId}`)
-  const data = await res.json()
+  const res = await fetch(`${api_url}/api/jobs?id=${jobId}`);
+  const data = await res.json();
 
   return {
-    props: { jobs: data}, // will be passed to the page component as props
-  }
+    props: { jobs: data }, // will be passed to the page component as props
+  };
 }
 
 function Job({ jobs }) {
-
-  
-// const [jobs, setJobData] = useState({
-//   company_name: "",
-//   company_url: "",
-//   company_description: "",
-//   city: "",
-//   postedat: "",
-//   job_position: "",
-//   job_category: "",
-//   logo: "",
-//   job_type: "",
-//   mission: "",
-//   location: "",
-//   emp_count: "",
-// });
-
-// const router = useRouter();
-// const { jobId } = router.query;
-
-// useEffect( () => {
-//     if (jobId) {
-//      fetch("/api/jobs?id=" + jobId, {
-//         method: "GET",
-//       })
-//         .then((res) => res.json())
-//         .then((jsonResponse) => setJobData(jsonResponse));
-// }}, [jobId]);
-
-
-  let data =   
-            {
-            "@context": "https://schema.org/",
-            "@type": "JobPosting",
-            "title": `${jobs.job_position}`,
-            "description": `${jobs.job_description}`,
-            "hiringOrganization": {
-                "@type": "Organization",
-                "name": `${jobs.company_name}`,
-                "sameAs": `${jobs.company_url}`,
-            },
-            "industry": `${jobs.job_category}`,
-            "employmentType": "FULL_TIME",
-            "datePosted": `${jobs.postedat}`,
-            "baseSalary": `${jobs.salary}`,
-            "validThrough": "",
-            "jobLocation": {
-                "@type": "Place",
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "",
-                    "addressLocality": "",
-                    "postalCode": "",
-                    "addressCountry": `${jobs.location}`
-                }
-            },
-            "responsibilities": `${jobs.job_requirements}`,
-            }
-
-            
-
-  function getDate() {
-    let date_1 = new Date(jobs.postedat);
-    let date_2 = new Date();
-
-    let difference = date_1.getTime() - date_2.getTime();
-    let TotalDays = Math.ceil((difference / (1000 * 3600 * 24)) * -1);
-
-    if (TotalDays === 0) {
-      return "Today";
-    } else if (TotalDays === 1) {
-      return `${TotalDays} day ago`;
-    } else if (TotalDays > 1 && TotalDays < 30) {
-      return `${TotalDays} days ago`;
-    } else if (TotalDays >= 30 && TotalDays <= 60) {
-      return "1 month ago";
-    } else if (TotalDays >= 60 && TotalDays <= 90) {
-      return "2 months ago";
-    } else if (TotalDays >= 90 && TotalDays <= 120) {
-      return "3 months ago";
-    }
-  }
-
-
-
-
   return (
-    
-    <div className="bg-gray-100 pb-10">
-      {/* <NextSEO
-      title={`${jobs.job_position} | ${jobs.company_name}`}
-      description={`${jobs.job_position} available at ${jobs.company_name}`}
-      canonical={`https://www.ecom-jobs.com/job/${jobs.jobUrl}`}
-      openGraph={{
-        type: "website",
-        url: `https://www.ecom-jobs.com/job/${jobs.jobUrl}`,
-        title: "hello",
-        description: `this finally`,
-        images: [
-          {
-            url: `https://ecom-jobs.com/images/${jobs.logo}`,
-            width: 800,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          }],
-      }}
-  
-    /> */}
-      <Helmet>
-      (<script className='structured-data-list' type="application/ld+json">{JSON.stringify(data)}</script>)
-      </Helmet> 
-      <Head>
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>{`${jobs.job_position} | ${jobs.company_name}`}</title>
-        <meta property="og:title" content={`${jobs.job_position} | ${jobs.company_name}`} key="maintitle" />
-        <meta property="og:description" content={`${jobs.job_description}`}  key="description" />
-        <meta property="og:image" content={`https://ecomportal.co/images/${jobs.logo}`} key="mainimage" />
-        <meta name="twitter:card" vmid="twitter:card" key="twcard" content="summary_large_image" />
-        <meta name="twitter:site" vmid="twitter:site" key="twsite"  content="@ecomprtal" />
-        <meta name="twitter:text:title" vmid="twitter:text:title" key="twtitle" content={`${jobs.company_name} is hiring for a ${jobs.job_position}!`} />
-        <meta name="twitter:text:description" vmid="twitter:text:description" key="twdesc"  content={`${jobs.job_description}`} />
-        <meta name="twitter:image:src" vmid="twitter:image:src"  key="twimg" content={`https://ecomportal.co/images/${jobs.logo}`} />
-</Head>
-
-      <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"/>
-<link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"/>
-
-<main class="profile-page">
-  <section class="relative block  h-500-px">
-    <div class="absolute top-0 w-full h-full bg-center bg-cover" >
-      
-    </div>
-    
-  </section>
-  <section class="relative">
-    <div class="container mx-auto  px-4">
-      <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-96">
-        
-          <div>
-            
-        
-          
-         
-          <div class="mt-4 ml-6">
-
-          <img src={`/images/${jobs.logo}`} alt="..." class="my-10 border-4  max-w-120-px"/>
-          
-          <a
-                          target="_blank"
-                          href={jobs.application_url}
-                            class="flex float-right w-auto text-xs px-10 mr-4 lg:text-lg  -mt-20 rounded-full lg:pr-20 lg:pl-20   py-4  text-base  font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
-                        >
-                           Apply Now
-                        </a>
-                   
-       
-
-          <a href={`/company/${jobs.company_id}`}><h2 class="text-3xl my-4 text-black font-bold">{jobs.company_name}</h2></a>
-       
-
-            <div class="text-sm leading-normal  text-blueGray-400 font-bold uppercase">
-              <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
-             {jobs.city} {jobs.location}
+    <>
+      <div className={`pb-10`}>
+        <div className="px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
+          <div className={styles.main_section}>
+            <div className={styles.leftSide}>
+              <Link href={"/"} className="cursor-pointer">
+                <span className="cursor-pointer"> &#60; Back to all jobs </span>
+              </Link>
+              <div className={styles.spahes}>
+                <svg
+                  width="58"
+                  height="70"
+                  viewBox="0 0 58 70"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M56.5 68.5L6.5 40L26.5 7L56.5 68.5Z"
+                    stroke="#BEF8A5"
+                    stroke-linecap="round"
+                  />
+                  <path d="M50 61.5L0 33L20 0L50 61.5Z" fill="#BEF8A5" />
+                </svg>
+              </div>
+              <h1>{jobs?.job_position}</h1>
+              <h5>Company Description</h5>
+              <p>{jobs?.company_description}</p>
+              <h5>Job Description</h5>
+              <p>{jobs?.job_description}</p>
+              <h5>Job Requirements</h5>
+              <p>{jobs?.job_requirements}</p>
             </div>
-            
-
- 
-            <div class=" text-blueGray-600 my-2">
-              <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i><a href={jobs.company_url} className="text-sky-400">{jobs.company_url}</a>
-            </div>
-
-            {/* <div class="mr-4 p-3 text-center">
-                        <span class="text-xl font-bold block uppercase tracking-wide text-blueGray-600">
-                         {jobs.emp_count}
-                        </span>
-                        <span class="text-sm text-blueGray-400">Employees</span>
-                      </div>
-           */}
-            </div>
-          </div>
-          <div className="text-center">
-          <h2 className="sm:text-2xl lg:text-5xl my-4 mx-auto font-bold underline ">{jobs.job_position}</h2>
-          <h3 className="my-1 text-md lg:text-xl text-[#6879a5]">  {jobs.job_category}  •   {jobs.job_type} • {getDate()}</h3>
-          </div>
-          <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
-         
-            <div class="flex flex-wrap justify-center">
-              <div class="w-full lg:w-9/12 px-4">
-              
-
-              <p>{jobs.company_description}</p>
-            <br></br>
-            <br></br>
-           
-            <p>{jobs.job_description}</p>
-            <br></br>
-            <br></br>
-           
-            <p>{jobs.job_requirements}</p>
-            <br></br>
-            <br></br>
-            
-
-<a
-     target="_blank"
-    href={jobs.application_url}
-    class="inline-flex relative items-center justify-center w-full sm:w-auto px-8 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg  hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
->
-   Apply Now
-</a>
-
-
-            
-               
+            <div className={styles.rightside}>
+              <div className={styles.shpesImg}>
+                <svg
+                  width="84"
+                  height="79"
+                  viewBox="0 0 84 79"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.00035 33.9235L49.2314 59.2292L65.3438 27.1185L2.00035 33.9235Z"
+                    stroke="#94D743"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M10.7381 35.5814L57.9692 60.8872L74.0816 28.7765L10.7381 35.5814Z"
+                    fill="#94D743"
+                  />
+                </svg>
+              </div>
+              <div className={styles.rightContent}>
+                <img src={`../images/${jobs?.logo}`}></img>
+                <h3>{jobs?.company_name}</h3>
+                <h6>{jobs?.salary}</h6>
+                <a
+                  href={jobs?.application_url}
+                  target="_blank"
+                  className={`inline-flex items-center justify-center px-6 py-2.5 text-base font-medium transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900 ${styles.apply_btn}`}
+                >
+                  Apply Now
+                </a>
+                <ul>
+                  <li>
+                    <h4>Job Posted</h4>
+                    <h5>{jobs?.postedat}</h5>
+                  </li>
+                  <li>
+                    <h4>Job Type</h4>
+                    <h5>{jobs?.job_type}</h5>
+                  </li>
+                  <li>
+                    <h4>URL</h4>
+                    <h5>{jobs?.application_url}</h5>
+                  </li>
+                  <li>
+                    <h4>Location</h4>
+                    <h5>{jobs?.location}</h5>
+                  </li>
+                  <li>
+                    <h4>Job Categories</h4>
+                    <button className={styles.categbtn}>
+                      {jobs?.job_category}
+                    </button>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-  </section>
-</main>
-    </div>
+      <Footer />
+    </>
   );
 }
+
+Job.getLayout = function getLayout(page) {
+  return <PublicLayout>{page}</PublicLayout>;
+};
 
 export default Job;
