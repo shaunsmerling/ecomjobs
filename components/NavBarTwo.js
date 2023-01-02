@@ -32,7 +32,7 @@ export default function NavBarTwo() {
         <div class="flex">
             <div class="shrink-0  ">
                 <a href="../" title="" class="">
-                    <img class=" w-auto h-14 -ml-1 lg:-ml-0 mt-2 lg:mt-0 lg:h-14" src="/logo.png" alt="" />
+                    <img loading="lazy" class=" w-auto h-14 -ml-1 lg:-ml-0 mt-2 lg:mt-0 lg:h-14" src="/logo.png" alt="" />
                 </a>
             </div>
         <div className={`lg:ml-40 lg:flex`}>
@@ -525,11 +525,11 @@ export default function NavBarTwo() {
        
     :  */}
      <div className={`lg:flex  lg:ml-36 `}>
-            <div class="  hidden lg:flex sm:ml-auto lg:py-2 ">
+            <div class="  hidden pb-2 mt-2 lg:flex ">
                 <a
                     href="/postajob"
                     title=""
-                    class="   px-4 py-2 lg:px-10 lg:pt-2 text-sm lg:text-[14px] font-medium text-white transition-all duration-200 bg-[#17614A] border border-2 rounded-full hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
+                    class="   px-4 py-2 lg:px-10  text-sm lg:text-[14px] font-medium text-white transition-all duration-200 bg-[#17614A] border border-2 rounded-full hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
                     role="button"
                 >
                     Post A Job

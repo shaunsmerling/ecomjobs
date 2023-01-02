@@ -91,7 +91,7 @@ const first = () => {
         </div>
 
         <div className="mt-8 sm:mt-12 lg:mt-16 aspect-w-16 aspect-h-9 lg:aspect-h-6">
-          <img className="object-cover w-full h-full" src="/googleshop.png" alt="">
+          <img loading="lazy" className="object-cover w-full h-full" src="/googleshop.png" alt="">
           </img>
         </div>
 
@@ -161,7 +161,7 @@ On the business side, Google Shopping is powered by two platforms: Googles Ads a
               </p>
             </blockquote>
             
-            <img className="object-cover w-full py-10" src="/googleshoppage.jpeg" alt=""/>
+            <img loading="lazy" className="object-cover w-full py-10" src="/googleshoppage.jpeg" alt=""/>
             <br></br>
             <p className="text-xl">
             Whether you are a marketer or business owner, you can apply for a Google Shopping account, and its free to join. However, like with traditional Google Ads, you can also run paid advertising through Google Shopping. With Google Shopping you can run targeted local inventory ads, or run a promotion for your best selling product. Similar to Google Ads, youre only charged when a prospective customer clicks your products, and theres no fee to list products if accepted into the Google Shopping platform.
