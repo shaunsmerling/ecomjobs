@@ -91,10 +91,12 @@ function Job({ jobs }) {
                     <h4>Job Type</h4>
                     <h5>{jobs?.job_type}</h5>
                   </li>
+                  {jobs?.salary && (
                   <li>
-                    <h4>URL</h4>
-                    <h5>{jobs?.application_url}</h5>
+                    <h4>Salary</h4>
+                    <h5>{jobs?.salary}</h5>
                   </li>
+                  )}
                   <li>
                     <h4>Location</h4>
                     <h5>{jobs?.location}</h5>
