@@ -72,7 +72,7 @@ function Job({ jobs }) {
                 </svg>
               </div>
               <div className={styles.rightContent}>
-                <img src={`../images/${jobs?.logo}`}></img>
+                <img loading="lazy" src={`../images/${jobs?.logo}`}></img>
                 <h3>{jobs?.company_name}</h3>
                 <h6>{jobs?.salary}</h6>
                 <a

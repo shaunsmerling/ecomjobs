@@ -14,7 +14,7 @@ function Footer() {
         <div className={styles.footer}>
           <div className={styles.section_left}>
             <div className={styles.logo_section}>
-              <Image src={logo} alt="footer-logo" />
+              <Image loading="lazy" src={logo} alt="footer-logo" />
               <p>
                 Join thousands of people getting weekly alerts <br /> from
                 brands hiring
@@ -97,6 +97,7 @@ function Footer() {
               </svg>
             </div>
           </div>
+       
           <div className={styles.ul_content}>
             <h2>Links</h2>
             <ul>

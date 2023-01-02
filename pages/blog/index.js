@@ -68,11 +68,12 @@ const Blog = () => {
         </div>
              
         <div className="grid grid-cols-1 gap-6 px-8 mt-12 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:px-0">
-        <Link href="/blog/what-is-google-shopping">
+        <Link passHref legacyBehavior  href="/blog/what-is-google-shopping">
+          <a>
           <div
             className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg   hover:border-2 hover:-translate-y-1">
                
-              <img className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
+              <img loading="lazy" className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
                 src="/googleshop.png" alt="">
                 </img>
             <div className="flex-1 px-4 py-5 sm:p-6">
@@ -88,9 +89,9 @@ const Blog = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <p className="text-sm font-medium text-gray-900">
-                    <a>
+                   
                      Marketing
-                    </a>
+                  
                   </p>
                   <span className="text-sm font-medium text-gray-900">
                     •
@@ -101,7 +102,7 @@ const Blog = () => {
                
                 </div>
 
-                <a href="/blog/first" title="" className="" role="button">
+              
                   <svg className="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-[#17614A]"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                     fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -109,17 +110,19 @@ const Blog = () => {
                     <line x1="17" y1="7" x2="7" y2="17"></line>
                     <polyline points="8 7 17 7 17 16"></polyline>
                   </svg>
-                </a>
+               
               </div>
             </div>
           </div>
+          </a>
           </Link>
 
-          <Link href="/blog/build-a-brand-on-shopify">
+          <Link passHref legacyBehavior href="/blog/build-a-brand-on-shopify">
+            <a>
           <div
             className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg   hover:border-2 hover:-translate-y-1">
                
-              <img className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
+              <img loading="lazy" className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
                 src="/shopblog.jpeg" alt="">
                 </img>
             <div className="flex-1 px-4 py-5 sm:p-6">
@@ -135,9 +138,9 @@ const Blog = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <p className="text-sm font-medium text-gray-900">
-                    <a>
+                    
                       Brand
-                    </a>
+                    
                   </p>
                   <span className="text-sm font-medium text-gray-900">
                     •
@@ -148,7 +151,7 @@ const Blog = () => {
                
                 </div>
 
-                <a href="/blog/second" title="" className="" role="button">
+            
                   <svg className="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-[#17614A]"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                     fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -156,17 +159,19 @@ const Blog = () => {
                     <line x1="17" y1="7" x2="7" y2="17"></line>
                     <polyline points="8 7 17 7 17 16"></polyline>
                   </svg>
-                </a>
+         
               </div>
             </div>
           </div>
+          </a>
           </Link>
 
-          <Link href="/blog/top-7-ecommerce-trends-in-2023">
+          <Link passHref legacyBehavior href="/blog/top-7-ecommerce-trends-in-2023">
+            <a>
           <div
             className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg   hover:border-2 hover:-translate-y-1">
                
-              <img className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
+              <img loading="lazy" className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
                 src="/ecomtrends.png" alt="">
                 </img>
             <div className="flex-1 px-4 py-5 sm:p-6">
@@ -182,9 +187,9 @@ const Blog = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <p className="text-sm font-medium text-gray-900">
-                    <a>
+                    
                      eCommerce Trends
-                    </a>
+                    
                   </p>
                   <span className="text-sm font-medium text-gray-900">
                     •
@@ -195,7 +200,6 @@ const Blog = () => {
                
                 </div>
 
-                <a href="/blog/first" title="" className="" role="button">
                   <svg className="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-[#17614A]"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                     fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -203,17 +207,19 @@ const Blog = () => {
                     <line x1="17" y1="7" x2="7" y2="17"></line>
                     <polyline points="8 7 17 7 17 16"></polyline>
                   </svg>
-                </a>
+          
               </div>
             </div>
           </div>
+          </a>
           </Link>
 
-          <Link href="/blog/five-proven-methods-to-increase-your-shopify-brands-aov-in-2023">
+          <Link passHref legacyBehavior href="/blog/five-proven-methods-to-increase-your-shopify-brands-aov-in-2023">
+            <a>
           <div
             className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg   hover:border-2 hover:-translate-y-1">
                
-              <img className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
+              <img loading="lazy"  className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
                 src="/aov.png" alt="">
                 </img>
             <div className="flex-1 px-4 py-5 sm:p-6">
@@ -229,9 +235,9 @@ const Blog = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <p className="text-sm font-medium text-gray-900">
-                    <a>
+                    
                      Brand
-                    </a>
+                    
                   </p>
                   <span className="text-sm font-medium text-gray-900">
                     •
@@ -242,7 +248,7 @@ const Blog = () => {
                
                 </div>
 
-                <a href="/blog/first" title="" className="" role="button">
+               
                   <svg className="w-5 h-5 text-gray-300 transition-all duration-200 group-hover:text-[#17614A]"
                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                     fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -250,10 +256,11 @@ const Blog = () => {
                     <line x1="17" y1="7" x2="7" y2="17"></line>
                     <polyline points="8 7 17 7 17 16"></polyline>
                   </svg>
-                </a>
+         
               </div>
             </div>
           </div>
+          </a>
           </Link>
          
           
