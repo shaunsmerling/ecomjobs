@@ -34,9 +34,7 @@ const HeroBanner = () => {
 <div className=''>
 
     <section class="relative py-12  bg-white sm:py-16 lg:py-20">
-        <div class="absolute inset-0">
-            <img class="object-cover w-full h-full" src="https://landingfoliocom.imgix.net/store/collection/clarity-blog/images/hero/5/grid-pattern.png" alt="" />
-        </div>
+        
 
         <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class=" mx-auto text-center">
