@@ -1,25 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroBanner from "../components/HeroBanner";
 import "@stripe/stripe-js";
 import algoliasearch from "algoliasearch/lite";
 import {
   InstantSearch,
-  RefinementList,
   SearchBox,
   Configure,
-  Hits,
-  clearRefinements,
-  ClearRefinements,
+  InfiniteHits,
 } from "react-instantsearch-hooks-web";
-import Hit from "../components/Hit";
-import { FacetDropdown } from "/components/FacetDropdown";
-import Featured from "../components/featured";
 import { NextSeo } from "next-seo";
-import { useSession } from "next-auth/react";
+import CustomSearchBox from "../custom-algolia-component/CustomSearchBox";
 import LogoBanner from "../components/logobanner";
-import JobsByCompany from "../components/jobsByCompany";
 import CompanyData from "../components/CompanyData";
-import Search from "../components/icons/Search";
 import Filter from "../components/Filter";
 
 export default function HomePage() {
@@ -43,7 +35,7 @@ export default function HomePage() {
       </div>
       <div className="flex flex-row justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
         <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
-          <Configure hitsPerPage={50} />
+          <Configure hitsPerPage={10} />
 
           {/* Filter Section */}
           <div className="max-w-xs w-full hidden lg:block">
@@ -52,24 +44,14 @@ export default function HomePage() {
 
           <div className="flex flex-col w-full gap-4">
             <div className="p-4 border rounded-md border-lightGray-100 searchBox mb-0.5">
+              {/* Custom Search Box */}
               <div>
-                {/* Search Box */}
-                <SearchBox
-                  placeholder="Search by Title, Company or any jobs keyword..."
-                  submitIconComponent={() => (
-                    <button className="flex flex-row gap-2 bg-lightGreen-200 rounded-md py-4 px-9 w-auto">
-                      <Search />
-                      <span className="font-Poppins font-medium text-sm text-white leading-30">
-                        Find
-                      </span>
-                    </button>
-                  )}
-                />
+                <CustomSearchBox />
               </div>
             </div>
             {/* View Data Section */}
-            <div className="border border-lightGray-100 rounded-md p-6">
-              <Hits hitComponent={CompanyData} />
+            <div className="border border-lightGray-100 rounded-md p-6 min-h-[500px]">
+              <InfiniteHits hitComponent={CompanyData} showPrevious={false} />
             </div>
           </div>
         </InstantSearch>

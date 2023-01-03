@@ -29,7 +29,11 @@ const CompanyData = ({ hit }) => {
   }
   return (
     <>
-      <div className="mb-7 border border-lightGray-100 rounded-md pt-5 pb-4 pl-4 pr-7 ">
+      <div
+        className={`mb-7 border border-lightGray-100 rounded-md pt-5 pb-4 pl-4 pr-7 ${
+          hit?.featured && "bg-[#e9e9e9]"
+        }`}
+      >
         <div className="flex flex-col gap-3">
           <div className="flex flex-row justify-between">
             <div className="flex flex-row items-center gap-4">
@@ -55,8 +59,8 @@ const CompanyData = ({ hit }) => {
                         <UserIcon />
                         <span className="font-Poppins font-normal text-sm tracking-common opacity-60 leading-30">
                           {parseInt(hit.emp_count) > 5
-                            ? `5 - ${hit.emp_count} -Employees `
-                            : `0 - ${hit.emp_count} -Employees `}
+                            ? `5 - ${hit.emp_count} Employees`
+                            : `0 - ${hit.emp_count} Employees`}
                         </span>
                       </p>
                     )}
@@ -72,7 +76,7 @@ const CompanyData = ({ hit }) => {
                     )}
                     {hit?.featured && (
                       <p className="font-medium text-xs tracking-common text-white font-Poppins bg-lightGreen-100 rounded-lg px-4 py-1.5">
-                        {hit.featured}
+                        Featured
                       </p>
                     )}
                   </div>
@@ -93,8 +97,15 @@ const CompanyData = ({ hit }) => {
           <div className="w-full flex flex-row flex-wrap gap-2 justify-start items-center">
             {hit?.job_category && (
               <div className="py-1.5 px-4 bg-lightGray-400 rounded-xl">
-                <p className=" font-Poppins font-medium text-xs text-lightGray-50 leading-4 ">
+                <p className="font-Poppins font-medium text-xs text-lightGray-50 leading-4">
                   {hit.job_category}
+                </p>
+              </div>
+            )}
+            {hit?.job_type && (
+              <div className="py-1.5 px-4 bg-lightGray-400 rounded-xl">
+                <p className="font-Poppins font-medium text-xs text-lightGray-50 leading-4">
+                  {hit.job_type}
                 </p>
               </div>
             )}

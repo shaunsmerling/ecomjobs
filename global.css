@@ -348,29 +348,16 @@
   border: none;
   color: black;
 }
-/* .filter
-  .ais-RefinementList
-  .ais-RefinementList-list
-  .ais-RefinementList-item
-  .ais-RefinementList-label
-  .input[type="checkbox"] {
-  background-color: red;
-  border: none;
-} */
-.searchBox .ais-SearchBox {
-  @apply p-0 w-full;
+
+.searchBox:focus {
+  @apply focus:ring-0 outline-none border-lightGray-100;
 }
-.searchBox .ais-SearchBox .ais-SearchBox-form {
-  @apply flex flex-row items-center justify-between w-full gap-5;
-}
-.searchBox .ais-SearchBox .ais-SearchBox-form .ais-SearchBox-input {
-  @apply outline-none border rounded-md border-lightGray-100 px-5 py-2.5 font-normal text-sm leading-30 tracking-common font-Poppins;
+.ais-InfiniteHits .ais-InfiniteHits-loadMore {
+  @apply bg-lightGreen-300 font-Poppins px-8 rounded-3xl py-3 text-base font-normal flex justify-center items-center mx-auto hover:scale-105 duration-150;
+  color: white;
 }
 
-.searchBox .ais-SearchBox .ais-SearchBox-form .ais-SearchBox-reset {
-  @apply hidden;
-}
-.searchBox .ais-SearchBox .ais-SearchBox-form .ais-SearchBox-loadingIndicator {
+.ais-InfiniteHits .ais-InfiniteHits-loadMore--disabled {
   @apply hidden;
 }
 
@@ -391,65 +378,75 @@
   .ais-Menu-count {
   @apply hidden;
 }
-.filter-checkbox {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  padding-left: 35px;
-  margin-bottom: 13px;
+/* Availability */
+
+.availability
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label {
+  @apply flex flex-row items-center gap-3 cursor-pointer mb-0.5;
 }
 
-/* Hide the browser's default checkbox */
-.filter-checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+.availability
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label
+  .ais-RefinementList-checkbox {
+  @apply w-5 h-5 ring-0 ring-offset-0  border border-lightGray-25 rounded-md bg-transparent checked:bg-lightGreen-400 cursor-pointer;
+}
+.availability
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label
+  .ais-RefinementList-labelText {
+  @apply font-Poppins font-normal text-sm leading-30 tracking-common opacity-70;
 }
 
-/* Create a custom checkbox */
-.checkmark-checkbox {
-  @apply w-5 h-5 absolute top-0 left-0 border border-lightGray-25 rounded-md bg-transparent;
+.availability
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label
+  .ais-RefinementList-count {
+  @apply hidden;
 }
 
-/* On mouse-over, add a grey background color */
-.filter-checkbox:hover input ~ .checkmark-checkbox {
-  @apply bg-lightGray-25;
+.specialities
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label {
+  @apply flex flex-row items-center justify-between gap-3 cursor-pointer mb-0.5;
 }
 
-/* When the checkbox is checked, add a blue background */
-.filter-checkbox input:checked ~ .checkmark-checkbox {
-  @apply bg-lightGreen-400 border-none;
+.specialities
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label
+  .ais-RefinementList-checkbox {
+  @apply w-5 h-5 ring-0 ring-offset-0 border border-lightGray-25 rounded-md bg-transparent checked:bg-lightGreen-400;
+}
+.specialities
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label
+  .ais-RefinementList-labelText {
+  @apply font-Poppins font-normal text-sm leading-30 tracking-common opacity-70 text-left w-full;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark-checkbox:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.filter-checkbox input:checked ~ .checkmark-checkbox:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.filter-checkbox .checkmark-checkbox:after {
-  left: 7.5px;
-  top: 4px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2.5px 2.5px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+.specialities
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label
+  .ais-RefinementList-count {
+  @apply mr-0 bg-transparent font-Poppins font-normal text-sm leading-30 tracking-common border-none;
+  color: black;
 }
 
 .filter-radio {
@@ -523,7 +520,7 @@
 
 .slider {
   position: relative;
-  width: 748px;
+  width: 100%;
 }
 
 .slider__track,
