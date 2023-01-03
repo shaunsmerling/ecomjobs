@@ -85,7 +85,7 @@ const second = () => {
         </div>
 
         <div className="mt-8 sm:mt-12 lg:mt-16 aspect-w-16 aspect-h-9 lg:aspect-h-6">
-          <img className="object-cover w-full h-full" src="/aov.png" alt="">
+          <img loading="lazy" className="object-cover w-full h-full" src="/aov.png" alt="">
           </img>
         </div>
 

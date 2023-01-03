@@ -61,7 +61,7 @@ function Hit({ hit }) {
       <a target="_blank">
     <div className={`flex flex-col border-2 rounded-lg mb-4 lg:mr-40 lg:ml-40 lg:pb-10 hover:bg-gray-100  lg:my-6 lg:py-2 pb-2  m${hit.featured && 'text-xs '}`}>
         <ul className={`  text-left  flex   `}>
-        <img className="z-1  ml-4 my-4 w-14 h-14 lg:w-20 lg:h-20 lg:mt-6 border border-[#17614A] border-2 " src={`./images/${hit.logo}`} ></img>
+        <img loading="lazy" className="z-1  ml-4 my-4 w-14 h-14 lg:w-20 lg:h-20 lg:mt-6 border border-[#17614A] border-2 " src={`./images/${hit.logo}`} ></img>
           <li className="w-full mt-4 box-border ">
             <p className=" font-bold tracking-tighter lg:ml-8 text-black text-xl max-w-2xl ml-4 lg:mb-4 z-1 lg:text-3xl  hover:no-underline">
             {hit.job_position}

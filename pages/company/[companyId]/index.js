@@ -116,7 +116,7 @@ function Company({ company, jobs }) {
                 <div class="flex flex-wrap justify-center">
                   <div class=" lg:w-3/12  lg:order-2 flex justify-center">
                     <div class="relative">
-                      <img class=" p-10 lg:p-10 border-2 border-gray-100 bg-white rounded-full  -mt-16 " src={`/images/${company.logo}`}/>
+                      <img loading="lazy" class=" p-10 lg:p-10 border-2 border-gray-100 bg-white rounded-full  -mt-16 " src={`/images/${company.logo}`}/>
                     </div>
                   </div>
                   <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
@@ -185,7 +185,7 @@ function Company({ company, jobs }) {
                   <div className={`flex flex-col lg:mx-20 pb-2`}>
                   <a href={`/job/${job?.jobUrl}`} target="_blank">
                 <ul className={`  -mx-10 lg:-mx-0 text-left mt-4  border-4 rounded-lg flex hover:bg-gray-100   hover:underline`}>
-                <img className="z-1 mt-6 ml-4 w-12 h-12 lg:w-20 lg:h-20 rounded-full border border-[#17614A] border-2 " src={`/images/${job?.logo}`} ></img>
+                <img loading="lazy" className="z-1 mt-6 ml-4 w-12 h-12 lg:w-20 lg:h-20 rounded-full border border-[#17614A] border-2 " src={`/images/${job?.logo}`} ></img>
                   <li className="w-full ml-2 my-4 box-border ">
                    
                     
