@@ -1,6 +1,6 @@
 import { useConnector } from "react-instantsearch-hooks-web";
 import connectRange from "instantsearch.js/es/connectors/range/connectRange";
-import { useCallback, useEffect } from "react";
+import { useCallback  } from "react";
 import MultiRangeSlider from "./MultiRangeSlider";
 import useDebounce from "../../functions/useDebounce";
 

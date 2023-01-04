@@ -12,8 +12,8 @@ const DownArrow = () => {
       <path
         d="M1 1L5 5L9 1"
         stroke="#98989C"
-        stroke-width="1.6"
-        stroke-linecap="round"
+        strokeWidth="1.6"
+        strokeLinecap="round"
       />
     </svg>
   );

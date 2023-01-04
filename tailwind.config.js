@@ -24,6 +24,9 @@ module.exports = {
         300: "#2F604B",
         400: "#258B60",
       },
+      lightYellow: {
+        100: "#FFF8E1",
+      },
       transparent: "transparent",
       current: "currentColor",
       mongo: "#17614A",

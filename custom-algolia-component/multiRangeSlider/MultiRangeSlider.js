@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 
-const MultiRangeSlider = ({ min, max, onChange, stateMin, stateMax }) => {
+const MultiRangeSlider = ({ min, max, onChange, stateMin, stateMax, showMinMax }) => {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
   const minValRef = useRef(min);
@@ -20,9 +20,9 @@ const MultiRangeSlider = ({ min, max, onChange, stateMin, stateMax }) => {
     const maxPercent = getPercent(maxValRef.current);
 
     if (range.current) {
-      range.current.style.left = `${minPercent}%`;
+      range.current.style.left = minPercent < 0 ? `${0}%` : `${minPercent}%`;
       range.current.style.width = `${maxPercent - minPercent}%`;
-      range.current.style.maxWidth = `${100 - minPercent}%`;
+      range.current.style.maxWidth = `${100}%`;
     }
   }, [minVal, getPercent]);
 
@@ -33,7 +33,7 @@ const MultiRangeSlider = ({ min, max, onChange, stateMin, stateMax }) => {
 
     if (range.current) {
       range.current.style.width = `${maxPercent - minPercent}%`;
-      range.current.style.maxWidth = `${100 - minPercent}%`;
+      range.current.style.maxWidth = `${100}%`;
     }
   }, [maxVal, getPercent]);
 
@@ -73,8 +73,20 @@ const MultiRangeSlider = ({ min, max, onChange, stateMin, stateMax }) => {
       <div className="slider">
         <div className="slider__track" />
         <div ref={range} className="slider__range" />
-        <div className="slider__left-value">{stateMin}</div>
-        <div className="slider__right-value">{stateMax}</div>
+        {
+          showMinMax ? (
+            <>
+              <div className="slider__left-value">{min}</div>
+              <div className="slider__right-value">{max}</div>
+            </>
+          ) : (
+            <>
+            <div className="slider__left-value">{stateMin}</div>
+            <div className="slider__right-value">{stateMax}</div>
+            </>
+          )
+        }
+        
       </div>
     </div>
   );

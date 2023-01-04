@@ -4,13 +4,13 @@ import { RefinementList, Menu } from "react-instantsearch-hooks-web";
 import CustomClearRefinements from "../custom-algolia-component/CustomClearRefinements";
 import CustomRefinementList from "../custom-algolia-component/CustomRefinementList";
 import CustomMenu from "../custom-algolia-component/CustomMenu";
-
 import { CustomRangeSlider } from "../custom-algolia-component/multiRangeSlider/CustomRangeSlider";
+import CustomSalarySlider from "../custom-algolia-component/salary/CustomSalarySlider";
 
 const Filter = () => {
   return (
     <>
-      <div className="bg-lightGreen-50 p-6 rounded-md">
+      <div className="bg-lightGreen-50 p-6 rounded-md w-full">
         <div className="relative flex flex-col gap-5">
           <div className="flex flex-row justify-between items-center">
             <div>
@@ -75,12 +75,7 @@ const Filter = () => {
           </div> */}
 
           {/* Salary */}
-          <CustomRangeSlider
-            attribute="salary"
-            stateMin={20000}
-            stateMax={500000}
-            title={"Salary"}
-          />
+          <CustomSalarySlider title="Salary" />
 
           {/* Employees */}
 

@@ -5,6 +5,7 @@ import World from "./icons/World";
 import Location from "./icons/Location";
 
 const CompanyData = ({ hit }) => {
+
   // Date Calculation
   function getDate() {
     let date_1 = new Date(hit.postedat);
@@ -31,14 +32,14 @@ const CompanyData = ({ hit }) => {
     <>
       <div
         className={`mb-7 border border-lightGray-100 rounded-md pt-5 pb-4 pl-4 pr-7 ${
-          hit?.featured && "bg-[#e9e9e9]"
+          hit?.featured && "bg-lightYellow-100"
         }`}
       >
         <div className="flex flex-col gap-3">
           <div className="flex flex-row justify-between">
             <div className="flex flex-row items-center gap-4">
               {hit?.logo && (
-                <div>
+                <div className="self-start lg:self-center">
                   <img
                     src={`./images/${hit.logo}`}
                     alt=""
@@ -47,17 +48,17 @@ const CompanyData = ({ hit }) => {
                 </div>
               )}
               <div>
-                <div className="flex flex-col md:flex-row items-center gap-3 xl:gap-6">
+                <div className="flex flex-col lg:flex-row items-center gap-1 lg:gap-3 xl:gap-6">
                   <div>
                     {hit?.job_position && (
-                      <h2 className="text-lg leading-30 font-Poppins tracking-common font-medium">
+                      <h2 className="text-lg leading-6 lg:!leading-30 font-Poppins tracking-common font-medium">
                         {hit.job_position}
                       </h2>
                     )}
                     {hit?.emp_count && (
                       <p className="flex flex-row items-center gap-2 ">
                         <UserIcon />
-                        <span className="font-Poppins font-normal text-sm tracking-common opacity-60 leading-30">
+                        <span className="font-Poppins font-normal text-sm tracking-common opacity-60 leading-6 lg:!leading-30">
                           {parseInt(hit.emp_count) > 5
                             ? `5 - ${hit.emp_count} Employees`
                             : `0 - ${hit.emp_count} Employees`}
@@ -69,13 +70,13 @@ const CompanyData = ({ hit }) => {
                     {hit?.postedat && (
                       <div className="flex flex-row items-center gap-1 md:gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-lightGray-300" />
-                        <p className="font-Poppins font-medium text-sm leading-30 tracking-common opacity-50">
+                        <p className="font-Poppins font-medium text-sm leading-6 lg:!leading-30 tracking-common opacity-50">
                           {getDate()}
                         </p>
                       </div>
                     )}
                     {hit?.featured && (
-                      <p className="font-medium text-xs tracking-common text-white font-Poppins bg-lightGreen-100 rounded-lg px-4 py-1.5">
+                      <p className="font-medium text-xs tracking-common text-white font-Poppins bg-lightGreen-100 rounded-lg px-4 py-2">
                         Featured
                       </p>
                     )}
@@ -89,7 +90,7 @@ const CompanyData = ({ hit }) => {
           </div>
           {hit?.job_requirements && (
             <div className="pt-1.5 lg:pr-8">
-              <p className="font-Poppins font-normal text-sm leading-5 tracking-common opacity-80 text-black line-clamp-3">
+              <p className="font-Poppins font-normal text-sm leading-6 tracking-common opacity-80 text-black line-clamp-3">
                 {hit.job_requirements}
               </p>
             </div>
@@ -110,7 +111,7 @@ const CompanyData = ({ hit }) => {
               </div>
             )}
           </div>
-          <div className="w-full mt-2.5 flex flex-row justify-between">
+          <div className="w-full mt-2.5 flex flex-row flex-wrap justify-between gap-2">
             <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-5">
               {hit?.company_url && (
                 <a
@@ -119,7 +120,7 @@ const CompanyData = ({ hit }) => {
                   className="flex flex-row items-center gap-2 cursor-pointer"
                 >
                   <World />
-                  <span className="font-Poppins font-normal text-sm leading-30 tracking-common text-black opacity-80">
+                  <span className="font-Poppins font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80">
                     {hit.company_url}
                   </span>
                 </a>
@@ -127,17 +128,21 @@ const CompanyData = ({ hit }) => {
               {(hit?.city || hit?.location) && (
                 <p className="flex flex-row items-center gap-2 cursor-pointer">
                   <Location />
-                  <span className="font-Poppins font-normal text-sm leading-30 tracking-common text-black opacity-80 ">
+                  <span className="font-Poppins font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 ">
                     {hit?.city} {hit?.location}
                   </span>
                 </p>
               )}
             </div>
 
-            <div>
-              <button className="font-Poppins text-white font-semibold text-xs leading-30 tracking-common bg-lightGreen-300 px-5 py-3 rounded-3xl hover:scale-110 duration-150">
+            <div className="w-full md:w-auto flex justify-end">
+              <a
+                href={`/job/${hit?.jobUrl}`}
+                target="_blank"
+                className="inline-block font-Poppins text-white font-semibold text-xs leading-6 lg:!leading-30 tracking-common bg-lightGreen-300 px-6 py-2 rounded-3xl hover:scale-110 duration-150"
+              >
                 Apply Now
-              </button>
+              </a>
             </div>
           </div>
         </div>
