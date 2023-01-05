@@ -4,7 +4,6 @@ import "@stripe/stripe-js";
 import algoliasearch from "algoliasearch/lite";
 import {
   InstantSearch,
-  SearchBox,
   Configure,
   InfiniteHits,
 } from "react-instantsearch-hooks-web";
@@ -65,7 +64,7 @@ export default function HomePage() {
                 {/* Filter Button For Mobile Filter Open */}
                 <div className="h-12 self-end lg:hidden">
                   <button
-                    className="h-full flex flex-row justify-center items-center gap-2 border border-lightGreen-300 rounded-md px-6 w-auto"
+                    className="h-full flex flex-row justify-center items-center gap-2 border border-lightGreen-300 rounded-md px-4 w-auto"
                     onClick={() => setFilterModelMobile(!filterModelMobile)}
                   >
                     <FilterIcon className="text-lightGreen-300" />

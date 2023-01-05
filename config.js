@@ -5,6 +5,6 @@ module.exports = {
   access_token_secret: process.env.ACCESS_TOKEN_SECRET,
   api_url:
     process.env.NODE_ENV == "production"
-      ? "http://localhost:3000"
-      : "https://ecomportal.co",
+      ? "https://ecomportal.co"
+      : "http://localhost:3000",
 };

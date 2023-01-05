@@ -1,5 +1,4 @@
-import React, { useRef, useState } from "react";
-import { RefinementList, Menu } from "react-instantsearch-hooks-web";
+import React, { useState } from "react";
 
 import CustomClearRefinements from "../custom-algolia-component/CustomClearRefinements";
 import CustomRefinementList from "../custom-algolia-component/CustomRefinementList";
@@ -8,6 +7,7 @@ import { CustomRangeSlider } from "../custom-algolia-component/multiRangeSlider/
 import CustomSalarySlider from "../custom-algolia-component/salary/CustomSalarySlider";
 
 const Filter = () => {
+  const [clearAll, setClearAll] = useState(false);
   return (
     <>
       <div className="bg-lightGreen-50 p-6 rounded-md w-full">
@@ -19,7 +19,7 @@ const Filter = () => {
               </h3>
             </div>
             <div>
-              <CustomClearRefinements />
+              <CustomClearRefinements setClearAll={setClearAll} />
             </div>
           </div>
 
@@ -75,8 +75,7 @@ const Filter = () => {
           </div> */}
 
           {/* Salary */}
-          <CustomSalarySlider title="Salary" />
-
+          <CustomSalarySlider title="Salary" clearAll={clearAll} />
           {/* Employees */}
 
           <CustomRangeSlider
@@ -84,6 +83,7 @@ const Filter = () => {
             stateMin={10}
             stateMax={3500}
             title={"Employees"}
+            clearAll={clearAll}
           />
 
           {/* Specialities */}

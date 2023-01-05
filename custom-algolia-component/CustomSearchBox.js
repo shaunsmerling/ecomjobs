@@ -26,7 +26,7 @@ function CustomSearchBox(props) {
           </div>
 
           <div className="h-12">
-            <button className="h-full flex flex-row justify-center items-center gap-2 bg-lightGreen-300 rounded-md px-9 w-auto">
+            <button className="h-full flex flex-row justify-center items-center gap-2 bg-lightGreen-300 rounded-md px-6 lg:px-9 w-auto">
               <Search />
               <span className="font-Poppins font-medium text-sm text-white leading-30">
                 Find

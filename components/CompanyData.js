@@ -1,11 +1,11 @@
 import React from "react";
 import UserIcon from "./icons/userIcon";
+import SalaryIcon from "./icons/SalaryIcon";
 import Icon from "./icons/icon";
 import World from "./icons/World";
 import Location from "./icons/Location";
 
 const CompanyData = ({ hit }) => {
-
   // Date Calculation
   function getDate() {
     let date_1 = new Date(hit.postedat);
@@ -55,16 +55,28 @@ const CompanyData = ({ hit }) => {
                         {hit.job_position}
                       </h2>
                     )}
-                    {hit?.emp_count && (
-                      <p className="flex flex-row items-center gap-2 ">
-                        <UserIcon />
-                        <span className="font-Poppins font-normal text-sm tracking-common opacity-60 leading-6 lg:!leading-30">
-                          {parseInt(hit.emp_count) > 5
-                            ? `5 - ${hit.emp_count} Employees`
-                            : `0 - ${hit.emp_count} Employees`}
-                        </span>
-                      </p>
-                    )}
+                    <div className="flex flex-row items-center justify-start gap-3">
+                      {hit?.emp_count && (
+                        <p className="flex flex-row items-center gap-2 ">
+                          <UserIcon />
+                          <span className="font-Poppins font-normal text-sm tracking-common opacity-60 leading-6 lg:!leading-30">
+                            {parseInt(hit.emp_count) > 5
+                              ? `5 - ${hit.emp_count} Employees`
+                              : `0 - ${hit.emp_count} Employees`}
+                          </span>
+                        </p>
+                      )}
+                      {hit?.salary !== "null" &&
+                        hit?.salary !== null &&
+                        hit?.salary !== undefined && (
+                          <p className="flex flex-row items-center gap-2 ">
+                            <SalaryIcon />
+                            <span className="font-Poppins font-normal text-sm tracking-common opacity-60 leading-6 lg:!leading-30">
+                              {hit.salary}
+                            </span>
+                          </p>
+                        )}
+                    </div>
                   </div>
                   <div className="flex flex-row items-center gap-6 self-start">
                     {hit?.postedat && (
