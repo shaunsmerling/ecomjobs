@@ -4,6 +4,8 @@ import Navbartwo from "../components/NavBarTwo"
 import Script from "next/script"
 import { SessionProvider } from "next-auth/react"; 
 import { useRouter } from "next/router";
+import Footer from "../components/Footer"
+
 
 
 
@@ -61,6 +63,7 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
   {showHeader && <Navbartwo/> }
     
       <Component {...pageProps} />
+      {/* <Footer/> */}
   </SessionProvider>
      
    </div>

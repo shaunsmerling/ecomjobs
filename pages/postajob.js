@@ -300,7 +300,7 @@ const [addOn, setAddOn] = useState(0)
                     />
 
                     {companyLogo && (
-                      <img src={companyLogo} className="mt-4 object-cover" />
+                      <img loading="lazy" src={companyLogo} className="mt-4 object-cover" />
                     )}
                   </div>
                 </div>
@@ -701,6 +701,7 @@ const [addOn, setAddOn] = useState(0)
           <div className=" mx-28">
             <ul className="rounded-lg text-left  pl-10 py-4 flex  bg-white hover:bg-gray-100  bg-white  shadow-lg">
               <img
+              loading="lazy"
                 className="mx-auto ml-10 border-2 rounded-full border-[#17614A] my-auto h-14 w-14 "
                 src={companyLogo ? `${companyLogo}` : "/mock.png"}
                 name="image"
@@ -740,6 +741,7 @@ const [addOn, setAddOn] = useState(0)
                 <div>
                   <div class="mt-4 ml-6">
                     <img
+                    loading="lazy"
                       src={companyLogo ? `${companyLogo}` : "/logo.png"}
                       alt="..."
                       class="my-10 border-4 h-16 max-w-120-px"

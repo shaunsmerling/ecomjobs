@@ -1,0 +1,113 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  border-top: 1px solid #00000024;
+  margin-top: 40px;
+}
+.section_left {
+  width: 60%;
+}
+.ul_content {
+  width: 20%;
+}
+.logo_section p {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #000000;
+  opacity: 0.4;
+  margin-top: 0px;
+}
+.socila_icons {
+  display: flex;
+  margin-top: 40px;
+}
+.socila_icons svg {
+  margin-right: 7px;
+  cursor: pointer;
+}
+
+.socila_icons svg:hover circle {
+  fill: #2e604b;
+}
+.twiter circle {
+  fill: #fff;
+  stroke: rgb(241, 241, 241);
+}
+.socila_icons svg:hover path {
+  fill: #fff;
+}
+.twiter path {
+  fill: #000;
+}
+
+.ul_content h2 {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.ul_content li {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #000000;
+  opacity: 0.4;
+}
+.footer_bottom {
+  padding-bottom: 40px;
+}
+.footer_bottom p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #000000;
+  opacity: 0.4;
+}
+.arrow_up {
+  position: fixed;
+  bottom: 30px;
+  right: 100px;
+  cursor: pointer;
+}
+
+/****** footer  css *******/
+@media only screen and (max-width: 992px) {
+  .logo_section p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .ul_content h2 {
+    font-size: 20px;
+  }
+  .ul_content li {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .footer {
+    flex-direction: column;
+  }
+  .ul_content {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .socila_icons {
+    margin-top: 10px;
+  }
+  .section_left {
+    width: 100%;
+  }
+  .arrow_up {
+    right: 30px;
+  }
+}
+
+/****** footer  css end*******/

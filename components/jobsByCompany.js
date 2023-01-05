@@ -24,9 +24,9 @@ export default function jobsByCompany({ jobs }) {
                 Explore <span className="font-bold text-[#17614A]">Jobs</span> by Company
             </h1>
             <div id="card">
-            <img src={`../images/$`} className="card--image" />
+            <img loading="lazy" src={`../images/$`} className="card--image" />
             <div className="card--stats">
-                <img src="../images/star.png" className="card--star" />
+                <img loading="lazy" src="../images/star.png" className="card--star" />
                 <span></span>
                 <span className="gray"> • </span>
                 <span className="gray"></span>

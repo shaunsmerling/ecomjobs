@@ -44,7 +44,7 @@ export default function googleads() {
        <div
          className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg   hover:border-2 hover:-translate-y-1">
             
-           <img className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
+           <img  loading="lazy" className="object-cover w-full h-full transition-all duration-200 transform group-hover:scale-110"
              src="/googleshop.png" alt="">
              </img>
          <div className="flex-1 px-4 py-5 sm:p-6">

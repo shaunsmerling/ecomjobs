@@ -1,577 +1,232 @@
-import React from "react"
-import Learn from "./Learn"
-import {useSession} from "next-auth/react"
-import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/solid'
-import { Fragment } from 'react'
-import {signOut} from "next-auth/react"
-import { useRouter } from "next/router"
+import SignIn from "./signIn";
+import SignOut from "./signOut";
+import { useSession } from "next-auth/react";
+import React from "react";
+import { useState } from "react";
+import { Menu, Transition } from "@headlessui/react";
+import { Fragment } from "react";
+import ModalSignIn from "./navModalSignIn";
+import Learn from "./Learn";
 
 function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
+  return classes.filter(Boolean).join(" ");
+}
 
-export default function NavBarTwo() {
+const Navbartwo = () => {
+  const { data: session } = useSession();
 
-    const router = useRouter()
+  const [button, setButton] = useState(true);
 
-    const noBorder = router.pathname === "/job" ? false : true
+  return (
+    <header className="py-4 sm:py-5 " x-data="{expanded: false}">
+      <div className="px-4  sm:px-6 lg:px-8 mx-auto max-w-7xl">
+        <div className="flex items-center justify-between">
+          <div className=" shrink-0">
+            <a href="../" title="" className="">
+              <img
+                className="w-auto h-16 -ml-2 lg:h-12 lg:-ml-0"
+                src="/logo.png"
+                alt=""
+              ></img>
+            </a>
+          </div>
 
-  
-
-
-    const { data: session, status } = useSession()
-
-
-
-  
-    return (
-
-<header class="lg:mx-40 lg:border-b-2 mx-24 border-b-2 py-4 bg-white sm:py-5 " x-data="{expanded: false}">
-    <div class="px-4  sm:px-6 lg:px-8 max-w-7xl">
-        <div class="flex">
-            <div class="shrink-0  ">
-                <a href="../" title="" class="">
-                    <img class=" w-auto h-14 -ml-1 lg:-ml-0 mt-2 lg:mt-0 lg:h-14" src="/logo.png" alt="" />
-                </a>
+          <div className="hidden lg:flex lg:items-center  lg:space-x-0 lg:justify-center">
+            <div className="nav_slaries">
+              {/* <Menu.Button className="inline-flex w-full text-sm justify-center px-4 py-2 font-medium text-gray-700   "> */}
+              <a
+                href="/salaries"
+                title=""
+                class="inline-flex font-bold items-center justify-center px-4 py-2.5 text-[14px]  text-gray-900 transition-all duration-200 border border-transparent rounded-full "
+              >
+                Salaries
+              </a>
+              {/* </Menu.Button> */}
             </div>
-        <div className={`lg:ml-40 lg:flex`}>
-            <div class="hidden lg:flex lg:items-center lg:space-x-4 lg:justify-end ">
-           
 
-    {/* <Menu as="div" className="relative inline-block text-left"> */}
-      <div className="">
-        {/* <Menu.Button className="inline-flex w-full text-sm justify-center px-4 py-2 font-medium text-gray-700   "> */}
-        <a href="/salaries" title="" class="inline-flex font-bold items-center justify-center px-4 py-2.5 text-[14px]  text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
-                    Salaries 
-                </a>
-        {/* </Menu.Button> */}
-      </div>
-
-      {/* <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      > */}
-        {/* <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className="py-1"> */}
-            {/* <Menu.Item>
-              {({ active }) => (
-                <a
-                // href=""
-                  href="/salaries/highest-paying-ecommerce-jobs"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Highest Paying Jobs 
-                </a>
-              )}
-            </Menu.Item> */}
-             {/* <Menu.Item>
-              {({ active }) => (
-                <a
-                // href=""
-                  href="/salaries/lowest-paying-ecommerce-jobs"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Lowest Paying Jobs
-                </a>
-              )}
-            </Menu.Item>
-            */}
-
-           
-          
-           
-          {/* </div> */}
-        {/* </Menu.Items>  */}
-      {/* </Transition> */}
-    {/* </Menu>
-     */}
-          
-    {/* <Menu as="div" className="relative inline-block text-left"> */}
-      <div className="">
-        {/* <Menu.Button className="inline-flex w-full justify-center px-4 py-2 font-medium text-gray-700   "> */}
-        <a href="/blog" title="" class="inline-flex items-center  font-bold justify-center px-4 py-2.5 text-[14px] text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
-                    Blog
-                </a>
-        {/* </Menu.Button> */}
-      </div>
-      <div className="">
-        {/* <Menu.Button className="inline-flex w-full justify-center px-4 py-2 font-medium text-gray-700   "> */}
-        <a href="/internships" title="" class="inline-flex items-center  font-bold justify-center px-4 py-2.5 text-[14px] text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
-                    Internships
-                </a>
-        {/* </Menu.Button> */}
-      </div>
-{/* 
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      > */}
-        {/* <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className="py-1">
-          <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="/blog"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  General 
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="/interviewquestions"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Interview Questions 
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/googleads"
-                  href="" 
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Google Ads
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/facebookads"
-                  href="" 
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Facebook Ads
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/instagram"
-                  href="" 
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Instagram
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/amazon"
-                  href="" 
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                 Amazon
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/tiktok"
-                  href="" 
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                 TikTok
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/snapchat"
-                  href="" 
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Snapchat
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/emailmarketing"
-                  href="" 
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Email Marketing
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/smsmarketing"
-                  href="" 
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  SMS Marketing
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/SEO"
-                  href="" 
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  SEO
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/cro"
-                  href=""
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  CRO
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/influencermarketing"
-                  href=""
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Influencer Marketing
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/ugc"
-                  href=""
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  UGC
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/creative"
-                  href=""
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Creative
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/ios14"
-                  href=""
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  IOS 14-15
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  // href="/blog/landingpages"
-                  href=""
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Landing Pages
-                </a>
-              )}
-            </Menu.Item>
-        
-
-           
-          
-           
-          </div>
-        </Menu.Items> */}
-      {/* </Transition> */}
-    {/* </Menu> */}
-                {/* <a href="/blog" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
-                    Blog
-                </a> */}
-
-                {/* <a href="/companylist" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-[12px]  text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
-                    Company List
-                </a> */}
-
-
-                {/* <a href="/contactus" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
-                    Contact Us
-                </a> */}
-                <Menu as="div" className="relative inline-block text-left">
-      <div className="">
-        <Menu.Button className="inline-flex w-full justify-center py-2 font-medium text-gray-700   ">
-        <a href="" title="" class="inline-flex items-center -ml-4 font-bold justify-center px-6 py-2.5 text-gray-900 text-[14px] transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
-                   Companies
-                </a>
-        </Menu.Button>
-      </div>
-
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className="py-1">
-          <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="/postajob"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Post A Job
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="/bulkdiscounts"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Bulk Discounts
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="/contactus"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                   Contact Us
-                </a>
-              )}
-            </Menu.Item>
-           
-            
-          </div>
-        </Menu.Items>
-      </Transition>
-    </Menu>
-                
-{/* 
-                <a href="#" title="" class="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-300">
-                    <SignIn/>
-                </a> */}
-
+            {/* <Learn /> */}
+            <div className="nav_slaries">
+              {/* <Menu.Button className="inline-flex w-full justify-center px-4 py-2 font-medium text-gray-700   "> */}
+              <a
+                href="/blog"
+                title=""
+                class="inline-flex items-center  font-bold justify-center px-4 py-2.5 text-[14px] text-gray-900 transition-all duration-200 border border-transparent rounded-full  "
+              >
+                Blog
+              </a>
+              {/* </Menu.Button> */}
             </div>
-           
-      
-          
-       
-       {/* <Menu as="div" className={`relative inline-block text-left `}>
-      <div>
-        <Menu.Button className={`inline-flex w-full text-[12px] justify-center px-4 py-2 font-medium text-gray-700`} >
-        <img src={session.user.image} alt="Avatar" className="h-10 w-10 mx-10 rounded-full" /> 
-          <ChevronDownIcon className="mt-3 -ml-6 h-5 w-5" aria-hidden="true" />
-        </Menu.Button>
-      </div>
-
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className={`py-1 `}>
-          <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="/users/editprofile"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Edit Profile
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="/privacy"
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Privacy Policy
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                onClick={() => { signOut({ redirect: false, callbackUrl: "/"})}}
-                  className={classNames(
-                    active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Sign Out
-                </a>
-              )}
-            </Menu.Item>
-          
-           
-          </div>
-        </Menu.Items>
-      </Transition>
-    </Menu>
-       
-    :  */}
-     <div className={`lg:flex  lg:ml-36 `}>
-            <div class="  hidden lg:flex sm:ml-auto lg:py-2 ">
-                <a
-                    href="/postajob"
+            <div className="nav_slaries">
+              {/* <Menu.Button className="inline-flex w-full justify-center px-4 py-2 font-medium text-gray-700   "> */}
+              <a
+                href="/internships"
+                title=""
+                class="inline-flex items-center  font-bold justify-center px-4 py-2.5 text-[14px] text-gray-900 transition-all duration-200 border border-transparent rounded-full "
+              >
+                Internships
+              </a>
+              {/* </Menu.Button> */}
+            </div>
+            {/* <a
+              href="/contactus"
+              title=""
+              className="inline-flex items-center justify-center px-4 py-2.5 text-base font-medium text-gray-900 transition-all duration-200 border border-transparent rounded-full  "
+            >
+              For Companies
+            </a> */}
+            <Menu as="div" className="relative inline-block text-left">
+              <div className="">
+                <Menu.Button className="inline-flex w-full justify-center py-2 font-medium text-gray-700   ">
+                  <a
+                    href=""
                     title=""
-                    class="   px-4 py-2 lg:px-10 lg:pt-2 text-sm lg:text-[14px] font-medium text-white transition-all duration-200 bg-[#17614A] border border-2 rounded-full hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
-                    role="button"
-                >
-                    Post A Job
-                </a>
-            </div>
-{/* 
-            <div class="hidden sm:flex sm:ml-auto lg:ml-4">
-                <a
-                    href="/api/auth/signin"
-                    title=""
-                    class="inline-flex items-center justify-center px-6 py-2.5 text-base font-medium text-white transition-all duration-200 bg-[#17614A] border border-2 rounded-lg hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
-                    role="button"
-                >
-                    Sign Up
-                </a>
+                    class="inline-flex items-center -ml-4 font-bold justify-center px-6 py-2.5 text-gray-900 text-[14px] transition-all duration-200 border border-transparent rounded-full  "
+                  >
+                    Companies
+                  </a>
+                </Menu.Button>
+              </div>
+
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+              >
+                <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <div className="py-1">
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="/postajob"
+                          className={classNames(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                          Post A Job
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="/bulkdiscounts"
+                          className={classNames(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                          Bulk Discounts
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="/contactus"
+                          className={classNames(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                          Contact Us
+                        </a>
+                      )}
+                    </Menu.Item>
+                  </div>
+                </Menu.Items>
+              </Transition>
+            </Menu>
+          </div>
+
+          <div className="hidden ml-auto  sm:flex lg:ml-0">
+            {/* <div className="mt-1 mr-5">
+              {session ? <SignOut /> : <SignIn />}
             </div> */}
-            </div>
-            
- </div>
 
-            <div class=" hidden">
-                <button
-                    type="button"
-                    class="inline-flex ml-40 p-2.5 text-white duration-200 bg-[#17614A]  border border-transparent rounded-full bg-[#17614A] transiton-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:bg-[#17614A] "
-                   
-                >
-                    <span x-show="!expanded" aria-hidden="true">
-                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </span>
+            {session ? (
+              <a
+                href="/employers/postajob"
+                title=""
+                className="inline-flex items-center  justify-center px-5 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+                role="button"
+              >
+                Post A Job
+              </a>
+            ) : (
+              <a
+                href="/postajob"
+                title=""
+                className="inline-flex items-center  justify-center px-6 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+                role="button"
+              >
+                Post A Job
+              </a>
+            )}
+          </div>
 
-                    <span x-show="expanded" aria-hidden="true">
-                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </span>
-                </button>
-            </div>
-            
+          <div className="flex ml-2 lg:hidden">
+            <button
+              type="button"
+              onClick={() => setButton(!button)}
+              className="inline-flex items-center p-2.5 text-gray-900 duration-200 border border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transiton-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 focus:bg-gray-900 focus:text-white"
+            >
+              {button ? (
+                <div>
+                  <span x-show="!expanded" aria-hidden="true">
+                    <svg
+                      className="w-6 h-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              ) : (
+                <div>
+                  <ModalSignIn />
+                  <span x-show="expanded" aria-hidden="true">
+                    <svg
+                      className="w-6 h-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              )}
+            </button>
+          </div>
         </div>
-    </div>
-</header>
+      </div>
+    </header>
+  );
+};
 
-)}
+export default Navbartwo;

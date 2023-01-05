@@ -85,7 +85,7 @@ const second = () => {
         </div>
 
         <div className="mt-8 sm:mt-12 lg:mt-16 aspect-w-16 aspect-h-9 lg:aspect-h-6">
-          <img className="object-cover w-full h-full" src="/shopblog.jpeg" alt="">
+          <img  loading="lazy" className="object-cover w-full h-full" src="/shopblog.jpeg" alt="">
           </img>
         </div>
 
@@ -333,7 +333,7 @@ Color psychology isn’t an exact science, but it does help to inform the choice
 
 The infographic below offers a nice overview of the emotions and associations that different colors generally evoke.
 <br></br>
-<img className="object-cover w-full py-10" src="/colorgraph.jpeg" alt=""/>
+<img loading="lazy" className="object-cover w-full py-10" src="/colorgraph.jpeg" alt=""/>
 <br></br>
 Consider how legible white and black text will be over your color palette and how colored text might look over white and black backgrounds. Try using a tool like Coolors to brainstorm colors that work together. Grab the hex codes to keep handy, and sift through different shades to find the ones you like.
 <br></br>
@@ -345,7 +345,7 @@ At this point, it’s also good to look at fonts you might want to use on your w
 The best way to build a brand when it comes to fonts is by keeping it simple. Pick two fonts at most to avoid confusing visitors: one for headings and one for body text (this doesn’t include the font you might use in your brand logo). 
 
 You can use Fontpair to browse from a wide selection of fonts that go well together.
-<img className="object-cover w-full py-10" src="/fontpair.jpeg" alt=""/>
+<img loading="lazy" className="object-cover w-full py-10" src="/fontpair.jpeg" alt=""/>
 </div> 
 <br></br>
 <br></br>
@@ -379,7 +379,7 @@ Invest in a logo that can appear anywhere around the web and in physical print.
 
 Notice how the Walmart logo has both the “sparks” icon and the wordmark, which can be used together or separately.
 <br></br>
-<img className="object-cover w-full py-10" src="/walmart.jpeg" alt=""/>
+<img loading="lazy" className="object-cover w-full py-10" src="/walmart.jpeg" alt=""/>
 </div>
 <br></br>
 <br></br>
