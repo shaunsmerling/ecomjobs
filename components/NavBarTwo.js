@@ -24,7 +24,7 @@ const Navbartwo = () => {
           <div className=" shrink-0">
             <a href="../" title="" className="">
               <img
-                className="w-auto h-16 -ml-2 lg:h-16 lg:-ml-0"
+                className="w-auto h-16 -ml-2 lg:h-14 lg:-ml-0"
                 src="/logo.png"
                 alt=""
               ></img>
