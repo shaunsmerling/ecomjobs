@@ -1,11 +1,14 @@
-import React from 'react';
-import { NextSeo } from 'next-seo';
+import { sanityClient, urlFor } from "../../sanity";
+import { NextSeo } from "next-seo"
+import PortableText from "react-portable-text";
 
-const second = () => {        
+
+function Post({post}) {
+    console.log(post);
     return (
-      <div>
+  <div>
      <NextSeo
-      title="Influencer Marketing Manager Salary| Blogs | eCommerce Jobs"
+      title={post.title}
       description="Salary Ranges for Influencer Marketing Managers" 
       openGraph={{
         url: 'https://www.ecomportal.co/salaries/influencer-marketing-manager-salary',
@@ -58,7 +61,7 @@ const second = () => {
                     <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
                   </svg>
                   <a href="#" title="" className="ml-2 text-base font-medium text-gray-500">
-                 Influencer Marketing Manager Salary 
+                 {post.title}
                   </a>
                 </div>
               </li>
@@ -66,7 +69,7 @@ const second = () => {
           </nav>
 
           <h1 className="mt-6 text-4xl font-bold text-gray-900 sm:text-5xl">
-          Influencer Marketing Manager Salary 
+         {post.title}
           </h1>
 
           <div className="flex items-center justify-center mt-8 space-x-2">
@@ -77,14 +80,25 @@ const second = () => {
             <span className="text-base font-medium text-gray-500">
               •
             </span>
-            <p className="text-base font-medium text-gray-500">
-              December 23rd, 2022
+            <p className="text-base font-medium ">
+             {new Date(post._createdAt).toLocaleString().replace(","," •")}
             </p>
+           
+           
+          
           </div>
+          <a href="https://twitter.com/smerlinger">
+          <div className="items-center mt-8 flex justify-center">
+          <img className="h-10 w-10 rounded-full mx-2 " src={urlFor(post.author.image).url()} /> 
+          <p className="text-base font-medium text-gray-500">
+          by {post.author.name}
+            </p>
+            </div>
+            </a>
         </div>
 
-        <div className="mt-8 sm:mt-12 lg:mt-16 mb-4 mx-auto aspect-w-16 aspect-h-9 lg:aspect-h-6">
-          <img loading="lazy" className="object-cover mx-auto w-1/2 h-1/2" src="/social-media-influencer.jpeg" alt="">
+        <div className="mt-8 sm:mt-12 lg:mt-10 mb-4 mx-auto aspect-w-16 aspect-h-9 lg:aspect-h-6">
+          <img loading="lazy" className="object-cover mx-auto w-1/2 h-1/2" src={urlFor(post.mainImage).url()} alt="">
           </img>
           
         </div>
@@ -94,7 +108,7 @@ const second = () => {
         
 
               <li>
-                <a href="http://www.twitter.com/ecomjobs_/" target="_blank" title=""
+                <a href="http://www.twitter.com/ecomprtal/" target="_blank" title=""
                   className="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 border border-gray-200 rounded-full hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
                   <span className="sr-only">
                     Twitter
@@ -110,7 +124,7 @@ const second = () => {
             
 
               <li>
-                <a href="#" title=""
+                <a href="https://www.linkedin.com/company/ecomportal/" title=""
                   className="inline-flex items-center justify-center w-10 h-10 text-gray-900 transition-all duration-200 border border-gray-200 rounded-full hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
                   <span className="sr-only">
                     LinkedIn
@@ -129,13 +143,30 @@ const second = () => {
 
           <article
             className="prose lg:col-span-8 max-w-none prose-gray prose-blockquote:px-8 prose-blockquote:py-3 prose-blockquote:lg:text-xl prose-blockquote:font-medium prose-blockquote:text-gray-900 prose-blockquote:border-gray-900 prose-blockquote:border-l-2 prose-blockquote:lg:leading-9 prose-blockquote:not-italic prose-blockquote:bg-gray-100 prose-blockquote:text-2xl prose-blockquote:leading-8">
-            <p className="text-md">
-              As the creator economy grows & more influencers are able to reach more followers, the growing need of an influencer marketing manager specialist is knocking on brands & companies doors as they look to leverage these modern entrepreneurs.<br></br><br></br> In this article, we'll breakdown a typical salary for an Influencer Marketing Manager operating a $16 billion dollar industry as well as 
-              the different roles one can expect to see in this category & what sort of salary ranges they can expect based on different variables such as location, compaany, or experience.
-            </p>
-            <br></br>
-          
-           
+            
+    <div>
+        <PortableText 
+        dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
+        projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
+        content={post.body}
+        className=""
+        serializers={{
+            h1: (props) => (
+                <h1 className="text-3xl font-bold " {...props}>{props.children}</h1>
+            ),
+            h2: (props) => (
+                <h2 className="text-3xl font-bold " {...props}>{props.children} </h2>
+            ),
+            h3: (props) => (
+                <h2 className="text-xl " {...props}>{props.children} </h2>
+            ),
+            p: (props) => (
+                <p className="text-md" {...props}>{props.children}</p>
+            ),
+        }}
+        />
+    </div>
+{/*            
          
             <br></br>
             <h2 className="text-3xl font-bold"> What is an Influencer Marketing Manager?</h2>
@@ -279,7 +310,7 @@ Influencer Marketing Associates are responsible for forging relationships with w
             <br></br>
             <br></br>
         
-             
+              */}
 
       
 
@@ -289,6 +320,65 @@ Influencer Marketing Associates are responsible for forging relationships with w
       </div>
     </section>
     </div>
+     
     )
 }
-export default second;
+ 
+export default Post;
+
+export const getStaticPaths  = async () => {
+    const query = `*[_type == "post"]{
+        _id,
+        slug {
+            current 
+        }
+    }`;
+
+    const posts = await sanityClient.fetch(query);
+
+    const paths = posts.map((post) => ({
+        params: {
+            slug: post.slug.current,
+        }
+        }))
+
+
+        return {
+            paths,
+            fallback: "blocking"
+        }
+}
+
+export const getStaticProps = async ({ params }) => {
+const query = `*[_type == "post" && slug.current == $slug][0]{
+    _id,
+    _createdAt,
+    title,
+    author-> {
+        name,
+        image
+    },
+    description,
+    mainImage,
+    slug,
+    body
+}`;
+
+const post = await sanityClient.fetch(query, { 
+    slug: params?.slug
+ });
+
+if (!post) {
+    return {
+        notFound: true,
+    }
+}
+
+    return {
+        props: {
+            post,
+        },
+        revalidate: 60, // after 60 seconds, it will update your old cache
+    }
+
+}

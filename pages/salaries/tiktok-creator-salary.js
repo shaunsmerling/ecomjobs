@@ -5,12 +5,12 @@ const second = () => {
     return (
       <div>
      <NextSeo
-      title="Influencer Marketing Manager Salary| Blogs | eCommerce Jobs"
-      description="Salary Ranges for Influencer Marketing Managers" 
+      title="TikTok Creator Salary| Blogs | eCommerce Jobs"
+      description="Salary Ranges for TikTok Creators" 
       openGraph={{
-        url: 'https://www.ecomportal.co/salaries/influencer-marketing-manager-salary',
-        title: "Salary Ranges for Influencer Marketing Managers" ,
-        description: 'Report breaking down Influencer Marketing Manager Salaries across the US, UK, and Internationally',
+        url: 'https://www.ecomportal.co/salaries/tiktok-creator-salary',
+        title: "Salary Ranges for TikTok Creators" ,
+        description: 'Report breaking down TikTok Creator Salaries across the US, UK, and Internationally',
         images: [
           {
             url: 'https://www.example.ie/og-image-01.jpg',
@@ -58,7 +58,7 @@ const second = () => {
                     <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
                   </svg>
                   <a href="#" title="" className="ml-2 text-base font-medium text-gray-500">
-                 Influencer Marketing Manager Salary 
+                 Tiktok Creator Salary 
                   </a>
                 </div>
               </li>
@@ -66,7 +66,7 @@ const second = () => {
           </nav>
 
           <h1 className="mt-6 text-4xl font-bold text-gray-900 sm:text-5xl">
-          Influencer Marketing Manager Salary 
+          Tiktok Creator Salary 
           </h1>
 
           <div className="flex items-center justify-center mt-8 space-x-2">
@@ -78,13 +78,13 @@ const second = () => {
               •
             </span>
             <p className="text-base font-medium text-gray-500">
-              December 23rd, 2022
+              Jan 4th, 2022
             </p>
           </div>
         </div>
 
         <div className="mt-8 sm:mt-12 lg:mt-16 mb-4 mx-auto aspect-w-16 aspect-h-9 lg:aspect-h-6">
-          <img loading="lazy" className="object-cover mx-auto w-1/2 h-1/2" src="/social-media-influencer.jpeg" alt="">
+          <img loading="lazy" className="object-cover mx-auto w-1/2 h-1/2" src="/tiktok-creator.png" alt="">
           </img>
           
         </div>
@@ -130,48 +130,39 @@ const second = () => {
           <article
             className="prose lg:col-span-8 max-w-none prose-gray prose-blockquote:px-8 prose-blockquote:py-3 prose-blockquote:lg:text-xl prose-blockquote:font-medium prose-blockquote:text-gray-900 prose-blockquote:border-gray-900 prose-blockquote:border-l-2 prose-blockquote:lg:leading-9 prose-blockquote:not-italic prose-blockquote:bg-gray-100 prose-blockquote:text-2xl prose-blockquote:leading-8">
             <p className="text-md">
-              As the creator economy grows & more influencers are able to reach more followers, the growing need of an influencer marketing manager specialist is knocking on brands & companies doors as they look to leverage these modern entrepreneurs.<br></br><br></br> In this article, we'll breakdown a typical salary for an Influencer Marketing Manager operating a $16 billion dollar industry as well as 
-              the different roles one can expect to see in this category & what sort of salary ranges they can expect based on different variables such as location, compaany, or experience.
+            TikTok is one of the most widely used platforms when it comes to creating video content. The app's unique algorithm makes it convenient for creators to get their content in front of potential audiences and grow their follower base substantially over a given period of time. TikTok has played a vital role to help one become a social media influencer.
+            <br></br><br></br>
+            In this article, we’ll discuss the average <a href="https://ecomportal.co/job/remote-brevit%C4%93-tiktok-content-creator--20871681">TikTok Creator Salary</a> and the different roles that one can expect to see in this category. The compensation may vary based on different variables such as location, company, collaborations, or experience. 
             </p>
-            <br></br>
+           
           
            
          
-            <br></br>
-            <h2 className="text-3xl font-bold"> What is an Influencer Marketing Manager?</h2>
-            <br></br>
-           
-
-            <p className="text-md">
-            An influencer marketing manager is there to help find the right influencers for the brand, manage the content marketing strategy using influencers on social media, and ensure that the business is posting the right type of content that appeals to its audience. Lots of brands like Nike, Amazon, Reebok, Nvidia, or Cricut are growing their business by leveraging the reach of these influencers with thousands or millions of followers. In doing this, Social Media Influencer Managers have an ever-increasing role to be able to find and manage influencers within their given niche
-            </p>
-            <br></br>
+            <h2 className="text-3xl font-bold"> What is a Tiktok Creator?</h2>
           
-            <br></br>
-            <h2 className="text-3xl font-bold"> Average salary ranges for Influencer Marketing Managers</h2>
+
+            <p className="text-md">
+            A TikTok creator is someone who creates content on a daily basis for an audience, especially in the form of short videos. The purpose is to educate or entertain the audience while delivering engaging and high-quality content. Browse through the information on our website to check more details on job openings for TikTok creators.
+            </p>
+     
+            <h2 className="text-3xl font-bold"> Average salary ranges for Tiktok Creators</h2>
             <br></br>
             <p className="text-md">
-            Here is a list of the average salary ranges for Influencer Marketing Managers located in the US: </p>
-            <br></br>
-            <br></br>
-            <h3>1. <a className="text-sky-500" href="https://www.glassdoor.com/Salaries/influencer-marketing-manager-salary-SRCH_KO0,28.htm">Glassdoor.com: </a> $80,908/yr </h3>
-            <br></br>
-            <br></br>
-            <h3>2. <a className="text-sky-500" href="https://www.ziprecruiter.com/Salaries/Influencer-Marketing-Manager-Salary">Ziprecruiter.com: </a> $70,311/yr </h3>
-            <br></br>
-            <br></br>
-            <h3>3. <a className="text-sky-500" href="https://www.payscale.com/research/US/Skill=Influencer_Marketing/Salary">Payscale.com: </a> $64,000/yr </h3>
-            <br></br>
-            <br></br>
-            <h3>4. <a className="text-sky-500" href="https://www.salary.com/research/salary/position/influencer-manager-salary">Salary.com: </a> $59,798/yr </h3>
+            1. <a href="https://www.glassdoor.com/Salary/TikTok-Digital-Content-Creator-Salaries-E2230881_D_KO7,30.htm">Glaasdoor.com</a>: $71,288/yr
+</p>
+<p>
+2. <a href="https://www.ziprecruiter.com/Salaries/Tiktok-Creator-Salary">Ziprecruiter</a>: $46,043/yr
+</p>
+<p>
+3. <a href="https://www.salary.com/research/company/tiktok-salary">Salary.com</a>: $204,192/yr
+</p>
            
 
-            <br></br>    
-            <br></br>
-            <h2 className="text-3xl font-bold">Highest salary ranges for Influencer Marketing Managers</h2>
+           
+            <h2 className="text-3xl font-bold">Highest salary ranges for Tiktok Creators</h2>
             <br></br>
             <p className="text-md">
-            Here is a list of the highest salary for Influencer Marketing Managers located in the US:</p>
+            Here is a list of the highest salary for Tiktok Creators located in the US:</p>
             <br></br>
             <br></br>
             <h3>1. <a className="text-sky-500" href="https://www.glassdoor.com/Salaries/influencer-marketing-manager-salary-SRCH_KO0,28.htm">Glassdoor.com: </a> $116,650/yr </h3>
@@ -189,10 +180,10 @@ const second = () => {
 
             <br></br>    
             <br></br>
-            <h2 className="text-3xl font-bold">Lowest salary for Influencer Marketing Managers</h2>
+            <h2 className="text-3xl font-bold">Lowest salary for Tiktok Creators</h2>
             <br></br>
             <p className="text-md">
-            Here is a list of the lowest salary for Influencer Marketing Managers located in the US:            </p>
+            Here is a list of the lowest salary for Tiktok Creators located in the US:            </p>
             <br></br>
             <br></br>
             <h3 >1. <a className="text-sky-500" href="https://www.glassdoor.com/Salaries/influencer-marketing-manager-salary-SRCH_KO0,28.htm">Glassdoor.com: </a> $59,659/yr </h3>
@@ -209,10 +200,10 @@ const second = () => {
            
             <br></br>    
             <br></br>
-            <h2 className="text-3xl font-bold">Highest paying states for Influencer Marketing Managers in the US</h2>
+            <h2 className="text-3xl font-bold">Highest paying states for Tiktok Creators in the US</h2>
             <br></br>
             <p className="text-md">
-            Across the states in the US, Influencer Marketing Manager roles are valued differnetly as talent is distributed in certain locations more than others. Here is a list of the highest paying states for this role:</p>
+            Across the states in the US, Tiktok Creator roles are valued differnetly as talent is distributed in certain locations more than others. Here is a list of the highest paying states for this role:</p>
             <br></br>
             <br></br>
             <h3>1. California (Los Angeles): $125,900/yr</h3>
@@ -231,10 +222,10 @@ const second = () => {
 
             <br></br>    
             <br></br>
-            <h2 className="text-3xl font-bold">Highest paying cities for Influencer Marketing Managers in the US</h2>
+            <h2 className="text-3xl font-bold">Highest paying cities for Tiktok Creators in the US</h2>
             <br></br>
             <p className="text-md">
-            Influencer Marketing Manager salaries in the United States will pay differently by cities. By knowing which cities pay the most, you'll be able to look for jobs from companies based out of these areas to maximize the earning potential for your influencer marketing manager career </p>
+            Tiktok Creator salaries in the United States will pay differently by cities. By knowing which cities pay the most, you'll be able to look for jobs from companies based out of these areas to maximize the earning potential for your Tiktok Creator career </p>
             <br></br>
             <br></br>
             <h3>1. San Jose, CA: $139,900/yr</h3>

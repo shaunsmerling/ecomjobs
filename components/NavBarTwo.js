@@ -58,13 +58,13 @@ const Navbartwo = () => {
             </div>
             <div className="nav_slaries">
               {/* <Menu.Button className="inline-flex w-full justify-center px-4 py-2 font-medium text-gray-700   "> */}
-              <a
-                href="/internships"
+              {/* <a
+                href="/companylist"
                 title=""
                 class="inline-flex items-center  font-bold justify-center px-4 py-2.5 text-[14px] text-gray-900 transition-all duration-200 border border-transparent rounded-full "
               >
-                Internships
-              </a>
+                Brand List
+              </a> */}
               {/* </Menu.Button> */}
             </div>
             {/* <a
