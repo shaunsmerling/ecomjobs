@@ -19,12 +19,12 @@ const Navbartwo = () => {
 
   return (
     <header className="py-4 sm:py-5 " x-data="{expanded: false}">
-      <div className="px-4  sm:px-6 lg:px-8 mx-auto max-w-7xl">
+      <div className="px-4 lg:border-b-2  sm:px-6 lg:px-8 mx-auto max-w-7xl">
         <div className="flex items-center justify-between">
           <div className=" shrink-0">
             <a href="../" title="" className="">
               <img
-                className="w-auto h-16 -ml-2 lg:h-12 lg:-ml-0"
+                className="w-auto h-16 -ml-2 lg:h-16 lg:-ml-0"
                 src="/logo.png"
                 alt=""
               ></img>
@@ -158,7 +158,7 @@ const Navbartwo = () => {
               <a
                 href="/employers/postajob"
                 title=""
-                className="inline-flex items-center  justify-center px-5 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+                className="inline-flex items-center mb-4  justify-center px-5 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
                 role="button"
               >
                 Post A Job
@@ -167,7 +167,7 @@ const Navbartwo = () => {
               <a
                 href="/postajob"
                 title=""
-                className="inline-flex items-center  justify-center px-6 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+                className="inline-flex items-center  mb-4 justify-center px-6 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
                 role="button"
               >
                 Post A Job
