@@ -26,11 +26,7 @@ export function CustomRangeSlider(props) {
     refine(refineValue);
   };
 
-  const debounce = useCallback(useDebounce(onChange, 500), [canRefine]);
-
-  if (range.min === range.max) {
-    return () => null;
-  }
+  const debounce = useCallback(useDebounce(onChange, 700), [canRefine]);
 
   return (
     <>
@@ -77,7 +73,7 @@ export function CustomRangeSlider(props) {
           </div>
         ) : (
           <div className="my-1">
-            <p className="text-center opacity-50 font-normal text-base leading-5 tracking-common text-lightGray-300 font-Poppins">
+            <p className="text-left opacity-30 font-normal text-base leading-5 tracking-common text-lightGray-300 font-Poppins">
               No Filter
             </p>
           </div>

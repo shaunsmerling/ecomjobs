@@ -26,7 +26,6 @@ const CustomSalarySlider = ({ title, clearAll, attribute1, attribute2 }) => {
   }, [clearAll]);
 
   const handleValue = (val) => {
-    console.log("val >>>", val);
     setValue(val);
     debounce(val);
   };
@@ -98,7 +97,7 @@ const CustomSalarySlider = ({ title, clearAll, attribute1, attribute2 }) => {
             </div>
           ) : (
             <div className="my-1">
-              <p className="text-center opacity-50 font-normal text-base leading-5 tracking-common text-lightGray-300 font-Poppins">
+              <p className="text-left opacity-30 font-normal text-base leading-5 tracking-common text-lightGray-300 font-Poppins">
                 No Filter
               </p>
             </div>

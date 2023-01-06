@@ -21,7 +21,7 @@ function CustomRefinementList(props) {
           </div>
         ) : (
           <div className="my-1">
-            <p className="text-center opacity-50 font-normal text-base leading-5 tracking-common text-lightGray-300 font-Poppins">
+            <p className="text-left opacity-30 font-normal text-base leading-5 tracking-common text-lightGray-300 font-Poppins">
               No Filter
             </p>
           </div>
