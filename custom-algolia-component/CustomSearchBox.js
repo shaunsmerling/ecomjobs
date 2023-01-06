@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSearchBox } from "react-instantsearch-hooks-web";
 import Search from "../components/icons/Search";
 
@@ -10,6 +10,13 @@ function CustomSearchBox(props) {
     e.preventDefault();
     refine(searchText);
   };
+
+  useEffect(() => {
+    if (props.clearFilter) {
+      setSearchText('')
+      refine('')
+    }
+  }, [props.clearFilter])
 
   return (
     <>

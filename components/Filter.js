@@ -6,8 +6,8 @@ import CustomMenu from "../custom-algolia-component/CustomMenu";
 import { CustomRangeSlider } from "../custom-algolia-component/multiRangeSlider/CustomRangeSlider";
 import CustomSalarySlider from "../custom-algolia-component/salary/CustomSalarySlider";
 
-const Filter = () => {
-  const [clearAll, setClearAll] = useState(false);
+const Filter = ({clearFilter, setClearFilter}) => {
+ 
   return (
     <>
       <div className="bg-lightGreen-50 p-6 rounded-md w-full">
@@ -19,7 +19,7 @@ const Filter = () => {
               </h3>
             </div>
             <div>
-              <CustomClearRefinements setClearAll={setClearAll} />
+              <CustomClearRefinements setClearAll={setClearFilter} />
             </div>
           </div>
 
@@ -75,7 +75,7 @@ const Filter = () => {
           </div> */}
 
           {/* Salary */}
-          <CustomSalarySlider title="Salary" clearAll={clearAll} />
+          <CustomSalarySlider attribute1="salaryMin" attribute2="salaryMax" title="Salary" clearAll={clearFilter} />
           {/* Employees */}
 
           <CustomRangeSlider
@@ -83,7 +83,7 @@ const Filter = () => {
             stateMin={10}
             stateMax={3500}
             title={"Employees"}
-            clearAll={clearAll}
+            clearAll={clearFilter}
           />
 
           {/* Specialities */}

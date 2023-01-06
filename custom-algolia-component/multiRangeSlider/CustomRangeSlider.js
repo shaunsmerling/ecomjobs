@@ -13,20 +13,8 @@ export function CustomRangeSlider(props) {
   const { range, refine, canRefine } = useRangeSlider(props);
   const [value, setValue] = useState([range.min, range.max]);
   const { clearAll } = props;
-  const { min, max } = range;
-
-  const marks = {
-    0: 20,
-    100: 3500,
-  };
-
   useEffect(() => {
-    if (clearAll) {
-      setValue([range.min, range.max]);
-    }
-    if (!clearAll) {
-      setValue([range.min, range.max]);
-    }
+    setValue([range.min, range.max]);
   }, [range.min, range.max, clearAll]);
 
   const handleValue = (val) => {
@@ -46,23 +34,26 @@ export function CustomRangeSlider(props) {
 
   return (
     <>
-      {canRefine && (
-        <div className="mb-10">
-          <div className="mb-4">
-            <p className="opacity-70 font-medium text-base leading-5 tracking-common text-black font-Poppins">
-              {props.title}
-            </p>
-          </div>
-          <div className="px-3.5 flex justify-center items-center">
+      <div>
+        <div className="mb-4">
+          <p className="opacity-70 font-medium text-base leading-5 tracking-common text-black font-Poppins">
+            {props.title}
+          </p>
+        </div>
+        {canRefine ? (
+          <div className=" mb-10 px-3.5 flex justify-center items-center">
             <Slider
               range
               allowCross={false}
               onChange={(val) => {
                 handleValue(val);
               }}
-              marks={marks}
-              min={min}
-              max={max}
+              marks={{
+                0: value[0],
+                100: value[1],
+              }}
+              min={range.min}
+              max={range.max}
               value={value}
               railStyle={{
                 backgroundColor: "#E9EBEE",
@@ -84,8 +75,14 @@ export function CustomRangeSlider(props) {
               }}
             />
           </div>
-        </div>
-      )}
+        ) : (
+          <div className="my-1">
+            <p className="text-center opacity-50 font-normal text-base leading-5 tracking-common text-lightGray-300 font-Poppins">
+              No Filter
+            </p>
+          </div>
+        )}
+      </div>
     </>
   );
 }

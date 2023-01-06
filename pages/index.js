@@ -17,6 +17,7 @@ import Close2 from "../components/icons/Close2";
 
 export default function HomePage() {
   const [filterModelMobile, setFilterModelMobile] = useState(false);
+  const [clearFilter, setClearFilter] = useState(false);
   const searchClient = algoliasearch(
     "RCW293MLIV",
     "bc44fb196bcec6b9602b254bc96f6e71"
@@ -52,14 +53,14 @@ export default function HomePage() {
 
             {/* Filter Section */}
             <div className="max-w-xs w-full hidden lg:block">
-              <Filter />
+              <Filter clearFilter={clearFilter} setClearFilter={setClearFilter} />
             </div>
 
             <div className="flex flex-col w-full gap-4">
               <div className="p-2 lg:p-4 border rounded-md border-lightGray-100 searchBox mb-0.5 flex flex-row justify-center items-center gap-3 lg:gap-5">
                 {/* Custom Search Box */}
                 <div className="w-full">
-                  <CustomSearchBox />
+                  <CustomSearchBox clearFilter={clearFilter} />
                 </div>
                 {/* Filter Button For Mobile Filter Open */}
                 <div className="h-12 self-end lg:hidden">
@@ -76,7 +77,7 @@ export default function HomePage() {
               </div>
               {/* View Data Section */}
               <div className="border border-lightGray-100 rounded-md p-6 min-h-[500px]">
-                <InfiniteHits hitComponent={CompanyData} showPrevious={false} />
+                <InfiniteHits hitComponent={CompanyData} showPrevious={false}  />
               </div>
             </div>
 

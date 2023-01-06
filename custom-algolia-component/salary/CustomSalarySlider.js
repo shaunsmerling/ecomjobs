@@ -3,26 +3,30 @@ import useDebounce from "../../functions/useDebounce";
 import { Configure } from "react-instantsearch-hooks-web";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
+import { useRangeSlider } from "../multiRangeSlider/CustomRangeSlider";
 
-const CustomSalarySlider = ({ title, clearAll }) => {
-  const [salaryMin, setSalaryMin] = useState(1);
+const CustomSalarySlider = ({ title, clearAll, attribute1, attribute2 }) => {
+  const [salaryMin, setSalaryMin] = useState(20000);
   const [salaryMax, setSalaryMax] = useState(500000);
   const [value, setValue] = useState([salaryMin, salaryMax]);
 
-  const marks = {
-    0: 20000,
-    100: 500000,
-  };
+  const { range: rangeMin, canRefine: canRefineMin } = useRangeSlider({
+    attribute: attribute1,
+  });
+  const { range: rangeMax, canRefine: canRefineMax } = useRangeSlider({
+    attribute: attribute2,
+  });
 
   useEffect(() => {
     if (clearAll) {
-      setSalaryMin(1);
+      setSalaryMin(20000);
       setSalaryMax(500000);
-      setValue([1, 500000]);
+      setValue([20000, 500000]);
     }
   }, [clearAll]);
 
   const handleValue = (val) => {
+    console.log("val >>>", val);
     setValue(val);
     debounce(val);
   };
@@ -35,59 +39,72 @@ const CustomSalarySlider = ({ title, clearAll }) => {
   };
 
   const debounce = useCallback(useDebounce(onChange, 700), [
-    salaryMin,
     salaryMax,
+    salaryMin,
   ]);
 
   return (
     <>
-      {(salaryMin || salaryMax) && (
-        <Configure
-          analytics={false}
-          filters={`salaryMin > ${salaryMin || 1} AND salaryMax < ${
-            salaryMax || 500000
-          }`}
-        />
-      )}
+      <>
+        {(salaryMin || salaryMax) && (
+          <>
+            {/* <Configure
+              analytics={false}
+              filters={`(salaryMin=0 OR salaryMin > ${salaryMin}) AND (salaryMax=0 OR salaryMax < ${salaryMax})`}
+              /> */}
+          </>
+        )}
 
-      <div className="mb-10">
-        <div className="mb-4">
-          <p className="opacity-70 font-medium text-base leading-5 tracking-common text-black font-Poppins">
-            {title}
-          </p>
+        <div>
+          <div className="mb-4">
+            <p className="opacity-70 font-medium text-base leading-5 tracking-common text-black font-Poppins">
+              {title}
+            </p>
+          </div>
+          {canRefineMin && canRefineMax ? (
+            <div className="mb-10 px-3.5 flex justify-center items-center">
+              <Slider
+                range
+                allowCross={false}
+                onChange={(val) => {
+                  handleValue(val);
+                }}
+                marks={{
+                  0: value[0],
+                  100: value[1],
+                }}
+                min={1}
+                max={500000}
+                value={value}
+                railStyle={{
+                  backgroundColor: "#E9EBEE",
+                  height: "6px",
+                  borderRadius: "3px",
+                }}
+                trackStyle={{
+                  backgroundColor: "#258B60",
+                  height: "6px",
+                  borderRadius: "3px",
+                }}
+                handleStyle={{
+                  backgroundColor: "#258B60",
+                  width: "20px",
+                  height: "20px",
+                  boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.12)",
+                  border: "3.5px solid #FFFFFF",
+                  opacity: 1,
+                }}
+              />
+            </div>
+          ) : (
+            <div className="my-1">
+              <p className="text-center opacity-50 font-normal text-base leading-5 tracking-common text-lightGray-300 font-Poppins">
+                No Filter
+              </p>
+            </div>
+          )}
         </div>
-        <div className="px-3.5 flex justify-center items-center">
-          <Slider
-            range
-            allowCross={false}
-            onChange={(val) => {
-              handleValue(val);
-            }}
-            marks={marks}
-            min={1}
-            max={500000}
-            value={value}
-            railStyle={{
-              backgroundColor: "#E9EBEE",
-              height: "6px",
-              borderRadius: "3px",
-            }}
-            trackStyle={{
-              backgroundColor: "#258B60",
-              height: "6px",
-              borderRadius: "3px",
-            }}
-            handleStyle={{
-              backgroundColor: "#258B60",
-              width: "20px",
-              height: "20px",
-              boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.12)",
-              border: "3.5px solid #FFFFFF",
-              opacity: 1,
-            }}
-          />
-        </div>
-      </div>
+      </>
     </>
   );
 };
