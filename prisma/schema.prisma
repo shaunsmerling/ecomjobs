@@ -32,7 +32,8 @@ model Job {
   empcount            String?
   companyUrl          String?
   user_id             String?
-  salary              String?
+  salaryMin           String?
+  salaryMax           String?
   
 }
 

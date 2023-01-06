@@ -1,5 +1,5 @@
 import React from "react"
-import { withPageAuthRequired } from '@auth0/nextjs-auth0'
+// import { withPageAuthRequired } from '@auth0/nextjs-auth0'
 
 export default function employers() {
     return (
@@ -10,4 +10,4 @@ export default function employers() {
 }
 
 
-export const getServerSideProps = withPageAuthRequired();
+// export const getServerSideProps = withPageAuthRequired();

@@ -57,7 +57,7 @@ function Hit({ hit }) {
 
 
    return (
-    <Link href={`/job/${hit.jobUrl}`} hit={hit} passHref>
+    <Link legacyBehavior href={`/job/${hit.jobUrl}`} hit={hit} passHref>
       <a target="_blank">
     <div className={`flex flex-col border-2 rounded-lg mb-4 lg:mr-40 lg:ml-40 lg:pb-10 hover:bg-gray-100  lg:my-6 lg:py-2 pb-2  m${hit.featured && 'text-xs '}`}>
         <ul className={`  text-left  flex   `}>
