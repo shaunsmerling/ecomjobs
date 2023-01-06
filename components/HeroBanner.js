@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { useRouter } from 'next/router';
 
 const HeroBanner = () => { 
     
@@ -6,6 +7,8 @@ const HeroBanner = () => {
     const [emails, setEmails] = useState({
         email: "",
       });
+
+      const router = useRouter()
   
       const handleChange = ({ target }) => {
         setEmails({...emails, [target.name]: target.value })
