@@ -157,6 +157,7 @@ const Navbartwo = () => {
             </div> */}
 
             {session ? (
+              <div>
               <a
                 href="/employers/postajob"
                 title=""
@@ -165,6 +166,16 @@ const Navbartwo = () => {
               >
                 Post A Job
               </a>
+              <a
+                href="/api/auth/signout"
+                title=""
+                class="inline-flex items-center  -mr-4 ml-4 font-bold justify-center px-4 py-2.5 text-[14px] text-gray-900 transition-all duration-200 border border-transparent rounded-full  "
+              >
+                Sign out
+              </a>
+              </div>
+              
+
             ) : (
               <a
                 href="/postajob"

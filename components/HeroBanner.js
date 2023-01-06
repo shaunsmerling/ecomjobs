@@ -18,7 +18,7 @@ const HeroBanner = () => {
           method: "POST",
           body: JSON.stringify({
             email: email,
-          })
+          }).then(router.push('/signup'))
         })
       }
   
