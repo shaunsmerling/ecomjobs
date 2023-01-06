@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import ModalSignIn from "./navModalSignIn";
-import Learn from "./Learn";
+import {useRouter} from "next/router"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -15,11 +15,13 @@ function classNames(...classes) {
 const Navbartwo = () => {
   const { data: session } = useSession();
 
+
+
   const [button, setButton] = useState(true);
 
   return (
     <header className="py-4 sm:py-5 " x-data="{expanded: false}">
-      <div className="px-4 lg:border-b-2  sm:px-6 lg:px-8 mx-auto max-w-7xl">
+      <div className="px-4 sm:px-6 lg:border-b-2 lg:px-8 mx-auto max-w-7xl">
         <div className="flex items-center justify-between">
           <div className=" shrink-0">
             <a href="../" title="" className="">
@@ -155,6 +157,7 @@ const Navbartwo = () => {
             </div> */}
 
             {session ? (
+              <div>
               <a
                 href="/employers/postajob"
                 title=""
@@ -163,6 +166,16 @@ const Navbartwo = () => {
               >
                 Post A Job
               </a>
+              <a
+                href="/api/auth/signout"
+                title=""
+                class="inline-flex items-center  -mr-4 ml-4 font-bold justify-center px-4 py-2.5 text-[14px] text-gray-900 transition-all duration-200 border border-transparent rounded-full  "
+              >
+                Sign out
+              </a>
+              </div>
+              
+
             ) : (
               <a
                 href="/postajob"

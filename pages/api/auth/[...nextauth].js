@@ -66,7 +66,7 @@ export default NextAuth({
       port: 465,// process.env.EMAIL_SERVER_PORT,
       auth: {
         user: 'shaun@ecomportal.co',//process.env.EMAIL_SERVER_USER,
-        pass: process.env.EMAIL_PWA,// process.env.EMAIL_SERVER_PASSWORD
+        pass: process.env.EMAIL_PW,// process.env.EMAIL_SERVER_PASSWORD
       }
     },
     from: 'shaun@ecomportal.co'

@@ -74,7 +74,7 @@ function Job({ jobs }) {
               <div className={styles.rightContent}>
                 <img loading="lazy" src={`../images/${jobs?.logo}`}></img>
                 <h3>{jobs?.company_name}</h3>
-                <h6>{jobs?.salary}</h6>
+                <h6>{jobs?.salaryMin && jobs?.salaryMax ? "$" + jobs.salaryMin + ` - ` + "$" + jobs.salaryMax : ""}</h6>
                 <a
                   href={jobs?.application_url}
                   target="_blank"

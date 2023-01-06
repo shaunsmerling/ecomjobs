@@ -20,7 +20,6 @@ function MyApp({
 const showHeader = router.pathname === '/signup' || router.pathname === "/createaccount" ? false : true;
   return (
     <div>
-  
 <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-K7WC2T06Y5"/>
 <Script
   id="google-analytics"
@@ -33,6 +32,20 @@ const showHeader = router.pathname === '/signup' || router.pathname === "/create
     gtag('config', 'G-K7WC2T06Y5', {
       page_path: window.location.pathname,
     });
+    `,
+  }}
+  
+/>
+<Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=AW-11061598180"/>
+<Script
+  id="google-tag"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-11061598180');
     `,
   }}
   
