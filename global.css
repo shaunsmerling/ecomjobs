@@ -1,9 +1,11 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .bold {
-  color: #17614A !important;
+  color: #17614a !important;
 }
 
 #logo {
@@ -18,15 +20,12 @@
   cursor: pointer;
   appearance: none;
 
-
   border: 1px solid #d6d6e7;
   border-radius: 3px;
   box-shadow: 0 1px 0 0 rgb(35 38 59 / 5%);
- 
+
   user-select: none;
   border-radius: 10%;
-  
-  
 }
 
 #titleban {
@@ -51,8 +50,6 @@
 /* Panel */
 .ais-Dropdown.ais-Panel {
   margin: 0;
-
-
 }
 
 .ais-Dropdown .ais-Panel-body {
@@ -62,18 +59,14 @@
   padding: 0.8rem;
   margin-top: 0.5rem;
   background-color: #fff;
-  
 }
-
 
 .ais-Dropdown .ais-Panel-header {
   margin-bottom: 0;
-  
 }
 
 .ais-Dropdown .ais-Panel-body {
   display: none;
-  
 }
 
 .ais-Dropdown .ais-Panel-footer {
@@ -94,11 +87,9 @@
 .ais-Dropdown-mobileTitle {
   display: none;
   margin-top: 0;
-  
 }
 
 @media only screen and (max-width: 375px) {
-
   .ais-Dropdown.ais-Dropdown--opened .ais-Panel-body {
     position: fixed;
     inset: 0;
@@ -109,19 +100,18 @@
     z-index: 10;
   }
 
-.ais-Dropdown-button {
-  width: 100px;
-  height: 60px;
-  font-size: 10px;
-  padding-left: 2px;
-  padding-right: 2px;
-  padding-top: 20px;
-  
-}
+  .ais-Dropdown-button {
+    width: 100px;
+    height: 60px;
+    font-size: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 20px;
+  }
 
-#emailhead {
-  display: none;
-}
+  #emailhead {
+    display: none;
+  }
 
   .ais-Dropdown.ais-Dropdown--opened .ais-Panel-footer {
     position: fixed;
@@ -142,59 +132,42 @@
   .ais-Dropdown-mobileTitle {
     display: block;
   }
-
-
-
 }
 
-.ais-SearchBox-input{
- width: 100%;
- padding-top: 8px;
- border-width: 2px;
- border-radius: 5px;
- font-size: 20px;
-border-color: white
- 
+.ais-SearchBox-input {
+  width: 100%;
+  padding-top: 8px;
+  border-width: 2px;
+  border-radius: 5px;
+  font-size: 20px;
+  border-color: white;
 }
 
 .ais-SearchBox {
   padding-bottom: 6px;
 }
 
-
-  
 .ais-RefinementList-list {
-
   overflow: auto;
-  left:-1em;
+  left: -1em;
   right: auto;
-  text-align:left;
-  
+  text-align: left;
 }
-
-
-
 
 .ais-SearchBox-input:focus {
   height: auto;
 }
 
 .ais-Hits-item {
-  width: 100%
+  width: 100%;
 }
 
 .ais-RefinementList-labelText {
-padding-left: 5px;
-padding-right: 5px;
-font-size: 14px;
-font-weight: 500;
-
-
-
-
-
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 14px;
+  font-weight: 500;
 }
-
 
 .ais-RefinementList-count {
   color: #254790;
@@ -215,17 +188,13 @@ font-weight: 500;
   margin-top: 5px;
 }
 
-
-
 #emailhead {
   background-color: white;
   color: black;
 }
 .ais-SearchBox-submitIcon {
   display: none;
-  
 }
-
 
 .ais-SearchBox-resetIcon {
   display: none;
@@ -234,8 +203,6 @@ font-weight: 500;
 #jobfilters {
   overflow: x-scroll;
 }
-
-
 
 #catfilter {
   margin-left: 5px;
@@ -247,16 +214,13 @@ font-weight: 500;
   margin-top: -7px !important;
 }
 
-
-
-
 .blog-card {
   display: flex;
   flex-direction: column;
   margin: 1rem auto;
-  box-shadow: 0 3px 7px -1px rgba(#000, .1);
+  box-shadow: 0 3px 7px -1px rgba(#000, 0.1);
   margin-bottom: 1.6%;
-  background:background-color white;
+  background: background-color white;
   line-height: 1.4;
   font-family: sans-serif;
   border-radius: 5px;
@@ -264,16 +228,12 @@ font-weight: 500;
   z-index: 0;
 }
 
-
-
-
 #submit {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
 .modal > .header {
   font-size: 24px;
@@ -281,21 +241,15 @@ font-weight: 500;
   padding: 5px;
 }
 
-
-
-
 .App {
   text-align: center;
 }
-
-
 
 #scroll-parent {
   position: relative;
   width: 100vw;
   height: 20rem;
   overflow-x: hidden;
-
 }
 
 #scroll-element {
@@ -307,9 +261,7 @@ font-weight: 500;
   display: flex;
   align-items: center;
   animation: primary 40s linear infinite;
-  
 }
-
 
 @keyframes primary {
   from {
@@ -321,53 +273,287 @@ font-weight: 500;
 }
 
 @media only screen and (max-width: 375px) {
+  #scroll-parent {
+    position: relative;
+    width: 100vw;
+    height: 20rem;
+    overflow-x: hidden;
+  }
 
-#scroll-parent {
-  position: relative;
-  width: 100vw;
-  height: 20rem;
-  overflow-x: hidden;
-
-}
-
-#scroll-element {
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  display: flex;
-  align-items: center;
-  animation: primary 30s linear infinite;
-  
-}
-
-
-@keyframes primary {
-  from {
+  #scroll-element {
+    width: inherit;
+    height: inherit;
+    position: absolute;
     left: 0%;
+    top: 0%;
+    display: flex;
+    align-items: center;
+    animation: primary 30s linear infinite;
   }
-  to {
-    left: -100%;
+
+  @keyframes primary {
+    from {
+      left: 0%;
+    }
+    to {
+      left: -100%;
+    }
   }
-}
 }
 
 .loading {
-opacity: 0;
-transition: all 0.1s ease-in;
+  opacity: 0;
+  transition: all 0.1s ease-in;
 }
 
 .loaded {
-opacity: 1;
-transition: all 0.1s ease-in;
+  opacity: 1;
+  transition: all 0.1s ease-in;
 }
 
 #card {
   width: 175px;
   font-size: 12px;
-  flex: 0 0 auto;         /* ADD */
-  display: flex;          /* ADD */
+  flex: 0 0 auto; /* ADD */
+  display: flex; /* ADD */
   flex-direction: column; /* ADD */
   position: relative;
+}
+
+/* .filter .ais-RefinementList .ais-RefinementList-list .ais-RefinementList-item{
+  @apply 
+} */
+.filter
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label {
+  @apply flex flex-row justify-between w-full cursor-pointer gap-3;
+}
+.filter
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label
+  .ais-RefinementList-labelText {
+  @apply w-full font-Poppins font-normal text-sm leading-30 opacity-40;
+}
+.filter
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label
+  .ais-RefinementList-count {
+  @apply font-normal text-sm leading-30 font-Poppins;
+  background-color: transparent;
+  border: none;
+  color: black;
+}
+
+.searchBox:focus {
+  @apply focus:ring-0 outline-none border-lightGray-100;
+}
+.ais-InfiniteHits .ais-InfiniteHits-loadMore {
+  @apply bg-lightGreen-300 font-Poppins px-8 rounded-3xl py-3 text-base font-normal flex justify-center items-center mx-auto hover:scale-105 duration-150;
+  color: white;
+}
+
+.ais-InfiniteHits .ais-InfiniteHits-loadMore--disabled {
+  @apply hidden;
+}
+
+.locationModel
+  .ais-Menu
+  .ais-Menu-list
+  .ais-Menu-item
+  .ais-Menu-link
+  .ais-Menu-label {
+  @apply font-Poppins font-normal text-sm leading-7 tracking-common opacity-70 cursor-pointer  hover:font-semibold;
+}
+
+.locationModel
+  .ais-Menu
+  .ais-Menu-list
+  .ais-Menu-item
+  .ais-Menu-link
+  .ais-Menu-count {
+  @apply hidden;
+}
+/* Availability */
+
+.availability
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label {
+  @apply flex flex-row items-center gap-3 cursor-pointer mb-0.5;
+}
+
+.availability
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label
+  .ais-RefinementList-checkbox {
+  @apply w-5 h-5 ring-0 ring-offset-0  border border-lightGray-25 rounded-md bg-transparent checked:bg-lightGreen-400 cursor-pointer;
+}
+.availability
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label
+  .ais-RefinementList-labelText {
+  @apply font-Poppins font-normal text-sm leading-30 tracking-common opacity-70;
+}
+
+.availability
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label
+  .ais-RefinementList-count {
+  @apply hidden;
+}
+
+.specialities
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label {
+  @apply flex flex-row items-center justify-between gap-3 cursor-pointer mb-0.5;
+}
+
+.specialities
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label
+  .ais-RefinementList-checkbox {
+  @apply w-5 h-5 ring-0 ring-offset-0 border border-lightGray-25 rounded-md bg-transparent checked:bg-lightGreen-400;
+}
+.specialities
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label
+  .ais-RefinementList-labelText {
+  @apply font-Poppins font-normal text-sm leading-30 tracking-common opacity-70 text-left w-full;
+}
+
+.specialities
+  .ais-RefinementList
+  .ais-RefinementList-list
+  .ais-RefinementList-item
+  .ais-RefinementList-label
+  .ais-RefinementList-count {
+  @apply mr-0 bg-transparent font-Poppins font-normal text-sm leading-30 tracking-common border-none;
+  color: black;
+}
+
+.filter-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.filter-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark-radio {
+  @apply absolute top-0 left-0 w-5 h-5 border border-lightGray-25 rounded-full bg-transparent;
+}
+/* On mouse-over, add a grey background color  */
+.filter-radio:hover input ~ .checkmark {
+  @apply bg-lightGray-25;
+}
+
+/* When the checkbox is checked, add a blue background */
+.filter-radio input:checked ~ .checkmark-radio {
+  @apply bg-lightGreen-400 border border-lightGray-400;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.filter-radio .checkmark-radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.filter-radio input:checked ~ .checkmark-radio:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.filter-radio .checkmark-radio:after {
+  top: 1.45px;
+  left: 1.45px;
+  width: 15px;
+  height: 15px;
+  border: solid white;
+  border-width: 3px;
+  border-radius: 50%;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Filter Model Animation */
+.filterModelAnimation {
+  animation: filter 0.4s 1;
+  animation-timing-function: linear;
+}
+
+@keyframes filter {
+  0% {
+    transform: translateX(100%);
+  }
+  25% {
+    transform: translateX(75%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  75% {
+    transform: translateX(25%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.rc-slider {
+  @apply flex items-center;
+}
+.rc-slider-dot {
+  @apply hidden;
+}
+
+.rc-slider-mark {
+  @apply flex flex-row justify-between items-center mt-4;
+}
+
+.rc-slider-mark .rc-slider-mark-text {
+  @apply font-Poppins font-normal tracking-common text-sm;
+  color: black;
+}
+.rc-slider-mark .rc-slider-mark-text:first-child {
+  @apply !left-0;
+}
+.rc-slider-mark .rc-slider-mark-text:nth-child(2) {
+  @apply !left-full;
 }
