@@ -6,6 +6,7 @@ import World from "./icons/World";
 import Location from "./icons/Location";
 
 const CompanyData = ({ hit }) => {
+  console.log('hit....', hit)
   // Date Calculation
   function getDate() {
     let date_1 = new Date(hit.postedat);
@@ -63,19 +64,16 @@ const CompanyData = ({ hit }) => {
                               ? `5 - ${hit.emp_count} Employees`
                               : `0 - ${hit.emp_count} Employees`}
                           </span>
-                          <span className="font-Poppins font-normal text-sm tracking-common opacity-60 leading-6 lg:!leading-30">{hit?.salaryMin && hit?.salaryMax ? "$" + hit.salaryMin + ` - ` + "$" + hit.salaryMax : ""}</span>
                         </p>
                       )}
-                      {hit?.salary !== "null" &&
-                        hit?.salary !== null &&
-                        hit?.salary !== undefined && (
-                          <p className="flex flex-row items-center gap-2 ">
-                            <SalaryIcon />
-                            <span className="font-Poppins font-normal text-sm tracking-common opacity-60 leading-6 lg:!leading-30">
-                              {hit.salary}
-                            </span>
-                          </p>
-                        )}
+                      {(hit?.salaryMin && hit?.salaryMax !== "null" || 0) ? (
+                        <p className="flex flex-row items-center gap-2 ">
+                          <SalaryIcon />
+                          <span className="font-Poppins font-normal text-sm tracking-common opacity-60 leading-6 lg:!leading-30">
+                            {"$" + hit.salaryMin + ` - ` + "$" + hit.salaryMax}
+                          </span>
+                        </p>
+                      ) : ""}
                     </div>
                   </div>
                   <div className="flex flex-row items-center gap-6 self-start">
