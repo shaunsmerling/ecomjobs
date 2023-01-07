@@ -31,9 +31,8 @@ const CompanyData = ({ hit }) => {
   return (
     <>
       <div
-        className={`mb-7 border border-lightGray-100 rounded-md pt-5 pb-4 pl-4 pr-7 ${
-          hit?.featured && "bg-lightYellow-100"
-        }`}
+        className={`mb-7 border border-lightGray-100 rounded-md pt-5 pb-4 pl-4 pr-7 ${hit?.featured && "bg-lightYellow-100"
+          }`}
       >
         <div className="flex flex-col gap-3">
           <div className="flex flex-row justify-between">
@@ -64,6 +63,7 @@ const CompanyData = ({ hit }) => {
                               ? `5 - ${hit.emp_count} Employees`
                               : `0 - ${hit.emp_count} Employees`}
                           </span>
+                          <span className="font-Poppins font-normal text-sm tracking-common opacity-60 leading-6 lg:!leading-30">{hit?.salaryMin && hit?.salaryMax ? "$" + hit.salaryMin + ` - ` + "$" + hit.salaryMax : ""}</span>
                         </p>
                       )}
                       {hit?.salary !== "null" &&
