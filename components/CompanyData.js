@@ -1,7 +1,7 @@
 import React from "react";
-import UserIcon from "./icons/userIcon";
+import UserIcon from "./icons/UserIcon";
 import SalaryIcon from "./icons/SalaryIcon";
-import Icon from "./icons/icon";
+import Icon from "./icons/Icon";
 import World from "./icons/World";
 import Location from "./icons/Location";
 
