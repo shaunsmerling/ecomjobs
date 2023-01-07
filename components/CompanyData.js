@@ -94,9 +94,10 @@ const CompanyData = ({ hit }) => {
                 </div>
               </div>
             </div>
-            <div className="border border-lightGray-100 rounded-md w-11 h-11 flex justify-center items-center cursor-pointer">
+            
+            {/*  add bookmark feature <div className="border border-lightGray-100 rounded-md w-11 h-11 flex justify-center items-center cursor-pointer">
               <Icon />
-            </div>
+            </div> */}
           </div>
           {hit?.job_requirements && (
             <div className="pt-1.5 lg:pr-8">
