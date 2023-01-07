@@ -53,7 +53,10 @@ export default function HomePage() {
 
             {/* Filter Section */}
             <div className="max-w-xs w-full hidden lg:block">
-              <Filter clearFilter={clearFilter} setClearFilter={setClearFilter} />
+              <Filter
+                clearFilter={clearFilter}
+                setClearFilter={setClearFilter}
+              />
             </div>
 
             <div className="flex flex-col w-full gap-4">
@@ -69,7 +72,7 @@ export default function HomePage() {
                     onClick={() => setFilterModelMobile(!filterModelMobile)}
                   >
                     <FilterIcon className="text-lightGreen-300" />
-                    <span className="font-Poppins font-medium text-sm leading-30 text-lightGreen-300">
+                    <span className="font-Poppins font-medium text-sm leading-30 text-lightGreen-300 hidden md:inline-block">
                       Filter
                     </span>
                   </button>
@@ -77,15 +80,14 @@ export default function HomePage() {
               </div>
               {/* View Data Section */}
               <div className="border border-lightGray-100 rounded-md p-6 min-h-[500px]">
-                <InfiniteHits hitComponent={CompanyData} showPrevious={false}  />
+                <InfiniteHits hitComponent={CompanyData} showPrevious={false} />
               </div>
             </div>
 
             {/* Filter Model For Mobile View */}
             <div
-              className={`lg:hidden filterModelAnimation bg-lightGreen-50 w-full overflow-y-auto h-screen py-4 fixed top-0 left-0 ${
-                filterModelMobile ? "block" : "hidden"
-              }`}
+              className={`lg:hidden filterModelAnimation bg-lightGreen-50 w-full overflow-y-auto h-screen py-4 fixed top-0 left-0 ${filterModelMobile ? "block" : "hidden"
+                }`}
             >
               <div className="flex justify-end items-center max-w-md mx-auto mb-5 pr-5">
                 <div>
@@ -99,7 +101,10 @@ export default function HomePage() {
               </div>
               <div>
                 <div className="max-w-xs mx-auto">
-                  <Filter />
+                  <Filter
+                    clearFilter={clearFilter}
+                    setClearFilter={setClearFilter}
+                  />
                 </div>
               </div>
             </div>

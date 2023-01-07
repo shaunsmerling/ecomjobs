@@ -13,10 +13,10 @@ function CustomSearchBox(props) {
 
   useEffect(() => {
     if (props.clearFilter) {
-      setSearchText('')
-      refine('')
+      setSearchText("");
+      refine("");
     }
-  }, [props.clearFilter])
+  }, [props.clearFilter]);
 
   return (
     <>
@@ -35,7 +35,7 @@ function CustomSearchBox(props) {
           <div className="h-12">
             <button className="h-full flex flex-row justify-center items-center gap-2 bg-lightGreen-300 rounded-md px-6 lg:px-9 w-auto">
               <Search />
-              <span className="font-Poppins font-medium text-sm text-white leading-30">
+              <span className="font-Poppins font-medium text-sm text-white leading-30 hidden md:inline-block">
                 Find
               </span>
             </button>

@@ -10,10 +10,10 @@ const CustomSalarySlider = ({ title, clearAll, attribute1, attribute2 }) => {
   const [salaryMax, setSalaryMax] = useState(500000);
   const [value, setValue] = useState([salaryMin, salaryMax]);
 
-  const { range: rangeMin, canRefine: canRefineMin } = useRangeSlider({
+  const { canRefine: canRefineMin } = useRangeSlider({
     attribute: attribute1,
   });
-  const { range: rangeMax, canRefine: canRefineMax } = useRangeSlider({
+  const { canRefine: canRefineMax } = useRangeSlider({
     attribute: attribute2,
   });
 
@@ -50,7 +50,7 @@ const CustomSalarySlider = ({ title, clearAll, attribute1, attribute2 }) => {
             <Configure
               analytics={false}
               filters={`(salaryMin=0 OR salaryMin > ${salaryMin}) AND (salaryMax=0 OR salaryMax < ${salaryMax})`}
-              />
+            />
           </>
         )}
 
@@ -66,13 +66,15 @@ const CustomSalarySlider = ({ title, clearAll, attribute1, attribute2 }) => {
                 range
                 allowCross={false}
                 onChange={(val) => {
-                  handleValue(val);
+                  if (val[0] >= 20000) {
+                    handleValue(val);
+                  }
                 }}
                 marks={{
                   0: value[0],
                   100: value[1],
                 }}
-                min={1}
+                min={20000}
                 max={500000}
                 value={value}
                 railStyle={{
