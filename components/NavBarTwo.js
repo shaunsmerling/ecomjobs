@@ -178,12 +178,12 @@ const Navbartwo = () => {
 
             ) : (
               <a
-                href="/postajob"
+                href="/signup"
                 title=""
-                className="inline-flex items-center  mb-4 justify-center px-6 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+                className="inline-flex items-center  mb-4 justify-center px-10 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
                 role="button"
               >
-                Post A Job
+                Log In
               </a>
             )}
           </div>
