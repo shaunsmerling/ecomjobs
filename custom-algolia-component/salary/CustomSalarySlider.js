@@ -47,10 +47,10 @@ const CustomSalarySlider = ({ title, clearAll, attribute1, attribute2 }) => {
       <>
         {(salaryMin || salaryMax) && (
           <>
-            {/* <Configure
+            <Configure
               analytics={false}
               filters={`(salaryMin=0 OR salaryMin > ${salaryMin}) AND (salaryMax=0 OR salaryMax < ${salaryMax})`}
-              /> */}
+              />
           </>
         )}
 
