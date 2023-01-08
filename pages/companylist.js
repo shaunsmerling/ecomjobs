@@ -10,13 +10,32 @@ const companylist = () => {
         <div className="py-12 bg-white sm:py-16 lg:py-20">
         <NextSeo
       title="Company List | eCommerce Jobs"
-      description="Search our directory of eCommerce companies." 
+      description="Search our directory of eCommerce companies. Find the brand you want to work for." 
+      openGraph={{
+        url: 'https://ecomportal.co/companylist',
+        title: 'Company List | eCommerce Jobs',
+        description: 'Search our directory of eCommerce companies. Find the brand you want to work for.',
+        images: [
+            {
+                url: 'https://ecomportal.co/images/logo.png',
+                width: 800,
+                height: 600,
+                alt: 'Og Image Alt',
+            },
+        ],
+        
+      }}
+      twitter={{
+        site: '@ecomprtal',
+        cardType: 'Summary',
+        image: "/logo.png"
+      }}
     />
     <div className="-mt-20 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
             <div className="sm:flex sm:items-center sm:justify-between">
             <div class=" my-8 mb-20 text-center">
-<h2 class="text-2xl text-[#17614A] md:text-4xl font-bold block md:inline text-blue-brand">Join a brand. </h2>
+<h1 class="text-2xl text-[#17614A] md:text-4xl font-bold block md:inline text-blue-brand">Search our company list. </h1>
 <h2 class="text-xl md:text-4xl block md:inline font-normal md:font-light">Find a job at one of these ecommerce brands.</h2>
 </div>
                 {/* <div>
@@ -40,11 +59,11 @@ const companylist = () => {
 
             <div className="flow-root mt-8">
                 <div className="-my-5 divide-y divide-gray-200">
-                <Link href="/company/cole-haan-85896455" >
+                <Link legacyBehavior href="/company/cole-haan-85896455" >
                     <div className="py-5  hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0 ">
-                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/colehaan.jpeg" alt="" />
+                                <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/colehaan.jpeg" alt="Cole Haan Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
                                     <p className=" text-xl font-bold text-gray-900 truncate">Cole Haan</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">We are advocates of the extraordinary </p>
@@ -52,18 +71,18 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/6365d74ea1e5cfc099f83bfd"  className=" hidden lg:flex text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/cole-haan-85896455"  className=" hidden lg:flex text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
                                     
                            
                             </div>
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/harry's-inc-57816028" >
+                    <Link legacyBehavior href="/company/harry's-inc-57816028" >
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
-                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/harrys.jpeg" alt="" />
+                                <img loading="lazy"   className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/harrys.jpeg" alt="Harrys Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
                                     <p className=" text-xl font-bold text-gray-900 truncate">Harrys</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Creating things more people like</p>
@@ -71,18 +90,18 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/6363a3a6d20d4aec518386c6" title="" className="hidden lg:flex text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/harry's-inc-57816028" title="" className="hidden lg:flex text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                                
                             </div>
                         </div>
                     </div>
                     </Link>
-                    <Link  href="/company/henkel-91731948" >
+                    <Link  legacyBehavior href="/company/henkel-91731948" >
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
-                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/henkel.jpeg"  alt="" />
+                                <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/henkel.jpeg"  alt="Henkel Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
                                     <p className=" text-xl font-bold text-gray-900 truncate">Henkel</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Pioneers at heart for the good of generations</p>
@@ -90,17 +109,17 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/6365c517a1e5cfc099f83bcc" title="" className=" hidden lg:flex text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/henkel-91731948" title="" className=" hidden lg:flex text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                             </div>
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/garmin-25074268">
+                    <Link legacyBehavior href="/company/garmin-25074268">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
-                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full"  src="./images/garmin.jpeg" alt="" />
+                                <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full"  src="./images/garmin.jpeg" alt="Garmin Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
                                     <p className=" text-xl font-bold text-gray-900 truncate">Garmin</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Engineered on the inside for life on the outside.</p>
@@ -108,17 +127,17 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/6365c80aa1e5cfc099f83bd5" title="" className=" hidden lg:flex text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/garmin-25074268" title="" className=" hidden lg:flex text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                             </div>
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/anthropologie-42133316">
+                    <Link legacyBehavior href="/company/anthropologie-42133316">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
-                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/anthropologie.jpeg" alt="" />
+                                <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/anthropologie.jpeg" alt="Anthropologie Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
                                     <p className=" text-xl font-bold text-gray-900 truncate">Anthropologie</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Sharing Inspiration. Sending Love.</p>
@@ -126,7 +145,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/6365ca58a1e5cfc099f83bdf" title="" className="hidden lg:flex  text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/anthropologie-42133316" title="" className="hidden lg:flex  text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                              
                              
@@ -134,11 +153,11 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/marimekko-29768936">
+                    <Link legacyBehavior href="/company/marimekko-29768936">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
-                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/marimekko.jpeg" alt="" />
+                                <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/marimekko.jpeg" alt="Marimekko Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
                                     <p className=" text-xl font-bold text-gray-900 truncate">Marimekko</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Empowering people to be happy.</p>
@@ -146,7 +165,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/6365cd5da1e5cfc099f83be5" title="" className="hidden lg:flex text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/marimekko-29768936" title="" className="hidden lg:flex text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                              
                              
@@ -154,11 +173,11 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/the-hundreds-49944881">
+                    <Link legacyBehavior href="/company/the-hundreds-49944881">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
-                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/thehundreds.jpeg" alt="" />
+                                <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/thehundreds.jpeg" alt="The Hundreds Logo " />
                                 <div className="flex-1 min-w-0 ml-4">
                                     <p className=" text-xl font-bold text-gray-900 truncate">Hundreds</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">The Hundreds is Huge.</p>
@@ -166,7 +185,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/6365d237a1e5cfc099f83bf0" title="" className=" hidden lg:flex text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/the-hundreds-49944881" title="" className=" hidden lg:flex text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                              
                              
@@ -174,11 +193,11 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/bose-36965113">
+                    <Link legacyBehavior  href="/company/bose-36965113">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
-                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/bose.jpeg" alt="" />
+                                <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/bose.jpeg" alt="Bose Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
                                     <p className=" text-xl font-bold text-gray-900 truncate">Bose</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Sound is Power.</p>
@@ -186,7 +205,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/6365d478a1e5cfc099f83bf6" title="" className="hidden lg:flex  text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/bose-36965113" title="" className="hidden lg:flex  text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                              
                              
@@ -194,11 +213,11 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/cole-haan-85896455">
+                    <Link legacyBehavior href="/company/cole-haan-85896455">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
-                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/colehaan.jpeg" alt="" />
+                                <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/colehaan.jpeg" alt="Cole Haan Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
                                     <p className=" text-xl font-bold text-gray-900 truncate">Cole Haan</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">We are advocates of the extraordinary.</p>
@@ -206,7 +225,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/6365d74ea1e5cfc099f83bfd" title="" className="hidden lg:flex  text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/cole-haan-85896455" title="" className="hidden lg:flex  text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                              
                              
@@ -214,11 +233,11 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/amazonia-57058216">
+                    <Link legacyBehavior href="/company/amazonia-57058216">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
-                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/amazonia.jpeg" alt="" />
+                                <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/amazonia.jpeg" alt="Amazonia Logo " />
                                 <div className="flex-1 min-w-0 ml-4">
                                     <p className=" text-xl font-bold text-gray-900 truncate">Amazonia</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Australian Owned & Operated Health Food Business.</p>
@@ -226,7 +245,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/6365d9e8a1e5cfc099f83c03" title="" className="hidden lg:flex  text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/amazonia-57058216" title="" className="hidden lg:flex  text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                              
                              
@@ -234,11 +253,11 @@ const companylist = () => {
                         </div>
                     </div>
                     </Link>
-                    <Link href="/company/casetify-94845554">
+                    <Link legacyBehavior href="/company/casetify-94845554">
                     <div className="py-5 hover:bg-gray-100">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0">
-                                <img className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/casetify.jpeg" alt="" />
+                                <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/casetify.jpeg" alt="Casetify Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
                                     <p className=" text-xl font-bold text-gray-900 truncate">Casetify</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Show Your Colors.</p>
@@ -246,7 +265,7 @@ const companylist = () => {
                             </div>
 
                             <div className="flex items-center justify-between mt-4 sm:space-x-6 pl-14 sm:pl-0 sm:justify-end sm:mt-0">
-                                <a href="/company/6365dad2a1e5cfc099f83c08" title="" className="hidden lg:flex  text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
+                                <a href="/company/casetify-94845554" title="" className="hidden lg:flex  text-xl font-medium text-gray-400 transition-all duration-200 hover:text-[#17614A] hover:font-bold"> Learn More </a>
 
                              
                              

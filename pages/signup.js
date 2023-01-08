@@ -3,6 +3,7 @@ import {providers, signIn, getSession, getCsrfToken, useSession } from "next-aut
 import { getProviders } from "next-auth/react"
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { NextSeo } from "next-seo"
 
 
 // export async function getServerSideProps(context) {
@@ -58,11 +59,37 @@ export async function getServerSideProps(context) {
     }
 
       return (
+        
           <section className=" bg-white sm:py-16 lg:pb-20 ">
+            
       <div className="px-4 mx-auto max-w-7xl sm:px-6  lg:px-8">
+      <NextSeo
+      title="Sign up | EcomPortal"
+      description="Create an account to get started" 
+      openGraph={{
+        url: 'https://www.url.ie/a',
+        title: 'Open Graph Title',
+        description: 'Open Graph Description',
+        images: [
+          {
+            url: 'https://www.example.ie/og-image-01.jpg',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          },
+        ],
+        siteName: 'SiteName',
+      }}
+      twitter={{
+        site: '@ecomprtal',
+        cardType: 'Summary',
+        image: "/logo.png"
+      }}
+    />
           <div className="">
             <a href="../">
-              <img className="w-auto h-16 mx-auto mb-20 mt-0" src="/logo.png" alt="" />
+              <img alt="company logo" loading="lazy" className="w-auto h-16 mx-auto mb-20 mt-0" src="/logo.png"   />
               </a>
           </div>
   
@@ -72,13 +99,13 @@ export async function getServerSideProps(context) {
                       <h1 className="font-bold text-gray-900 text-4xl font-pj">Sign in with email</h1>
   
                       <div className="flex justify-center flex-shrink-0 mt-8 -space-x-4 overflow-hidden">
-                          <img className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-male-1.png" alt="" />
-                          <img className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-1.png" alt="" />
-                          <img className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-2.png" alt="" />
-                          <img className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-3.png" alt="" />
-                          <img className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-male-2.png" alt="" />
-                          <img className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-4.png" alt="" />
-                          <img className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-5.png" alt="" />
+                          <img alt="user profile picture" loading="lazy" lassName="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-male-1.png"   />
+                          <img alt="user profile picture" loading="lazy" className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-1.png"   />
+                          <img alt="user profile picture" loading="lazy" className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-2.png"   />
+                          <img alt="user profile picture" loading="lazy" className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-3.png"   />
+                          <img alt="user profile picture" loading="lazy" className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-male-2.png"   />
+                          <img alt="user profile picture" loading="lazy" className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-4.png"   />
+                          <img alt="user profile picture" loading="lazy" className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-5.png"   />
                       </div>
   
                       <p className="px-4 mt-5 text-lg font-normal text-gray-900 sm:px-0 font-pj">Search over <span className="font-bold">4600+ eCommerce brands </span> that're hiring</p>
@@ -270,17 +297,17 @@ export async function getServerSideProps(context) {
   
                   <ul className="mt-8 space-y-6 lg:mt-12 md:space-y-9">
                       <li className="flex items-startt">
-                          <img className="flex-shrink-0 w-10 h-10" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/icon-thumb.png" alt="" />
+                          <img alt="thumbs up logo" loading="lazy" className="flex-shrink-0 w-10 h-10" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/icon-thumb.png"   />
                           <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Jobs strictly from ecom brands.</span> If you're about the DTC life, generic jobs won't cut it. We've got the jobs specifically for you. </span>
                       </li>
   
                       <li className="flex items-startt">
-                          <img className="flex-shrink-0 w-10 h-10" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/icon-mailbox.png" alt="" />
+                          <img alt="mailbox logo" loading="lazy" className="flex-shrink-0 w-10 h-10" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/icon-mailbox.png"   />
                           <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Get email alerts for open positions.</span> If a company you love is hiring, or a job position you want is open - you'll know right away.</span>
                       </li>
   
                       <li className="flex items-startt">
-                          <img className="flex-shrink-0 w-10 h-10" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/icon-sand-clock.png" alt="" />
+                          <img alt="time logo" loading="lazy" className="flex-shrink-0 w-10 h-10" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/icon-sand-clock.png"   />
                           <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Apply to more jobs faster.</span> Spend less time smashing your keyboard looking for jobs, and more time applying to them. </span>
                       </li>
                   </ul>

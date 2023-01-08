@@ -36,8 +36,21 @@ export default function HomePage() {
   return (
     <>
       <NextSeo
-        title="Jobs For the eCommerce Industry"
+        title="Find Jobs In the eCommerce Industry"
         description="Join an eCommerce brand. Help shape the future by working with some of the fastest growing Direct-To-Consumer companies."
+        openGraph={{
+          url: 'https://ecomportal.co',
+          title: "Find Jobs In the eCommerce Industry",
+          description: "Join an eCommerce brand. Help shape the future by working with some of the fastest growing Direct-To-Consumer companies.",
+          images: [
+              {
+                  url: 'https://ecomportal.co/images/logo.png',
+                  width: 800,
+                  height: 600,
+                  alt: 'Og Image Alt',
+              },
+          ],
+        }}
       />
       <div className="relative">
         <div>

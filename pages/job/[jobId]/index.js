@@ -4,6 +4,8 @@ import styles from "./styles.module.css";
 import Footer from "../../../components/Footer";
 import { api_url } from "../../../config";
 import Link from "next/link";
+import Head from "next/head";
+import Helmet from 'react-helmet';
 
 export async function getServerSideProps(context) {
   const { params } = context;
@@ -17,10 +19,61 @@ export async function getServerSideProps(context) {
   };
 }
 
+
+
 function Job({ jobs }) {
+
+  let jobData =   
+{
+"@context": "https://schema.org/",
+"@type": "JobPosting",
+"title": `${jobs.job_position}`,
+"description": `${jobs.job_description}`,
+"hiringOrganization": {
+    "@type": "Organization",
+    "name": `${jobs.company_name}`,
+    "sameAs": `${jobs.company_url}`,
+},
+"industry": `${jobs.job_category}`,
+"employmentType": "FULL_TIME",
+"datePosted": `${jobs.postedat}`,
+"baseSalary": `${jobs.salary}`,
+"validThrough": "",
+"jobLocation": {
+    "@type": "Place",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "",
+        "addressLocality": "",
+        "postalCode": "",
+        "addressCountry": `${jobs.location}`
+    }
+},
+"responsibilities": `${jobs.job_requirements}`,
+}
+
   return (
     <>
       <div className={`pb-10`}>
+
+      <Helmet>
+            (<script className='structured-data-list' type="application/ld+json">{JSON.stringify(jobData)}</script>)
+      </Helmet> 
+      <Head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>{`${jobs.job_position} | ${jobs.company_name}`}</title>
+        <meta property="og:title" content={`${jobs.job_position} | ${jobs.company_name}`} key="maintitle" />
+        <meta property="og:description" content={`${jobs.job_description}`}  key="description" />
+        <meta property="og:image" content={`https://ecomportal.co/images/${jobs.logo}`} key="mainimage" />
+        <meta name="twitter:card" vmid="twitter:card" key="twcard" content="summary_large_image" />
+        <meta name="twitter:site" vmid="twitter:site" key="twsite"  content="@ecomprtal" />
+        <meta name="twitter:text:title" vmid="twitter:text:title" key="twtitle" content={`${jobs.company_name} is hiring for a ${jobs.job_position}!`} />
+        <meta name="twitter:text:description" vmid="twitter:text:description" key="twdesc"  content={`${jobs.job_description}`} />
+        <meta name="twitter:image:src" vmid="twitter:image:src"  key="twimg" content={`https://ecomportal.co/images/${jobs.logo}`} />
+</Head>
+      
         <div className="px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
           <div className={styles.main_section}>
             <div className={styles.leftSide}>
@@ -74,7 +127,7 @@ function Job({ jobs }) {
               <div className={styles.rightContent}>
                 <img loading="lazy" src={`../images/${jobs?.logo}`}></img>
                 <h3>{jobs?.company_name}</h3>
-                <h6>{jobs?.salaryMin && jobs?.salaryMax ? "$" + jobs.salaryMin + ` - ` + "$" + jobs.salaryMax : ""}</h6>
+                <h6>{jobs?.salaryMin && jobs?.salaryMax !== "0" ? "$" + jobs.salaryMin + ` - ` + "$" + jobs.salaryMax : ""}</h6>
                 <a
                   href={jobs?.application_url}
                   target="_blank"

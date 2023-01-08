@@ -26,9 +26,10 @@ const Navbartwo = () => {
           <div className=" shrink-0">
             <a href="../" title="" className="">
               <img
+              loading="lazy"
                 className="w-auto h-16 -ml-2 lg:h-14 lg:-ml-0"
                 src="/logo.png"
-                alt=""
+                alt="company logo"
               ></img>
             </a>
           </div>
@@ -180,7 +181,7 @@ const Navbartwo = () => {
               <a
                 href="/signup"
                 title=""
-                className="inline-flex items-center  mb-4 justify-center px-10 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+                className="inline-flex items-center  mb-4 justify-center px-10 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-lg bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
                 role="button"
               >
                 Log In

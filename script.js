@@ -14,7 +14,7 @@ export function generateJobUrl(company_name, job_position, job_type) {
     if(company_name) {
         newUrl += "-"
     }
-    newUrl += job_position.replace(/\s/g, "-").replace("&", "and").replace(",", "").replace(".", "").replace("/", "") +
+    newUrl += job_position.replace(/\s/g, "-").replace("&", "and").replace(",", "").replace(".", "").replace("/", "").replace("(", "").replace(")", "") +
     "-" +
     random;
   }
