@@ -557,3 +557,66 @@
 .rc-slider-mark .rc-slider-mark-text:nth-child(2) {
   @apply !left-full;
 }
+
+
+/********  Hero stayle here **********/
+.herobanners h1 {
+  font-weight: 900;
+  font-size: 80px;
+  font-family: "Cabinet Grotesk";
+  line-height: 90px;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  color: #000000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.herobanners h1 .find-text {
+  text-shadow: -4px -4px 0 #fff, 4px -4px 0 #fff, -4px 4px 0 #fff,
+    4px 4px 0 #fff;
+  color: #000000;
+}
+.herobanners h1 span {
+  color: #3c7f45;
+}
+.svg_images.top {
+  position: absolute;
+  width: 100%;
+}
+.herobanners h2 {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 35px;
+  margin: 20px 0 25px;
+  letter-spacing: -0.01em;
+  color: #000000;
+}
+
+.svg_images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.svg_images.bottom {
+  position: relative;
+  top: -50px;
+}
+
+@media only screen and (max-width: 800px) {
+  .svg_images svg {
+    width: 40px;
+    height: 40px;
+  }
+  .ul_li-divs {
+    margin-top: 30px;
+  }
+  .svg_images.top {
+    top: -30px;
+  }
+  .svg_images.bottom {
+    top: 10px;
+  }
+  .herobanners h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}

@@ -105,7 +105,7 @@ function Job({ jobs }) {
               <p>{jobs?.job_requirements}</p>
             </div>
             <div className={styles.rightside}>
-              <div className={styles.shpesImg}>
+              <div className={styles.shapesImg}>
                 <svg
                   width="84"
                   height="79"
