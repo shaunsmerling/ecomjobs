@@ -96,7 +96,7 @@ export default function HomePage() {
                 </div>
               </div>
               {/* View Data Section */}
-              <div className="border border-lightGray-100 rounded-md p-6 min-h-[500px]">
+              <div className="border border-lightGray-100 rounded-md p-4 md:p-6 min-h-[500px]">
                 <InfiniteHits hitComponent={CompanyData} showPrevious={false} />
               </div>
             </div>

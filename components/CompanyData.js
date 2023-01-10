@@ -6,7 +6,6 @@ import World from "./icons/World";
 import Location from "./icons/Location";
 
 const CompanyData = ({ hit }) => {
-  console.log('hit....', hit)
   // Date Calculation
   function getDate() {
     let date_1 = new Date(hit.postedat);
@@ -32,30 +31,30 @@ const CompanyData = ({ hit }) => {
   return (
     <>
       <div
-        className={`mb-7 border border-lightGray-100 rounded-md pt-5 pb-4 pl-4 pr-7 ${hit?.featured && "bg-lightYellow-100"
+        className={`mb-7 border border-lightGray-100 rounded-md py-4 pl-4 pr-4 lg:pr-7 ${hit?.featured && "bg-lightYellow-100"
           }`}
       >
         <div className="flex flex-col gap-3">
           <div className="flex flex-row justify-between">
-            <div className="flex flex-row items-center gap-4">
+            <div className="flex flex-row items-center gap-3 md:gap-4">
               {hit?.logo && (
                 <div className="self-start lg:self-center">
                   <img
                     src={`./images/${hit.logo}`}
                     alt=""
-                    className="w-14 h-14 border border-lightGray-200 rounded-lg"
+                    className="w-14 h-14 min-w-[56px] min-h-[56px] border border-lightGray-200 rounded-lg"
                   />
                 </div>
               )}
               <div>
-                <div className="flex flex-col lg:flex-row items-center gap-1 lg:gap-3 xl:gap-6">
+                <div className="flex flex-col md:flex-row items-center gap-1 lg:gap-3 xl:gap-6">
                   <div>
                     {hit?.job_position && (
-                      <h2 className="text-lg leading-6 lg:!leading-30 font-Poppins tracking-common font-medium">
+                      <h2 className="text-base md:text-lg leading-5 md:leading-6 lg:!leading-30 font-Poppins tracking-common font-medium">
                         {hit.job_position}
                       </h2>
                     )}
-                    <div className="flex flex-row items-center justify-start gap-3">
+                    <div className="flex flex-wrap flex-row  items-center justify-start gap-2 lg:gap-3">
                       {hit?.emp_count && (
                         <p className="flex flex-row items-center gap-2 ">
                           <UserIcon />
@@ -66,17 +65,19 @@ const CompanyData = ({ hit }) => {
                           </span>
                         </p>
                       )}
-                      {(hit?.salaryMin && hit?.salaryMax !== "null" || 0) ? (
+                      {(hit?.salaryMin && hit?.salaryMax !== "null") || 0 ? (
                         <p className="flex flex-row items-center gap-2 ">
                           <SalaryIcon />
                           <span className="font-Poppins font-normal text-sm tracking-common opacity-60 leading-6 lg:!leading-30">
                             {"$" + hit.salaryMin + ` - ` + "$" + hit.salaryMax}
                           </span>
                         </p>
-                      ) : ""}
+                      ) : (
+                        ""
+                      )}
                     </div>
                   </div>
-                  <div className="flex flex-row items-center gap-6 self-start">
+                  <div className="flex flex-col md:flex-row items-center gap-2  md:gap-6 self-start">
                     {hit?.postedat && (
                       <div className="flex flex-row items-center gap-1 md:gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-lightGray-300" />
@@ -94,8 +95,8 @@ const CompanyData = ({ hit }) => {
                 </div>
               </div>
             </div>
-            
-            {/*  add bookmark feature <div className="border border-lightGray-100 rounded-md w-11 h-11 flex justify-center items-center cursor-pointer">
+
+            {/* add bookmark feature <div className="border border-lightGray-100 rounded-md w-11 h-11 flex justify-center items-center cursor-pointer">
               <Icon />
             </div> */}
           </div>
@@ -131,7 +132,7 @@ const CompanyData = ({ hit }) => {
                   className="flex flex-row items-center gap-2 cursor-pointer"
                 >
                   <World />
-                  <span className="font-Poppins font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80">
+                  <span className="font-Poppins font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 break-all">
                     {hit.company_url}
                   </span>
                 </a>
@@ -139,7 +140,7 @@ const CompanyData = ({ hit }) => {
               {(hit?.city || hit?.location) && (
                 <p className="flex flex-row items-center gap-2 cursor-pointer">
                   <Location />
-                  <span className="font-Poppins font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 ">
+                  <span className="font-Poppins font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 break-all">
                     {hit?.city} {hit?.location}
                   </span>
                 </p>
@@ -150,7 +151,7 @@ const CompanyData = ({ hit }) => {
               <a
                 href={`/job/${hit?.jobUrl}`}
                 target="_blank"
-                className="inline-block font-Poppins text-white font-semibold text-xs leading-6 lg:!leading-30 tracking-common bg-lightGreen-300 px-6 py-2 rounded-3xl hover:scale-110 duration-150"
+                className="inline-block font-Poppins text-white font-semibold text-xs leading-6 md:!leading-30 tracking-common bg-lightGreen-300 py-1.5 px-5 md:px-6 md:py-2 rounded-3xl hover:scale-110 duration-150"
               >
                 Apply Now
               </a>
