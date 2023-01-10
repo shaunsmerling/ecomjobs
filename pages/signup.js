@@ -99,7 +99,7 @@ export async function getServerSideProps(context) {
                       <h1 className="font-bold text-gray-900 text-4xl font-pj">Sign in with email</h1>
   
                       <div className="flex justify-center flex-shrink-0 mt-8 -space-x-4 overflow-hidden">
-                          <img alt="user profile picture" loading="lazy" lassName="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-male-1.png"   />
+                          {/* <img alt="user profile picture" loading="lazy" lassName="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-male-1.png"   /> */}
                           <img alt="user profile picture" loading="lazy" className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-1.png"   />
                           <img alt="user profile picture" loading="lazy" className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-2.png"   />
                           <img alt="user profile picture" loading="lazy" className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-3.png"   />

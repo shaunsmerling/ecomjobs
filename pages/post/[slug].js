@@ -9,14 +9,14 @@ function Post({post}) {
   <div>
      <NextSeo
       title={post.title}
-      description="Salary Ranges for Influencer Marketing Managers" 
+      description={post.description}
       openGraph={{
-        url: 'https://www.ecomportal.co/salaries/influencer-marketing-manager-salary',
-        title: "Salary Ranges for Influencer Marketing Managers" ,
-        description: 'Report breaking down Influencer Marketing Manager Salaries across the US, UK, and Internationally',
+        url: `https://www.ecomportal.co/salaries/${post.slug.current}`,
+        title: `${post.title}`,
+        description: `${post.description}`,
         images: [
           {
-            url: 'https://www.example.ie/og-image-01.jpg',
+            url:`https://www.ecomportal.co/salaries/${post.slug.current}`,
             width: 800,
             height: 600,
             alt: 'Og Image Alt',
@@ -26,7 +26,7 @@ function Post({post}) {
         siteName: 'SiteName',
       }}
       twitter={{
-        site: '@ecomjobs_',
+        site: '@ecomprtal',
         cardType: 'summary',
         image: "/logo.png"
       }}

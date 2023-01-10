@@ -14,6 +14,7 @@ import CompanyData from "../components/CompanyData";
 import Filter from "../components/Filter";
 import FilterIcon from "../components/icons/FilterIcon";
 import Close2 from "../components/icons/Close2";
+import { useSession } from "next-auth/react";
 
 export default function HomePage() {
   const [filterModelMobile, setFilterModelMobile] = useState(false);
@@ -22,6 +23,7 @@ export default function HomePage() {
     "RCW293MLIV",
     "bc44fb196bcec6b9602b254bc96f6e71"
   );
+  const { data: session } = useSession();
 
   useEffect(() => {
     if (typeof window !== undefined) {
@@ -52,10 +54,12 @@ export default function HomePage() {
           ],
         }}
       />
-      <div className="relative">
+    <div>
+      {!session ? (
         <div>
+        <div className="relative">
           <HeroBanner />
-          {/* <Featured /> */}
+       
           <div className="mb-10">
             <LogoBanner />
           </div>
@@ -64,7 +68,7 @@ export default function HomePage() {
           <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
             <Configure hitsPerPage={10} />
 
-            {/* Filter Section */}
+    
             <div className="max-w-xs w-full hidden lg:block">
               <Filter
                 clearFilter={clearFilter}
@@ -123,16 +127,83 @@ export default function HomePage() {
             </div>
           </InstantSearch>
         </div>
+        </div> )  :  (  
+        <div className="flex flex-row justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
+          <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
+            <Configure hitsPerPage={10} />
+
+   
+            <div className="max-w-xs w-full hidden lg:block">
+              <Filter
+                clearFilter={clearFilter}
+                setClearFilter={setClearFilter}
+              />
+            </div>
+
+            <div className="flex flex-col w-full gap-4">
+              <div className="p-2 lg:p-4 border rounded-md border-lightGray-100 searchBox mb-0.5 flex flex-row justify-center items-center gap-3 lg:gap-5">
+          
+                <div className="w-full">
+                  <CustomSearchBox clearFilter={clearFilter} />
+                </div>
+              
+                <div className="h-12 self-end lg:hidden">
+                  <button
+                    className="h-full flex flex-row justify-center items-center gap-2 border border-lightGreen-300 rounded-md px-4 w-auto"
+                    onClick={() => setFilterModelMobile(!filterModelMobile)}
+                  >
+                    <FilterIcon className="text-lightGreen-300" />
+                    <span className="font-Poppins font-medium text-sm leading-30 text-lightGreen-300 hidden md:inline-block">
+                      Filter
+                    </span>
+                  </button>
+                </div>
+              </div>
+       
+              <div className="border border-lightGray-100 rounded-md p-6 min-h-[500px]">
+                <InfiniteHits hitComponent={CompanyData} showPrevious={false} />
+              </div>
+            </div>
+
+         
+            <div
+              className={`lg:hidden filterModelAnimation bg-lightGreen-50 w-full overflow-y-auto h-screen py-4 fixed top-0 left-0 ${filterModelMobile ? "block" : "hidden"
+                }`}
+            >
+              <div className="flex justify-end items-center max-w-md mx-auto mb-5 pr-5">
+                <div>
+                  <button
+                    onClick={() => setFilterModelMobile(false)}
+                    className="border border-lightGray-100 bg-white rounded-full p-1 shadow-md"
+                  >
+                    <Close2 />
+                  </button>
+                </div>
+              </div>
+              <div>
+                <div className="max-w-xs mx-auto">
+                  <Filter
+                    clearFilter={clearFilter}
+                    setClearFilter={setClearFilter}
+                  />
+                </div>
+              </div>
+            </div>
+          </InstantSearch>
+          </div>
+      )}
       </div>
     </>
   );
 }
 
-// import React from "react";
+
+
+{/* // import React from "react";
 // import HeroBanner from "../components/HeroBanner";
 // import "@stripe/stripe-js";
 // import algoliasearch from "algoliasearch/lite";
-// import {
+// import { */}
 //   InstantSearch,
 //   RefinementList,
 //   SearchBox,
