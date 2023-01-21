@@ -214,7 +214,7 @@ function Modal() {
                   <div className="mt-2 ml-2 ">Blog</div>
                 </div>
               </a>
-              <a
+              {/* <a
                 class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                 href="/internships"
               >
@@ -235,7 +235,7 @@ function Modal() {
                   </div>
                   <div className="mt-2 ml-2 ">Internships</div>
                 </div>
-              </a>
+              </a> */}
               <a
                 class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                 href="/bulkdiscounts"
