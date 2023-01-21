@@ -31,7 +31,7 @@ const CompanyData = ({ hit }) => {
   return (
     <>
       <div
-        className={`mb-7 border border-lightGray-100 rounded-md py-4 pl-4 pr-4 lg:pr-7 ${hit?.featured && "bg-lightYellow-100"
+        className={`mb-7 border border-lightGray-100 rounded-md py-4 pl-4 pr-4 lg:pr-7 hover:bg-gray-50 ${hit?.featured && "bg-lightYellow-100"
           }`}
       >
         <div className="flex flex-col gap-3">
@@ -51,7 +51,7 @@ const CompanyData = ({ hit }) => {
                   <div>
                     {hit?.job_position && (
                       <h2 className="text-base md:text-lg leading-5 md:leading-6 lg:!leading-30 font-Poppins tracking-common font-medium">
-                        {hit.job_position}
+                        <a href={`/job/${hit?.jobUrl}`}>{hit.job_position}</a>
                       </h2>
                     )}
                     <div className="flex flex-wrap flex-row  items-center justify-start gap-2 lg:gap-3">
@@ -153,7 +153,7 @@ const CompanyData = ({ hit }) => {
                 target="_blank"
                 className="inline-block font-Poppins text-white font-semibold text-xs leading-6 md:!leading-30 tracking-common bg-lightGreen-300 py-1.5 px-5 md:px-6 md:py-2 rounded-3xl hover:scale-110 duration-150"
               >
-                Apply Now
+                Learn More
               </a>
             </div>
           </div>
