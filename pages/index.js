@@ -103,7 +103,7 @@ export default function HomePage() {
                 <InfiniteHits hitComponent={CompanyData} showPrevious={false} />
               </div>
               <div>
-                <Grid arrOfObj={arrOfObj}/>
+                {/* <Grid arrOfObj={arrOfObj}/> */}
               </div>
             </div>
 
@@ -118,7 +118,7 @@ export default function HomePage() {
                     onClick={() => setFilterModelMobile(false)}
                     className="border border-lightGray-100 bg-white rounded-full p-1 shadow-md"
                   >
-                    {/* <Close2 /> */}
+                    <Close2 />
                   </button>
                 </div>
               </div>
