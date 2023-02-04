@@ -15,6 +15,7 @@ import Filter from "../components/Filter";
 import FilterIcon from "../components/icons/FilterIcon";
 import Close2 from "../components/icons/Close2";
 import { useSession } from "next-auth/react";
+import Grid from "../components/Grid"
 
 export default function HomePage() {
   const [filterModelMobile, setFilterModelMobile] = useState(false);
@@ -24,6 +25,8 @@ export default function HomePage() {
     "bc44fb196bcec6b9602b254bc96f6e71"
   );
   const { data: session } = useSession();
+
+  const arrOfObj = ["mcdonalds", "nike", "ikea", "gymshark"]
 
   useEffect(() => {
     if (typeof window !== undefined) {
@@ -98,6 +101,9 @@ export default function HomePage() {
               {/* View Data Section */}
               <div className="border border-lightGray-100 rounded-md p-4 md:p-6 min-h-[500px]">
                 <InfiniteHits hitComponent={CompanyData} showPrevious={false} />
+              </div>
+              <div>
+                <Grid arrOfObj={arrOfObj}/>
               </div>
             </div>
 
