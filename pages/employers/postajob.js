@@ -51,30 +51,32 @@ const [addOn, setAddOn] = useState(0)
     jobDescription: "",
     jobRequirements: "",
     applicationUrl: "",
+    user_id: "",
   });
 
 
-  // function getLink() {
-  //   switch (addOn) {
-  //     case 0:
-  //       return router.push("https://buy.stripe.com/7sI4joeqI5bnemQ5kp")
-  //     case 1:
-  //       return router.push("https://buy.stripe.com/6oEaHM1DW47ja6A6ou")
-  //     case 2:
-  //       return router.push("https://buy.stripe.com/dR66rw82kcDPa6AfZ5")
-  //     case 3:
-  //       return router.push("https://buy.stripe.com/aEU2bgbew33f1A4dQY")
-  //   }
-  // }
+  function getLink() {
+    switch (addOn) {
+      case 0:
+        return router.push("https://buy.stripe.com/7sI4joeqI5bnemQ5kp")
+      case 1:
+        return router.push("https://buy.stripe.com/6oEaHM1DW47ja6A6ou")
+      case 2:
+        return router.push("https://buy.stripe.com/dR66rw82kcDPa6AfZ5")
+      case 3:
+        return router.push("https://buy.stripe.com/aEU2bgbew33f1A4dQY")
+    }
+  }
 
   function delayLoad() {
     let timerId;
     showSpinner()
     timerId = setTimeout(() => {
-      router.push("https://buy.stripe.com/fZedTYdmEeLXa6AcMV")
+      getLink()
     }, 4000);
 
-      if (router.pathname == "https://buy.stripe.com/fZedTYdmEeLXa6AcMV") {
+    if (router.pathname === "https://buy.stripe.com/aEU2bgbew33f1A4dQY" || router.pathname === "https://buy.stripe.com/aEU2bgbew33f1A4dQY" || 
+    router.pathname === "https://buy.stripe.com/6oEaHM1DW47ja6A6ou" ||router.pathname === "https://buy.stripe.com/7sI4joeqI5bnemQ5kp" ) {
       clearTimeout(timerId);
     }
 
@@ -114,6 +116,7 @@ const [addOn, setAddOn] = useState(0)
         job_requirements: jobRequirements,
         application_url: applicationUrl,
         jobUrl,
+        user_id: session.id,
         // datets: datets
       }),
     })
@@ -134,7 +137,7 @@ const [addOn, setAddOn] = useState(0)
         console.log(err, "Error");
       });
 
-      delayLoad()
+      // delayLoad()
   };
 
   {/* https://buy.stripe.com/7sI4joeqI5bnemQ5kp (Normal Job Post, no Addons) */}
@@ -351,8 +354,7 @@ onChange={handleChange}
 class="block w-full rounded-md border-gray-300 px-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
 name="jobType"
 value={jobType}
-onChange={handleChange}>
-<option value="">Select a Type</option>
+onChange={handleChange}><option value="">Select a Type</option>
 <option value="Remote">Remote</option>
 <option value="In-Office">In-Office</option>
 <option value="Hybrid">Hybrid</option></select>
