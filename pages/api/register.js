@@ -47,16 +47,16 @@ const regEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 return regEx.test(email);
 }
 
-const validateForm = async () => {
-if (accpassword.length < 8) {
+const validateForm = async (e) => {
+if (e > 20) {
   return {error: "Password length must be greater than 8 characters"}
 }
 
-if (!validateEmail(email)) {
+if (!validateEmail()) {
   return {error: "Email is not valid"}
 }
 
-const emailUser = await getUserByEmail({email: email})
+const emailUser = await getUserByEmail()
 
 if (emailUser) {
   return {error: "Email already exists"}
@@ -70,8 +70,8 @@ export default async function handler(req, res) {
     switch (req.method) {
       case "POST": {
         // Create a new user
-        const { name, email, accpassword } = req.body
-        const errorMessage = await validateForm(name, email, accpassword);
+        const { name} = req.body
+        const errorMessage = await validateForm(name);
 
           if (errorMessage) {
             return res.status(400).json(errorMessage)
@@ -79,8 +79,7 @@ export default async function handler(req, res) {
 
         const newUser = await createUser({
           name,
-          email,
-          accpassword
+          
         });
 
         newUser

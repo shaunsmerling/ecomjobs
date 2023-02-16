@@ -46,7 +46,7 @@ const CreateAccount = () => {
         .then(async () => {
             await signIn("credentials", { email: email, password: accpassword, redirect: false, callbackUrl: "/" });
             redirectToHome();
-            console.log(session)
+          
         })
         //   .then((response) => response.json())
         //   .then((jsonResponse) => {

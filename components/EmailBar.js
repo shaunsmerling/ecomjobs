@@ -38,7 +38,7 @@ function EmailBar({props}) {
         body: JSON.stringify({
           email: email,
         }),
-      }).then(alert("Thank you for your email! We'll shoot you the right job alerts when they are available!") ? "" : location.reload() )
+      }).then(alert("Thank you for your email! We'll shoot you the right job alerts when they are available!") ? "" : window.reload() )
     }
 
     const {

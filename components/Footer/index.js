@@ -141,8 +141,4 @@ function Footer() {
   );
 }
 
-Footer.getLayout = function getLayout(page) {
-  return <PublicLayout>{page}</PublicLayout>;
-};
-
 export default Footer;
