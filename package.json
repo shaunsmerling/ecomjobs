@@ -1,109 +1,109 @@
 {
-  "name": "ecomjobs",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "@headlessui/react": "^1.6.6",
-    "@heroicons/react": "^1.0.6",
-    "@mui/material": "^5.10.11",
-    "@next-auth/mongodb-adapter": "^1.1.1",
-    "@prisma/client": "^4.3.1",
-    "@sanity/image-url": "^1.0.1",
-    "@stripe/stripe-js": "^1.35.0",
-    "@tailwindcss/forms": "^0.5.3",
-    "@tailwindcss/line-clamp": "^0.4.2",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "algoliasearch": "^4.14.2",
-    "alpinejs": "^3.10.3",
-    "bcrypt": "^5.1.0",
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.20.0",
-    "cron": "^2.1.0",
-    "eslint": "^8.34.0",
-    "eslint-config-next": "^13.1.1",
-    "express": "^4.18.1",
-    "gray-matter": "^4.0.3",
-    "instantsearch.js": "^4.46.1",
-    "jquery": "^3.6.1",
-    "markdown-it": "^13.0.1",
-    "mongoose": "^6.6.1",
-    "next": "^13.1.1",
-    "next-auth": "^4.19.2",
-    "next-sanity": "^3.1.9",
-    "next-seo": "^5.14.1",
-    "node-fetch": "^2.6.7",
-    "nodemailer": "^6.8.0",
-    "rc-slider": "^10.1.0",
-    "react": "^18.2.0",
-    "react-data-table-component": "^7.5.3",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-instantsearch-dom": "^6.38.1",
-    "react-instantsearch-hooks-web": "^6.33.0",
-    "react-portable-text": "^0.5.1",
-    "react-router-dom": "^6.4.4",
-    "react-table": "^7.8.0",
-    "reactjs-popup": "^2.0.5",
-    "slugify": "^1.6.5",
-    "styled-components": "^5.3.6",
-    "twitter-api-v2": "^1.12.9",
-    "web-vitals": "^2.1.4",
-    "webpack": "^5.75.0"
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "prisma:update": "npx prisma db push",
-    "prisma:studio": "npx prisma studio",
-    "build:prod": "npm run prisma:update && npm run build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.8",
-    "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6",
-    "@types/react-instantsearch-dom": "^6.12.3",
-    "autoprefixer": "^10.4.8",
-    "eslint-config-react-app": "^7.0.1",
-    "parcel": "2.5.0",
-    "postcss": "^8.4.16",
-    "prisma": "^4.3.1",
-    "tailwindcss": "^3.1.8",
-    "typescript": "^4.8.3"
-  },
-  "description": "A simple job board for ecommerce companies to find relevant applicants.",
-  "main": "checkout.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shaunsmerling/stripe-nextjs.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shaunsmerling/stripe-nextjs/issues"
-  },
-  "homepage": "https://github.com/shaunsmerling/stripe-nextjs#readme"
-}
+    "name": "ecomjobs",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@emotion/react": "^11.10.4",
+      "@emotion/styled": "^11.10.4",
+      "@headlessui/react": "^1.6.6",
+      "@heroicons/react": "^1.0.6",
+      "@mui/material": "^5.10.11",
+      "@next-auth/mongodb-adapter": "^1.1.1",
+      "@prisma/client": "^4.3.1",
+      "@sanity/image-url": "^1.0.1",
+      "@stripe/stripe-js": "^1.35.0",
+      "@tailwindcss/forms": "^0.5.3",
+      "@tailwindcss/line-clamp": "^0.4.2",
+      "@testing-library/jest-dom": "^5.16.5",
+      "@testing-library/react": "^13.3.0",
+      "@testing-library/user-event": "^13.5.0",
+      "algoliasearch": "^4.14.2",
+      "alpinejs": "^3.10.3",
+      "bcrypt": "^5.1.0",
+      "bcryptjs": "^2.4.3",
+      "body-parser": "^1.20.0",
+      "cron": "^2.1.0",
+      "eslint": "^8.34.0",
+      "eslint-config-next": "^13.1.1",
+      "express": "^4.18.1",
+      "gray-matter": "^4.0.3",
+      "instantsearch.js": "^4.46.1",
+      "jquery": "^3.6.1",
+      "markdown-it": "^13.0.1",
+      "mongoose": "^6.6.1",
+      "next": "^13.1.1",
+      "next-auth": "^4.19.2",
+      "next-sanity": "^3.1.9",
+      "next-seo": "^5.14.1",
+      "node-fetch": "^2.6.7",
+      "nodemailer": "^6.8.0",
+      "rc-slider": "^10.1.0",
+      "react": "^18.2.0",
+      "react-data-table-component": "^7.5.3",
+      "react-dom": "^18.2.0",
+      "react-helmet": "^6.1.0",
+      "react-instantsearch-dom": "^6.38.1",
+      "react-instantsearch-hooks-web": "^6.33.0",
+      "react-portable-text": "^0.5.1",
+      "react-router-dom": "^6.4.4",
+      "react-table": "^7.8.0",
+      "reactjs-popup": "^2.0.5",
+      "slugify": "^1.6.5",
+      "styled-components": "^5.3.6",
+      "twitter-api-v2": "^1.12.9",
+      "web-vitals": "^2.1.4",
+      "webpack": "^5.75.0"
+    },
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "prisma:update": "npx prisma db push",
+      "prisma:studio": "npx prisma studio",
+      "build:prod": "npm run prisma:update && npm run build"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "@tailwindcss/typography": "^0.5.8",
+      "@types/react": "^18.0.15",
+      "@types/react-dom": "^18.0.6",
+      "@types/react-instantsearch-dom": "^6.12.3",
+      "autoprefixer": "^10.4.8",
+      "eslint-config-react-app": "^7.0.1",
+      "parcel": "2.5.0",
+      "postcss": "^8.4.16",
+      "prisma": "^4.3.1",
+      "tailwindcss": "^3.1.8",
+      "typescript": "^4.8.3"
+    },
+    "description": "A simple job board for ecommerce companies to find relevant applicants.",
+    "main": "checkout.js",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/shaunsmerling/stripe-nextjs.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/shaunsmerling/stripe-nextjs/issues"
+    },
+    "homepage": "https://github.com/shaunsmerling/stripe-nextjs#readme"
+  }
