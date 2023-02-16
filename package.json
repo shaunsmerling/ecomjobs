@@ -56,7 +56,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "CI='' npm run build",
     "start": "next start",
     "prisma:update": "npx prisma db push",
     "prisma:studio": "npx prisma studio",
