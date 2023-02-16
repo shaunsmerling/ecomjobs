@@ -21,7 +21,7 @@ function SignIn()  {
                     </div>
 
                     <form action="api/suth/signin/email" method="POST" className="mt-4">
-                    <input name="csrfToken" type="hidden" defaultValue={csrfToken} />
+                    <input name="csrfToken" type="hidden" />
                         <div className="space-y-4">
                             <div>
                                 <label for="" className="text-base font-medium text-gray-900 font-pj"> Email </label>
