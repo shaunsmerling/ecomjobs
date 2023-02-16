@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { NextSeo } from 'next-seo';
-import api_url from '../config.js'
 
-const contactus = () => {  
+
+const ContactUs = () => {  
 
 const [name, setName] = useState('')
 const [email, setEmail] = useState('')
@@ -33,9 +33,9 @@ const handleSubmit = (e) => {
       setSubmitted(true)
       setName('')
       setEmail('')
-      setBody('')
+      setMessage('')
     }
-  }).then(alert("Thank you for your submission. We will get back to your inquiry as soon as possible!") ? "" : location.reload() )
+  }).then(alert("Thank you for your submission. We will get back to your inquiry as soon as possible!") ? "" : window.reload() )
 
 }
 
@@ -164,4 +164,4 @@ const handleSubmit = (e) => {
     </section>
     )
 }
-export default contactus;
+export default ContactUs;

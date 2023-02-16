@@ -7,7 +7,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
 }
 
-function navBarThree() {
+function NavBarThree() {
 
   
 
@@ -860,4 +860,4 @@ Existing customer?
 }
 
 
-export default navBarThree
+export default NavBarThree

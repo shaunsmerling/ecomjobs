@@ -1,4 +1,4 @@
-export default async (req, res) => {
+export default function async (req, res) {
 
    
 

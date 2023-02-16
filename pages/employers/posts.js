@@ -1,7 +1,7 @@
 import { useSession, getSession } from "next-auth/react"
 import { useState, useEffect } from "react"
 
-export default function posts() {
+export default function Posts() {
 
 
 

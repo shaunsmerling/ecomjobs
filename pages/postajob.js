@@ -117,7 +117,7 @@ const [addOn, setAddOn] = useState(0)
         console.log(err, "Error");
       });
 
-      // getLink()
+      getLink()
   };
 
   {/* https://buy.stripe.com/7sI4joeqI5bnemQ5kp (Normal Job Post, no Addons) */}
@@ -394,7 +394,7 @@ value={salaryMax}
                             setCompanyLogo(reader.result);
                           };
                           reader.readAsDataURL(file);
-                          handleChange;
+                          handleChange();
                         }
                       }}
                       class="block w-full px-4 border py-3 placeholder-gray-500 border border-gray-300 

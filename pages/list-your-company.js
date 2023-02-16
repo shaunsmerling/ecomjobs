@@ -1,13 +1,12 @@
 
 import { useState } from "react";
-import { NextSeo } from "next-seo";
 import { generateCompanyUrl } from "../scriptcompany.js";
 import {useRouter} from "next/router"
 
 
 
 
-function listCompany() {
+function ListCompany() {
 
 
   const router = useRouter()
@@ -201,7 +200,7 @@ onChange={handleChange}
                             setCompanyLogo(reader.result);
                           };
                           reader.readAsDataURL(file);
-                          handleChange;
+                          handleChange();
                         }
                       }}
                       class="block w-full px-4 border py-3 placeholder-gray-500 border border-gray-300 
@@ -296,4 +295,4 @@ onChange={handleChange} />
   );
 }
 
-export default listCompany;
+export default ListCompany;

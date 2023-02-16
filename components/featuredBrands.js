@@ -1,16 +1,11 @@
 import Logo from "./logobanner"
-import { useSearchBox } from "react-instantsearch-hooks-web";
-import CustomSearchBox from "../custom-algolia-component/CustomSearchBox";
 import React, {useState, useEffect} from "react"
 import algoliasearch from "algoliasearch/lite";
-import {
-  InstantSearch,
-  Configure,
-  InfiniteHits,
-} from "react-instantsearch-hooks-web";
+import {useRouter} from "next/router"
 
 
-function featuredBrands() {
+
+function FeaturedBrands() {
     const [filterModelMobile, setFilterModelMobile] = useState(false);
     const [clearFilter, setClearFilter] = useState(false);
     const searchClient = algoliasearch(
@@ -20,6 +15,8 @@ function featuredBrands() {
     const [emails, setEmails] = useState({
       email: "",
     })
+
+    const router = useRouter()
 
     const handleChange = ({ target }) => {
       setEmails({ ...emails, [target.name]: target.value });
@@ -209,4 +206,4 @@ return (
 }
 
 
-export default featuredBrands
+export default FeaturedBrands

@@ -4,7 +4,6 @@ import {
   getJobByJobUrl,
   updateJob,
   deleteJob,
-  getJobsByCompanyId,
   getJobsByCompanyUrl,
 } from "../../prisma/job";
 import { generateJobUrl } from "../../script";

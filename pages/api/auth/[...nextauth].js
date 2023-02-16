@@ -4,8 +4,6 @@ import clientPromise from "lib/mongodb"
 import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google"
 import CredentialProvider from "next-auth/providers/credentials"
-import Email from "next-auth/providers/email";
-import api_url from "../../../config"
 
 
 
@@ -38,7 +36,7 @@ export default NextAuth({
                 body: JSON.stringify(credentials)
               });
 
-              let data = await res.json();
+
 
         
           const user = { email: credentials?.username, password: credentials?.password }

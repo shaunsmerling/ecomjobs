@@ -54,7 +54,7 @@ const Email = () => {
            />
     
     <button 
-    onClick={() => alert("Thank you for your  submission. Please check your inbox for a confirmation email") ? "" : location.reload()}
+    onClick={() => alert("Thank you for your  submission. Please check your inbox for a confirmation email") ? "" : window.reload()}
     type="submit" 
     value="Submit" 
     id="emailbtn" 

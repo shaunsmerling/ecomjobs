@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { signIn, useSession } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 import bcrypt from "bcryptjs"
 
 
-const createaccount = () => {     
+const CreateAccount = () => {     
 
   
     const router = useRouter(); 
@@ -177,4 +177,4 @@ const createaccount = () => {
 
     )
 }
-export default createaccount;
+export default CreateAccount
