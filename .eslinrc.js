@@ -5,8 +5,9 @@ module.exports = {
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended",
-    ]
+        "next",
+        "plugin:react/recommended"
+    ],
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -18,14 +19,5 @@ module.exports = {
         "react"
     ],
     "rules": {
-    },
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-      	"next/core-web-vitals"
-    ],
+    }
 };
