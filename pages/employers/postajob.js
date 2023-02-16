@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
-import { generateJobUrl } from "../../../script.js";
 import { useSession, getSession } from "next-auth/react"
 
 export async function getServerSideProps(context) {
@@ -30,7 +29,29 @@ const [addOn, setAddOn] = useState(0)
 // const datets = dateToUnixTimestamp(now);
 
 
+function generateJobUrl(company_name, job_position, job_type) {
+  const random = Math.floor(Math.random() * 100000000);
+  let newUrl = "";
+  if(job_type) {
+    newUrl += job_type.replace(/\s/g, "-").replace("&", "and").replace(",", "").replace(".", "").replace("/", "")
+  } if(company_name) {
+    if(job_type) {
+        newUrl += "-"
+    }
+    newUrl += company_name.replace(/\s/g, "-").replace("&", "and").replace(",", "").replace(".", "").replace("/", "")
+  }
+   if(job_position) {
+    if(company_name) {
+        newUrl += "-"
+    }
+    newUrl += job_position.replace(/\s/g, "-").replace("&", "and").replace(",", "").replace(".", "").replace("/", "").replace("(", "").replace(")", "") +
+    "-" +
+    random;
+  }
 
+  const jobUrl = newUrl.toLowerCase();
+  return jobUrl;
+}
 
 
   const [fields, setFields] = useState({
