@@ -1,7 +1,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/router";
-import Preview from "../components/preview";
 import { NextSeo } from "next-seo";
 import { generateJobUrl } from "../script.js";
 import { useSession, getSession } from "next-auth/react"
@@ -354,7 +353,8 @@ onChange={handleChange}
 class="block w-full rounded-md border-gray-300 px-2 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
 name="jobType"
 value={jobType}
-onChange={handleChange}><option value="">Select a Type</option>
+onChange={handleChange}>
+<option value="">Select a Type</option>
 <option value="Remote">Remote</option>
 <option value="In-Office">In-Office</option>
 <option value="Hybrid">Hybrid</option></select>
