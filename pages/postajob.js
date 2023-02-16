@@ -51,7 +51,7 @@ const [addOn, setAddOn] = useState(0)
     jobDescription: "",
     jobRequirements: "",
     applicationUrl: "",
-    user_id: "",
+    // user_id: "",
   });
 
 
@@ -96,7 +96,7 @@ const [addOn, setAddOn] = useState(0)
         job_requirements: jobRequirements,
         application_url: applicationUrl,
         jobUrl,
-        user_id: session.id,
+        // user_id: session.id,
         // datets: datets
       }),
     })
