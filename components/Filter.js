@@ -10,11 +10,11 @@ const Filter = ({clearFilter, setClearFilter}) => {
  
   return (
     <>
-      <div className="bg-lightGreen-50 p-6 rounded-md w-full">
+      <div className="bg-gray-700 p-6 rounded-md w-full">
         <div className="relative flex flex-col gap-5">
           <div className="flex flex-row justify-between items-center">
             <div>
-              <h3 className="font-medium text-base leading-5 tracking-tight text-black font-Poppins">
+              <h3 className="font-medium text-base leading-5 tracking-tight text-white font-Poppins">
                 Filter
               </h3>
             </div>

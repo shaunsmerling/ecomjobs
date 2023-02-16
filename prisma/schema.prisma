@@ -34,7 +34,6 @@ model Job {
   user_id             String?
   salaryMin           String?
   salaryMax           String?
-  
 }
 
 model Email {
@@ -48,11 +47,14 @@ model Company {
   company_url         String?
   logo                String?
   location            String?
-  city                String?
   company_description String?
+  applicant_name      String?
   empcount            String?
-  companyUrl          String?
+  mission             String?
+  remote              Boolean?
   user_id             String?
+  email               String?
+  companyUrl          String?
 }
 
 

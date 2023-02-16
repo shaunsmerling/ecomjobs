@@ -7,7 +7,7 @@ const companylist = () => {
  
 
     return (
-        <div className="py-12 bg-white sm:py-16 lg:py-20">
+        <div className="py-12 bg-gray-900  sm:py-16 lg:py-20">
         <NextSeo
       title="Company List | eCommerce Jobs"
       description="Search our directory of eCommerce companies. Find the brand you want to work for." 
@@ -36,10 +36,10 @@ const companylist = () => {
             <div className="sm:flex sm:items-center sm:justify-between">
             <div class=" my-8 mb-20 text-center">
 <h1 class="text-2xl text-[#17614A] md:text-4xl font-bold block md:inline text-blue-brand">Search our company list. </h1>
-<h2 class="text-xl md:text-4xl block md:inline font-normal md:font-light">Find a job at one of these ecommerce brands.</h2>
+<h2 class="text-xl text-white md:text-4xl block md:inline font-normal md:font-light">Find a job at one of these ecommerce brands.</h2>
 </div>
                 {/* <div>
-                    <p className="text-2xl font-bold text-gray-900">Companies List</p>
+                    <p className="text-2xl font-bold text-white">Companies List</p>
                     <p className="mt-1  text-xl font-medium text-gray-500">Search through our directory of brands hiring for roles</p>
                 </div>
 
@@ -60,12 +60,12 @@ const companylist = () => {
             <div className="flow-root mt-8">
                 <div className="-my-5 divide-y divide-gray-200">
                 <Link legacyBehavior href="/company/cole-haan-85896455" >
-                    <div className="py-5  hover:bg-gray-100">
+                    <div className="py-5 ">
                         <div className="sm:flex sm:items-center sm:justify-between sm:space-x-5">
                             <div className="flex items-center flex-1 min-w-0 ">
                                 <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/colehaan.jpeg" alt="Cole Haan Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
-                                    <p className=" text-xl font-bold text-gray-900 truncate">Cole Haan</p>
+                                    <p className=" text-xl font-bold text-white truncate">Cole Haan</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">We are advocates of the extraordinary </p>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ const companylist = () => {
                             <div className="flex items-center flex-1 min-w-0">
                                 <img loading="lazy"   className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/harrys.jpeg" alt="Harrys Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
-                                    <p className=" text-xl font-bold text-gray-900 truncate">Harrys</p>
+                                    <p className=" text-xl font-bold text-white truncate">Harrys</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Creating things more people like</p>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@ const companylist = () => {
                             <div className="flex items-center flex-1 min-w-0">
                                 <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/henkel.jpeg"  alt="Henkel Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
-                                    <p className=" text-xl font-bold text-gray-900 truncate">Henkel</p>
+                                    <p className=" text-xl font-bold text-white truncate">Henkel</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Pioneers at heart for the good of generations</p>
                                 </div>
                             </div>
@@ -121,7 +121,7 @@ const companylist = () => {
                             <div className="flex items-center flex-1 min-w-0">
                                 <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full"  src="./images/garmin.jpeg" alt="Garmin Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
-                                    <p className=" text-xl font-bold text-gray-900 truncate">Garmin</p>
+                                    <p className=" text-xl font-bold text-white truncate">Garmin</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Engineered on the inside for life on the outside.</p>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@ const companylist = () => {
                             <div className="flex items-center flex-1 min-w-0">
                                 <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/anthropologie.jpeg" alt="Anthropologie Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
-                                    <p className=" text-xl font-bold text-gray-900 truncate">Anthropologie</p>
+                                    <p className=" text-xl font-bold text-white truncate">Anthropologie</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Sharing Inspiration. Sending Love.</p>
                                 </div>
                             </div>
@@ -159,7 +159,7 @@ const companylist = () => {
                             <div className="flex items-center flex-1 min-w-0">
                                 <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/marimekko.jpeg" alt="Marimekko Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
-                                    <p className=" text-xl font-bold text-gray-900 truncate">Marimekko</p>
+                                    <p className=" text-xl font-bold text-white truncate">Marimekko</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Empowering people to be happy.</p>
                                 </div>
                             </div>
@@ -179,7 +179,7 @@ const companylist = () => {
                             <div className="flex items-center flex-1 min-w-0">
                                 <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/thehundreds.jpeg" alt="The Hundreds Logo " />
                                 <div className="flex-1 min-w-0 ml-4">
-                                    <p className=" text-xl font-bold text-gray-900 truncate">Hundreds</p>
+                                    <p className=" text-xl font-bold text-white truncate">Hundreds</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">The Hundreds is Huge.</p>
                                 </div>
                             </div>
@@ -199,7 +199,7 @@ const companylist = () => {
                             <div className="flex items-center flex-1 min-w-0">
                                 <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/bose.jpeg" alt="Bose Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
-                                    <p className=" text-xl font-bold text-gray-900 truncate">Bose</p>
+                                    <p className=" text-xl font-bold text-white truncate">Bose</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Sound is Power.</p>
                                 </div>
                             </div>
@@ -219,7 +219,7 @@ const companylist = () => {
                             <div className="flex items-center flex-1 min-w-0">
                                 <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/colehaan.jpeg" alt="Cole Haan Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
-                                    <p className=" text-xl font-bold text-gray-900 truncate">Cole Haan</p>
+                                    <p className=" text-xl font-bold text-white truncate">Cole Haan</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">We are advocates of the extraordinary.</p>
                                 </div>
                             </div>
@@ -239,7 +239,7 @@ const companylist = () => {
                             <div className="flex items-center flex-1 min-w-0">
                                 <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/amazonia.jpeg" alt="Amazonia Logo " />
                                 <div className="flex-1 min-w-0 ml-4">
-                                    <p className=" text-xl font-bold text-gray-900 truncate">Amazonia</p>
+                                    <p className=" text-xl font-bold text-white truncate">Amazonia</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Australian Owned & Operated Health Food Business.</p>
                                 </div>
                             </div>
@@ -259,7 +259,7 @@ const companylist = () => {
                             <div className="flex items-center flex-1 min-w-0">
                                 <img loading="lazy"  className="flex-shrink-0  w-14 h-14 border-2 border-gray rounded-full" src="./images/casetify.jpeg" alt="Casetify Logo" />
                                 <div className="flex-1 min-w-0 ml-4">
-                                    <p className=" text-xl font-bold text-gray-900 truncate">Casetify</p>
+                                    <p className=" text-xl font-bold text-white truncate">Casetify</p>
                                     <p className="mt-1  text-xl font-medium text-gray-500 truncate">Show Your Colors.</p>
                                 </div>
                             </div>

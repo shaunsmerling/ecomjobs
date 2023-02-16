@@ -56,7 +56,7 @@ const CustomSalarySlider = ({ title, clearAll, attribute1, attribute2 }) => {
 
         <div>
           <div className="mb-4">
-            <p className="opacity-70 font-medium text-base leading-5 tracking-common text-black font-Poppins">
+            <p className="opacity-70 font-medium text-base leading-5 tracking-common text-white font-Poppins">
               {title}
             </p>
           </div>
@@ -99,7 +99,7 @@ const CustomSalarySlider = ({ title, clearAll, attribute1, attribute2 }) => {
             </div>
           ) : (
             <div className="my-1">
-              <p className="text-left opacity-30 font-normal text-base leading-5 tracking-common text-lightGray-300 font-Poppins">
+              <p className="text-left opacity-30 font-normal text-base leading-5 tracking-common text-white font-Poppins">
                 No Filter
               </p>
             </div>

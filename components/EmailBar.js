@@ -20,7 +20,7 @@ import Link from "next/link"
 // Upon click of a category, Searchbar should parse through list of jobs
 // Jobs with category including clicked category should show
 
-function EmailBar() {
+function EmailBar({props}) {
 
     const [emails, setEmails] = useState({
       email: "",
@@ -38,7 +38,7 @@ function EmailBar() {
         body: JSON.stringify({
           email: email,
         }),
-      })
+      }).then(alert("Thank you for your email! We'll shoot you the right job alerts when they are available!") ? "" : location.reload() )
     }
 
     const {
@@ -49,33 +49,37 @@ function EmailBar() {
 
 
   return ( 
-    <form  class=" -mt-20 pt-10 pb-10 my-20 w-auto " onSubmit={handleSubmit}>   
-    <div class="flex items-center w-full" >
+    <form  onSubmit={handleSubmit}>   
+      <div className="flex flex-wrap lg:py-2 justify-center fixed bottom-0 bg-lightGreen-300 items-center w-full">
+      <p className="text-white"> Get the newest <span className="italic font-bold">{props}</span> ecom jobs in your inbox</p>
         
         <input 
         type="text" 
         id="emailsubmit" 
         className="
-         w-80 mx-auto border border-solid border-2 border-blue-700 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 
-           dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 
-           dark:focus:border-blue-500 lg: w-6/12 " 
+         w-80  border mx-4 border-solid border-2 border-blue-700 text-black text-sm rounded-lg h-26 focus:ring-blue-500 focus:border-blue-500 
+           dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 
+           dark:focus:border-blue-500 lg: w-100 " 
         name="email" 
         value={email}
         onChange={handleChange}
         
 
-        placeholder="✉️ Enter email for weekly job alerts..." 
+        placeholder="Your email"
 
-        /> 
-    </div>
-   <button 
+        />
+           <button 
     type="submit" 
     value="Submit" 
     id="emailbtn" 
-    class="align-baseline mb-10 px-20 mt-4 py-1  ml-1 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-    </button>
+    class=" h-26 bg-emerald-900 hover:bg-neutral-800 px-2 py-2 text-sm text-white  rounded-lg  ">
+    Notify Me</button> 
+    </div>
+
     </form>
 )}
+
+
 
 
 export default EmailBar

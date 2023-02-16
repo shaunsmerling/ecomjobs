@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import '../global.css'
 import Navbartwo from "../components/NavBarTwo"
+import Navbarthree from "../components/navBarThree"
 import Script from "next/script"
 import { SessionProvider } from "next-auth/react"; 
 import { useRouter } from "next/router";
@@ -73,7 +74,7 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
 </noscript>
 
   <SessionProvider session={session}>
-  {showHeader && <Navbartwo/> }
+  {showHeader && <Navbarthree/> }
     
       <Component {...pageProps} />
       {/* <Footer/> */}

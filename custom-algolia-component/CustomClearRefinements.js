@@ -30,7 +30,7 @@ function CustomClearRefinements({ setClearAll }) {
         }}
         // disabled={!canRefine}
       >
-        <span className="font-Poppins font-normal text-sm leading-30 tracking-common text-black opacity-100 ">
+        <span className="font-Poppins font-normal text-sm leading-30 tracking-common text-white opacity-100 ">
           Clear All
         </span>
         <Close className="opacity-100" />

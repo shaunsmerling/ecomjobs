@@ -89,9 +89,19 @@ function Company({ company, jobs }) {
     }
   }
 
+  const logoString = company.logo
+
+function isImageFile(filename) {
+  return /\.(png|jpe?g)$/i.test(filename);
+}
+
+
+  const logoImage = isImageFile(logoString) ? 
+  `./images/${logoString}` : 
+  `${logoString}`;
 
   return (
-    <div className="bg-gray-100 pb-10">
+    <div className="bg-gray-900 pb-10">
       <NextSeo
       title={`${company.company_name} | eCommerce Jobs `}
       description={`${company.company_name} | eCommerce Jobs `}
@@ -116,7 +126,7 @@ function Company({ company, jobs }) {
                 <div class="flex flex-wrap justify-center">
                   <div class=" lg:w-3/12  lg:order-2 flex justify-center">
                     <div class="relative">
-                      <img loading="lazy" class=" p-10 lg:p-10 border-2 border-gray-100 bg-white rounded-full  -mt-16 " src={`/images/${company.logo}`}/>
+                      <img loading="lazy" class=" p-10 lg:p-10 border-2 border-gray-100 bg-white rounded-full  -mt-16 " src={logoImage}/>
                     </div>
                   </div>
                   <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">

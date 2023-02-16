@@ -5,10 +5,10 @@ export default function Pricing() {
     return (
 
             <div>
-                <section class="py-12 -mt-10 bg-white sm:py-16 lg:py-20 xl:py-24">
+                <section class="py-12 mx-10 rounded-lg bg-white sm:py-16 lg:my-10">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">Bulk Discounts</h2>
+            <h2 class="text-3xl font-semibold tracking-tight text-lightGreen-300 sm:text-4xl lg:text-5xl">Bulk Discounts</h2>
             <p class="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8"> Buy job posts in bulk, save them as pre-purchased credits, and use them throughout the year (valid for 12 months). Each job will be posted on our front page & sent out to our email list.</p>
             <p class="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8">Our Highlight Addon will display your job post highlighted in yellow for extra visibility. Our Top Pinned addon will display your job post at the top of the page. Both addons are priced at $99 & are included when you purchase more than 5 jobs at once.</p>
         </div>
@@ -22,7 +22,7 @@ export default function Pricing() {
                         </svg>
                     </div>
      
-                    <p class="mt-6 text-5xl font-semibold text-gray-900">5 Jobs</p>
+                    <p class="mt-6 text-5xl font-semibold text-lightGreen-300">5 Jobs</p>
                 
                     <ul class="mt-8 space-y-4 text-base font-normal text-left text-gray-900">
                         <li class="flex items-center">
@@ -49,7 +49,7 @@ export default function Pricing() {
                         <li class="flex items-center">
                             {/* <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg> */}
+    </svg> */}
                             ❌ &nbsp; Top Pinned 
                         </li>
 
@@ -101,7 +101,7 @@ export default function Pricing() {
                         </svg>
                     </div>
                     {/* <h3 class="mt-6 text-lg font-semibold text-gray-900">Standard</h3> */}
-                    <p class="mt-6 text-5xl font-semibold text-gray-900">15 Jobs</p>
+                    <p class="mt-6 text-5xl font-semibold text-lightGreen-300">15 Jobs</p>
                     {/* <p class="mt-1 text-sm font-normal text-gray-500">per month</p> */}
                     <ul class="mt-8 space-y-4 text-base font-normal text-left text-gray-900">
                         <li class="flex items-center">
@@ -168,7 +168,7 @@ export default function Pricing() {
                         </svg>
                     </div>
                 
-                    <p class="mt-6 text-5xl font-semibold text-gray-900">30 Jobs</p>
+                    <p class="mt-6 text-5xl font-semibold text-lightGreen-300">30 Jobs</p>
                     <ul class="mt-8 space-y-4 text-base font-normal text-left text-gray-900">
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -228,7 +228,7 @@ export default function Pricing() {
                         </svg>
                     </div>
                 
-                    <p class="mt-6 text-5xl font-semibold text-gray-900">50 Jobs</p>
+                    <p class="mt-6 text-5xl font-semibold text-lightGreen-300">50 Jobs</p>
                     <ul class="mt-8 space-y-4 text-base font-normal text-left text-gray-900">
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

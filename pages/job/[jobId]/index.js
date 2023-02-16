@@ -52,6 +52,17 @@ function Job({ jobs }) {
 "responsibilities": `${jobs.job_requirements}`,
 }
 
+const logoString = jobs.logo;
+
+function isImageFile(filename) {
+  return /\.(png|jpe?g)$/i.test(filename);
+}
+
+
+  const logoImage = isImageFile(logoString) ? 
+  `../images/${logoString}` : 
+  `${logoString}`;
+
   return (
     <>
       <div className={`pb-10`}>
@@ -74,7 +85,7 @@ function Job({ jobs }) {
         <meta name="twitter:image:src" vmid="twitter:image:src"  key="twimg" content={`https://ecomportal.co/images/${jobs.logo}`} />
 </Head>
       
-        <div className="px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
+        <div className="px-4 sm:px-6 bg-white rounded-lg lg:px-8 mx-auto max-w-7xl">
           <div className={styles.main_section}>
             <div className={styles.leftSide}>
               <Link href={"/"} className="cursor-pointer">
@@ -125,7 +136,7 @@ function Job({ jobs }) {
                 </svg>
               </div>
               <div className={styles.rightContent}>
-                <img loading="lazy" src={`../images/${jobs?.logo}`}></img>
+                <img loading="lazy" src={logoImage}></img>
                 <h3>{jobs?.company_name}</h3>
                 <h6>{jobs?.salaryMin && jobs?.salaryMax !== "0" ? "$" + jobs.salaryMin + ` - ` + "$" + jobs.salaryMax : ""}</h6>
                 <a
@@ -167,7 +178,7 @@ function Job({ jobs }) {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

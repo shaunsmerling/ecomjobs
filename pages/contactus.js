@@ -50,10 +50,10 @@ const handleSubmit = (e) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-12 lg:gap-x-16 xl:gap-x-32">
           <div className="flex flex-col self-stretch justify-between">
             <div className="flex-1">
-              <h2 className="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
                 Love to hear from you, Get in touch 👋
               </h2>
-              <p className="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8">
+              <p className="mt-4 text-base font-normal leading-7 text-white lg:text-lg lg:mt-6 lg:leading-8">
                 Feel free to reach out if you have any questions regarding job posting, recruiting, company profiles, talent acquisition.
               </p>
             </div>

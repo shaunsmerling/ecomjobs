@@ -48,15 +48,15 @@ export async function getServerSideProps(context) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleSubmit =  async (e) => {
-        e.preventDefault();
-        await signIn("credentials", { 
-            email: email,
-            password: password,
-            redirect: false, 
-            callbackUrl: "/" });
-            router.push("/");
-    }
+    // const handleSubmit =  async (e) => {
+    //     e.preventDefault();
+    //     await signIn("credentials", { 
+    //         email: email,
+    //         password: password,
+    //         redirect: false, 
+    //         callbackUrl: "/" });
+    //         router.push("/");
+    // }
 
       return (
         
@@ -87,17 +87,18 @@ export async function getServerSideProps(context) {
         image: "/logo.png"
       }}
     />
-          <div className="">
+          <div className="lg:pt-0 pt-4">
             <a href="../">
-              <img alt="company logo" loading="lazy" className="w-auto h-16 mx-auto mb-20 mt-0" src="/logo.png"   />
+              <img alt="company logo" loading="lazy" className="w-auto h-20 mx-auto mb-6 lg:mb-20 " src="/logo.png"   />
               </a>
           </div>
   
-          <div className="grid max-w-lg grid-cols-1 mx-auto  gap-y-12 lg:mt-10 lg:max-w-none lg:grid-cols-2">
+          <div className="grid max-w-lg grid-cols-1 mx-auto  gap-y-12  lg:max-w-none lg:grid-cols-2">
               <div className="lg:px-12 xl:px-16">
                   <div className="text-center">
-                      <h1 className="font-bold text-gray-900 text-4xl font-pj">Sign in with email</h1>
-  
+                    <div className="flex flex-col items-center justify-center">
+                      <h1 className="font-bold text-lightGreen-300 text-2xl font-pj">Sign in. </h1><span className="text-gray text-2xl font-pj">Recieve your magic link by email.</span> 
+                    </div>
                       <div className="flex justify-center flex-shrink-0 mt-8 -space-x-4 overflow-hidden">
                           {/* <img alt="user profile picture" loading="lazy" lassName="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-male-1.png"   /> */}
                           <img alt="user profile picture" loading="lazy" className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-1.png"   />
@@ -108,7 +109,7 @@ export async function getServerSideProps(context) {
                           <img alt="user profile picture" loading="lazy" className="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-female-5.png"   />
                       </div>
   
-                      <p className="px-4 mt-5 text-lg font-normal text-gray-900 sm:px-0 font-pj">Search over <span className="font-bold">4600+ eCommerce brands </span> that're hiring</p>
+                      {/* <p className="px-4 mt-5 text-lg font-normal text-gray-900 sm:px-0 font-pj">Search over <span className="font-bold">4600+ eCommerce brands </span> that're hiring</p> */}
                   </div>
 
         
@@ -266,7 +267,7 @@ export async function getServerSideProps(context) {
               </div>
   
               <div className="lg:px-12 xl:px-16">
-                  <h3 className="text-3xl font-bold text-gray-900 sm:text-4xl font-pj">Search jobs from the top DTC brands</h3>
+                  <h3 className="text-3xl  text-gray-900 sm:text-4xl font-pj">Post your job. Find top eCommerce-Specific talent</h3>
   
                   <svg className="w-auto h-4 mt-8 text-gray-300 lg:mt-12" viewBox="0 0 172 16" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 11 1)" />
@@ -298,17 +299,17 @@ export async function getServerSideProps(context) {
                   <ul className="mt-8 space-y-6 lg:mt-12 md:space-y-9">
                       <li className="flex items-startt">
                           <img alt="thumbs up logo" loading="lazy" className="flex-shrink-0 w-10 h-10" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/icon-thumb.png"   />
-                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Jobs strictly from ecom brands.</span> If you're about the DTC life, generic jobs won't cut it. We've got the jobs specifically for you. </span>
+                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">The #1 eCommerce Job Board.</span> Our industry deserved its own platform, so we created one. </span>
                       </li>
   
                       <li className="flex items-startt">
                           <img alt="mailbox logo" loading="lazy" className="flex-shrink-0 w-10 h-10" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/icon-mailbox.png"   />
-                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Get email alerts for open positions.</span> If a company you love is hiring, or a job position you want is open - you'll know right away.</span>
+                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Keep notified of new applicants. </span> All potential employees can be emailed to your inbox.</span>
                       </li>
   
                       <li className="flex items-startt">
                           <img alt="time logo" loading="lazy" className="flex-shrink-0 w-10 h-10" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/icon-sand-clock.png"   />
-                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Apply to more jobs faster.</span> Spend less time smashing your keyboard looking for jobs, and more time applying to them. </span>
+                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Find high-quality talent faster.</span> Spend less time posting on generic job boards and more timing interviewing experienced employees </span>
                       </li>
                   </ul>
               </div>

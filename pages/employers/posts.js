@@ -3,6 +3,8 @@ import { useState, useEffect } from "react"
 
 export default function posts() {
 
+
+
     
 const [jobData, setJobData] = useState({
   company_name: "",
@@ -32,33 +34,50 @@ useEffect( () => {
 
 const { data: session } = useSession()
 
-function returnData(){
-for (let key in jobData) {
-    if (jobData.hasOwnProperty(key)) {
-      let innerObject = jobData[key]
-      if (innerObject.hasOwnProperty('user_id') && innerObject.user_id === session.user.id) {
-        return (
 
+
+  let newData = []
+  for (let key in jobData) {
+    let data = jobData[key]
+
+    if (jobData[key].user_id === session.id) {
+     newData.push(data)
+    }
+}
+
+
+
+
+
+
+
+
+function returnData(){
+        return (
+        newData.map((innerObject) => 
+    
             // WARNING: this needs to be updated if the same user posts multiple times
             <div>
 <div className="my-4">
 <table className="border-2 mx-auto">
 <tbody className="border-2"><tr className="border-2">
 <td className="border-2 px-10">
+<div class="font-bold"><h2 >Posted At</h2></div>
 { innerObject.postedat}
 </td>
 <td className="border-2 px-10">
-<div class="font-bold"><a href="/senior-nextjs-dev-foobar-3927229">{ innerObject.job_position}</a></div>
+<div class="font-bold"><a >{ innerObject.job_position}</a></div>
 <div>{ innerObject.company_name}</div>
 </td>
-<td className="border-2 px-10">
+{/* <td className="border-2 px-10">
 💳 &nbsp;
 <a href="/employers/posts/3927229/wizard/payment">Paid</a>
+</td> */}
+<td className="border-2 px-10">
+<div>Hybrid</div>
 </td>
 <td className="border-2 px-10">
-<div>{ innerObject.job_type}</div>
-</td>
-<td className="border-2 px-10">
+<div class="font-bold"><h2 >Location</h2></div>
 <div>{ innerObject.location}</div>
 </td>
 <td className="border-2 px-10">
@@ -71,7 +90,7 @@ for (let key in jobData) {
 </tbody></table>
 </div>
 </div> 
-)}}}}
+))}
 
 
 
@@ -89,13 +108,17 @@ for (let key in jobData) {
     // Map them & return 
 
     return (
-
-
-        <div className="text-center"> 
-            <h1 className="leading-[3rem] font-bold tracking-tighter text-black text-2xl mt-10 mb-10 ">My Jobs 💼</h1>
-            {returnData() ? returnData(): <div> Currently there are no jobs posted </div>}
+      <div>
+      <section class="py-12 mx-10 rounded-lg bg-white sm:py-16 h-96 lg:my-10">
+      <div class="px-4 mx-auto sm:px-6 lg:px-8 h-96 max-w-7xl">
+      <div class="max-w-3xl mx-auto text-center ">
+            <h1 className=" font-bold tracking-tighter text-black text-4xl mt-10 mb-10 ">My Jobs 💼</h1>
+            {returnData() ? returnData() : <div> Currently there are no jobs posted </div>}
            
         </div>
+        </div>
+     </section>
+      </div>
     )
 }
 

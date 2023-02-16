@@ -31,9 +31,10 @@ const CompanyData = ({ hit }) => {
   return (
     <>
       <div
-        className={`mb-7 border border-lightGray-100 rounded-md py-4 pl-4 pr-4 lg:pr-7 hover:bg-gray-50 ${hit?.featured && "bg-lightYellow-100"
+        className={`mb-7 border border-lightGray-100 bg-white rounded-lg py-4 pl-4 pr-4 lg:pr-7 hover:bg-gray-200  ${hit?.featured && "bg-lightYellow-100"
           }`}
       >
+        <a href={`/job/${hit?.jobUrl}`}>
         <div className="flex flex-col gap-3">
           <div className="flex flex-row justify-between">
             <div className="flex flex-row items-center gap-3 md:gap-4">
@@ -100,31 +101,61 @@ const CompanyData = ({ hit }) => {
               <Icon />
             </div> */}
           </div>
-          {hit?.job_requirements && (
+          {/* {hit?.job_requirements && (
             <div className="pt-1.5 lg:pr-8">
               <p className="font-Poppins font-normal text-sm leading-6 tracking-common opacity-80 text-black line-clamp-3">
                 {hit.job_requirements}
               </p>
             </div>
-          )}
-          <div className="w-full flex flex-row flex-wrap gap-2 justify-start items-center">
+          )} */}
+          <div className="w-full lg:-mb-6 flex flex-row flex-wrap gap-2 justify-start items-center">
             {hit?.job_category && (
-              <div className="py-1.5 px-4 bg-lightGray-400 rounded-xl">
-                <p className="font-Poppins font-medium text-xs text-lightGray-50 leading-4">
+              <div className="py-1.5 px-4 bg-lightGreen-300 rounded-xl">
+                <p className="font-Poppins font-medium text-xs text-white leading-4">
                   {hit.job_category}
                 </p>
               </div>
             )}
             {hit?.job_type && (
-              <div className="py-1.5 px-4 bg-lightGray-400 rounded-xl">
-                <p className="font-Poppins font-medium text-xs text-lightGray-50 leading-4">
+              <div className="py-1.5 px-4 bg-gray-900 rounded-xl">
+                <p className="font-Poppins font-medium text-xs text-white
+                 leading-4">
                   {hit.job_type}
                 </p>
               </div>
             )}
+               {/* {hit?.company_url && (
+                <a
+                  href={`${hit.company_url}`}
+                  target="_blank"
+                  className="flex flex-row items-center gap-2 cursor-pointer"
+                >
+                  <World />
+                  <span className="font-Poppins font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 break-all">
+                    {hit.company_url}
+                  </span>
+                </a>
+              )} */}
+                   {(hit?.city || hit?.location) && (
+                <p className="flex flex-row items-center gap-2 cursor-pointer">
+                  <Location />
+                  <span className="font-Poppins font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 break-all">
+                    {hit?.city} {hit?.location}
+                  </span>
+                </p>
+              )}
+              {/* <div className="w-full md:w-auto flex  float-right">
+              <a
+                href={`/job/${hit?.jobUrl}`}
+                target="_blank"
+                className="inline-block font-Poppins text-white font-semibold text-xs leading-6 md:!leading-30 tracking-common bg-lightGreen-300 py-1.5 px-5 md:px-6 md:py-2 rounded-3xl hover:scale-110 duration-150"
+              >
+                Learn More
+              </a>
+            </div> */}
           </div>
           <div className="w-full mt-2.5 flex flex-row flex-wrap justify-between gap-2">
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-5">
+            {/* <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-5">
               {hit?.company_url && (
                 <a
                   href={`${hit.company_url}`}
@@ -145,19 +176,20 @@ const CompanyData = ({ hit }) => {
                   </span>
                 </p>
               )}
-            </div>
-
-            <div className="w-full md:w-auto flex justify-end">
+            </div> */}
+{/* 
+            <div className="w-full md:w-auto flex ">
               <a
                 href={`/job/${hit?.jobUrl}`}
                 target="_blank"
-                className="inline-block font-Poppins text-white font-semibold text-xs leading-6 md:!leading-30 tracking-common bg-lightGreen-300 py-1.5 px-5 md:px-6 md:py-2 rounded-3xl hover:scale-110 duration-150"
+                className="inline-block font-Poppins text-white font-semibold text-xs leading-6 md:!leading-30 mx-auto tracking-common bg-lightGreen-300 py-1.5 px-5 md:px-6 md:py-2 rounded-3xl hover:scale-110 duration-150"
               >
                 Learn More
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
+        </a>
       </div>
     </>
   );

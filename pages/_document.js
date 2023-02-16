@@ -6,7 +6,7 @@ import Script from "next/script"
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" className="bg-gray-900">
       <Head>
            
             <script src="https://cdn.tailwindcss.com"></script>
