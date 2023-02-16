@@ -58,6 +58,7 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
+        "lint": "next lint",
         "prisma:update": "npx prisma db push",
         "prisma:studio": "npx prisma studio",
         "build:prod": "npm run prisma:update && npm run build"
