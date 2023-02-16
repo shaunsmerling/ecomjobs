@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
-import { generateJobUrl } from "../script.js";
+import { generateJobUrl } from "../../../script.js";
 import { useSession, getSession } from "next-auth/react"
 
 export async function getServerSideProps(context) {
