@@ -68,6 +68,26 @@ const [addOn, setAddOn] = useState(0)
     }
   }
 
+  function delayLoad() {
+    let timerId;
+    showSpinner()
+    timerId = setTimeout(() => {
+      getLink()
+    }, 4000);
+
+    if (router.pathname === "https://buy.stripe.com/aEU2bgbew33f1A4dQY" || router.pathname === "https://buy.stripe.com/aEU2bgbew33f1A4dQY" || 
+    router.pathname === "https://buy.stripe.com/6oEaHM1DW47ja6A6ou" ||router.pathname === "https://buy.stripe.com/7sI4joeqI5bnemQ5kp" ) {
+      clearTimeout(timerId);
+    }
+
+  }
+
+  function showSpinner() {
+    document.querySelector(".spinner").classList.add("show")
+}
+
+
+
   const handleChange = ({ target }) => {
     setFields({ ...fields, [target.name]: target.value });
     // console.log(fields)
@@ -117,7 +137,7 @@ const [addOn, setAddOn] = useState(0)
         console.log(err, "Error");
       });
 
-      getLink()
+      delayLoad()
   };
 
   {/* https://buy.stripe.com/7sI4joeqI5bnemQ5kp (Normal Job Post, no Addons) */}
