@@ -394,7 +394,7 @@ value={salaryMax}
                             setCompanyLogo(reader.result);
                           };
                           reader.readAsDataURL(file);
-                          handleChange;
+                          handleChange(e);
                         }
                       }}
                       class="block w-full px-4 border py-3 placeholder-gray-500 border border-gray-300 
