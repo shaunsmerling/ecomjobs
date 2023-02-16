@@ -217,7 +217,7 @@ Post a Job
                         </a>
                       )}
                     </Menu.Item>
-                    <Menu.Item>
+                    {/* <Menu.Item>
                       {({ active }) => (
                         <a
                           href="/interviews"
@@ -231,7 +231,7 @@ Post a Job
                         Interviews
                         </a>
                       )}
-                    </Menu.Item>
+                    </Menu.Item> */}
                 
                   </div>
                 </Menu.Items>
@@ -727,7 +727,7 @@ Post a Job
                         </a>
                       )}
                     </Menu.Item>
-                     <Menu.Item>
+                     {/* <Menu.Item>
                       {({ active }) => (
                         <a
                           href="/contactus"
@@ -741,7 +741,7 @@ Post a Job
                         Company Profile
                         </a>
                       )}
-                    </Menu.Item>
+                    </Menu.Item> */}
                     <Menu.Item>
                       {({ active }) => (
                         <a
