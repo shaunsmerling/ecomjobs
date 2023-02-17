@@ -304,12 +304,12 @@ export async function getServerSideProps(context) {
   
                       <li className="flex items-startt">
                           <img alt="mailbox logo" loading="lazy" className="flex-shrink-0 w-10 h-10" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/icon-mailbox.png"   />
-                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Keep notified of new applicants. </span> All potential employees can be emailed to your inbox.</span>
+                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Keep notified of new applicants. </span> All potential prospects can be emailed to your inbox.</span>
                       </li>
   
                       <li className="flex items-startt">
                           <img alt="time logo" loading="lazy" className="flex-shrink-0 w-10 h-10" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/icon-sand-clock.png"   />
-                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Find high-quality talent faster.</span> Spend less time posting on generic job boards and more timing interviewing experienced employees </span>
+                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Find high-quality talent faster.</span> Spend less time posting on generic job boards and more timing interviewing experienced prospects </span>
                       </li>
                   </ul>
               </div>
