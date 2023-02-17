@@ -97,7 +97,7 @@ function isImageFile(filename) {
 
 
   const logoImage = isImageFile(logoString) ? 
-  `./images/${logoString}` : 
+  `../images/${logoString}` : 
   `${logoString}`;
 
   return (
