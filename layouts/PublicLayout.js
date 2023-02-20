@@ -1,9 +1,9 @@
-import Navbartwo from "../components/NavBarTwo";
+import Navbarthree from "../components/navBarThree";
 
 export default function PublicLayout({ children }) {
   return (
     <>
-      <Navbartwo />
+      <Navbarthree />
       <main>{children}</main>
     </>
   );
