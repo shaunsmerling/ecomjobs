@@ -1,10 +1,10 @@
-import { sanityClient, urlFor } from "../sanity";
+import { sanityClient, urlFor } from "../../../sanity";
 import { NextSeo } from "next-seo"
 import PortableText from "react-portable-text";
 
 
 function Post({post}) {
-    console.log(post);
+
     return (
   <div>
      <NextSeo
