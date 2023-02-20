@@ -16,7 +16,7 @@ import Filter from "../components/Filter";
 import FilterIcon from "../components/icons/FilterIcon";
 import Close2 from "../components/icons/Close2";
 import { useSession } from "next-auth/react";
-import Grid from "../components/Grid"
+
 
 export default function HomePage() {
   const [filterModelMobile, setFilterModelMobile] = useState(false);
