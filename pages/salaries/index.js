@@ -34,8 +34,8 @@ export default function salaries({posts}) {
     return (
         <section className="py-12 sm:py-16 lg:py-20">
         <NextSeo
-   title="Blogs | eCommerce Jobs"
-   description="Blog articles relating to marketing, logistics, product, and more." 
+   title="Salaries | eComPortal"
+   description="Salary data for the most common jobs in the eCommerce industry" 
    openGraph={{
      url: 'https://www.url.ie/a',
      title: 'Open Graph Title',
@@ -52,7 +52,7 @@ export default function salaries({posts}) {
      siteName: 'SiteName',
    }}
    twitter={{
-     site: '@ecomjobs_',
+     site: '@cecomptral',
      cardType: 'summary',
      image: "/logo.png"
    }}
