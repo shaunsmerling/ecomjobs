@@ -18,25 +18,25 @@ function index() {
                 <Link href="/united-states-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
                 <img class="w-full rounded-lg h-48" src="/usa.jpg" alt="office content 1"/>
-                <div class="ml-2 absolute text-xl text-white font-bold ">United States</div>
+                <div class="ml-4 absolute  text-md text-white font-bold ">United<br></br> States</div>
                 </div>
                 </Link>
                 <Link href="/australian-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
                 <img class="w-full rounded-lg lg:mt-10 h-48" src="/australia.jpg" alt="office content 1"/>
-                <div class="ml-2 absolute text-xl text-white font-bold ">Australia</div>
+                <div class="ml-2 absolute text-md text-white font-bold ">Australia</div>
                 </div>
                 </Link>
                 <Link href="/netherlands-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
                 <img class="w-full rounded-lg h-48 " src="/netherlands.jpg" alt="office content 1"/>
-                <div class="ml-2 absolute text-xl text-white font-bold ">Netherlands</div>
+                <div class="absolute text-md text-white font-bold ">Netherlands</div>
                 </div>
                 </Link>
                 <Link href="/sweden-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
                 <img class="w-full rounded-lg lg:mt-10 h-48" src="/sweden.jpg" alt="office content 1"/>
-                <div class="ml-2 absolute text-xl text-white font-bold ">Sweden</div>
+                <div class="ml-2 absolute text-md text-white font-bold ">Sweden</div>
                 </div>
                 </Link>
                 </div>
@@ -45,25 +45,25 @@ function index() {
             <Link href="/united-kingdom-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
                 <img class="w-full rounded-lg h-48" src="/uk.jpg" alt="office content 1"/>
-                <div class="ml-2 absolute text-xl text-white font-bold ">United<br></br> Kingdom</div>
+                <div class="ml-2 absolute text-md text-white font-bold ">United<br></br> Kingdom</div>
                 </div>
                 </Link>
                 <Link href="/vietnam-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
                 <img class="w-full rounded-lg lg:mt-10 h-48" src="/vietnam.jpg" alt="office content 1"/>
-                <div class="ml-2 absolute text-xl text-white font-bold ">Vietnam</div>
+                <div class="ml-2 absolute text-md text-white font-bold ">Vietnam</div>
                 </div>
                 </Link>
                 <Link href="/singapore-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
                 <img class="w-full rounded-lg h-48 " src="/singapore.jpg" alt="office content 1"/>
-                <div class="ml-2 absolute text-xl text-white font-bold ">Singapore</div>
+                <div class="ml-2 absolute text-md text-white font-bold ">Singapore</div>
                 </div>
                 </Link>
                 <Link href="/canada-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
                 <img class="w-full rounded-lg lg:mt-10 h-48" src="/canada.jpg" alt="office content 1"/>
-                <div class="ml-2 absolute text-xl text-white font-bold ">Canada</div>
+                <div class="ml-2 absolute text-md text-white font-bold ">Canada</div>
                 
                 
                 </div>

@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import { NextSeo } from "next-seo"
-import {sanityClient, urlFor} from "../../sanity"
+import {sanityClient, urlFor} from "./sanity"
 
 
 
@@ -69,7 +69,7 @@ export default function salaries({posts}) {
      <div className="grid grid-cols-1 gap-6 px-8 mt-12 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:px-0">
       {posts.map((post) => {
         return (
-       <Link key={post._id} passHref legacyBehavior href={`/post/${post.slug.current}`} >
+       <Link key={post._id} passHref legacyBehavior href={`/salaries/post/${post.slug.current}`} >
 <a>
             <div
               className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg   hover:border-2 hover:-translate-y-1">

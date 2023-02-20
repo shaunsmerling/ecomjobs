@@ -28,9 +28,9 @@ export async function getServerSideProps(context) {
 
 function Company({ company, jobs }) {
 
-  console.log(company)
 
-  console.log(jobs)
+
+
   // const [company, setCompanyData] = useState({
   //   company_name: "",
   //   company_url: "",
