@@ -108,7 +108,7 @@ const CompanyData = ({ hit }) => {
               </p>
             </div>
           )} */}
-          <div className="w-full lg:-mb-6 flex flex-row flex-wrap gap-2 justify-start items-center">
+          <div className="w-full lg:mt-10 flex flex-row flex-wrap gap-2 justify-start items-center">
             {hit?.job_category && (
               <div className="py-1.5 px-4 bg-lightGreen-300 rounded-xl">
                 <p className="font-Poppins font-medium text-xs text-white leading-4">
@@ -137,7 +137,7 @@ const CompanyData = ({ hit }) => {
                 </a>
               )} */}
                    {(hit?.city || hit?.location) && (
-                <p className="flex flex-row items-center gap-2 cursor-pointer">
+                <p className="flex flex-row items-center  gap-2 cursor-pointer">
                   <Location />
                   <span className="font-Poppins font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 break-all">
                     {hit?.city} {hit?.location}
@@ -154,7 +154,6 @@ const CompanyData = ({ hit }) => {
               </a>
             </div> */}
           </div>
-          <div className="w-full mt-2.5 flex flex-row flex-wrap justify-between gap-2">
             {/* <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-5">
               {hit?.company_url && (
                 <a
@@ -187,7 +186,7 @@ const CompanyData = ({ hit }) => {
                 Learn More
               </a>
             </div> */}
-          </div>
+     
         </div>
         </a>
       </div>
