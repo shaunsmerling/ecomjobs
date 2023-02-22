@@ -365,6 +365,7 @@
 .ais-InfiniteHits .ais-InfiniteHits-loadMore {
   @apply bg-lightGreen-300 font-Poppins px-8 rounded-3xl py-3 text-base font-normal flex justify-center items-center mx-auto hover:scale-105 duration-150;
   color: white;
+  margin-top: 10px;
 }
 
 .ais-InfiniteHits .ais-InfiniteHits-loadMore--disabled {
