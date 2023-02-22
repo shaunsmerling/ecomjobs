@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from 'next/image'
 
 function index() {
     return (
@@ -17,25 +18,57 @@ function index() {
             <div class="-mr-4 mx-auto grid grid-cols-4 gap-4 mt-8">
                 <Link href="/united-states-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <img class="w-full rounded-lg h-48" src="/usa.jpg" alt="office content 1"/>
+                <Image
+        src="/usa.jpg"
+        alt="Picture of the author"
+        className="w-full rounded-lg h-52 "
+        width={500}
+        height={500}
+        priority
+      />
+                {/* <img class="w-full rounded-lg h-48" src="/usa.jpg" alt="office content 1"/> */}
                 <div class="ml-4 absolute  text-md text-white font-bold ">United<br></br> States</div>
                 </div>
                 </Link>
                 <Link href="/australian-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <img class="w-full rounded-lg lg:mt-10 h-48" src="/australia.jpg" alt="office content 1"/>
+                <Image
+        src="/australia.jpg"
+        alt="Picture of the author"
+        className="w-full rounded-lg h-52 "
+        width={500}
+        height={500}
+        priority
+      />
+                {/* <img class="w-full rounded-lg lg:mt-10 h-48" src="/australia.jpg" alt="office content 1"/> */}
                 <div class="ml-2 absolute text-md text-white font-bold ">Australia</div>
                 </div>
                 </Link>
                 <Link href="/netherlands-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <img class="w-full rounded-lg h-48 " src="/netherlands.jpg" alt="office content 1"/>
-                <div class="absolute text-md text-white font-bold ">Netherlands</div>
+                <Image
+        src="/netherlands.jpg"
+        className="w-full rounded-lg h-52 "
+        alt="Picture of the author"
+        width={500}
+        height={500}
+        priority
+      />
+                {/* <img class="w-full rounded-lg h-48 " src="/netherlands.jpg" alt="office content 1"/> */}
+                <div class="absolute text-sm text-white font-bold ">Netherlands</div>
                 </div>
                 </Link>
                 <Link href="/sweden-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <img class="w-full rounded-lg lg:mt-10 h-48" src="/sweden.jpg" alt="office content 1"/>
+                <Image
+        src="/sweden.jpg"
+        className="w-full rounded-lg h-52 "
+        alt="Picture of the author"
+        width={500}
+        height={500}
+        priority
+      />
+                {/* <img class="w-full rounded-lg lg:mt-10 h-48" src="/sweden.jpg" alt="office content 1"/> */}
                 <div class="ml-2 absolute text-md text-white font-bold ">Sweden</div>
                 </div>
                 </Link>
@@ -44,25 +77,57 @@ function index() {
             <div class="-mr-4 mx-auto grid grid-cols-4 gap-4 mt-8">
             <Link href="/united-kingdom-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <img class="w-full rounded-lg h-48" src="/uk.jpg" alt="office content 1"/>
+                <Image
+        src="/uk.jpg"
+        className="w-full rounded-lg h-52 "
+        alt="Picture of the author"
+        width={500}
+        height={500}
+        priority
+      />
+                {/* <img class="w-full rounded-lg h-48" src="/uk.jpg" alt="office content 1"/> */}
                 <div class="ml-2 absolute text-md text-white font-bold ">United<br></br> Kingdom</div>
                 </div>
                 </Link>
                 <Link href="/vietnam-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <img class="w-full rounded-lg lg:mt-10 h-48" src="/vietnam.jpg" alt="office content 1"/>
+                <Image
+        src="/vietnam.jpg"
+        className="w-full rounded-lg h-52 "
+        alt="Picture of the author"
+        width={500}
+        height={500}
+        priority
+      />
+                {/* <img class="w-full rounded-lg lg:mt-10 h-48" src="/vietnam.jpg" alt="office content 1"/> */}
                 <div class="ml-2 absolute text-md text-white font-bold ">Vietnam</div>
                 </div>
                 </Link>
                 <Link href="/singapore-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <img class="w-full rounded-lg h-48 " src="/singapore.jpg" alt="office content 1"/>
-                <div class="ml-2 absolute text-md text-white font-bold ">Singapore</div>
+                <Image
+        src="/singapore.jpg"
+        alt="Picture of the author"
+        className="w-full rounded-lg h-52 "
+        height={500}
+        width={500}
+        priority
+      />
+                {/* <img class="w-full rounded-lg h-48 " src="/singapore.jpg" alt="office content 1"/> */}
+                <div class="ml-1 lg:ml-2 lg:text-md absolute text-sm text-white font-bold ">Singapore</div>
                 </div>
                 </Link>
                 <Link href="/canada-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <img class="w-full rounded-lg lg:mt-10 h-48" src="/canada.jpg" alt="office content 1"/>
+                <Image
+        src="/canada.jpg"
+        className="w-full rounded-lg h-52 "
+        alt="Picture of the author"
+        width={500}
+        height={500}
+        priority
+      />
+                {/* <img class="w-full rounded-lg lg:mt-10 h-48" src="/canada.jpg" alt="office content 1"/> */}
                 <div class="ml-2 absolute text-md text-white font-bold ">Canada</div>
                 
                 
