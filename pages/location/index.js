@@ -15,7 +15,7 @@ function index() {
                 <p class="mb-4">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
                 <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
             </div> */}
-            <div class="-mr-4 mx-auto grid grid-cols-4 gap-4 mt-8">
+            <div class="lg:-mr-4 mx-auto grid grid-cols-4 gap-4 mt-8">
                 <Link href="/united-states-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
                 <Image
