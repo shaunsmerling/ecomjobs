@@ -31,7 +31,7 @@ const CompanyData = ({ hit }) => {
   return (
     <>
       <div
-        className={` lg:mb-7 border border-lightGray-100 bg-white lg:rounded-lg py-4 pl-4 pr-4 lg:pr-7 hover:bg-gray-200  ${hit?.featured && "bg-lightYellow-100"
+        className={` ml-4 rounded-lg mx-2 mb-4 lg:mb-7 border border-lightGray-100 bg-white lg:rounded-lg py-4 pl-4 pr-4  hover:bg-gray-200  ${hit?.featured && "bg-lightYellow-100"
           }`}
       >
         <a href={`/job/${hit?.jobUrl}`}>
