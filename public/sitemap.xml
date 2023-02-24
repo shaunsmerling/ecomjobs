@@ -88,11 +88,27 @@
   <priority>0.64</priority>
 </url>
 <url>
+  <loc>https://ecomportal.co/interviews</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecomportal.co/interviews/post/skims-interview-hiring-process</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecomportal.co/interviews/post/harrys-inc-interview-hiring-process</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecomportal.co/interviews/post/sephora-interview-hiring-process</loc>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://ecomportal.co/salaries</loc>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://ecomportal.co/blog</loc>
+  <loc>https://ecomportal.co/blogs</loc>
   <priority>0.80</priority>
 </url>
 <url>
@@ -174,21 +190,18 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://ecomportal.co/blog/what-is-google-shopping</loc>
+  <loc>https://ecomportal.co/blogs/post/ecommerce-brands-in-los-angeles</loc>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://ecomportal.co/blog/build-a-brand-on-shopify</loc>
+  <loc>https://ecomportal.co/blogs/post/ecommerce-brands-in-new-york</loc>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://ecomportal.co/blog/top-7-ecommerce-trends-in-2023</loc>
+  <loc>https://ecomportal.co/blogs/post/ecommerce-brands-in-miami</loc>
   <priority>0.64</priority>
 </url>
-<url>
-  <loc>https://ecomportal.co/blog/five-proven-methods-to-increase-your-shopify-brands-aov-in-2023</loc>
-  <priority>0.64</priority>
-</url>
+
 <url>
   <loc>https://ecomportal.co/list-your-company</loc>
   <priority>0.64</priority>
