@@ -243,7 +243,7 @@ function NavBarThree() {
                     <Menu.Item>
                       {({ active }) => (
                         <a
-                          href="/blogs"
+                          href="/blog"
                           className={classNames(
                             active
                               ? "bg-gray-100 text-gray-900"
@@ -251,7 +251,7 @@ function NavBarThree() {
                             "block px-4 py-2 text-sm"
                           )}
                         >
-                        Blogs
+                        Blog
                         </a>
                       )}
                     </Menu.Item>
@@ -676,7 +676,7 @@ Post a Job
                     <Menu.Item>
                       {({ active }) => (
                         <a
-                          href="/blogs"
+                          href="/blog"
                           className={classNames(
                             active
                               ? "bg-gray-100 text-gray-900"
@@ -684,7 +684,7 @@ Post a Job
                             "block px-4 py-2 text-sm"
                           )}
                         >
-                        Blogs
+                        Blog
                         </a>
                       )}
                     </Menu.Item>
