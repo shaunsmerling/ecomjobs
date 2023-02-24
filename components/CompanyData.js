@@ -4,6 +4,7 @@ import SalaryIcon from "./icons/SalaryIcon";
 import Icon from "./icons/Icon";
 import World from "./icons/World";
 import Location from "./icons/Location";
+import Image from "next/image"
 
 const CompanyData = ({ hit }) => {
   // Date Calculation
@@ -40,6 +41,8 @@ const CompanyData = ({ hit }) => {
             <div className="flex flex-row items-center gap-3 md:gap-4">
               {hit?.logo && (
                 <div className="self-start lg:self-center">
+                  
+
                   <img
                     src={`./images/${hit.logo}`}
                     alt=""

@@ -6,7 +6,7 @@ import {sanityClient, urlFor} from "../../sanity"
 
 
 export const getServerSideProps = async () => {
-  const query = `*[_type == "post" &&  "Salary" in categories[]->title] {
+  const query = `*[_type == "post" &&  "Interviews" in categories[]->title] {
     _id,  
     title,
     author -> {
@@ -14,11 +14,11 @@ export const getServerSideProps = async () => {
       image
     },
       description,
+      
       mainImage,
       slug
       
   }`
-  
   
   const posts = await sanityClient.fetch(query)
   
@@ -32,11 +32,13 @@ export const getServerSideProps = async () => {
 
 export default function salaries({posts}) {
 
+  console.log(posts.categories)
+
     return (
         <section className="py-12 sm:py-16 lg:py-20">
         <NextSeo
-   title="Salaries | eComPortal"
-   description="Salary data for the most common jobs in the eCommerce industry" 
+   title="Interviews | eComPortal"
+   description="A walkthrough of the interview process for top eCommerce brands" 
    openGraph={{
      url: 'https://www.url.ie/a',
      title: 'Open Graph Title',
@@ -61,7 +63,7 @@ export default function salaries({posts}) {
    <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
      <div className="text-center sm:flex sm:items-end sm:space-x-16 sm:text-left">
        <h2 className="max-w-xs text-3xl mx-auto sm:mx-0 font-bold text-white sm:text-4xl shrink-0">
-        Top eCommerce Job Salaries
+        Interview Process For The Top eCommerce brands
        </h2>
        <p className="max-w-xs mt-5 text-sm font-normal leading-6 text-gray-500 sm:mt-0">
 
@@ -70,7 +72,7 @@ export default function salaries({posts}) {
      <div className="grid grid-cols-1 gap-6 px-8 mt-12 sm:mt-16 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:px-0">
       {posts.map((post) => {
         return (
-       <Link key={post._id} passHref legacyBehavior href={`/salaries/post/${post.slug.current}`} >
+       <Link key={post._id} passHref legacyBehavior href={`/interviews/post/${post.slug.current}`} >
 <a>
             <div
               className="flex flex-col overflow-hidden transition-all duration-200 transform bg-white border border-gray-100 shadow group rounded-xl hover:shadow-lg   hover:border-2 hover:-translate-y-1">
@@ -99,7 +101,7 @@ export default function salaries({posts}) {
                   <div className="flex items-center space-x-2">
                     <p className="text-sm font-medium text-gray-900">
                   
-                       Salaries
+                       Interviews
                   
                     </p>
                     <span className="text-sm font-medium text-gray-900">

@@ -243,7 +243,7 @@ function NavBarThree() {
                     <Menu.Item>
                       {({ active }) => (
                         <a
-                          href="/blog"
+                          href="/blogs"
                           className={classNames(
                             active
                               ? "bg-gray-100 text-gray-900"
@@ -255,7 +255,7 @@ function NavBarThree() {
                         </a>
                       )}
                     </Menu.Item>
-                    {/* <Menu.Item>
+                    <Menu.Item>
                       {({ active }) => (
                         <a
                           href="/interviews"
@@ -269,7 +269,7 @@ function NavBarThree() {
                         Interviews
                         </a>
                       )}
-                    </Menu.Item> */}
+                    </Menu.Item>
                 
                   </div>
                 </Menu.Items>
@@ -676,7 +676,7 @@ Post a Job
                     <Menu.Item>
                       {({ active }) => (
                         <a
-                          href="/blog"
+                          href="/blogs"
                           className={classNames(
                             active
                               ? "bg-gray-100 text-gray-900"
@@ -688,7 +688,7 @@ Post a Job
                         </a>
                       )}
                     </Menu.Item>
-                    {/* <Menu.Item>
+                    <Menu.Item>
                       {({ active }) => (
                         <a
                           href="/interviews"
@@ -702,7 +702,7 @@ Post a Job
                         Interviews
                         </a>
                       )}
-                    </Menu.Item> */}
+                    </Menu.Item>
                 
                   </div>
                 </Menu.Items>

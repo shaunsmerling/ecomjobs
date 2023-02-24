@@ -62,6 +62,7 @@
         "lint": "next lint",
         "prisma:update": "npx prisma db push",
         "prisma:studio": "npx prisma studio",
+        "analyze": "ANALYZE=true next build",
         "build:prod": "npm run prisma:update && npm run build"
     },
     "eslintConfig": {
