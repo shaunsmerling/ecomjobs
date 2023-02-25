@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../global.css'
 import Navbarthree from "../components/navBarThree"
 import Script from "next/script"
@@ -15,8 +15,27 @@ function MyApp({
   Component, 
   pageProps: { session, ...pageProps },
 }) {
-  const router = useRouter();
+const router = useRouter();
 const showHeader = router.pathname === '/signup' || router.pathname === "/createaccount" ? false : true;
+
+
+
+// useEffect(() => {
+//   import('react-facebook-pixel')
+//     .then((x) => x.default)
+//     .then((ReactPixel) => {
+//       ReactPixel.init('XXXXXXXXXXXXXXXXXXXXX') // facebookPixelId
+//       ReactPixel.pageView()
+
+//       router.events.on('routeChangeComplete', () => {
+//         ReactPixel.pageView()
+//       })
+//     })
+// }, [router.events])
+
+
+
+
   return (
     <div>
 <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-K7WC2T06Y5"/>
@@ -35,6 +54,26 @@ const showHeader = router.pathname === '/signup' || router.pathname === "/create
   }}
   
 />
+<Script
+        id="fb-pixel"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '242161221475139');
+          fbq('track', 'PageView');
+          `,
+        }}
+/>
+<Script strategy="afterInteractive" src="https://www.facebook.com/tr?id=242161221475139&ev=PageView&noscript=1"/>
+
 <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=AW-11061598180"/>
 <Script
   id="google-tag"
@@ -66,6 +105,12 @@ b.type = "text/javascript";b.async = true;
 b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
 s.parentNode.insertBefore(b, s);})(window.lintrk);
 `}}
+/>
+<Script 
+
+
+
+
 />
 <noscript>
 <img height="1" width="1" className="hidden" alt="" src="https://px.ads.linkedin.com/collect/?pid=4366308&fmt=gif" />

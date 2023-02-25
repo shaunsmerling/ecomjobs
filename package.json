@@ -42,6 +42,7 @@
         "react": "^18.2.0",
         "react-data-table-component": "^7.5.3",
         "react-dom": "^18.2.0",
+        "react-facebook-pixel": "^1.0.4",
         "react-helmet": "^6.1.0",
         "react-instantsearch-dom": "^6.38.1",
         "react-instantsearch-hooks-web": "^6.33.0",
