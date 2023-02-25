@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { api_url } from "../../config";
-
+import { NextSeo } from 'next-seo';
 
 export async function getServerSideProps() {
   const res = await fetch(`${api_url}/api/company`);
@@ -18,7 +18,32 @@ function brands({ companies }) {
 
 
     return (
+    
         <section>
+          <NextSeo
+      title="Brands | Ecomportal"
+      description="Browse our list of eCommerce brands hiring on Ecomportal" 
+      openGraph={{
+        url: 'https://www.ecomportal.co/brands',
+        title: 'Brand List | Ecomportal',
+        description: "Browse our list of eCommerce brands hiring on Ecomportal" ,
+        images: [
+          {
+            url: 'https://www.ecomportal.co/logo.png',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+            type: 'image/jpeg',
+          },
+        ],
+        siteName: 'Ecomportal',
+      }}
+      twitter={{
+        site: '@ecomprtal',
+        cardType: 'summary',
+        image: "/logo.png"
+      }}
+      />
         <section class="content-wrapper"><div class="content ">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
        

@@ -31,10 +31,10 @@ function Post({post}) {
         image: "/logo.png"
       }}
     />
-      <section className="py-12 bg-white sm:py-16 lg:py-20">
+      <section className="py-12 bg-white lg:mx-10 rounded-lg sm:py-16 lg:py-20">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-xl mx-auto text-center">
-          <nav className="flex items-center justify-center">
+          {/* <nav className="flex items-center justify-center">
             <ol className="flex items-center space-x-2">
               <li>
                 <a href="#" title="" className="text-base font-medium text-gray-900">
@@ -66,7 +66,7 @@ function Post({post}) {
                 </div>
               </li>
             </ol>
-          </nav>
+          </nav> */}
 
           <h1 className="mt-6 text-4xl font-bold text-gray-900 sm:text-5xl">
          {post.title}
