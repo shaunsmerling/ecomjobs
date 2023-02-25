@@ -81,7 +81,7 @@ export default function HomePage() {
             
 
             <div className="flex flex-col w-full gap-4">
-              <div className="p-2 lg:p-4  searchBox mb-0.5 flex flex-row justify-center items-center gap-3  ">
+              <div className="p-2 lg:p-4  searchBox -mb-4 lg:mb-0.5 -mx-8 lg:-mx-0 flex flex-row justify-center items-center gap-3  ">
                 {/* Custom Search Box */}
                 <div className="w-full">
                   <CustomSearchBox clearFilter={clearFilter} />

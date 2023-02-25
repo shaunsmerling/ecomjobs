@@ -82,7 +82,7 @@ export default function HomePage() {
             
 
             <div className="flex flex-col w-full gap-4">
-              <div className="p-2 lg:p-4  searchBox mb-0.5 flex flex-row justify-center items-center gap-3 lg:gap-5">
+              <div className="p-2 lg:p-4  searchBox mb-0.5 -mx-8 flex flex-row justify-center items-center gap-3 lg:gap-5">
                 {/* Custom Search Box */}
                 <div className="w-full">
                   <CustomSearchBox clearFilter={clearFilter} />
@@ -101,7 +101,7 @@ export default function HomePage() {
                 </div> */}
               </div>
               {/* View Data Section */}
-              <div className=" p-4 md:p-6 min-h-[500px]">
+              <div className="-mx-10  p-4 md:p-6 min-h-[500px]">
                 <InfiniteHits hitComponent={CompanyData} showPrevious={false} />
               </div>
               <div>

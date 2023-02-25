@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from "react"
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 
 
@@ -22,6 +23,8 @@ import Link from "next/link"
 
 function EmailBar({props}) {
 
+  const router = useRouter()
+
     const [emails, setEmails] = useState({
       email: "",
     });
@@ -38,7 +41,7 @@ function EmailBar({props}) {
         body: JSON.stringify({
           email: email,
         }),
-      }).then(alert("Thank you for your email! We'll shoot you the right job alerts when they are available!") ? "" : window.reload() )
+      }).then(alert("Thank you for your email! We'll shoot you the right job alerts when they are available!") ? "" : router.reload(window.location.pathname) )
     }
 
     const {
@@ -50,9 +53,10 @@ function EmailBar({props}) {
 
   return ( 
     <form  onSubmit={handleSubmit}>   
-      <div className="flex flex-wrap lg:py-2 justify-center fixed bottom-0 bg-lightGreen-300 items-center w-full">
-      <p className="text-white"> Get the newest <span className="italic font-bold">{props}</span> ecom jobs in your inbox</p>
+      <div className="flex flex-wrap py-1 lg:py-0 justify-center fixed bottom-0 bg-lightGreen-300 items-center w-full">
+      <p className="mb-1 text-white"> Get the newest <span className="italic font-bold">{props}</span> ecom jobs in your inbox</p>
         
+        <div className=" flex flex-row items-center  mb-1 lg:mr-0 mr-4 justify-center w-full">
         <input 
         type="text" 
         id="emailsubmit" 
@@ -72,8 +76,9 @@ function EmailBar({props}) {
     type="submit" 
     value="Submit" 
     id="emailbtn" 
-    class=" h-26 bg-emerald-900 hover:bg-neutral-800 px-2 py-2 text-sm text-white  rounded-lg  ">
+    class=" lg:h-26 bg-emerald-900 hover:bg-neutral-800 px-2 lg:py-2 text-sm text-white  rounded-lg  ">
     Notify Me</button> 
+    </div>
     </div>
 
     </form>

@@ -90,7 +90,7 @@ return (
                       "Thank you for your  submission. Please check your inbox for a confirmation email"
                     )
                       ? ""
-                      : router.push("/signup")
+                      : router.reload(window.location.pathname)
                   }
                   class="inline-flex relative items-center justify-center w-full sm:w-auto px-8 py-3 sm:text-sm text-base sm:py-3.5 font-semibold text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg  hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
                 >

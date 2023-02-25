@@ -69,7 +69,7 @@ export default function HomePage() {
         <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Browse our curated list of eCommerce brands hiring for <span className="font-bold text-white italic">web development</span></p>
         </div>
         </div>
-        <div className="flex  bg-gray-900 flex-row justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
+        <div className="flex  bg-gray-900 flex-row -mx-8 justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
           <InstantSearch searchClient={searchClient} indexName="ecomjobs_index"  >
             <Configure hitsPerPage={10} filters={`job_category:"Web Development"`} />
 {/*     
@@ -82,7 +82,7 @@ export default function HomePage() {
             
 
             <div className="flex flex-col w-full gap-4">
-              <div className="p-2 lg:p-4  searchBox mb-0.5 flex flex-row justify-center items-center gap-3 lg:gap-5">
+              <div className="p-2 lg:p-4  searchBox mb-0.5 -mx-8 flex flex-row justify-center items-center gap-3 lg:gap-5">
                 {/* Custom Search Box */}
                 <div className="w-full">
                   <CustomSearchBox clearFilter={clearFilter} />
@@ -101,7 +101,7 @@ export default function HomePage() {
                 </div>
               </div>
               {/* View Data Section */}
-              <div className=" p-4 md:p-6 min-h-[500px]">
+              <div className=" -mx-10 p-4 md:p-6 min-h-[500px]">
                 <InfiniteHits   hitComponent={CompanyData} showPrevious />
               </div>
               <div>

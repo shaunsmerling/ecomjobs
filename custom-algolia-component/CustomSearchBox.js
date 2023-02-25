@@ -22,7 +22,7 @@ function CustomSearchBox(props) {
     <>
       <form onSubmit={(e) => handleSearch(e)}>
         <div className="flex flex-row items-center justify-between w-full gap-2 lg:gap-5">
-          <div className="h-12 w-full">
+          <div className="h-12 w-full ">
             <input
               type="text"
               placeholder="Search by Title, Company or any jobs keyword..."
