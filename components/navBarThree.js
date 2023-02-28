@@ -285,6 +285,21 @@ function NavBarThree() {
                         </a>
                       )}
                     </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="/tools"
+                          className={classNames(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                        Tools
+                        </a>
+                      )}
+                    </Menu.Item>
                   </div>
                 </Menu.Items>
               </Transition>
@@ -729,6 +744,21 @@ Post a Job
                           )}
                         >
                         Courses
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="/tools"
+                          className={classNames(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                        Tools
                         </a>
                       )}
                     </Menu.Item>

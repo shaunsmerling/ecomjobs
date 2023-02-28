@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
-import HeroBanner from "../components/HeroBanner";
+import Footer from "../components/Footer/index"
+import FooterEmail from "../components/Footer/footerEmail"
+import FooterCities from "../components/Footer/footerCities"
+import FooterJobs from "../components/Footer/footerJobs"
+import FooterRoles from "../components/Footer/footerRoles"
 import "@stripe/stripe-js";
 import algoliasearch from "algoliasearch/lite";
 import {
@@ -199,6 +203,11 @@ export default function HomePage() {
           </InstantSearch>
           </div>
       )} */}
+      <FooterEmail/>
+      <Footer/>
+      <FooterCities/>
+      {/* <FooterJobs/>
+      <FooterRoles/> */}
       </div>
       </div>
     </>

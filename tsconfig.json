@@ -22,7 +22,7 @@
   },
   "include": [
     "components/*"
-, "custom-algolia-component/multiRangeSlider"  ],
+, "custom-algolia-component/multiRangeSlider", "components/Footer/footerEmail.js"  ],
   "exclude": [
     "node_modules"
   ]

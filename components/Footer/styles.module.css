@@ -1,15 +1,42 @@
 .footer {
   display: flex;
+
   background-color: white;
   justify-content: space-between;
   padding: 40px;
   border-top: 1px solid #00000024;
-  margin-top: 40px;
+
+}
+
+.footer1 {
+  display: flex;
+
+  background-color: white;
+  justify-content: space-between;
+  padding: 40px;
+  border-top: 1px solid #00000024;
+
+ 
+}
+
+
+.footerEmail {
+  display: flex;
+
+  background-color: #2F604B;
+  justify-content: space-between;
+  padding: 40px;
+  border-top: 1px solid #00000024;
+  margin-top: 20px;
 }
 .section_left {
   width: 60%;
 }
 .ul_content {
+  width: 20%;
+}
+
+.ul_content1 {
   width: 20%;
 }
 .logo_section p {
@@ -18,12 +45,12 @@
   line-height: 34px;
   letter-spacing: -0.01em;
   color: #000000;
-  opacity: 0.4;
+ 
   margin-top: 0px;
 }
 .socila_icons {
   display: flex;
-  margin-top: 40px;
+ margin-top:10px;
 }
 .socila_icons svg {
   margin-right: 7px;
@@ -50,16 +77,66 @@
   line-height: 34px;
   letter-spacing: -0.01em;
   color: #000000;
+  font-style: bold;
+  margin-bottom: 15px;
+}
+.ul_content1 h2 {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #000000;
+  font-style: bold;
   margin-bottom: 15px;
 }
 
 .ul_content li {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 34px;
   letter-spacing: -0.01em;
   color: #000000;
   opacity: 0.4;
+}
+
+.ul_content1 li {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #000000;
+  opacity: 0.4;
+}
+@media only screen and (max-width: 600px) {
+.ul_content1 li {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #000000;
+  opacity: 0.4;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  .ul_content1 h2 {
+    font-weight: 500;
+  font-size: 26px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #000000;
+  font-style: bold;
+  margin-bottom: 30px;
+  
+  }
+  }
+
+.ul_content :hover {
+  color: #258B60;
+}
+
+.ul_content1 :hover {
+  color: #258B60;
 }
 .footer_bottom {
   padding-bottom: 40px;
@@ -72,6 +149,7 @@
   color: #000000;
   opacity: 0.4;
 }
+
 .arrow_up {
   position: fixed;
   bottom: 30px;

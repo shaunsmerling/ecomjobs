@@ -62,8 +62,8 @@ export default async function handler(req, res) {
           }
   
           // Otherwise, fetch all jobs
-          const jobs = await getAllEmails();
-          return res.json(jobs);
+          const email = await getAllEmails();
+          return res.json(email);
         }
         case "PUT": {
           // Update an existing job

@@ -10,17 +10,15 @@ function Footer() {
 
   return (
     <>
-      <div className="px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
+      <div className="">
         <div className={styles.footer}>
           <div className={styles.section_left}>
             <div className={styles.logo_section}>
               <Image loading="lazy" src={logo} alt="footer-logo" />
-              <p>
-                Join thousands of people getting weekly alerts <br /> from
-                brands hiring
-              </p>
+           
             </div>
             <div className={styles.socila_icons}>
+              <a href="https://www.facebook.com/ecomprtal"  target="_blank">
               <svg
                 width="44"
                 height="44"
@@ -40,7 +38,8 @@ function Footer() {
                   fill="black"
                 />
               </svg>
-
+              </a>
+            <a href="https://twitter.com/smerlinger" target="_blank" rel="noreferrer">
               <svg
                 width="44"
                 height="44"
@@ -55,27 +54,8 @@ function Footer() {
                   fill="white"
                 />
               </svg>
-              <svg
-                width="44"
-                height="44"
-                viewBox="0 0 44 44"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="22"
-                  cy="22"
-                  r="21.5"
-                  fill="white"
-                  stroke="#F1F1F1"
-                />
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M28.9361 18.4189C29.0482 17.7881 29.0453 17.1382 28.6581 16.6481C28.1167 15.9602 26.9649 15.9346 26.1755 16.0562C25.5328 16.1546 23.3619 17.1178 22.6231 19.4224C23.9319 19.3221 24.6187 19.5171 24.4926 20.9653C24.4392 21.572 24.1345 22.2358 23.7951 22.8721C23.4022 23.6055 22.6658 25.0468 21.7001 24.008C20.8305 23.0731 20.8957 21.2856 20.6965 20.095C20.5858 19.4271 20.4691 18.5948 20.2511 17.9078C20.0636 17.3169 19.6333 16.6044 19.1073 16.4503C18.542 16.2832 17.843 16.5441 17.4324 16.7868C16.1259 17.5592 15.1307 18.657 14 19.5626V19.6475C14.2245 19.8624 14.2836 20.2157 14.6146 20.2635C15.3923 20.3786 16.1339 19.5352 16.6519 20.4125C16.9659 20.9491 17.0639 21.5376 17.266 22.1155C17.535 22.8856 17.7436 23.7248 17.964 24.6105C18.3357 26.1102 18.7942 28.3526 20.0842 28.9012C20.7429 29.1816 21.7324 28.8061 22.2331 28.5076C23.5907 27.7004 24.6478 26.5303 25.553 25.3401C27.6226 22.5231 28.7645 19.3314 28.9361 18.4189Z"
-                  fill="black"
-                />
-              </svg>
+            </a>
+              <a href="https://www.linkedin.com/company/ecomportal" target="_blank">
               <svg
                 width="44"
                 height="44"
@@ -95,47 +75,42 @@ function Footer() {
                   fill="black"
                 />
               </svg>
+              </a>
             </div>
           </div>
        
-          <div className={styles.ul_content}>
-            <h2>Links</h2>
+          {/* <div className={styles.ul_content}>
+            <h3 className="hover:text-black">For Talent</h3>
             <ul>
-              <li>Salaries</li>
-              <li> Internships</li>
+              <li>Sign In</li>
+              <li>Create A Profile</li>
+              <li>Learn eCommerce Skills</li>
+              <li>FAQs</li>
+              <li>Search Companies</li>
+            </ul>
+          </div> */}
+          {/* <div className={styles.ul_content}>
+            <h3 className="hover:text-black">For Employers</h3>
+            <ul>
+              <li>Pricing Page</li>
+              <li> Employer Login</li>
               <li> Blog</li>
               <li> Company List</li>
               <li> For Companies</li>
             </ul>
           </div>
           <div className={styles.ul_content}>
-            <h2>Resources</h2>
+            <h3 className="hover:text-black">For More</h3>
             <ul>
-              <li>Support</li>
-              <li> Latest Updates</li>
-              <li> Updates Newsletter</li>
-              <li> Flow Management</li>
+              <li>What is eCommerce?</li>
+              <li>FAQ eCommerce Brands</li>
+              <li>Sponsors </li>
+              <li>Advertise With Us</li>
+              <li>Partner With Us</li>
             </ul>
-          </div>
+          </div> */}
         </div>
-        <div className={styles.footer_bottom}>
-          <p>Copyright©ecomportal 2022, All right Reserved</p>
-          <div className={styles.arrow_up} onClick={handleScrollToTop}>
-            <svg
-              width="42"
-              height="42"
-              viewBox="0 0 42 42"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="42" height="42" rx="6" fill="#7ED957" />
-              <path
-                d="M20 29C20 29.5523 20.4477 30 21 30C21.5523 30 22 29.5523 22 29L20 29ZM21.7071 11.2929C21.3166 10.9024 20.6834 10.9024 20.2929 11.2929L13.9289 17.6569C13.5384 18.0474 13.5384 18.6805 13.9289 19.0711C14.3195 19.4616 14.9526 19.4616 15.3431 19.0711L21 13.4142L26.6569 19.0711C27.0474 19.4616 27.6805 19.4616 28.0711 19.0711C28.4616 18.6805 28.4616 18.0474 28.0711 17.6569L21.7071 11.2929ZM22 29L22 12L20 12L20 29L22 29Z"
-                fill="white"
-              />
-            </svg>
-          </div>
-        </div>
+   
       </div>
     </>
   );
