@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import useRouter from "next/router"
 import styles from "./styles.module.css";
 
 function FooterEmail() {
@@ -10,6 +11,7 @@ function FooterEmail() {
     email: "",
   })
 
+  const router = useRouter()
 
   const handleChange = ({ target }) => {
     setEmails({ ...emails, [target.name]: target.value });
