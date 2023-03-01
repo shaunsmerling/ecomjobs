@@ -11,7 +11,7 @@ function Footer() {
 
   return (
     <>
-      <div className="">
+      <div className="s">
         <div className={styles.footer1}>
          
        

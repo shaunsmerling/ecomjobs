@@ -74,7 +74,6 @@ const timestampInSeconds = getTimestampInSeconds();
 // Get Todays Date
 
   // Function to send an email using Nodemailer
-
   const transporter = nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
@@ -91,16 +90,15 @@ const timestampInSeconds = getTimestampInSeconds();
 
     // Filter out jobs that are older than 7 days
     const filteredData = data.filter((job) => {
+    
       const date = new Date(job.postedat);
       const timestampInSecs = Math.floor(date.getTime() / 1000);
+  
 
-      
       if (timestampInSecs > timestampInSeconds) {
-       return job
+        return job;
       }
     });
-
-
 
 
 const structuredData = filteredData.map((job) => `
@@ -108,7 +106,11 @@ const structuredData = filteredData.map((job) => `
     `
 ).join('')
 
+
+
     emailList.forEach((email) => {
+
+
   const mailOptions = {
     from: "shaun@ecomportal.co",
     to: `${email}`,
@@ -136,12 +138,15 @@ const structuredData = filteredData.map((job) => `
     `
   };
 
+
+
  transporter.sendMail(mailOptions, (error, info) => {
   if (error) {
     console.log(error);
   } else {
     console.log("Email sent: " + info.response);
   }
+  setTimeout(3000);
 });
   })
 });

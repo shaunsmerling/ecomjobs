@@ -300,6 +300,21 @@ function NavBarThree() {
                         </a>
                       )}
                     </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="/entry-level"
+                          className={classNames(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                        Entry Level
+                        </a>
+                      )}
+                    </Menu.Item>
                   </div>
                 </Menu.Items>
               </Transition>
@@ -759,6 +774,21 @@ Post a Job
                           )}
                         >
                         Tools
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="/entry-level"
+                          className={classNames(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                        Entry Level
                         </a>
                       )}
                     </Menu.Item>

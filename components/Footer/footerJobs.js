@@ -10,7 +10,7 @@ function Footer() {
 
   return (
     <>
-      <div className="px-4 sm:px-6 lg:px-8 mx-auto max-w-9xl">
+      <div className="">
         <div className={styles.footer1}>
          
        
