@@ -33,7 +33,7 @@ fetchEmail().then((data) => {
         continue;
       }
   
-      if (!uniqueEmails.has(email)) {
+      if (!uniqueEmails.has(email) && email.includes(".com")) {
         uniqueEmails.add(email);
       }
     }
@@ -69,7 +69,13 @@ function getTimestampInSeconds() {
 const timestampInSeconds = getTimestampInSeconds();
 
 
-
+function getTodaysDate() {
+  const today = new Date();
+  const year = today.getFullYear().toString().substr(-2);
+  const month = (today.getMonth() + 1).toString().padStart(2, '0');
+  const day = today.getDate().toString().padStart(2, '0');
+  return `${month}/${day}/${year}`;
+}
 
 // Get Todays Date
 
@@ -78,6 +84,7 @@ const timestampInSeconds = getTimestampInSeconds();
     service: "gmail",
     host: "smtp.gmail.com",
     port: 465,
+    pool: true,
     auth: {
       user: "shaun@ecomportal.co",
       pass: process.env.EMAIL_PW,
@@ -108,7 +115,10 @@ const structuredData = filteredData.map((job) => `
 
 
 
-    emailList.forEach((email) => {
+emailList.forEach(function (email, index) {
+  setTimeout(() => {
+    sendMail()
+    }, 3000 * index)
 
 
   const mailOptions = {
@@ -139,15 +149,17 @@ const structuredData = filteredData.map((job) => `
   };
 
 
-
+function sendMail() {
  transporter.sendMail(mailOptions, (error, info) => {
   if (error) {
     console.log(error);
   } else {
     console.log("Email sent: " + info.response);
   }
-  setTimeout(3000);
 });
+
+console.log("Finished sending weekly job updates for " + getTodaysDate())
+}
   })
 });
 
