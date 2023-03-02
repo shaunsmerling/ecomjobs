@@ -11,12 +11,12 @@ function Post({post}) {
       title={post.title}
       description={post.description}
       openGraph={{
-        url: `https://www.ecomportal.co/interviews/${post.slug.current}`,
+        url: `https://www.ecomportal.co/interviews/post/${post.slug.current}`,
         title: `${post.title}`,
         description: `${post.description}`,
         images: [
           {
-            url:`https://www.ecomportal.co/interviews/${post.slug.current}`,
+            url:`https://www.ecomportal.co/interviews/post/${post.slug.current}`,
             width: 800,
             height: 600,
             alt: 'Og Image Alt',

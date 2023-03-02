@@ -11,12 +11,12 @@ function Post({post}) {
       title={post.title}
       description={post.description}
       openGraph={{
-        url: `https://www.ecomportal.co/salaries/post/${post.slug.current}`,
+        url: `https://www.ecomportal.co/loyalty-programs/post/${post.slug.current}`,
         title: `${post.title}`,
         description: `${post.description}`,
         images: [
           {
-            url:`https://www.ecomportal.co/salaries/post/${post.slug.current}`,
+            url:`https://www.ecomportal.co/loyalty-programs/post/${post.slug.current}`,
             width: 800,
             height: 600,
             alt: 'Og Image Alt',
@@ -75,7 +75,7 @@ function Post({post}) {
           <div className="flex items-center justify-center mt-8 space-x-2">
             <p className="text-base font-medium text-gray-900">
               <a href="#" title="" className="">
-                Salaries              </a>
+                Loyalty Programs            </a>
             </p>
             <span className="text-base font-medium text-gray-500">
               •
@@ -96,6 +96,7 @@ function Post({post}) {
             </div>
             </a>
         </div>
+        
 
         <div className="mt-8 sm:mt-12 lg:mt-10 mb-4 mx-auto aspect-w-16 aspect-h-9 lg:aspect-h-6">
           <img loading="lazy" className="object-cover mx-auto w-1/2 h-1/2" src={urlFor(post.mainImage).url()} alt="">
