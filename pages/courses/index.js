@@ -41,8 +41,8 @@ export default function salaries({posts}) {
    description="Learn The Top eCommerce Skills To Supercharge Your Career  " 
    openGraph={{
      url: 'https://www.url.ie/a',
-     title: 'Open Graph Title',
-     description: 'Open Graph Description',
+     title: 'Courses | eComPortal',
+     description: 'Courses | eComPortal',
      images: [
        {
          url: 'https://www.example.ie/og-image-01.jpg',
