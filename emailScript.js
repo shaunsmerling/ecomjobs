@@ -92,7 +92,7 @@ function getTodaysDate() {
     secure: true,
   });
 
-  const email = async () => {
+  // const email = async () => {
   fetchData().then((data) => {
 
 
@@ -164,14 +164,13 @@ console.log("Finished sending weekly job updates for " + getTodaysDate())
 
   })
 })
-  }
+  // }
 
-  const job = new CronJob("0 0 * * 2", () => {
-    email();
-  })
+  // const job = new CronJob("0 0 * * 2", () => {
+  //   email();
+  // })
 
-  job.start()
-  
+  // job.start()
 
 
 

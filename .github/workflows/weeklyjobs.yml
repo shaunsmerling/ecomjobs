@@ -1,0 +1,15 @@
+name: weekly-jobs
+on:
+  schedule:
+    - cron: "0 0 * * 2"
+  workflow_dispatch:
+jobs:
+  build-node:
+    runs-on: ubuntu-latest
+    container: node:16
+    steps:
+      - run: node --version
+      - run: npm --version
+      - uses: actions/checkout@v3
+      - run: npm install
+      - run: node emailScript
