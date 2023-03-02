@@ -206,7 +206,7 @@ export default function HomePage() {
       <FooterEmail/>
       <Footer/>
       <FooterCities/>
-      {/* <FooterJobs/> */}
+      <FooterJobs/>
       {/* <FooterRoles/> */}
       </div>
       </div>
