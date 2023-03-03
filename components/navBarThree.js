@@ -330,6 +330,21 @@ function NavBarThree() {
                         </a>
                       )}
                     </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="/printondemand"
+                          className={classNames(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                        Print On Demand
+                        </a>
+                      )}
+                    </Menu.Item>
                   </div>
                 </Menu.Items>
               </Transition>
@@ -819,6 +834,21 @@ Post a Job
                           )}
                         >
                         Loyalty Programs
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="/printondemand"
+                          className={classNames(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                        Print On Demand
                         </a>
                       )}
                     </Menu.Item>
