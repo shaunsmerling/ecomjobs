@@ -14,8 +14,6 @@ export async function getServerSideProps() {
 
 function brands({ companies }) {
 
-  console.log(companies)
-
 
     return (
     
@@ -47,8 +45,8 @@ function brands({ companies }) {
         <section class="content-wrapper"><div class="content ">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
        
-       <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Join a brand.</h1>
-       <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Search our directory of eCommerce brands to find a job you'll love. </p>
+       <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-black md:text-5xl lg:text-6xl ">Join a brand.</h1>
+       {/* <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Search our directory of eCommerce brands to find a job you'll love. </p> */}
        </div>
 </div></section>
         <section class="content-wrapper"><div class="content "><div class="companyCards ">
@@ -67,7 +65,7 @@ function isImageFile(filename) {
 
           return (
 
-<a class="companyCard  hover:opacity-90" href={`/company/${company.companyUrl}`}><div class="companyCard__logo"></div>
+<a class="companyCard  hover:bg-btn" href={`/company/${company.companyUrl}`}><div class="companyCard__logo"></div>
 <div className="self-startlg:self-center">
                   <img
                     src={logoImage}

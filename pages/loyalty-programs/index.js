@@ -62,7 +62,7 @@ export default function salaries({posts}) {
  />
    <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
      <div className="text-center sm:flex sm:items-end sm:space-x-16 sm:text-left">
-       <h2 className="max-w-sm text-3xl mx-auto sm:mx-0 font-bold text-white sm:text-4xl shrink-0">
+       <h2 className="max-w-sm text-3xl mx-auto sm:mx-0 font-bold text-black sm:text-4xl shrink-0">
        Tools, Tips, and Case Studies of Loyalty Programs from eCommerce Brands
        </h2>
        <p className="max-w-xs mt-5 text-sm font-normal leading-6 text-gray-500 sm:mt-0">

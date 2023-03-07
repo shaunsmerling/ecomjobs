@@ -50,15 +50,15 @@ const handleSubmit = (e) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-12 lg:gap-x-16 xl:gap-x-32">
           <div className="flex flex-col self-stretch justify-between">
             <div className="flex-1">
-              <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl lg:text-5xl">
                 Love to hear from you, Get in touch 👋
               </h2>
-              <p className="mt-4 text-base font-normal leading-7 text-white lg:text-lg lg:mt-6 lg:leading-8">
+              <p className="mt-4 text-base font-normal leading-7 text-black lg:text-lg lg:mt-6 lg:leading-8">
                 Feel free to reach out if you have any questions regarding job posting, recruiting, company profiles, talent acquisition.
               </p>
             </div>
 
-            <div className="relative mt-10 overflow-hidden bg-[#17614A] lg:mt-0 rounded-3xl -rotate-3">
+            <div className="relative mt-10 overflow-hidden bg-black lg:mt-0 rounded-3xl -rotate-3">
               <div
                 className="absolute bottom-0 right-0 -mb-72 -mr-24 border-[6px] opacity-20 border-white rounded-full w-96 h-96">
               </div>
@@ -93,7 +93,7 @@ const handleSubmit = (e) => {
                 </div>
                 <blockquote className="mt-8">
                   <p className="text-xl font-normal text-white">
-                    "ecomportal has helped us find really high quality candidates for our open positions. We've been able to sift through all the other generic job boards like Linkedin or Indeed & get right to the industries-finest."
+                    "eComportal has helped us find really high quality candidates for our open positions. We've been able to sift through all the other generic job boards like Linkedin or Indeed & get right to the industries-finest."
                   </p>
                 </blockquote>
                 <div className="flex items-center mt-6">
@@ -152,7 +152,7 @@ const handleSubmit = (e) => {
                 </div>
 
                 <button type="submit" onClick={(e)=>{handleSubmit(e)}}
-                  className="inline-flex items-center justify-center w-full px-12 py-4 text-base font-medium text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700">
+                  className="inline-flex items-center justify-center w-full px-12 py-4 text-base font-medium text-white transition-all duration-200 bg-black border border-transparent rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700">
                   Send message
                 </button>
               </form>

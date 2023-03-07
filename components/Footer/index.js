@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "../../public/logo.svg";
+import logo from "../../public/logo.png";
 import Image from "next/image";
 import styles from "./styles.module.css";
 
@@ -14,7 +14,7 @@ function Footer() {
         <div className={styles.footer}>
           <div className={styles.section_left}>
             <div className={styles.logo_section}>
-              <Image loading="lazy" src={logo} alt="footer-logo" />
+              <Image className="h-30 w-48" loading="lazy" src={logo} alt="footer-logo" />
            
             </div>
             <div className={styles.socila_icons}>

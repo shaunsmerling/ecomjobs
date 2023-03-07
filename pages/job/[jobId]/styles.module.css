@@ -46,8 +46,9 @@
 }
 .rightside {
   width: 25%;
-  background: #f8fef5;
-  border-radius: 6px;
+  background: #fffcd3;
+  border-radius: 10px;
+  height: 25%;
   padding: 30px;
   text-align: center;
   position: relative;

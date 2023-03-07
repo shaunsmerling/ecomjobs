@@ -101,7 +101,7 @@ function isImageFile(filename) {
   `${logoString}`;
 
   return (
-    <div className="bg-gray-900 pb-10">
+    <div className="bg-d2c pb-10">
       <NextSeo
       title={`${company.company_name} | eCommerce Jobs `}
       description={`${company.company_name} | eCommerce Jobs `}
@@ -174,9 +174,9 @@ function isImageFile(filename) {
                       {company.company_url}
                     </a>
                   </div>
-                  <div class="mb-2 text-blueGray-600">
+                  {/* <div class="mb-2 text-blueGray-600">
                     <i class="fas fa-university mr-2 text-lg text-blueGray-400"></i>
-                  </div>
+                  </div> */}
                 </div>
                 <div class="mt-10 py-10 border-t border-blueGray-200 text-center">
                   <div class="flex flex-wrap justify-center">
@@ -199,10 +199,10 @@ function isImageFile(filename) {
                   <li className="w-full ml-2 my-4 box-border ">
                    
                     
-                    <p className=" ml-2 mr-2 lg:mr-10 -mb-2 z-1 text-md lg:text-2xl text-[#17614A] z-0 font-bold pb-2 pr-20 ">{job?.job_position}</p>
+                    <p className=" ml-2 mr-2 lg:mr-10 -mb-2 z-1 text-md lg:text-2xl text-black z-0 font-bold pb-2 pr-20 ">{job?.job_position}</p>
                     <span className=" text-xs ml-2">{getDate(job?.postedat)}</span>
 
-                    <p className="float-right mr-4 text-[10px] -mt-6 bold  text-sky-200 lg:text-xl">{job?.job_type} | {job?.location}</p>
+                    <p className="float-right mr-4 text-[10px] -mt-6 bold  text-black lg:text-xl">{job?.job_type} | {job?.location}</p>
                       
                   </li>
                 </ul>

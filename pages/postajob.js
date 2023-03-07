@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Preview from "../components/preview";
 import { NextSeo } from "next-seo";
@@ -20,7 +20,6 @@ function PostAJob() {
 
   const { data: session } = useSession() 
 
-const [addOn, setAddOn] = useState(0)
 
 // function dateToUnixTimestamp(date) {
 //   let datets = Math.floor(date.getTime() / 1000)
@@ -66,6 +65,29 @@ const [addOn, setAddOn] = useState(0)
   //       return router.push("https://buy.stripe.com/aEU2bgbew33f1A4dQY")
   //   }
   // }
+const [checkbox, setCheckbox] = useState({
+highlight: 0,
+top24: 0,
+week: 0,
+month: 0,
+email: 0,
+})
+
+const [total, setTotal] = useState(99);
+
+function handleCheckboxChange(event) {
+  const { name, value, checked } = event.target;
+  setCheckbox(prevState => ({
+    ...prevState,
+    [name]: checked ? parseInt(value) : 0,
+  }));
+}
+
+useEffect(() => {
+  setTotal(
+    Object.values(checkbox).reduce((acc, cur) => acc + cur, 0)
+  );
+}, [checkbox]);
 
   function delayLoad() {
     let timerId;
@@ -169,7 +191,7 @@ const [addOn, setAddOn] = useState(0)
 <div class="hugger__content">
 <div class="wizard">
 <div class="max-w-5xl my-8">
-<h1 class="text-2xl md:text-4xl font-bold block md:inline text-lightGreen-300">Hire the best. </h1>
+<h1 class="text-2xl md:text-4xl font-bold block md:inline text-black">Hire the best. </h1>
 <h2 class="text-xl md:text-4xl block md:inline font-normal md:font-light">Post a job & reach thousands of potential employees working in the eCommerce industry.</h2>
 </div>
 <div class="grid grid-cols-5 mb-16">
@@ -178,20 +200,20 @@ const [addOn, setAddOn] = useState(0)
 
 {session ? (
 <div>
-<div>
+{/* <div>
 <h3 class="text-xl font-medium leading-6 text-gray-900">Interested in creating a company profile?</h3>
 <p class="mt-1 text-gray-500">Create a profile page for your brand so that future employees can learn more</p>
-</div>
+</div> */}
 <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
 
-<div class="sm:col-span-3 form-field">
+{/* <div class="sm:col-span-3 form-field">
 <a class="whitespace-nowrap inline-flex items-center justify-center pl-3 pr-1 py-1 border border-transparent rounded-full shadow-sm text-base font-medium text-white  bg-lightGreen-300 " href="/list-your-company">
 Register Here
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-1 w-6 h-6">
 <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 </a>
-</div>
+</div> */}
 
 <div class="sm:col-span-4 form-field">
 <label class="block text-sm font-medium text-gray-700" >Company Name</label>
@@ -223,20 +245,20 @@ name="companyUrl"
 </div>
 ) : (
 <div>
-<div>
+{/* <div>
 <h3 class="text-xl font-medium leading-6 text-gray-900">Create an account with us</h3>
 <p class="mt-1 text-gray-500">Create an account to save your jobs, create a company page, and get alerts</p>
-</div>
+</div> */}
 <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
 
-<div class="sm:col-span-3 form-field">
+{/* <div class="sm:col-span-3 form-field">
 <a class="whitespace-nowrap inline-flex items-center justify-center pl-3 pr-1 py-1 border border-transparent rounded-full shadow-sm text-base font-medium text-white  bg-lightGreen-300 " href="/signup">
 Sign In
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-1 w-6 h-6">
 <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
 </a>
-</div>
+</div> */}
 
 <div class="sm:col-span-4 form-field">
 <label class="block text-sm font-medium text-gray-700" >Company Name</label>
@@ -465,8 +487,8 @@ value={location}
 onChange={handleChange} 
 />
 </div>
-</div>
-
+</div> */}
+{/* 
 <div class="sm:col-span-4 form-field">
 <label for="" class="block text-sm font-medium text-gray-700 mb-1">
                     {" "}
@@ -537,15 +559,128 @@ onChange={handleChange} />
 </div>
 )} */}
 </div>
+<div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
 
+<div class="sm:col-span-3 form-field">
+<label class="block text-sm font-medium text-gray-700" for="post_user_attributes_first_name">Boost Your Job Post</label>
+
+<div class="flex mt-4">
+          <div className="flex items-center h-5">
+            <input
+              id="helper-checkbox"
+              aria-describedby="helper-checkbox-text"
+              type="checkbox"
+              name="highlight"
+              value="39"
+              className="w-4 h-4 bg-white border-black rounded focus:ring-blue-500 focus:ring-2"
+              onChange={handleCheckboxChange}
+            />
+    </div>
+    <div class="ml-2 text-sm">
+        <label for="helper-checkbox" class="font-bold text-black "> Highlight Post (+$39) </label>
+        <p id="helper-checkbox-text" class="text-xs font-normal text-black"> ⚡️ Include our featured tag & highlight your job </p>
+    </div>
+</div>
+
+
+
+<div class="flex mt-4">
+    <div class="flex items-center h-5">
+    <input
+              id="helper-checkbox"
+              aria-describedby="helper-checkbox-text"
+              type="checkbox"
+              name="top24"
+              value="99"
+              className="w-4 h-4 bg-white border-black rounded focus:ring-blue-500 focus:ring-2"
+              onChange={handleCheckboxChange}
+            />
+    </div>
+    <div class="ml-2 text-sm">
+    <label for="helper-checkbox" class="font-bold text-black ">Stick To The Top Page For 24 Hours (+$99)</label>
+        <p id="helper-checkbox-text" class="text-xs font-normal text-black">📌 Pin your post to the top of the 1st page for 24 hours</p>
+    </div>
+</div>
+
+
+
+<div class="flex mt-4">
+    <div class="flex items-center h-5">
+    <input
+              id="helper-checkbox"
+              aria-describedby="helper-checkbox-text"
+              type="checkbox"
+              name="week"
+              value="199"
+              className="w-4 h-4 bg-white border-black rounded focus:ring-blue-500 focus:ring-2"
+              onChange={handleCheckboxChange}
+            />
+    </div>
+    <div class="ml-2 text-sm">
+    <label for="helper-checkbox" class="font-bold text-black ">Stick To The Top Page For 1 Week (+$199)</label>
+        <p id="helper-checkbox-text" class="text-xs font-normal text-black">📌 Pin your post to the top of the 1st page for 1 Week</p>
+    </div>
+</div>
+
+
+
+<div class="flex mt-4">
+    <div class="flex items-center h-5">
+    <input
+              id="helper-checkbox"
+              aria-describedby="helper-checkbox-text"
+              type="checkbox"
+              name="month"
+              value="299"
+              className="w-4 h-4 bg-white border-black rounded focus:ring-blue-500 focus:ring-2"
+              onChange={handleCheckboxChange}
+            />
+    </div>
+    <div class="ml-2 text-sm">
+    <label for="helper-checkbox" class="font-bold text-black ">Stick To The Top Page For 1 Month (+$299)</label>
+        <p id="helper-checkbox-text" class="text-xs font-normal text-black">📌 Pin your post to the top of the 1st page for 1 Month</p>
+    </div>
+</div>
+
+
+<div class="flex mt-4">
+    <div class="flex items-center h-5">
+    <input
+              id="helper-checkbox"
+              aria-describedby="helper-checkbox-text"
+              type="checkbox"
+              name="email"
+              value="89"
+              className="w-4 h-4 bg-white border-black rounded focus:ring-blue-500 focus:ring-2"
+              onChange={handleCheckboxChange}
+            />
+    </div>
+    <div class="ml-2 text-sm">
+    <label for="helper-checkbox" class="font-bold text-black ">Email Blast to eComportal's Newsletter (+$89)</label>
+        <p id="helper-checkbox-text" class="text-xs font-normal text-black">📢 Reach thousands subscribed to our email list</p>
+    </div>
+</div>
+{/* <div class="flex mt-4 mb-4">
+    <div class="flex items-center h-5">
+    <input id="helper-checkbox" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 bg-white
+         border-black rounded focus:ring-blue-500 
+        focus:ring-2 "></input>
+    </div>
+    <div class="ml-2 text-sm">
+    <label for="helper-checkbox" class="font-bold text-black ">Free shipping via Flowbite</label>
+        <p id="helper-checkbox-text" class="text-xs font-normal text-black">For orders shipped from $25 in books or $29 in other categories</p>
+    </div>
+</div> */}
+</div>
+</div>
 <div class="pt-5">
 <div class="flex fixed w-full bottom-0 left-0 right-0 z-10 py-1 justify-center bg-white border-t sm:justify-end sm:relative sm:w-auto sm:p-0 sm:border-none">
 <button
             type="submit"
             href=""
-            class="flex relative items-center w-10/12 justify-center lg:mb-4 mx-auto px-20 py-3 sm:text-sm text-base sm:py-3.5  text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-lg  hover:bg-[#114031] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+            class="flex relative items-center w-10/12 justify-center lg:mb-4 mx-auto px-20 py-3 sm:text-sm text-base sm:py-3.5  text-white transition-all duration-200 bg-black border border-transparent rounded-lg  hover:bg-btn hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
           >
-            Post a job for $99
+            Post a job for&nbsp;<span> {`${total ? "$" + total : "$99"}`}</span>
           </button>
 </div>
 </div>

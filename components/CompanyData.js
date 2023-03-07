@@ -29,13 +29,15 @@ const CompanyData = ({ hit }) => {
       return "3 months ago";
     }
   }
+
+
   return (
     <>
       <div
-        className={` ml-4 rounded-lg mx-2 mb-4 lg:mb-7 border border-lightGray-100 bg-white lg:rounded-lg py-4 pl-4 pr-4  hover:bg-gray-200  ${hit?.featured && "bg-lightYellow-100"
+        className={` ml-4 rounded-lg mx-2 mb-4 lg:mb-7 border border-lightGray-100 bg-[#fdf4b0] lg:rounded-lg py-4 pl-4 pr-4  hover:bg-[#eee761]  ${hit?.featured && "bg-lightYellow-100"
           }`}
       >
-        <a href={`/job/${hit?.jobUrl}`}>
+        <a className="z-0" href={`/job/${hit?.jobUrl}`}>
         <div className="flex flex-col gap-3">
           <div className="flex flex-row justify-between">
             <div className="flex flex-row items-center gap-3 md:gap-4">
@@ -62,7 +64,7 @@ const CompanyData = ({ hit }) => {
                       {hit?.emp_count && (
                         <p className="flex flex-row items-center gap-2 ">
                           <UserIcon />
-                          <span className="font-Poppins font-normal text-sm tracking-common opacity-60 leading-6 lg:!leading-30">
+                          <span className="font-Poppins font-normal text-sm text-black tracking-common opacity-60 leading-6 lg:!leading-30">
                             {parseInt(hit.emp_count) > 5
                               ? `5 - ${hit.emp_count} Employees`
                               : `0 - ${hit.emp_count} Employees`}
@@ -72,7 +74,7 @@ const CompanyData = ({ hit }) => {
                       {(hit?.salaryMin && hit?.salaryMax !== "null") || 0 ? (
                         <p className="flex flex-row items-center gap-2 ">
                           <SalaryIcon />
-                          <span className="font-Poppins font-normal text-sm tracking-common opacity-60 leading-6 lg:!leading-30">
+                          <span className="font-Poppins font-normal text-sm text-black tracking-common opacity-60 leading-6 lg:!leading-30">
                             {"$" + hit.salaryMin + ` - ` + "$" + hit.salaryMax}
                           </span>
                         </p>
@@ -113,7 +115,7 @@ const CompanyData = ({ hit }) => {
           )} */}
           <div className="w-full lg:mt-2  flex flex-row flex-wrap gap-2 justify-start items-center">
             {hit?.job_category && (
-              <div className="py-1.5 px-4 bg-lightGreen-300 rounded-xl">
+              <div className="py-1.5 px-4 bg-black rounded-xl">
                 <p className="font-Poppins font-medium text-xs text-white leading-4">
                   {hit.job_category}
                 </p>
@@ -147,14 +149,15 @@ const CompanyData = ({ hit }) => {
                   </span>
                 </p>
               )}
-              {/* <div className="w-full md:w-auto flex  float-right">
-              <a
-                href={`/job/${hit?.jobUrl}`}
-                target="_blank"
-                className="inline-block font-Poppins text-white font-semibold text-xs leading-6 md:!leading-30 tracking-common bg-lightGreen-300 py-1.5 px-5 md:px-6 md:py-2 rounded-3xl hover:scale-110 duration-150"
+              
+              {/* <div className="w-full md:w-auto ">
+              <button
+                id="save-btn"
+                onclick={console.log("booty")}
+                className=" save-btn absolute right-9  font-Poppins text-black font-semibold text-xs leading-6 md:!leading-30 tracking-common bg-btn py-1.5 px-5 md:px-6 md:py-2 rounded-3xl hover:scale-110 duration-150"
               >
-                Learn More
-              </a>
+                Save
+              </button>
             </div> */}
           </div>
             {/* <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-5">
@@ -191,10 +194,13 @@ const CompanyData = ({ hit }) => {
             </div> */}
      
         </div>
-        </a>
+    </a>
       </div>
     </>
   );
 };
+ 
+
+
 
 export default CompanyData;

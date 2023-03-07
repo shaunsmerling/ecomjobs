@@ -23,7 +23,7 @@
 .footerEmail {
   display: flex;
 
-  background-color: #2F604B;
+  background-color: #fef266;
   justify-content: space-between;
   padding: 40px;
   border-top: 1px solid #00000024;
@@ -58,14 +58,14 @@
 }
 
 .socila_icons svg:hover circle {
-  fill: #2e604b;
+  fill: #bcb48c;
 }
 .twiter circle {
   fill: #fff;
   stroke: rgb(241, 241, 241);
 }
 .socila_icons svg:hover path {
-  fill: #fff;
+  fill: #000000;
 }
 .twiter path {
   fill: #000;
@@ -132,11 +132,11 @@
   }
 
 .ul_content :hover {
-  color: #258B60;
+  color: #000000;
 }
 
 .ul_content1 :hover {
-  color: #258B60;
+  color: #000000;
 }
 .footer_bottom {
   padding-bottom: 40px;

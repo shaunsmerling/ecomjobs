@@ -20,6 +20,27 @@
   grid-auto-flow: row;
 }
 
+.animate-tick {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.animate-tick path {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  transition: stroke-dashoffset 0.3s ease-in-out;
+}
+
+#save-btn.animate-tick .animate-tick {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#save-btn.animate-tick .animate-tick path {
+  stroke-dashoffset: 0;
+}
+
 /* Button */
 .ais-Dropdown-button {
   padding: 30px;
@@ -363,9 +384,11 @@
   @apply focus:ring-0 outline-none border-lightGray-100;
 }
 .ais-InfiniteHits .ais-InfiniteHits-loadMore {
-  @apply bg-lightGreen-300 font-Poppins px-8 rounded-3xl py-3 text-base font-normal flex justify-center items-center mx-auto hover:scale-105 duration-150;
-  color: white;
+  @apply bg-btn font-Poppins px-8 rounded-3xl py-3 text-base font-normal flex justify-center items-center mx-auto hover:scale-105 duration-150;
+  color: black;
+  font-weight: 600;
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .ais-InfiniteHits .ais-InfiniteHits-loadMore--disabled {

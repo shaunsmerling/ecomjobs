@@ -4,33 +4,49 @@ import Link from "next/link"
 import { useSession } from "next-auth/react";
 import ModalSignIn from "./navModalSignIn";
 import { useState } from "react"
+import { api_url } from "../config";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
 }
 
-function NavBarThree() {
+
+export async function getServerSideProps() {
+    const res = await fetch(`${api_url}/api/users`);
+    const data =await res.json();
+
+    return {
+      props: {users: data}
+    }
+}
+
+function NavBarThree({ users }) {
+
+  console.log(users)
+
 
   const [button, setButton] = useState(true)
   
 
   const { data: session } = useSession();
 
+
+ 
     return (
 <div>
       {!session ? (
-        <div class="relative bg-gray-900 z-20" data-controller="transition">
-<div class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
+        <div class="relative bg-d2c z-20" data-controller="transition">
+<div class="flex justify-between items-center -mt-6 px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
 <div class="flex justify-start">
 <a href="/">
-<img class="h-14 w-14 sm:h-18 sm:w-18" alt="" src="/logobg.png"/>
+<img class="h-30 w-52 sm:h-18 sm:w-18" alt="" src="/logo.png"/>
 </a> </div>
 
 <div className="flex ml-2 lg:hidden">
             <button
               type="button"
               onClick={() => setButton(!button)}
-              className="inline-flex items-center bg-lightGreen-300 p-2.5 text-gray-300 duration-200 border border-gray-300 rounded-full hover:bg-gray-900 hover:text-white transiton-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 focus:bg-gray-900 focus:text-white"
+              className="inline-flex items-center bg-lightGreen-300 p-2.5 text-gray-300 duration-200 border border-gray-300 rounded-full hover:bg-gray-900 hover:text-black transiton-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 focus:bg-gray-900 focus:text-black"
             >
               {button ? (
                 <div>
@@ -85,7 +101,7 @@ function NavBarThree() {
 </button> */}
 <Menu as="div" className="relative inline-block text-left">
               <div className="  rounded-full">
-                <Menu.Button className="text-white     px-3 py-1 rounded-full inline-flex items-center text-base hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" aria-expanded="false" data-action="transition#toggle ">
+                <Menu.Button className="text-black     px-3 py-1 rounded-full inline-flex items-center text-base hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" aria-expanded="false" data-action="transition#toggle ">
                   <a
                     href=""
                     title=""
@@ -93,7 +109,7 @@ function NavBarThree() {
                   >
                     Find Jobs
                   </a>
-                  <svg class="text-bold text-white ml-1 h-5 w-5 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="text-bold text-black ml-1 h-5 w-5 group-hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path>
 </svg>
                 </Menu.Button>
@@ -193,14 +209,14 @@ function NavBarThree() {
 </div>
 </div> */}
 </div>
-<Link href="/brands" class="whitespace-nowrap text-base rounded-full px-3 py-1 -ml-1 text-white hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
+<Link href="/brands" class="whitespace-nowrap text-base rounded-full px-3 py-1 -ml-1 text-black hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
   Brands
 </Link>
 
 <div class="relative" data-controller="transition" data-action="keyup@window->transition#hideWithKeyboard click@window->transition#hideBackground">
 <Menu as="div" className="relative inline-block text-left">
               <div className="  rounded-full">
-                <Menu.Button className="text-white group    px-3 py-1 rounded-full inline-flex items-center text-base hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" aria-expanded="false" data-action="transition#toggle ">
+                <Menu.Button className="text-black group    px-3 py-1 rounded-full inline-flex items-center text-base hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" aria-expanded="false" data-action="transition#toggle ">
                   <a
                     href=""
                     title=""
@@ -208,7 +224,7 @@ function NavBarThree() {
                   >
                     More
                   </a>
-                  <svg class="text-white ml-1 h-5 w-5 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="text-black ml-1 h-5 w-5 group-hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path>
 </svg>
                 </Menu.Button>
@@ -345,6 +361,21 @@ function NavBarThree() {
                         </a>
                       )}
                     </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="/ecommerce-platforms"
+                          className={classNames(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                        eCommerce Platforms
+                        </a>
+                      )}
+                    </Menu.Item>
                   </div>
                 </Menu.Items>
               </Transition>
@@ -356,22 +387,20 @@ function NavBarThree() {
 <div class="hidden md:flex items-center justify-end gap-5 md:flex-1 lg:w-0">
 <div class="relative" data-controller="transition" data-action="keyup@window->transition#hideWithKeyboard click@window->transition#hideBackground">
 <Menu as="div" className="relative inline-block text-left">
-              <div className="">
-                <Menu.Button className="text-white group px-3 py-1 rounded-full inline-flex items-center text-base hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" aria-expanded="false" data-action="transition#toggle ">
+              {/* <div className="">
+                <Menu.Button className="text-black group px-3 py-1 rounded-full inline-flex items-center text-base hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" aria-expanded="false" data-action="transition#toggle ">
                   <a
-                    href=""
+                    href="/signup"
                     title=""
 
                   >
-                    For Employers
+                   Log In
                   </a>
-                  <svg class="text-white ml-1 h-5 w-5 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path>
-</svg>
+                 
                 </Menu.Button>
-              </div>
+              </div> */}
 
-              <Transition
+              {/* <Transition
                 as={Fragment}
                 enter="transition ease-out duration-100"
                 enterFrom="transform opacity-0 scale-95"
@@ -379,8 +408,8 @@ function NavBarThree() {
                 leave="transition ease-in duration-75"
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
-              >
-                <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              > */}
+                {/* <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                   <div className="py-1">
                   <Menu.Item>
                       {({ active }) => (
@@ -444,12 +473,12 @@ function NavBarThree() {
                     </Menu.Item>
                 
                   </div>
-                </Menu.Items>
-              </Transition>
+                </Menu.Items> */}
+              {/* </Transition> */}
             </Menu>
 
 </div>
-<a class="whitespace-nowrap inline-flex items-center justify-center pl-3 pr-1 py-1 border border-transparent rounded-full shadow-sm text-base font-medium text-white  bg-lightGreen-300 " href="/postajob">
+<a class="whitespace-nowrap inline-flex items-center justify-center pl-3 pr-1 py-1 border border-transparent rounded-full shadow-sm text-base font-medium text-black  bg-btn " href="/postajob">
 Post a Job
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-1 w-6 h-6">
 <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -479,7 +508,7 @@ Post a Job
 <div class="mt-6">
 <nav class="grid grid-cols-1 gap-7">
 <a class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50" href="/">
-<div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-brand text-white">
+<div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-brand text-black">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
@@ -487,7 +516,7 @@ Post a Job
 <div class="ml-4 text-base font-medium text-gray-900">Recent Jobs</div>
 </a>
 <a class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50" href="/startups">
-<div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-brand text-white">
+<div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-brand text-black">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
 <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z"></path>
 </svg>
@@ -495,7 +524,7 @@ Post a Job
 <div class="ml-4 text-base font-medium text-gray-900">Startups</div>
 </a>
 <a class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50" href="/locations">
-<div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-brand text-white">
+<div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-brand text-black">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
 <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"></path>
 </svg>
@@ -503,7 +532,7 @@ Post a Job
 <div class="ml-4 text-base font-medium text-gray-900">Locations</div>
 </a>
 <a class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50" href="/tags">
-<div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-brand text-white">
+<div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-brand text-black">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
 <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"></path>
 <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z"></path>
@@ -512,7 +541,7 @@ Post a Job
 <div class="ml-4 text-base font-medium text-gray-900">Tags</div>
 </a>
 <a class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50" href="/collections">
-<div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-brand text-white">
+<div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-blue-brand text-black">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
 <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"></path>
 </svg>
@@ -526,17 +555,17 @@ Post a Job
 </div> */}
 </div>
       ) : (
-          <div class="relative bg-gray-900 z-20" data-controller="transition">
-<div class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
+          <div class="relative bg-d2c z-20" data-controller="transition">
+<div class="flex justify-between items-center -mt-6 px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
 <div class="flex justify-start">
 <a href="/">
-<img class="h-14 w-14 sm:h-18 sm:w-18" alt="" src="/logobg.png"/>
+<img class="h-30 w-52 sm:h-18 sm:w-18" alt="" src="/logo.png"/>
 </a> </div>
 <div className="flex ml-2 lg:hidden">
             <button
               type="button"
               onClick={() => setButton(!button)}
-              className="inline-flex items-center bg-lightGreen-300 p-2.5 text-gray-300 duration-200 border border-gray-300 rounded-full hover:bg-gray-900 hover:text-white transiton-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 focus:bg-gray-900 focus:text-white"
+              className="inline-flex items-center bg-lightGreen-300 p-2.5 text-gray-300 duration-200 border border-gray-300 rounded-full hover:bg-gray-900 hover:text-black transiton-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 focus:bg-gray-900 focus:text-black"
             >
               {button ? (
                 <div>
@@ -592,7 +621,7 @@ Post a Job
 </button> */}
 <Menu as="div" className="relative inline-block text-left">
               <div className="  rounded-full">
-                <Menu.Button className="text-white     px-3 py-1 rounded-full inline-flex items-center text-base hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" aria-expanded="false" data-action="transition#toggle ">
+                <Menu.Button className="text-black  font-bold   px-3 py-1 rounded-full inline-flex items-center text-base hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" aria-expanded="false" data-action="transition#toggle ">
                   <a
                     href=""
                     title=""
@@ -600,7 +629,7 @@ Post a Job
                   >
                     Find Jobs
                   </a>
-                  <svg class="text-bold text-white ml-1 h-5 w-5 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="text-bold text-black ml-1 h-5 w-5 group-hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path>
 </svg>
                 </Menu.Button>
@@ -700,14 +729,14 @@ Post a Job
 </div>
 </div>
 </div>
-<Link href="/brands" class="whitespace-nowrap text-base rounded-full px-3 py-1 -ml-1 text-white hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
+<Link href="/brands" class="whitespace-nowrap font-bold  text-base rounded-full px-3 py-1 -ml-1 text-black hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
   Brands
 </Link>
 
 <div class="relative" data-controller="transition" data-action="keyup@window->transition#hideWithKeyboard click@window->transition#hideBackground">
 <Menu as="div" className="relative inline-block text-left">
               <div className="  rounded-full">
-                <Menu.Button className="text-white group    px-3 py-1 rounded-full inline-flex items-center text-base hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" aria-expanded="false" data-action="transition#toggle ">
+                <Menu.Button className="text-black group  font-bold   px-3 py-1 rounded-full inline-flex items-center text-base hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" aria-expanded="false" data-action="transition#toggle ">
                   <a
                     href=""
                     title=""
@@ -715,7 +744,7 @@ Post a Job
                   >
                     More
                   </a>
-                  <svg class="text-white ml-1 h-5 w-5 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="text-black ml-1 h-5 w-5 group-hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path>
 </svg>
                 </Menu.Button>
@@ -852,6 +881,21 @@ Post a Job
                         </a>
                       )}
                     </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="/ecommerce-platforms"
+                          className={classNames(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                        eCommerce Platforms
+                        </a>
+                      )}
+                    </Menu.Item>
                   </div>
                 </Menu.Items>
               </Transition>
@@ -862,20 +906,18 @@ Post a Job
 </nav>
 <div class="hidden md:flex items-center justify-end gap-5 md:flex-1 lg:w-0">
 <div class="relative" data-controller="transition" data-action="keyup@window->transition#hideWithKeyboard click@window->transition#hideBackground">
-  
 <Menu as="div" className="relative inline-block text-left">
               <div className="">
-                <Menu.Button className="text-white group px-3 py-1 rounded-full inline-flex items-center text-base hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" aria-expanded="false" data-action="transition#toggle ">
-                  <a
-                    href=""
-                    title=""
-
-                  >
-                    Your Account
-                  </a>
-                  <svg class="text-white ml-1 h-5 w-5 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <Menu.Button className="text-black group px-3 py-1 rounded-full inline-flex items-center text-base hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" aria-expanded="false" data-action="transition#toggle ">
+           <a>
+<div className="flex ">
+  <img src={`${session.user.image}`} className="rounded-full relative inline-block text-left h-10 w-auto" alt="" />
+  <svg class="text-black mt-4 ml-1 h-5 w-5 group-hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
 <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"></path>
 </svg>
+  </div>
+  </a>
+                  
                 </Menu.Button>
               </div>
 
@@ -893,7 +935,8 @@ Post a Job
                   <Menu.Item>
                       {({ active }) => (
                         <a
-                          href="/employers/posts"
+                          // href={users.achievements ? "/editprofile" : "/profile"}
+                          href="/profile"
                           className={classNames(
                             active
                               ? "bg-gray-100 text-gray-900"
@@ -901,14 +944,14 @@ Post a Job
                             "block px-4 py-2 text-sm"
                           )}
                         >
-                        My Jobs
+                         Profile
                         </a>
                       )}
                     </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
                         <a
-                          href="/bulkdiscounts"
+                          href="/profile/jobs"
                           className={classNames(
                             active
                               ? "bg-gray-100 text-gray-900"
@@ -916,7 +959,7 @@ Post a Job
                             "block px-4 py-2 text-sm"
                           )}
                         >
-                        Bulk Discounts
+                        Saved Jobs
                         </a>
                       )}
                     </Menu.Item>
@@ -935,21 +978,6 @@ Post a Job
                         </a>
                       )}
                     </Menu.Item>
-                     {/* <Menu.Item>
-                      {({ active }) => (
-                        <a
-                          href="/contactus"
-                          className={classNames(
-                            active
-                              ? "bg-gray-100 text-gray-900"
-                              : "text-gray-700",
-                            "block px-4 py-2 text-sm"
-                          )}
-                        >
-                        Company Profile
-                        </a>
-                      )}
-                    </Menu.Item> */}
                     <Menu.Item>
                       {({ active }) => (
                         <a
@@ -972,12 +1000,12 @@ Post a Job
             </Menu>
 
 </div>
-<a class="whitespace-nowrap inline-flex items-center justify-center pl-3 pr-1 py-1 border border-transparent rounded-full shadow-sm text-base font-medium text-white  bg-lightGreen-300 " href="/employers/postajob">
+{/* <a class="whitespace-nowrap inline-flex items-center justify-center pl-3 pr-1 py-1 border border-transparent rounded-full shadow-sm text-base font-medium text-black  bg-lightGreen-300 " href="/employers/postajob">
 Post a Job
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-1 w-6 h-6">
 <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
-</a>
+</a> */}
 </div>
 </div>
 </div>

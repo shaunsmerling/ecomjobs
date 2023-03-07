@@ -14,37 +14,6 @@ async function fetchEmail() {
 }
 
 
-fetchEmail().then((data) => {
-  let mockEmails = []
-  data.forEach((emails) => {
-    mockEmails.push(emails.email)
-  })
-
-  function removeDuplicatesAndEmptyEmails(emails) {
-    if (emails.length === 0) {
-      console.log("The email list is empty.");
-      return [];
-    }
-  
-    const uniqueEmails = new Set();
-  
-    for (const email of emails) {
-      if (email === "") {
-        continue;
-      }
-  
-      if (!uniqueEmails.has(email) && email.includes(".com")) {
-        uniqueEmails.add(email);
-      }
-    }
-  
-    return [...uniqueEmails];
-  }
-
-  emailList = removeDuplicatesAndEmptyEmails(mockEmails)
-
- 
-})
 
 
 // Get todays date, minus 7 days (1 week) to get the date 7 days ago. Convert date to datets. Write logic only include
@@ -109,17 +78,46 @@ function getTodaysDate() {
     });
 
 
-const structuredData = filteredData.map((job) => `
+fetchEmail().then((data) => {
+  let mockEmails = []
+  data.forEach((emails) => {
+    mockEmails.push(emails.email)
+  })
+
+  function removeDuplicatesAndEmptyEmails(emails) {
+    if (emails.length === 0) {
+      console.log("The email list is empty.");
+      return [];
+    }
+  
+    const uniqueEmails = new Set();
+  
+    for (const email of emails) {
+      if (email === "") {
+        continue;
+      }
+  
+      if (!uniqueEmails.has(email) && email.includes(".com")) {
+        uniqueEmails.add(email);
+      }
+    }
+  
+    return [...uniqueEmails];
+  }
+
+  let emailList = removeDuplicatesAndEmptyEmails(mockEmails)
+
+  const structuredData = filteredData.map((job) => `
       <a href=${`www.ecomportal.co/job/${job.jobUrl}`}><h2>${job.job_position}</h2></a> <p style="margin-top: 0px"> ${job.company_name} | ${job.location} | ${job.job_type}</p>
     `
 ).join('')
 
 
-
-emailList.forEach(function (email, index) {
-  setTimeout(() => {
-    sendMail()
-    }, 3000 * index)
+  emailList.forEach(function (email, index) {
+    setTimeout(() => {
+      sendMail()
+      }, 3000 * index)
+  
 
 
   const mailOptions = {
@@ -150,20 +148,25 @@ emailList.forEach(function (email, index) {
   };
 
 
-function sendMail() {
- transporter.sendMail(mailOptions, (error, info) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Email sent: " + info.response);
-  }
-});
+  function sendMail() {
+    transporter.sendMail(mailOptions, (error, info) => {
+     if (error) {
+       console.log(error);
+     } else {
+       console.log("Email sent: " + info.response);
+     }
+   });
 
-console.log("Finished sending weekly job updates for " + getTodaysDate())
-}
-
-  })
+   }
+     })
+   })
 })
+
+
+
+
+
+
   // }
 
   // const job = new CronJob("0 0 * * 2", () => {

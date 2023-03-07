@@ -62,33 +62,27 @@ model Company {
 
 model User {
   id                  String @id @default(auto()) @map("_id") @db.ObjectId
-  username            String?
-  password            String?
-  name                String?
-  email               String?
+  user_name           String?
+  website_url         String?
+  profilePicture      String?
+  location            String?
+  job_category        String?
   primary_role        String?
-  years_of_experience String?
+  years_of_exp        String?
   open_to_roles       String?
   bio                 String?
-  social_website      String?
-  social_linkedin     String?
-  social_github       String?
-  social_twitter      String?
-  work_experience_1   String?
-  work_experience_2   String?
-  work_experience_3   String?
-  work_experience_4   String?
-  ecomportal_url      String?
-  skills              String?
-  languages           String?
-  annual_pay          String?
-  hourly_pay          String?
-  education           String?
+  linkedin            String?
+  twitter             String?
+  github              String?
+  work_exp_1          String?
+  work_exp_2          String?
+  work_exp_3          String?
+  work_exp_4          String?
+  work_exp_5          String?
+  school_name         String?
+  grad_year           String?
+  degree              String?
+  skills              String[]
   achievements        String?
-  resume              String?
-  profile_picture     String?
-  location_base       String?
-  gender              String?
-  saved_jobs          String?
 
 }

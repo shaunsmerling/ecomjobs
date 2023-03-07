@@ -89,7 +89,7 @@ export async function getServerSideProps(context) {
     />
           <div className="lg:pt-0 pt-4">
             <a href="../">
-              <img alt="company logo" loading="lazy" className="w-auto h-20 mx-auto mb-6 lg:mb-20 " src="/logo.png"   />
+              <img alt="company logo" loading="lazy" className="w-auto h-36 mx-auto mb-6 lg:mb-20 " src="/logo.png"   />
               </a>
           </div>
   
@@ -97,7 +97,7 @@ export async function getServerSideProps(context) {
               <div className="lg:px-12 xl:px-16">
                   <div className="text-center">
                     <div className="flex flex-col items-center justify-center">
-                      <h1 className="font-bold text-lightGreen-300 text-2xl font-pj">Sign in. </h1><span className="text-gray text-2xl font-pj">Recieve your magic link by email.</span> 
+                      <h1 className="font-bold text-black text-2xl font-pj">Sign in. </h1><span className="text-gray text-2xl font-pj">Recieve your magic link by email.</span> 
                     </div>
                       <div className="flex justify-center flex-shrink-0 mt-8 -space-x-4 overflow-hidden">
                           {/* <img alt="user profile picture" loading="lazy" lassName="inline-block rounded-full w-14 h-14 ring-2 ring-white" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/avatar-male-1.png"   /> */}
@@ -267,7 +267,7 @@ export async function getServerSideProps(context) {
               </div>
   
               <div className="lg:px-12 xl:px-16">
-                  <h3 className="text-3xl  text-gray-900 sm:text-4xl font-pj">Post your job. Find top eCommerce-Specific talent</h3>
+                  <h3 className="text-3xl  text-gray-900 sm:text-4xl font-pj">Get hired by eCommerce brands looking for talent</h3>
   
                   <svg className="w-auto h-4 mt-8 text-gray-300 lg:mt-12" viewBox="0 0 172 16" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
                       <line y1="-0.5" x2="18.0278" y2="-0.5" transform="matrix(-0.5547 0.83205 0.83205 0.5547 11 1)" />
@@ -299,17 +299,17 @@ export async function getServerSideProps(context) {
                   <ul className="mt-8 space-y-6 lg:mt-12 md:space-y-9">
                       <li className="flex items-startt">
                           <img alt="thumbs up logo" loading="lazy" className="flex-shrink-0 w-10 h-10" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/icon-thumb.png"   />
-                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">The #1 eCommerce Job Board.</span> Our industry deserved its own platform, so we created one. </span>
+                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">The #1 eCommerce Job Board.</span> All our jobs are strictly from direct-to-consumer brands selling online </span>
                       </li>
   
                       <li className="flex items-startt">
                           <img alt="mailbox logo" loading="lazy" className="flex-shrink-0 w-10 h-10" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/icon-mailbox.png"   />
-                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Keep notified of new applicants. </span> All potential prospects can be emailed to your inbox.</span>
+                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Jobs sent directly to your inbox </span> Get notified by email when new roles for your skillset open up at top brands </span>
                       </li>
   
                       <li className="flex items-startt">
                           <img alt="time logo" loading="lazy" className="flex-shrink-0 w-10 h-10" src="https://cdn.rareblocks.xyz/collection/clarity/images/sign-up/1/icon-sand-clock.png"   />
-                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Find high-quality talent faster.</span> Spend less time posting on generic job boards and more timing interviewing experienced prospects </span>
+                          <span className="ml-6 text-xl font-normal leading-relaxed text-gray-900 font-pj"> <span className="font-bold">Spend less time applying, more time interviewing.</span> Create a profile for a fast & easy application process </span>
                       </li>
                   </ul>
               </div>

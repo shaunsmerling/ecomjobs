@@ -71,7 +71,7 @@ export default function HomePage() {
             <LogoBanner />
           </div> */}
         </div>
-        <div className="flex  bg-gray-900 flex-row justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
+        <div className="flex flex-row justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
           <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
             <Configure hitsPerPage={10} />
 

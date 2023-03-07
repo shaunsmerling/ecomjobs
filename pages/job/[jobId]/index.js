@@ -91,7 +91,7 @@ function isImageFile(filename) {
               <Link href={"/"} className="cursor-pointer">
                 <span className="cursor-pointer"> &#60; Back to all jobs </span>
               </Link>
-              <div className={styles.spahes}>
+              {/* <div className={styles.spahes}>
                 <svg
                   width="58"
                   height="70"
@@ -106,7 +106,7 @@ function isImageFile(filename) {
                   />
                   <path d="M50 61.5L0 33L20 0L50 61.5Z" fill="#BEF8A5" />
                 </svg>
-              </div>
+              </div> */}
               <h1>{jobs?.job_position}</h1>
               <h5>Company Description</h5>
               <p>{jobs?.company_description}</p>
@@ -116,7 +116,7 @@ function isImageFile(filename) {
               <p>{jobs?.job_requirements}</p>
             </div>
             <div className={styles.rightside}>
-              <div className={styles.shapesImg}>
+              {/* <div className={styles.shapesImg}>
                 <svg
                   width="84"
                   height="79"
@@ -134,7 +134,7 @@ function isImageFile(filename) {
                     fill="#94D743"
                   />
                 </svg>
-              </div>
+              </div> */}
               <div className={styles.rightContent}>
                 <img loading="lazy" src={logoImage}></img>
                 <h3>{jobs?.company_name}</h3>
@@ -142,7 +142,7 @@ function isImageFile(filename) {
                 <a
                   href={jobs?.application_url}
                   target="_blank"
-                  className={`inline-flex items-center justify-center px-6 py-2.5 text-base font-medium transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900 ${styles.apply_btn}`}
+                  className={`inline-flex items-center justify-center px-6 py-2.5 text-base font-medium transition-all duration-200 border border-gray-900 rounded-full bg-btn text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900 ${styles.apply_btn}`}
                 >
                   Apply Now
                 </a>

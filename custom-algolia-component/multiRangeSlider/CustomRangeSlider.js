@@ -57,12 +57,12 @@ export function CustomRangeSlider(props) {
                 borderRadius: "3px",
               }}
               trackStyle={{
-                backgroundColor: "#258B60",
+                backgroundColor: "#fdf4b0",
                 height: "6px",
                 borderRadius: "3px",
               }}
               handleStyle={{
-                backgroundColor: "#258B60",
+                backgroundColor: "#eee761",
                 width: "20px",
                 height: "20px",
                 boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.12)",

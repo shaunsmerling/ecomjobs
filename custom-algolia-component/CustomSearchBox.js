@@ -33,9 +33,9 @@ function CustomSearchBox(props) {
           </div>
 
           <div className="h-12">
-            <button className="h-full flex flex-row justify-center items-center gap-2 bg-lightGreen-300 rounded-md px-6 lg:px-9 w-auto">
+            <button className="h-full flex flex-row justify-center items-center gap-2 text-black transition-all duration-200 bg-[#fff366] border border-transparent rounded-lg  hover:bg-[#e0db79] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 px-6 lg:px-9 w-auto">
               <Search />
-              <span className="font-Poppins font-medium text-sm text-white leading-30 hidden md:inline-block">
+              <span className="font-Poppins font-bold text-sm text-black leading-30 hidden md:inline-block">
                 Find
               </span>
             </button>
