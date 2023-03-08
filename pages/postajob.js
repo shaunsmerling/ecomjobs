@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Preview from "../components/preview";
+import checkout from "../checkout.js"
 import { NextSeo } from "next-seo";
 import { generateJobUrl } from "../script.js";
 import { useSession, getSession } from "next-auth/react"
@@ -21,16 +21,15 @@ function PostAJob() {
   const { data: session } = useSession() 
 
 
-// function dateToUnixTimestamp(date) {
-//   let datets = Math.floor(date.getTime() / 1000)
-//   return datets.toString()
-// }
-
-// const now = new Date();
-// const datets = dateToUnixTimestamp(now);
-
-
-
+  const [checkbox, setCheckbox] = useState({
+    highlight: 0,
+    top24: 0,
+    week: 0,
+    month: 0,
+    email: 0,
+    })
+    
+    const [total, setTotal] = useState(99);
 
 
   const [fields, setFields] = useState({
@@ -53,27 +52,109 @@ function PostAJob() {
   });
 
 
-  // function getLink() {
-  //   switch (addOn) {
-  //     case 0:
-  //       return router.push("https://buy.stripe.com/7sI4joeqI5bnemQ5kp")
-  //     case 1:
-  //       return router.push("https://buy.stripe.com/6oEaHM1DW47ja6A6ou")
-  //     case 2:
-  //       return router.push("https://buy.stripe.com/dR66rw82kcDPa6AfZ5")
-  //     case 3:
-  //       return router.push("https://buy.stripe.com/aEU2bgbew33f1A4dQY")
-  //   }
-  // }
-const [checkbox, setCheckbox] = useState({
-highlight: 0,
-top24: 0,
-week: 0,
-month: 0,
-email: 0,
-})
+  function getLink() {
+    switch (total) {
+      case 99:
+         router.push("https://buy.stripe.com/fZedTYdmEeLXa6AcMV")
+         break;
+      case 138:
+         router.push("https://buy.stripe.com/6oE5ns1DWeLX2E814h")
+         break;
+      case 227:
+         router.push("https://buy.stripe.com/6oE5ns1DWeLX2E814h")
+         break;
+      case 296:
+         router.push("https://buy.stripe.com/dR68zE1DWcDP0w05kz")
+         break;
+      case 306:
+        router.push("https://buy.stripe.com/dR66rwdmEcDP4Mg8wQ")
+        break;
+      case 375:
+         router.push("https://buy.stripe.com/7sI7vAbeweLX3Ic8wM")
+            break;
+      case 337:
+         router.push("https://buy.stripe.com/dR65nseqIeLX0w08wN")
+         break;
+      case 406:
+         router.push("https://buy.stripe.com/dR6bLQ82kbzLdiM14m")
+         break;
+      case 416:
+        router.push("https://buy.stripe.com/3cs5ns3M4eLX1A47sN")
+        break;
+      case 485:
+         router.push("https://buy.stripe.com/dR68zE82kavHdiMdR9")
+         break;
+      case 437:
+         router.push("https://buy.stripe.com/cN25nsgyQ9rDemQ3cy")
+         break;
+      case 506:
+        router.push("https://buy.stripe.com/fZe6rwbew8nzfqUaF1")
+        break;
+      case 516:
+        router.push("https://buy.stripe.com/dR6dTYeqI1ZbemQ14s")
+        break;
+      case 585:
+         router.push("https://buy.stripe.com/cN217c96o33fbaE7sR")
+         break;
+      case 207:
+        router.push("https://buy.stripe.com/14k17caasbzL2E8bJ8")
+        break;
+      case 217:
+        router.push("https://buy.stripe.com/6oE3fkgyQeLXa6A7sT")
+        break;
+      case 286:
+        router.push("https://buy.stripe.com/fZeaHM2I0fQ1emQ6oQ")
+        break;
+      case 188:
+       router.push("https://buy.stripe.com/5kA5nsbew47j3Ic3cF")
+       break;
+      case 257:
+       router.push("https://buy.stripe.com/dR66rw1DW7jvemQaF8")
+       break;
+      case 267:
+      router.push("https://buy.stripe.com/6oEeY20zSdHT4MgfZt")
+      break;
+      case 336:
+        router.push("https://buy.stripe.com/8wMaHM3M433fdiMdRm")
+        break;
+      case 298:
+         router.push("https://buy.stripe.com/cN2g265Uc8nzceIbJf")
+         break;
+      case 367:
+         router.push("https://buy.stripe.com/4gwaHMdmE47j5Qk28G")
+         break;
+      case 377:
+       router.push("https://buy.stripe.com/3csg266YgavH0w07t1")
+       break;
+      case 446:
+       router.push("https://buy.stripe.com/cN217cbewbzL6UoaFe")
+       break;
+      case 396:
+        router.push("https://buy.stripe.com/6oE8zE5Uc5bn6Uo14F")
+        break;
+      case 467:
+       router.push("https://buy.stripe.com/fZe3fk1DW47jguY5kW")
+       break;
+      case 477:
+        router.push("https://buy.stripe.com/28o2bg4Q8bzLemQfZB")
+        break;
+      case 546:
+       router.push("https://buy.stripe.com/00g038gyQ5bn2E88xa")
+       break;
+      case 168:
+        router.push("https://buy.stripe.com/7sI8zEfuM6frdiM7t7")
+        break;
+      case 178:
+        router.push("https://buy.stripe.com/fZe2bg1DWfQ1baE14K")
+        break;
+      case 247:
+         router.push("https://buy.stripe.com/5kA0383M49rD6UofZF")
+         break;
+         default:
+          break
+    }
+  }
 
-const [total, setTotal] = useState(99);
 
 function handleCheckboxChange(event) {
   const { name, value, checked } = event.target;
@@ -85,21 +166,16 @@ function handleCheckboxChange(event) {
 
 useEffect(() => {
   setTotal(
-    Object.values(checkbox).reduce((acc, cur) => acc + cur, 0)
+    Object.values(checkbox).reduce((acc, cur) => acc + cur, 99)
   );
 }, [checkbox]);
 
   function delayLoad() {
-    let timerId;
     showSpinner()
-    timerId = setTimeout(() => {
-      router.push("https://buy.stripe.com/fZedTYdmEeLXa6AcMV")
-    }, 4000);
-
-      if (router.pathname == "https://buy.stripe.com/fZedTYdmEeLXa6AcMV") {
-      clearTimeout(timerId);
-    }
-
+    setTimeout(function() {
+      getLink()
+    }, 5000)
+  
   }
 
   function showSpinner() {
@@ -142,11 +218,12 @@ useEffect(() => {
       .then((response) => response.json())
       .then((jsonResponse) => {
         console.log(jsonResponse, "JSON");
+        console.log(total)
 
         // checkout({
         //   lineItems: [
         //     {
-        //       price: "price_1M6CyrJ3L3qVyujTFalmvGtb",
+        //       price: total,
         //       quantity: 1,
         //     },
         //   ],
@@ -159,10 +236,6 @@ useEffect(() => {
       delayLoad()
   };
 
-  {/* https://buy.stripe.com/7sI4joeqI5bnemQ5kp (Normal Job Post, no Addons) */}
-{/* https://buy.stripe.com/6oEaHM1DW47ja6A6ou (Job Post + Highlight Addon) */}
-{/* https://buy.stripe.com/dR66rw82kcDPa6AfZ5 (Job Post + Top Pinned Addon) */}
-{/* https://buy.stripe.com/aEU2bgbew33f1A4dQY (Job Post + Top Pinned + Highlight) */}
 
   const {
     email,
@@ -563,7 +636,7 @@ onChange={handleChange} />
 
 <div class="sm:col-span-3 form-field">
 <label class="block text-sm font-medium text-gray-700" for="post_user_attributes_first_name">Boost Your Job Post</label>
-
+<p  class="text-xs font-normal text-black"> A normal job post with no addons is $99 and posts your job on our board for 1 month </p>
 <div class="flex mt-4">
           <div className="flex items-center h-5">
             <input
@@ -591,13 +664,13 @@ onChange={handleChange} />
               aria-describedby="helper-checkbox-text"
               type="checkbox"
               name="top24"
-              value="99"
+              value="89"
               className="w-4 h-4 bg-white border-black rounded focus:ring-blue-500 focus:ring-2"
               onChange={handleCheckboxChange}
             />
     </div>
     <div class="ml-2 text-sm">
-    <label for="helper-checkbox" class="font-bold text-black ">Stick To The Top Page For 24 Hours (+$99)</label>
+    <label for="helper-checkbox" class="font-bold text-black ">Stick To The Top Page For 24 Hours (+$89)</label>
         <p id="helper-checkbox-text" class="text-xs font-normal text-black">📌 Pin your post to the top of the 1st page for 24 hours</p>
     </div>
 </div>
@@ -650,13 +723,31 @@ onChange={handleChange} />
               aria-describedby="helper-checkbox-text"
               type="checkbox"
               name="email"
-              value="89"
+              value="69"
               className="w-4 h-4 bg-white border-black rounded focus:ring-blue-500 focus:ring-2"
               onChange={handleCheckboxChange}
             />
     </div>
     <div class="ml-2 text-sm">
-    <label for="helper-checkbox" class="font-bold text-black ">Email Blast to eComportal's Newsletter (+$89)</label>
+    <label for="helper-checkbox" class="font-bold text-black ">Email Blast to eComportal's Newsletter (+$69)</label>
+        <p id="helper-checkbox-text" class="text-xs font-normal text-black">📢 Reach thousands subscribed to our email list</p>
+    </div>
+</div>
+
+<div class="flex mt-4">
+    <div class="flex items-center h-5">
+    <input
+              id="helper-checkbox"
+              aria-describedby="helper-checkbox-text"
+              type="checkbox"
+              name="email"
+              value="79"
+              className="w-4 h-4 bg-white border-black rounded focus:ring-blue-500 focus:ring-2"
+              onChange={handleCheckboxChange}
+            />
+    </div>
+    <div class="ml-2 text-sm">
+    <label for="helper-checkbox" class="font-bold text-black ">Email Blast to <a href="https://1800d2c.com"> 1800-D2C's </a> Newsletter (+$79)</label>
         <p id="helper-checkbox-text" class="text-xs font-normal text-black">📢 Reach thousands subscribed to our email list</p>
     </div>
 </div>
@@ -674,13 +765,13 @@ onChange={handleChange} />
 </div>
 </div>
 <div class="pt-5">
-<div class="flex fixed w-full bottom-0 left-0 right-0 z-10 py-1 justify-center bg-white border-t sm:justify-end sm:relative sm:w-auto sm:p-0 sm:border-none">
+<div class="flex fixed w-full bottom-0 left-0 mb-4 right-0 z-10 py-1 justify-center bg-white border-t sm:justify-end sm:relative sm:w-auto sm:p-0 sm:border-none">
 <button
             type="submit"
             href=""
             class="flex relative items-center w-10/12 justify-center lg:mb-4 mx-auto px-20 py-3 sm:text-sm text-base sm:py-3.5  text-white transition-all duration-200 bg-black border border-transparent rounded-lg  hover:bg-btn hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
           >
-            Post a job for&nbsp;<span> {`${total ? "$" + total : "$99"}`}</span>
+            Post a job for&nbsp;<span> {`${"$" + total}`}</span>
           </button>
 </div>
 </div>
