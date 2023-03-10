@@ -19,9 +19,20 @@ export async function getServerSideProps(context) {
   };
 }
 
+function convertToISO8601(dateString) {
+  const dateParts = dateString.split('/');
+  const year = dateParts[2];
+  const month = dateParts[0].padStart(2, '0');
+  const date = dateParts[1].padStart(2, '0');
+  const isoString = `${year}-${month}-${date}T00:00:00+00:00`;
+  return isoString;
+}
+
 
 
 function Job({ jobs }) {
+
+  const isoStr = convertToISO8601(jobs.postedat);
 
   let jobData =   
 {
@@ -36,7 +47,7 @@ function Job({ jobs }) {
 },
 "industry": `${jobs.job_category}`,
 "employmentType": "FULL_TIME",
-"datePosted": `${jobs.postedat}`,
+"datePosted": `${isoStr}`,
 "baseSalary": `${jobs.salary}`,
 "validThrough": "",
 "jobLocation": {
