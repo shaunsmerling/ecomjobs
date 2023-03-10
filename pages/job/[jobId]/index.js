@@ -21,7 +21,7 @@ export async function getServerSideProps(context) {
 
 function convertToISO8601(dateString) {
   const dateParts = dateString.split('/');
-  const year = dateParts[2];
+  const year = 2000 + parseInt(dateParts[2]);
   const month = dateParts[0].padStart(2, '0');
   const date = dateParts[1].padStart(2, '0');
   const isoString = `${year}-${month}-${date}T00:00:00+00:00`;
@@ -33,6 +33,7 @@ function convertToISO8601(dateString) {
 function Job({ jobs }) {
 
   const isoStr = convertToISO8601(jobs.postedat);
+  console.log(isoStr)
 
   let jobData =   
 {
