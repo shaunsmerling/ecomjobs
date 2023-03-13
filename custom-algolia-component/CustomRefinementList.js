@@ -11,7 +11,7 @@ function CustomRefinementList(props) {
     <>
       <div>
         <div className="mb-3">
-          <p className="opacity-70 font-medium text-base leading-5 tracking-common text-white font-Poppins">
+          <p className="opacity-70 font-medium text-base leading-5 tracking-common text-white font-Studio6">
             {props.title}
           </p>
         </div>
@@ -21,7 +21,7 @@ function CustomRefinementList(props) {
           </div>
         ) : (
           <div className="my-1">
-            <p className="text-left opacity-30 font-normal text-base leading-5 tracking-common text-white font-Poppins">
+            <p className="text-left opacity-30 font-normal text-base leading-5 tracking-common text-white font-Studio6">
               No Filter
             </p>
           </div>

@@ -26,7 +26,7 @@ function CustomSearchBox(props) {
             <input
               type="text"
               placeholder="Search by Title, Company or any jobs keyword..."
-              className="searchBox h-full w-full outline-none border rounded-md border-lightGray-100 px-5 font-normal text-sm leading-30 tracking-common font-Poppins "
+              className="searchBox h-full w-full outline-none border rounded-md border-lightGray-100 px-5 font-normal text-sm leading-30 tracking-common font-Studio6 "
               value={searchText}
               onChange={(e) => setSearchText(e.target.value)}
             />
@@ -35,7 +35,7 @@ function CustomSearchBox(props) {
           <div className="h-12">
             <button className="h-full flex flex-row justify-center items-center gap-2 text-black transition-all duration-200 bg-[#fff366] border border-transparent rounded-lg  hover:bg-[#e0db79] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 px-6 lg:px-9 w-auto">
               <Search />
-              <span className="font-Poppins font-bold text-sm text-black leading-30 hidden md:inline-block">
+              <span className="font-Studio6 font-bold text-sm text-black leading-30 hidden md:inline-block">
                 Find
               </span>
             </button>

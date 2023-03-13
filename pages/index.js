@@ -97,7 +97,7 @@ export default function HomePage() {
                     onClick={() => setFilterModelMobile(!filterModelMobile)}
                   >
                     <FilterIcon className="text-lightGreen-300" />
-                    <span className="font-Poppins font-medium text-sm leading-30 text-lightGreen-300 hidden md:inline-block">
+                    <span className="font-Studio6 font-medium text-sm leading-30 text-lightGreen-300 hidden md:inline-block">
                       Filter
                     </span>
                   </button>
