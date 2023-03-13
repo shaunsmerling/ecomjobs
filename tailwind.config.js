@@ -55,6 +55,7 @@ module.exports = {
           'Segoe UI Symbol', 
           'Noto Color Emoji'
         ],
+        Studio6: ['Studio6', 'sans-serif'],
         'sans': [
           'Inter', 
           'ui-sans-serif', 

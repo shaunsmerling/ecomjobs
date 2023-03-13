@@ -53,10 +53,10 @@ const CompanyData = ({ hit }) => {
                 </div>
               )}
               <div>
-                <div className="flex flex-col md:flex-row items-center gap-1 lg:gap-3 xl:gap-6">
+                <div className="flex flex-col font-Studio6 md:flex-row items-center gap-1 lg:gap-3 xl:gap-6">
                   <div>
                     {hit?.job_position && (
-                      <h2 className="text-base md:text-lg leading-5 md:leading-6 lg:!leading-30 font-Poppins tracking-common font-medium">
+                      <h2 className="text-base md:text-lg leading-5 md:leading-6 lg:!leading-30 font-Studio6 tracking-common font-medium">
                         <a href={`/job/${hit?.jobUrl}`}>{hit.job_position}</a>
                       </h2>
                     )}
@@ -64,7 +64,7 @@ const CompanyData = ({ hit }) => {
                       {hit?.emp_count && (
                         <p className="flex flex-row items-center gap-2 ">
                           <UserIcon />
-                          <span className="font-Poppins font-normal text-sm text-black tracking-common opacity-60 leading-6 lg:!leading-30">
+                          <span className="font-Studio6 font-normal text-sm text-black tracking-common opacity-60 leading-6 lg:!leading-30">
                             {parseInt(hit.emp_count) > 5
                               ? `5 - ${hit.emp_count} Employees`
                               : `0 - ${hit.emp_count} Employees`}
@@ -74,7 +74,7 @@ const CompanyData = ({ hit }) => {
                       {(hit?.salaryMin && hit?.salaryMax !== "null") || 0 ? (
                         <p className="flex flex-row items-center gap-2 ">
                           <SalaryIcon />
-                          <span className="font-Poppins font-normal text-sm text-black tracking-common opacity-60 leading-6 lg:!leading-30">
+                          <span className="font-Studio6 font-normal text-sm text-black tracking-common opacity-60 leading-6 lg:!leading-30">
                             {"$" + hit.salaryMin + ` - ` + "$" + hit.salaryMax}
                           </span>
                         </p>
@@ -87,13 +87,13 @@ const CompanyData = ({ hit }) => {
                     {hit?.postedat && (
                       <div className="flex flex-row items-center gap-1 md:gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-lightGray-300" />
-                        <p className="font-Poppins font-medium text-sm leading-6 lg:!leading-30 tracking-common opacity-50">
+                        <p className="font-Studio6 font-medium text-sm leading-6 lg:!leading-30 tracking-common opacity-50">
                           {getDate()}
                         </p>
                       </div>
                     )}
                     {hit?.featured && (
-                      <p className="font-medium text-xs tracking-common text-white font-Poppins bg-lightGreen-100 rounded-lg px-4 py-2">
+                      <p className="font-medium text-xs tracking-common text-white font-Studio6 bg-lightGreen-100 rounded-lg px-4 py-2">
                         Featured
                       </p>
                     )}
@@ -108,7 +108,7 @@ const CompanyData = ({ hit }) => {
           </div>
           {/* {hit?.job_requirements && (
             <div className="pt-1.5 lg:pr-8">
-              <p className="font-Poppins font-normal text-sm leading-6 tracking-common opacity-80 text-black line-clamp-3">
+              <p className="font-Studio6 font-normal text-sm leading-6 tracking-common opacity-80 text-black line-clamp-3">
                 {hit.job_requirements}
               </p>
             </div>
@@ -116,14 +116,14 @@ const CompanyData = ({ hit }) => {
           <div className="w-full lg:mt-2  flex flex-row flex-wrap gap-2 justify-start items-center">
             {hit?.job_category && (
               <div className="py-1.5 px-4 bg-black rounded-xl">
-                <p className="font-Poppins font-medium text-xs text-white leading-4">
+                <p className="font-Studio6 font-medium text-xs text-white leading-4">
                   {hit.job_category}
                 </p>
               </div>
             )}
             {hit?.job_type && (
               <div className="py-1.5 px-4 bg-gray-900 rounded-xl">
-                <p className="font-Poppins font-medium text-xs text-white
+                <p className="font-Studio6 font-medium text-xs text-white
                  leading-4">
                   {hit.job_type}
                 </p>
@@ -136,7 +136,7 @@ const CompanyData = ({ hit }) => {
                   className="flex flex-row items-center gap-2 cursor-pointer"
                 >
                   <World />
-                  <span className="font-Poppins font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 break-all">
+                  <span className="font-Studio6 font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 break-all">
                     {hit.company_url}
                   </span>
                 </a>
@@ -144,7 +144,7 @@ const CompanyData = ({ hit }) => {
                    {(hit?.city || hit?.location) && (
                 <p className="flex flex-row items-center  gap-2 cursor-pointer">
                   <Location />
-                  <span className="font-Poppins font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 break-all">
+                  <span className="font-Studio6 font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 break-all">
                     {hit?.city} {hit?.location}
                   </span>
                 </p>
@@ -154,7 +154,7 @@ const CompanyData = ({ hit }) => {
               <button
                 id="save-btn"
                 onclick={console.log("booty")}
-                className=" save-btn absolute right-9  font-Poppins text-black font-semibold text-xs leading-6 md:!leading-30 tracking-common bg-btn py-1.5 px-5 md:px-6 md:py-2 rounded-3xl hover:scale-110 duration-150"
+                className=" save-btn absolute right-9  font-Studio6 text-black font-semibold text-xs leading-6 md:!leading-30 tracking-common bg-btn py-1.5 px-5 md:px-6 md:py-2 rounded-3xl hover:scale-110 duration-150"
               >
                 Save
               </button>
@@ -168,7 +168,7 @@ const CompanyData = ({ hit }) => {
                   className="flex flex-row items-center gap-2 cursor-pointer"
                 >
                   <World />
-                  <span className="font-Poppins font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 break-all">
+                  <span className="font-Studio6 font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 break-all">
                     {hit.company_url}
                   </span>
                 </a>
@@ -176,7 +176,7 @@ const CompanyData = ({ hit }) => {
               {(hit?.city || hit?.location) && (
                 <p className="flex flex-row items-center gap-2 cursor-pointer">
                   <Location />
-                  <span className="font-Poppins font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 break-all">
+                  <span className="font-Studio6 font-normal text-sm leading-6 lg:!leading-30 tracking-common text-black opacity-80 break-all">
                     {hit?.city} {hit?.location}
                   </span>
                 </p>
@@ -187,7 +187,7 @@ const CompanyData = ({ hit }) => {
               <a
                 href={`/job/${hit?.jobUrl}`}
                 target="_blank"
-                className="inline-block font-Poppins text-white font-semibold text-xs leading-6 md:!leading-30 mx-auto tracking-common bg-lightGreen-300 py-1.5 px-5 md:px-6 md:py-2 rounded-3xl hover:scale-110 duration-150"
+                className="inline-block font-Studio6 text-white font-semibold text-xs leading-6 md:!leading-30 mx-auto tracking-common bg-lightGreen-300 py-1.5 px-5 md:px-6 md:py-2 rounded-3xl hover:scale-110 duration-150"
               >
                 Learn More
               </a>

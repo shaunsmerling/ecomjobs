@@ -35,7 +35,7 @@ export default function salaries({posts}) {
   console.log(posts.categories)
 
     return (
-        <section className="py-12 sm:py-16 lg:py-20">
+        <section className="py-12 font-Studio6 sm:py-16 lg:py-20">
         <NextSeo
    title="Interviews | eComPortal"
    description="A walkthrough of the interview process for top eCommerce brands" 

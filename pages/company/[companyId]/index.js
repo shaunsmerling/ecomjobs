@@ -101,7 +101,7 @@ function isImageFile(filename) {
   `${logoString}`;
 
   return (
-    <div className="bg-d2c pb-10">
+    <div className="bg-d2c font-Studio6 pb-10">
       <NextSeo
       title={`${company.company_name} | eCommerce Jobs `}
       description={`${company.company_name} | eCommerce Jobs `}

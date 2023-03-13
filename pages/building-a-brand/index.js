@@ -60,7 +60,7 @@ export default function salaries({posts}) {
      image: "/logo.png"
    }}
  />
-   <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+   <div className="px-4 mx-auto font-Studio6 sm:px-6 lg:px-8 max-w-7xl">
      <div className="text-center sm:flex sm:items-end sm:space-x-16 sm:text-left">
        <h2 className="max-w-sm text-3xl mx-auto sm:mx-0 font-bold text-black sm:text-4xl shrink-0">
        Learn the Fundamentals To Building A Succesful eCommerce Brand 

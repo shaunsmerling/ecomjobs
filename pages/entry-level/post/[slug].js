@@ -31,7 +31,7 @@ function Post({post}) {
         image: "/logo.png"
       }}
     />
-      <section className="py-12 bg-white lg:mx-10 rounded-lg sm:py-16 lg:py-20">
+      <section className="py-12 font-Studio6 bg-white lg:mx-10 rounded-lg sm:py-16 lg:py-20">
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-xl mx-auto text-center">
           {/* <nav className="flex items-center justify-center">

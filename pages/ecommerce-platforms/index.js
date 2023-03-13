@@ -35,7 +35,7 @@ export default function salaries({posts}) {
 
 
     return (
-        <section className="py-12 sm:py-16 lg:py-20">
+        <section className="py-12 font-Studio6 sm:py-16 lg:py-20">
         <NextSeo
    title="eCommerce Platforms | eComPortal"
    description="Dive deep into the top eCommerce platforms used today   " 

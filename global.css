@@ -12,6 +12,15 @@
   width: 100%;
 }
 
+@font-face {
+    font-family: Studio6;
+    src: url(./public/fonts/s6med.ttf);
+  }
+  @font-face {
+    font-family: Studio6;
+    src: url(./public/fonts/s6reg.ttf);
+  }
+
 
 .grid {
   display: grid;

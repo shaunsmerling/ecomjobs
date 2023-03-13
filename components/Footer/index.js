@@ -14,7 +14,7 @@ function Footer() {
         <div className={styles.footer}>
           <div className={styles.section_left}>
             <div className={styles.logo_section}>
-              <Image className="h-30 w-48" loading="lazy" src={logo} alt="footer-logo" />
+              <Image className="h-30 w-48 -ml-2" loading="lazy" src={logo} alt="footer-logo" />
               
            
             </div>

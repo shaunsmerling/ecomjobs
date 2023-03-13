@@ -277,7 +277,7 @@ useEffect(() => {
 <h3 class="text-xl font-medium leading-6 text-gray-900">Interested in creating a company profile?</h3>
 <p class="mt-1 text-gray-500">Create a profile page for your brand so that future employees can learn more</p>
 </div> */}
-<div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+<div class="mt-6 grid grid-cols-1 font-Studio6 gap-y-6 gap-x-4 sm:grid-cols-6">
 
 {/* <div class="sm:col-span-3 form-field">
 <a class="whitespace-nowrap inline-flex items-center justify-center pl-3 pr-1 py-1 border border-transparent rounded-full shadow-sm text-base font-medium text-white  bg-lightGreen-300 " href="/list-your-company">
@@ -288,7 +288,7 @@ Register Here
 </a>
 </div> */}
 
-<div class="sm:col-span-4 form-field">
+<div class="sm:col-span-4 font-Studio6 orm-field">
 <label class="block text-sm font-medium text-gray-700" >Company Name</label>
 <div class="mt-1">
 <input 
@@ -322,7 +322,7 @@ name="companyUrl"
 <h3 class="text-xl font-medium leading-6 text-gray-900">Create an account with us</h3>
 <p class="mt-1 text-gray-500">Create an account to save your jobs, create a company page, and get alerts</p>
 </div> */}
-<div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+<div class="mt-6 grid grid-cols-1 font-Studio6 gap-y-6 gap-x-4 sm:grid-cols-6">
 
 {/* <div class="sm:col-span-3 form-field">
 <a class="whitespace-nowrap inline-flex items-center justify-center pl-3 pr-1 py-1 border border-transparent rounded-full shadow-sm text-base font-medium text-white  bg-lightGreen-300 " href="/signup">
@@ -632,7 +632,7 @@ onChange={handleChange} />
 </div>
 )} */}
 </div>
-<div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+<div class="mt-6 grid grid-cols-1 font-Studio6 gap-y-6 gap-x-4 sm:grid-cols-6">
 
 <div class="sm:col-span-3 form-field">
 <label class="block text-sm font-medium text-gray-700" for="post_user_attributes_first_name">Boost Your Job Post</label>
@@ -769,7 +769,7 @@ onChange={handleChange} />
 <button
             type="submit"
             href=""
-            class="flex relative items-center w-10/12 justify-center lg:mb-4 mx-auto px-20 py-3 sm:text-sm text-base sm:py-3.5  text-white transition-all duration-200 bg-black border border-transparent rounded-lg  hover:bg-btn hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+            class="flex relative items-center w-10/12 justify-center lg:mb-4 mx-auto px-20 py-3 sm:text-sm text-base sm:py-3.5  text-white transition-all duration-200 bg-black border border-transparent rounded-lg font-Studio6 hover:bg-btn hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
           >
             Post a job for&nbsp;<span> {`${"$" + total}`}</span>
           </button>

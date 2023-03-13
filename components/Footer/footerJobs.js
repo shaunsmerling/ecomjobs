@@ -11,7 +11,7 @@ function Footer() {
 
   return (
     <>
-      <div className="">
+      <div className="font-Studio6">
         <div className={styles.footer1}>
          
        

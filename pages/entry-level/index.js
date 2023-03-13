@@ -35,7 +35,7 @@ export default function salaries({posts}) {
 
 
     return (
-        <section className="py-12 sm:py-16 lg:py-20">
+        <section className="py-12 font-Studio6 sm:py-16 lg:py-20">
         <NextSeo
    title="Entry Level | eComPortal"
    description="Learnings & Career Advice for Entry Level (Junior) Positions in eCommerce  " 

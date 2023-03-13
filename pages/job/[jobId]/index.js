@@ -97,7 +97,7 @@ function isImageFile(filename) {
         <meta name="twitter:image:src" vmid="twitter:image:src"  key="twimg" content={`https://ecomportal.co/images/${jobs.logo}`} />
 </Head>
       
-        <div className="px-4 sm:px-6 bg-white rounded-lg lg:px-8 mx-auto max-w-7xl">
+        <div className="px-4 sm:px-6 bg-white rounded-lg font-Studio6 lg:px-8 mx-auto max-w-7xl">
           <div className={styles.main_section}>
             <div className={styles.leftSide}>
               <Link href={"/"} className="cursor-pointer">
