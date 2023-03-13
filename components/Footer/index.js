@@ -15,7 +15,14 @@ function Footer() {
           <div className={styles.section_left}>
             <div className={styles.logo_section}>
               <Image className="h-30 w-48" loading="lazy" src={logo} alt="footer-logo" />
+              
            
+            </div>
+            <div className="flex -mt-4 ml-3 mb-4">
+            <p className="">In collaboration with </p>
+            <a href="https://1800d2c.com" target="_blank" rel="noreferrer">
+            <img src="./d2c.png" class="ml-2  mt-1 h-auto w-20"></img>
+            </a>
             </div>
             <div className={styles.socila_icons}>
               <a href="https://www.facebook.com/ecomprtal"  target="_blank">

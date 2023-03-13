@@ -96,8 +96,80 @@ return (
                 >
                   Subscribe
                 </button>
+                
               </div>
+              
             </form>
+            <div className="flex items-center mt-6 justify-center">
+            <p>In collaboration with </p>
+            <a href="https://1800d2c.com" target="_blank" rel="noreferrer">
+            <img src="./d2c.png" class="ml-2  h-auto w-20"></img>
+            </a>
+            </div>
+              {/* <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2 text-gray-400"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span class="text-xs font-medium text-gray-900 sm:text-sm">
+                  {" "}
+                  Updated Daily{" "}
+                </span>
+              </li>
+
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2 text-gray-400"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span class="text-xs font-medium text-gray-900 sm:text-sm">
+                  {" "}
+                  Curated & Vetted{" "}
+                </span>
+              </li>
+
+              <li class="flex items-center">
+                <svg
+                  class="w-5 h-5 mr-2 text-gray-400"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span class="text-xs font-medium text-gray-900 sm:text-sm">
+                  {" "}
+                  Over 2763+ DTC Jobs Available
+                </span>
+              </li>
+            </ul> */}
+
         <Logo/>
         <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
             {/* <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
