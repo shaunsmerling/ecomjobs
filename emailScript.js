@@ -63,23 +63,24 @@ function getTodaysDate() {
 
   // const email = async () => {
   fetchData().then((data) => {
-
-
     // Filter out jobs that are older than 7 days
     const filteredData = data.filter((job) => {
     
       const date = new Date(job.postedat);
       const timestampInSecs = Math.floor(date.getTime() / 1000);
   
-
+  
       if (timestampInSecs > timestampInSeconds) {
-        return job;
+       return job 
       }
     });
 
 
 fetchEmail().then((data) => {
   let mockEmails = []
+  console.log(typeof(data))
+  console.log(data)
+ 
   data.forEach((emails) => {
     mockEmails.push(emails.email)
   })
@@ -97,7 +98,7 @@ fetchEmail().then((data) => {
         continue;
       }
   
-      if (!uniqueEmails.has(email) && email.includes(".com")) {
+      if (!uniqueEmails.has(email)) {
         uniqueEmails.add(email);
       }
     }
