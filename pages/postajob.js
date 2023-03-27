@@ -174,7 +174,7 @@ useEffect(() => {
     showSpinner()
     setTimeout(function() {
       getLink()
-    }, 5000)
+    }, 10000)
   
   }
 
