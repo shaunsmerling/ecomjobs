@@ -32,7 +32,7 @@ def date_to_unix_timestamp(date_str):
     except ValueError:
         print("Invalid date format. Please use 'dd/mm/yyyy' format.")
         return None
-    
+
 
 def convert_date_format(date_str):
     try:
@@ -60,18 +60,18 @@ def insert_job_in_db(job_data):
 def generate_job_url(company_name, job_position):
     random_num = random.randint(0, 100000000)
     new_url = ''
-    
+
     # if job_type:
     #  new_url += job_type.replace(' ', '-').replace('&', 'and').replace(',', '').replace('.', '').replace('/', '').replace("'", '').replace('"', '')
-        
+
     if company_name:
         new_url += company_name.replace(' ', '-').replace('&', 'and').replace(',', '').replace('.', '').replace('/', '').replace("'", '').replace('"', '')
-    
+
     if job_position:
         if company_name:
             new_url += '-'
         new_url += job_position.replace(' ', '-').replace('&', 'and').replace(',', '').replace('.', '').replace('/', '').replace("'", '').replace('"', '').replace('(', '').replace(')', '') + '-' + str(random_num)
-    
+
     job_url = new_url.lower()
     return job_url
 
@@ -101,7 +101,7 @@ def parse_content(content):
 
 def determine_job_type(job_data):
     content = job_data.get("content", "")
-    
+
     # Use BeautifulSoup to parse and clean the HTML content
     soup = BeautifulSoup(content, 'html.parser')
     content = soup.get_text(separator=' ', strip=True)  # Get the text and remove extra whitespaces
@@ -125,7 +125,7 @@ def determine_job_type(job_data):
 
 def get_job_board(board_id):
     geolocator = Nominatim(user_agent="my-app")
-    
+
 
     base_url = f'https://boards-api.greenhouse.io/v1/boards/{board_id}/jobs?content=true'
     response = requests.get(base_url)
@@ -134,113 +134,122 @@ def get_job_board(board_id):
     formatted_data = []
 
     for entry in jobs_data:
-        title = entry.get('title', 'N/A')
+        try:
+            title = entry.get('title', 'N/A')
 
 
-        department = entry.get('departments', [{}])[0].get('name', 'N/A')     
-        content = html.unescape(entry.get('content', 'N/A'))
-        job_type = determine_job_type(entry)
-        parsed_content = parse_content(content)
-        location = entry.get('location', {}).get('name', 'N/A')
-        application_url = entry.get('absolute_url', 'N/A')
-        posted_at = entry.get('updated_at', 'N/A')
-        posted_at_date =datetime.strptime(posted_at[:-6], '%Y-%m-%dT%H:%M:%S').strftime('%d/%m/%Y')
-        date_in_mmddyyyy = convert_date_format(posted_at_date)
-        unix_date = date_to_unix_timestamp(posted_at_date)
-        salary_range = re.findall(r'\$[\d,]+-?\$?[\d,]*', content)
-        if salary_range:
-            salary_values = salary_range[0].replace('$', '').replace(',', '').split('-')
-            if len(salary_values) == 2:
-                salary_min = int(salary_values[0])
-                salary_max = int(salary_values[1])
+            department = entry.get('departments', [{}])[0].get('name', 'N/A')
+            content = html.unescape(entry.get('content', 'N/A'))
+            job_type = determine_job_type(entry)
+            parsed_content = parse_content(content)
+            location = entry.get('location', {}).get('name', 'N/A')
+            application_url = entry.get('absolute_url', 'N/A')
+            posted_at = entry.get('updated_at', 'N/A')
+            posted_at_date =datetime.strptime(posted_at[:-6], '%Y-%m-%dT%H:%M:%S').strftime('%d/%m/%Y')
+            date_in_mmddyyyy = convert_date_format(posted_at_date)
+            unix_date = date_to_unix_timestamp(posted_at_date)
+            salary_range = re.findall(r'\$[\d,]+-?\$?[\d,]*', content)
+            if salary_range:
+                salary_values = salary_range[0].replace('$', '').replace(',', '').split('-')
+                if len(salary_values) == 2:
+                    salary_min = int(salary_values[0])
+                    salary_max = int(salary_values[1])
+                else:
+                    salary_min = 1
+                    salary_max = int(salary_values[0])
             else:
-                salary_min = 1  
-                salary_max = int(salary_values[0])
-        else:
-            salary_min = salary_max = 0
+                salary_min = salary_max = 0
 
 
-        if salary_min < 1000:
-            salary_min *= 1000
-        if salary_max < 1000:
-            salary_max *= 1000
+            if salary_min < 1000:
+                salary_min *= 1000
+            if salary_max < 1000:
+                salary_max *= 1000
 
-        # Extract the city from the location string
-        city = location.split(',')[0].strip()
+            # Extract the city from the location string
+            city = location.split(',')[0].strip()
 
-        # Use Geopy to get the country from the city
-        country = 'N/A'
-        try:
-            location = geolocator.geocode(city, addressdetails=True, exactly_one=True)
-            if location:
-                address = location.raw['address']
-                country = address.get('country', 'N/A')
+            # Use Geopy to get the country from the city
+            country = 'N/A'
+            try:
+                location = geolocator.geocode(city, addressdetails=True, exactly_one=True)
+                if location:
+                    address = location.raw['address']
+                    country = address.get('country', 'N/A')
 
-                if country in ['United States', 'United States of America', 'US']:
-                    country = 'USA'
-                    
-                elif country in ['United Kingdom', 'England']:
-                    country = 'UK'
-                    
-                elif country in ['Canada']:
-                    country = 'CA'
-                    
-                elif country in ['Australia', 'AU']:
-                    country = "AUS"
-                    
-        except:
-            pass
+                    if country in ['United States', 'United States of America', 'US']:
+                        country = 'USA'
 
-        logo_data = None
-        try:
-            response = requests.get(application_url)
-            soup = BeautifulSoup(response.content, 'html.parser')
-            logo_url = soup.find('img')['src']
-            logo_response = requests.get(logo_url)
-            logo_data = base64.b64encode(logo_response.content).decode('utf-8')
-        except:
-            pass
+                    elif country in ['United Kingdom', 'England']:
+                        country = 'UK'
 
-        job_url = generate_job_url(board_id, title)
-        company_url = "www." + board_id + ".com"
+                    elif country in ['Canada']:
+                        country = 'CA'
 
-        # Create the result object
-        result = {
-            'company_name': board_id.capitalize(),
-            'job_type': job_type,
-            'job_position': title,
-            'company_url': company_url,
-            'job_category': department,
-            'city': city,
-            'location': country,
-            'application_url': application_url,
-            'postedat': date_in_mmddyyyy,
-            'jobUrl': job_url,
-            'datets': str(unix_date),
-            'salaryMin':  str(salary_min),
-            'salaryMax': str(salary_max),
-            'company_description': "",
-            'job_description': parsed_content['job_description'],
-            'job_requirements': parsed_content['job_requirements'],
-            'logo': board_id + ".jpeg",
-       
-            
-        }
-        
-       
-        formatted_data.append(result)
+                    elif country in ['Australia', 'AU']:
+                        country = "AUS"
 
-        
+            except:
+                pass
+
+
+            logo_data = None
+            try:
+                response = requests.get(application_url)
+                soup = BeautifulSoup(response.content, 'html.parser')
+                logo_url = soup.find('img')['src']
+                logo_response = requests.get(logo_url)
+                logo_data = base64.b64encode(logo_response.content).decode('utf-8')
+            except:
+                pass
+
+            job_url = generate_job_url(board_id, title)
+            company_url = "www." + board_id + ".com"
+
+            # Create the result object
+            result = {
+                'company_name': board_id.capitalize(),
+                'job_type': job_type,
+                'job_position': title,
+                'company_url': company_url,
+                'job_category': department,
+                'city': city,
+                'location': country,
+                'application_url': application_url,
+                'postedat': date_in_mmddyyyy,
+                'jobUrl': job_url,
+                'datets': str(unix_date),
+                'salaryMin':  str(salary_min),
+                'salaryMax': str(salary_max),
+                'company_description': "",
+                'job_description': parsed_content['job_description'],
+                'job_requirements': parsed_content['job_requirements'],
+                'logo': board_id + ".jpeg",
+
+
+            }
+
+
+            formatted_data.append(result)
+
+        except IndexError:
+            print("Error while parsing content, skipping this job.")
+            continue
+
+
     return formatted_data
 
 def main():
           # When you add company names to the board, make sure to save their logo .jpeg
     boards = [
-        'harrys',
-        'casper',
-        'gymshark',
-        'away',
-        'hellofresh'
+        # 'harrys',
+        # 'casper',
+        # 'gymshark',
+        # 'away',
+        # 'barkbox',
+        'glossier',
+        'allbirds'
+
     ]
 
     for board in boards:
@@ -262,4 +271,3 @@ if __name__ == '__main__':
 
 
     #fix job categories, as they are certain terms for our categories.
-  
