@@ -1,5 +1,5 @@
 import requests
-import json
+from datetime import datetime
 import html
 import re
 from bs4 import BeautifulSoup
@@ -20,6 +20,33 @@ client = MongoClient(db_url, tlsAllowInvalidCertificates=True)
 db = client["ejserver"]
 collection = db["Job"]
 
+def date_to_unix_timestamp(date_str):
+    try:
+        # Parse the date string and convert it to a datetime object
+        date_obj = datetime.strptime(date_str, "%d/%m/%Y")
+
+        # Convert the datetime object to a Unix timestamp (in seconds)
+        unix_timestamp = int(date_obj.timestamp())
+
+        return unix_timestamp
+    except ValueError:
+        print("Invalid date format. Please use 'dd/mm/yyyy' format.")
+        return None
+    
+
+def convert_date_format(date_str):
+    try:
+        # Parse the date string and convert it to a datetime object
+        date_obj = datetime.strptime(date_str, "%d/%m/%Y")
+
+        # Convert the datetime object to the new format "mm/day/year"
+        new_date_str = date_obj.strftime("%m/%d/%Y")
+
+        return new_date_str
+    except ValueError:
+        print("Invalid date format. Please use 'day/mm/year' format.")
+        return None
+
 def check_job_exists_in_db(application_url):
     """Check if job with given URL already exists in the database"""
     result = collection.find_one({'application_url': application_url})
@@ -30,22 +57,20 @@ def insert_job_in_db(job_data):
     result = collection.insert_one(job_data)
     return result.inserted_id
 
-def generate_job_url(company_name, job_position, job_type):
+def generate_job_url(company_name, job_position):
     random_num = random.randint(0, 100000000)
     new_url = ''
     
-    if job_type:
-        new_url += job_type.replace(' ', '-').replace('&', 'and').replace(',', '').replace('.', '').replace('/', '')
+    # if job_type:
+    #  new_url += job_type.replace(' ', '-').replace('&', 'and').replace(',', '').replace('.', '').replace('/', '').replace("'", '').replace('"', '')
         
     if company_name:
-        if job_type:
-            new_url += '-'
-        new_url += company_name.replace(' ', '-').replace('&', 'and').replace(',', '').replace('.', '').replace('/', '')
+        new_url += company_name.replace(' ', '-').replace('&', 'and').replace(',', '').replace('.', '').replace('/', '').replace("'", '').replace('"', '')
     
     if job_position:
         if company_name:
             new_url += '-'
-        new_url += job_position.replace(' ', '-').replace('&', 'and').replace(',', '').replace('.', '').replace('/', '').replace('(', '').replace(')', '') + '-' + str(random_num)
+        new_url += job_position.replace(' ', '-').replace('&', 'and').replace(',', '').replace('.', '').replace('/', '').replace("'", '').replace('"', '').replace('(', '').replace(')', '') + '-' + str(random_num)
     
     job_url = new_url.lower()
     return job_url
@@ -73,6 +98,31 @@ def parse_content(content):
 
     return result
 
+
+def determine_job_type(job_data):
+    content = job_data.get("content", "")
+    
+    # Use BeautifulSoup to parse and clean the HTML content
+    soup = BeautifulSoup(content, 'html.parser')
+    content = soup.get_text(separator=' ', strip=True)  # Get the text and remove extra whitespaces
+
+    remote_keywords = ["remote", "work from home", "wfh", "remotely"]
+    in_office_keywords = ["in office", "in-office", "onsite", "on-site", "on site"]
+    hybrid_keywords = ["flexible", "hybrid"]
+
+    remote = any(keyword in content.lower() for keyword in remote_keywords)
+    in_office = any(keyword in content.lower() for keyword in in_office_keywords)
+    hybrid = any(keyword in content.lower() for keyword in hybrid_keywords)
+
+    if hybrid:
+        return "Hybrid"
+    elif remote:
+        return "Remote"
+    elif in_office:
+        return "In-office"
+    else:
+        return ""
+
 def get_job_board(board_id):
     geolocator = Nominatim(user_agent="my-app")
     
@@ -85,13 +135,18 @@ def get_job_board(board_id):
 
     for entry in jobs_data:
         title = entry.get('title', 'N/A')
-        department = entry.get('departments', [{}])[0].get('name', 'N/A')
+
+
+        department = entry.get('departments', [{}])[0].get('name', 'N/A')     
         content = html.unescape(entry.get('content', 'N/A'))
+        job_type = determine_job_type(entry)
         parsed_content = parse_content(content)
         location = entry.get('location', {}).get('name', 'N/A')
         application_url = entry.get('absolute_url', 'N/A')
-        updated_at = entry.get('updated_at', 'N/A')
-
+        posted_at = entry.get('updated_at', 'N/A')
+        posted_at_date =datetime.strptime(posted_at[:-6], '%Y-%m-%dT%H:%M:%S').strftime('%d/%m/%Y')
+        date_in_mmddyyyy = convert_date_format(posted_at_date)
+        unix_date = date_to_unix_timestamp(posted_at_date)
         salary_range = re.findall(r'\$[\d,]+-?\$?[\d,]*', content)
         if salary_range:
             salary_values = salary_range[0].replace('$', '').replace(',', '').split('-')
@@ -99,7 +154,7 @@ def get_job_board(board_id):
                 salary_min = int(salary_values[0])
                 salary_max = int(salary_values[1])
             else:
-                salary_min = 0
+                salary_min = 1  
                 salary_max = int(salary_values[0])
         else:
             salary_min = salary_max = 0
@@ -146,33 +201,40 @@ def get_job_board(board_id):
         except:
             pass
 
-        job_url = generate_job_url(board_id, title, department)
+        job_url = generate_job_url(board_id, title)
         company_url = "www." + board_id + ".com"
 
         # Create the result object
         result = {
             'company_name': board_id.capitalize(),
+            'job_type': job_type,
             'job_position': title,
             'company_url': company_url,
             'job_category': department,
             'city': city,
             'location': country,
             'application_url': application_url,
-            'updated_at': datetime.strptime(updated_at[:-6], '%Y-%m-%dT%H:%M:%S').strftime('%d/%m/%Y'),
+            'postedat': date_in_mmddyyyy,
             'jobUrl': job_url,
-            'salaryMin':  salary_min,
-            'salaryMax': salary_max,
-            'Job Description': parsed_content['job_description'],
-            'Job Requirements': parsed_content['job_requirements'],
-            'logo': logo_data
+            'datets': str(unix_date),
+            'salaryMin':  str(salary_min),
+            'salaryMax': str(salary_max),
+            'company_description': "",
+            'job_description': parsed_content['job_description'],
+            'job_requirements': parsed_content['job_requirements'],
+            'logo': board_id + ".jpeg",
+       
+            
         }
         
+       
         formatted_data.append(result)
 
         
     return formatted_data
 
 def main():
+          # When you add company names to the board, make sure to save their logo .jpeg
     boards = [
         'harrys',
         'casper',
@@ -200,4 +262,4 @@ if __name__ == '__main__':
 
 
     #fix job categories, as they are certain terms for our categories.
-    #fix sizing of some base64 images. It doesn't fit in Algolia 
+  
