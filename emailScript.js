@@ -3,13 +3,13 @@ const fetch = require('node-fetch');
 
 async function fetchData(){
   const response = await fetch( `${config.api_url}/api/jobs`)
-  const resData = response.json();
+  const resData = await response.json();
   return resData; 
 };
 
 async function fetchEmail() {
   const response = await fetch (`${config.api_url}/api/emails`)
-  const resData = response.json()
+  const resData = await response.json()
   return resData
 }
 
@@ -38,13 +38,13 @@ function getTimestampInSeconds() {
 const timestampInSeconds = getTimestampInSeconds();
 
 
-function getTodaysDate() {
-  const today = new Date();
-  const year = today.getFullYear().toString().substr(-2);
-  const month = (today.getMonth() + 1).toString().padStart(2, '0');
-  const day = today.getDate().toString().padStart(2, '0');
-  return `${month}/${day}/${year}`;
-}
+// function getTodaysDate() {
+//   const today = new Date();
+//   const year = today.getFullYear().toString().substr(-2);
+//   const month = (today.getMonth() + 1).toString().padStart(2, '0');
+//   const day = today.getDate().toString().padStart(2, '0');
+//   return `${month}/${day}/${year}`;
+// }
 
 // Get Todays Date
 
@@ -63,6 +63,7 @@ function getTodaysDate() {
 
   // const email = async () => {
   fetchData().then((data) => {
+    console.log('Fetched data:', data);
     // Filter out jobs that are older than 7 days
     const filteredData = data.filter((job) => {
     
@@ -78,8 +79,7 @@ function getTodaysDate() {
 
 fetchEmail().then((data) => {
   let mockEmails = []
-  console.log(typeof(data))
-  console.log(data)
+  
  
   data.forEach((emails) => {
     mockEmails.push(emails.email)
