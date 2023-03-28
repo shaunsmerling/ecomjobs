@@ -142,7 +142,7 @@ def get_job_board(board_id):
             content = html.unescape(entry.get('content', 'N/A'))
             job_type = determine_job_type(entry)
             parsed_content = parse_content(content)
-            location = entry.get('location', {}).get('name', 'N/A')
+            location = entry.get('location', {}).get('name', '')
             application_url = entry.get('absolute_url', 'N/A')
             posted_at = entry.get('updated_at', 'N/A')
             posted_at_date =datetime.strptime(posted_at[:-6], '%Y-%m-%dT%H:%M:%S').strftime('%d/%m/%Y')
@@ -242,13 +242,14 @@ def get_job_board(board_id):
 def main():
           # When you add company names to the board, make sure to save their logo .jpeg
     boards = [
+        "quip",
         # 'harrys',
         # 'casper',
         # 'gymshark',
         # 'away',
         # 'barkbox',
-        'glossier',
-        'allbirds'
+        # 'glossier',
+        # 'allbirds'
 
     ]
 
