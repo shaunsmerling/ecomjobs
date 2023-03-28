@@ -10,31 +10,30 @@ import Helmet from 'react-helmet';
 export async function getServerSideProps(context) {
   const { params } = context;
   const { jobId } = params;
- 
+
   const res = await fetch(`${api_url}/api/jobs?id=${jobId}`);
   const data = await res.json();
-  console.log(data)
+
   return {
     props: { jobs: data }, // will be passed to the page component as props
   };
 }
 
-// function convertToISO8601(dateString) {
-//   const dateParts = dateString.split('/');
-//   const year = 2000 + parseInt(dateParts[2]);
-//   const month = dateParts[0].padStart(2, '0');
-//   const date = dateParts[1].padStart(2, '0');
-//   const isoString = `${year}-${month}-${date}T00:00:00+00:00`;
-//   return isoString;
-// }
+function convertToISO8601(dateString) {
+  const dateParts = dateString.split('/');
+  const year = 2000 + parseInt(dateParts[2]);
+  const month = dateParts[0].padStart(2, '0');
+  const date = dateParts[1].padStart(2, '0');
+  const isoString = `${year}-${month}-${date}T00:00:00+00:00`;
+  return isoString;
+}
 
 
 
 function Job({ jobs }) {
-  console.log(jobs)
 
-  // const isoStr = convertToISO8601(jobs.postedat);
-  // console.log(isoStr)
+  const isoStr = convertToISO8601(jobs.postedat);
+  console.log(isoStr)
 
   let jobData =   
 {
@@ -49,7 +48,7 @@ function Job({ jobs }) {
 },
 "industry": `${jobs.job_category}`,
 "employmentType": "FULL_TIME",
-"datePosted": ``,
+"datePosted": `${isoStr ? isoStr : ""}`,
 "baseSalary": `${jobs.salary}`,
 "validThrough": "",
 "jobLocation": {
@@ -120,7 +119,7 @@ function isImageFile(filename) {
                   <path d="M50 61.5L0 33L20 0L50 61.5Z" fill="#BEF8A5" />
                 </svg>
               </div> */}
-              <h1>{jobs?.job_position}</h1>
+             <h1>{jobs?.job_position}</h1>
               <h5>{jobs?.company_description ? "Company Description" : ""}</h5>
               <p>{jobs?.company_description}</p>
               <h5>{jobs?.job_description ? "Job Description" : ""}</h5>
