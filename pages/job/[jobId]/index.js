@@ -121,11 +121,11 @@ function isImageFile(filename) {
                 </svg>
               </div> */}
               <h1>{jobs?.job_position}</h1>
-              <h5>Company Description</h5>
+              <h5>{jobs?.company_description ? "Company Description" : ""}</h5>
               <p>{jobs?.company_description}</p>
-              <h5>Job Description</h5>
+              <h5>{jobs?.job_description ? "Job Description" : ""}</h5>
               <p>{jobs?.job_description}</p>
-              <h5>Job Requirements</h5>
+              <h5>{jobs?.job_requirements ? "Job Requirements" : ""}</h5>
               <p>{jobs?.job_requirements}</p>
             </div>
             <div className={styles.rightside}>
