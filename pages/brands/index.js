@@ -75,7 +75,7 @@ function isImageFile(filename) {
                 </div>
 <div class="companyCard__details ml-2">
 <div class="companyCard__details__name ">{company.company_name}</div>
-<div class="companyCard__details__count">{company.empcount} jobs</div>
+<div class="companyCard__details__count">{company.empcount} employees</div>
 </div>
 </a>
 )
@@ -83,7 +83,18 @@ function isImageFile(filename) {
  
 
 </div>
-</div></section>
+</div>
+
+<div className="flex justify-center mt-10 mb-10">
+<a class="whitespace-nowrap inline-flex items-center justify-center pl-3 pr-1 py-1 border border-transparent rounded-full shadow-sm text-base font-Studio6 text-black  bg-btn " href="/list-your-company">
+Don't See Your Brand? Sign Up Here
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-1 w-6 h-6">
+<path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+</svg>
+</a>
+</div>
+
+</section>
 </section>
     )
 }

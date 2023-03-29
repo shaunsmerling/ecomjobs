@@ -121,12 +121,12 @@ function isImageFile(filename) {
         </section>
         <section class="relative">
           <div class="container mx-auto  px-4">
-            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-96">
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-20">
               <div class="mx-10 lg:mx-0">
                 <div class="flex flex-wrap justify-center">
                   <div class=" lg:w-3/12  lg:order-2 flex justify-center">
                     <div class="relative">
-                      <img loading="lazy" class=" p-10 lg:p-10 border-2 border-gray-100 bg-white rounded-full  -mt-16 " src={logoImage}/>
+                      <img loading="lazy" class=" p-10  border-2 border-gray-100 bg-white rounded-md h-44  -mt-16 " src={logoImage}/>
                     </div>
                   </div>
                   <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
@@ -152,7 +152,8 @@ function isImageFile(filename) {
                     </div>
                   </div>
                 </div>
-                <div class="px-0 lg:mx-0 text-center mt-4">
+               
+                <div class="px-0 lg:mx-0 text-center  ">
                   <h3 class="text-xl lg:text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
                     {company.company_name}
                   </h3>
@@ -161,19 +162,28 @@ function isImageFile(filename) {
                     <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
                     {company.city} {company.location}
                   </div>
-
-                  <p className="text-md lg:text-xl lg:px-10 mx-auto mt-10 mb-8 ">
-                    {" "}
-                    {company.mission
-                      ? company.mission
-                      : company.company_description}
-                  </p>
-                  <div class="mb-2 text-blueGray-600 mt-10">
+                  <div class="mb-2 text-blueGray-600 ">
                     <i class="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i>
                     <a href={company.company_url} className="text-sky-400">
                       {company.company_url}
                     </a>
                   </div>
+                
+                  <p className="text-md lg:text-xl lg:px-10 mx-auto mt-10 mb-8 ">
+                    <p className="mb-6 font-bold underline"> Mission Statement:</p>
+                    {" "}
+                    {company.mission
+                      ? company.mission
+                      : company.company_description}
+                  </p>
+                  <p className="text-md lg:text-xl lg:px-10 mx-auto mt-10 mb-8 ">
+                  <p className="mb-6 font-bold underline"> Company Description:</p>
+                    {" "}
+                    {company.company_description
+                      ? company.company_description
+                      : ''}
+                  </p>
+                 
                   {/* <div class="mb-2 text-blueGray-600">
                     <i class="fas fa-university mr-2 text-lg text-blueGray-400"></i>
                   </div> */}
@@ -195,14 +205,15 @@ function isImageFile(filename) {
                   <div className={`flex flex-col lg:mx-20 pb-2`}>
                   <a href={`/job/${job?.jobUrl}`} target="_blank">
                 <ul className={`  -mx-10 lg:-mx-0 text-left mt-4  border-4 rounded-lg flex hover:bg-gray-100   hover:underline`}>
-                <img loading="lazy" className="z-1 mt-6 ml-4 w-12 h-12 lg:w-20 lg:h-20 rounded-full border border-[#17614A] border-2 " src={`/images/${job?.logo}`} ></img>
+                <img loading="lazy" className="z-1 mt-2 ml-4 w-12 h-12 lg:w-20 lg:h-20 rounded-full border border-2 " src={`/images/${job?.logo}`} ></img>
                   <li className="w-full ml-2 my-4 box-border ">
                    
-                    
-                    <p className=" ml-2 mr-2 lg:mr-10 -mb-2 z-1 text-md lg:text-2xl text-black z-0 font-bold pb-2 pr-20 ">{job?.job_position}</p>
-                    <span className=" text-xs ml-2">{getDate(job?.postedat)}</span>
+                    <div className="mt-2 mx-4">
+                    <p className=" ml-2 mr-2 lg:mr-10  z-1 text-md lg:text-2xl text-black z-0 font-bold pb-2 pr-20 ">{job?.job_position}</p>
+                    </div>
+                    <span className=" text-xs ml-6">{getDate(job?.postedat)}</span>
 
-                    <p className="float-right mr-4 text-[10px] -mt-6 bold  text-black lg:text-xl">{job?.job_type} | {job?.location}</p>
+                    <p className="float-right mr-4 text-[10px] font-bold -mt-6 bold  text-black lg:text-md">{job?.job_type && job?.location ? job?.job_type + " | " + job?.location : ""}</p>
                       
                   </li>
                 </ul>

@@ -253,7 +253,10 @@ def main():
         # 'everlane',
         # 'prose',
         # 'parade'
-        'mejuri'
+        # 'mejuri'
+        # 'dailyharvest',
+        # 'naadam',
+        # 'rothys',
 
     ]
 

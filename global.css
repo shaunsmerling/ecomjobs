@@ -4,9 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.bold {
-  color: #17614a !important;
-}
+
 
 #logo {
   width: 100%;
