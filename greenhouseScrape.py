@@ -250,9 +250,10 @@ def main():
         # 'glossier',
         # 'allbirds'
         # 'commonthreadcollective'
-        'everlane',
-        'prose',
-        'parade'
+        # 'everlane',
+        # 'prose',
+        # 'parade'
+        'mejuri'
 
     ]
 
@@ -274,4 +275,5 @@ if __name__ == '__main__':
     main()
 
 
-    #fix job categories, as they are certain terms for our categories.
+    #Get rid of &nbsp; in job descriptions / requirements and &amp
+    # change starting min salary if there is a max to 100k
