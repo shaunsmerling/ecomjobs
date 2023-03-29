@@ -249,7 +249,10 @@ def main():
         # 'away',
         # 'glossier',
         # 'allbirds'
-        'commonthreadcollective'
+        # 'commonthreadcollective'
+        'everlane',
+        'prose',
+        'parade'
 
     ]
 
