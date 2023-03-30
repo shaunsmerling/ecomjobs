@@ -242,8 +242,8 @@ def get_job_board(board_id):
 def main():
           # When you add company names to the board, make sure to save their logo .jpeg
     boards = [
-        # "quip",
-        # 'harrys',
+        # "quip", -
+        # 'harrys', -
         # 'casper',
         # 'gymshark',
         # 'away',
@@ -257,6 +257,12 @@ def main():
         # 'dailyharvest',
         # 'naadam',
         # 'rothys',
+        # 'dollarshaveclub',
+        # 'cometeer',
+    #  'ruggable',
+    #  'barkbox',
+    # 'bombas',
+    'meundies',
 
     ]
 

@@ -102,10 +102,10 @@ const handleSubmit = (e) => {
                     </img>
                   <div className="ml-4">
                     <p className="text-base font-semibold text-white">
-                      Josh Platis 
+                      HR Manager
                     </p>
                     <p className="text-sm font-normal text-gray-300">
-                      Co-Founder, PurpleLotus.com
+                      Your Favorite DTC Brand
                     </p>
                   </div>
                 </div>

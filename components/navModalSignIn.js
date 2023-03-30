@@ -12,16 +12,16 @@ function Modal() {
             <a href="../">
               <img
                 href="../"
-                className="w-auto h-10 mt-4 -ml-2 mb-4 "
+                className="w-auto h-14 mt-4 -ml-2 mb-4 "
                 src="../logo.png"
                 alt=""
               ></img>
             </a>
           </div>
-          <div className=" -mr-36 mb-4 mt-4">
+          <div className=" -mr-52 mb-4 mt-4">
             <button
               type="button"
-              class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              class="bg-white rounded-md p-2 inline-flex items-center justify-center text-black hover:text-black hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
               data-action="transition#hide"
             >
               <span class="sr-only">Close menu</span>
@@ -53,7 +53,7 @@ function Modal() {
                       href="/remote-jobs"
                     >
                       <div class="ml-2 flex text-base font-medium text-gray-900">
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-[#17614A]  text-white mr-2">
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
                         <img src="https://img.icons8.com/windows/32/FFFFFF/laptop-computer.png"/>
                         </div>
                         <div className="mt-2 ml-2 ">Remote Jobs</div>
@@ -64,7 +64,7 @@ function Modal() {
                       href="/employers/posts"
                     >
                       <div class="ml-2 flex text-base font-medium text-gray-900">
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-[#17614A]  text-white mr-2">
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
@@ -82,7 +82,7 @@ function Modal() {
                       href="/bulkdiscounts"
                     >
                       <div class="ml-2 flex text-base font-medium text-gray-900">
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-[#17614A]  text-white mr-2">
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
                   
                            <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ function Modal() {
                       href="/list-your-company"
                     >
                       <div class="ml-2 flex text-base font-medium text-gray-900">
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-[#17614A]  text-white mr-2">
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
       {/*             
                            <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +123,7 @@ function Modal() {
                       href="/contactus"
                     >
                       <div class="ml-2 flex text-base font-medium text-gray-900">
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-[#17614A]  text-white mr-2">
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 24 24"
@@ -144,7 +144,7 @@ function Modal() {
                       <a
                         href="/postajob"
                         title=""
-                        className="inline-flex items-center justify-center px-20 mt-4 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+                        className="inline-flex items-center justify-center px-20 mt-4 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-black text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
                         role="button"
                       >
                         Post A Job
@@ -173,7 +173,7 @@ function Modal() {
                 href="/remote-jobs"
               >
                 <div class="ml-2 flex text-base font-medium text-gray-900">
-                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-[#17614A]  text-white mr-2">
+                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
                   <img src="https://img.icons8.com/windows/32/FFFFFF/laptop-computer.png"/>
                   </div>
                   <div className="mt-2 ml-2 ">Remote Jobs</div>
@@ -184,7 +184,7 @@ function Modal() {
                 href="/blog"
               >
                 <div class="ml-2 flex text-base font-medium text-gray-900">
-                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-[#17614A]  text-white mr-2">
+                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -202,7 +202,7 @@ function Modal() {
                 href="/location"
               >
                 <div class="ml-2 flex text-base font-medium text-gray-900">
-                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-[#17614A]  text-white mr-2">
+                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
             
                      <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -222,7 +222,7 @@ function Modal() {
                 href="/category"
               >
                 <div class="ml-2 flex text-base font-medium text-gray-900">
-                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-[#17614A]  text-white mr-2">
+                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
 {/*             
                      <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -243,7 +243,7 @@ function Modal() {
                 href="/contactus"
               >
                 <div class="ml-2 flex text-base font-medium text-gray-900">
-                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-[#17614A]  text-white mr-2">
+                  <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -264,24 +264,24 @@ function Modal() {
                 <a
                   href="/postajob"
                   title=""
-                  className="inline-flex items-center justify-center px-20 mt-4 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#17614A] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+                  className="inline-flex items-center justify-center px-20 mt-4 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-btn text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
                   role="button"
                 >
                   Post A Job
                 </a>
               </div>
-              <div className=" -mt-4 -mb-10 mx-auto">
+              {/* <div className=" -mt-4 -mb-10 mx-auto">
                 <p className="text-black">  Are you an employer? Sign in&nbsp;
                 <a
                   href="/signup"
                   title=""
-                  className="text-lightGreen-300 font-bold "
+                  className="text-bg font-bold "
                  
                 >
                    here
                 </a>
                 </p>
-              </div>
+              </div> */}
             </nav>
           </div>
         )}

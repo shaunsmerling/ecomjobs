@@ -213,6 +213,7 @@ function NavBarThree({ users }) {
   Brands
 </Link>
 
+
 <div class="relative" data-controller="transition" data-action="keyup@window->transition#hideWithKeyboard click@window->transition#hideBackground">
 <Menu as="div" className="relative inline-block text-left">
               <div className="  rounded-full">
@@ -523,6 +524,9 @@ function NavBarThree({ users }) {
             </Menu>
 
 </div>
+<Link href="/contactus" class="whitespace-nowrap text-base rounded-full px-3 py-1 -ml-1 text-black hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
+  Contact Us
+</Link>
 <a class="whitespace-nowrap inline-flex items-center justify-center pl-3 pr-1 py-1 border border-transparent rounded-full shadow-sm text-base font-Studio6 text-black  bg-btn " href="/postajob">
 Post a Job
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-1 w-6 h-6">
