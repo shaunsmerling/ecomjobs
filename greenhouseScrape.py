@@ -268,7 +268,8 @@ def main():
     # 'theragun'
     # 'omaze',
     # 'thinx'
-    'fashionnova'
+    # 'fashionnova'
+    'poshmark',
     ]
 
     for board in boards:
