@@ -109,7 +109,7 @@ fetchEmail().then((data) => {
   let emailList = removeDuplicatesAndEmptyEmails(mockEmails)
 
   const structuredData = filteredData.map((job) => `
-      <a href=${`www.ecomportal.co/job/${job.jobUrl}`}><h2>${job.job_position}</h2></a> <p style="margin-top: 0px"> ${job.company_name} | ${job.location} | ${job.job_type}</p>
+      <a href=${`www.ecomportal.co/job/${job.jobUrl}`}><h2>${job.job_position}</h2></a> <p style="margin-top: 0px"> ${job.company_name && job.location && job.job_type ? job.company_name + "|" + job.location + "|" + job.job_type : job.company_name + "|" + job.location }</p>
     `
 ).join('')
 

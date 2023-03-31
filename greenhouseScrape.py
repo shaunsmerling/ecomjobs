@@ -262,8 +262,13 @@ def main():
     #  'ruggable',
     #  'barkbox',
     # 'bombas',
-    'meundies',
-
+    # 'meundies',
+    # 'seed',
+    # 'billie',
+    # 'theragun'
+    # 'omaze',
+    # 'thinx'
+    'fashionnova'
     ]
 
     for board in boards:
