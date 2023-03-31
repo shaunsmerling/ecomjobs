@@ -269,7 +269,8 @@ def main():
     # 'omaze',
     # 'thinx'
     # 'fashionnova'
-    'poshmark',
+    # 'poshmark',
+    'disco'
     ]
 
     for board in boards:

@@ -89,7 +89,7 @@ export default function salaries({posts}) {
                   
                   <img 
                   className="w-10 h-10 mt-4 mb-4 rounded-full"
-                  src={urlFor(post.author.image).url()}
+                  src={urlFor(post.author?.image).url()}
                   />
                   by {post.author.name} 
                   </div>
