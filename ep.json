@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ecomportal-382409",
+  "private_key_id": "eef1ead214b119c17c4807cd62371f3cb90c2cda",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDv+jXl+SQG5Hna\nk5Ku+N69h7SyqIWy1jpIwP22IlgU0RpRRS+YxYeixJZRVfuVkytWEhZjWdpL7Sqd\nhkP1SBd7Wm4Vww9VLtoTsi7xCQVbiPZwQOX9bZx1WQlAOoC1Yx/hGLJD19mdDa+n\nqFsP4kFRWr2/3lTtETmQCv7+uJ/EvQVPrxt0+CyhbihRJRBsE3RMrem5/K6zcCxW\nx7Zp5UhpM9mZUOBqVvdFGQxSxzEXTs9WPEYH/7f0MLKeX7Wq3rEplqqXeZ2LR8uq\nHaU8avDGs2pnewih7JGdGinVQJSsGkUOOE4urimsTkp8pCqWQYS0HlhXqwQ9ylYU\nThh7aHndAgMBAAECggEACWE4sJhhmlxdT+1jNxrBTVwBHyzmQZR32uaiNAzZGlfc\nT7oPeh5EZtizaGf0NAc4fdN/U7BMJO9sR5PF0w/s4l8pPN6u2ifr5wet/TFap9aC\nuBCtUfpyD7B5zlcgYevx2nZA53/HwMiraYyeIeY4d9x/B1bCb9wJFDJ91N50rjeY\nHbY+FU4+hRtO7f+OrJvloNHhKRsB77/NxhNGZQ8L6JsWq3t4El/xdHggEjZhVUVF\nUcY6GGgGFJfwYAK2AymVmSsMy+lUtHYmBkhP1g+jxMcU1kj/x3l6xCbe4gbLzuUq\nwbU5ngmDrMZcS8e0Uy9U5QDzOg+DuC7NdowmNKXQeQKBgQD57hS1ClL1A3VZoyxe\nnQAOFsiKwZQQTdEq8wDAhAQ4U8ssuIRdMbVgfZJBev9p1RkmKd3LjdG8DxeW8nIG\nJLkt8Sgg+I4FVwAhTUqWDztDMCdDzPxdf+uGSb9R7P6jqvbzJlOx+WPCpgvCfevO\nNVq5Chf1LAt5pEZn/2aXr4it+QKBgQD1zkAEo4+OcehyeP0mSXFmlq9yrSNurQDA\nQkBa6RMgdVEHboOV6rx5A9CGqv8MRp8acL9D0p8QuofiZ1qbjq58MPJThlbkPH1R\nKHK9heaD7jELsRsD7jfz722PyYI5/Xv/+jM+5eKJge4LBl+r/6mmgw5mqsugt1yB\np8b5ETq0BQKBgG5u8ptkKm+0zX+ECDDuMn4HNymIi4IAwHG32hc2vh6dd+MUzPfY\n5QnzslJYpM8AqBIi4av1yDzOdl/uVM++HkzciBy5dxeI77fHTTOtG0R+3Hqq8r/l\nrA40O+NZUtLC0kdyIf078wapE/0mYrFFBgdJHHjqs09WdP2y7oQLvdsRAoGBAKsU\n6H3SEWLFaVHzX868I0+R5X9dfmHTy8gE1KHxwzw+Ky2O/8riXFemDgcNEQNMTASt\nIJJmEAwmp9kusmO+xTbvIlp8EBI+/8Hy8xlyDuUYbc6DcBgmP49qv8jqKdeO1DVv\nwScv/aJTaokF4KToBv48DVPr4Fp2BM7BJb3I/iC5AoGAR33SS8R7zjipw2SGFmJV\njzslcobHC21bgZCJeT3WKxTCYLgC7XIBRdA+anz/DLQJv2wHHhlgu2hc+2vjRE3G\n3KmDUmQjb2oG6pieVmRTmpb6NCZJwstxkRvZDjjlH5P379I5ghzkBwiGs6rdmts/\nHUzAV8mTGiGJnaqApa/+wkI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "ecomportal@ecomportal-382409.iam.gserviceaccount.com",
+  "client_id": "112510097368938103530",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ecomportal%40ecomportal-382409.iam.gserviceaccount.com"
+}

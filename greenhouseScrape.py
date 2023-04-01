@@ -10,6 +10,48 @@ import base64
 from pymongo import MongoClient
 import os
 from dotenv import load_dotenv
+import google.auth
+from google.auth.transport.requests import Request
+from google.oauth2 import service_account
+from google.auth.exceptions import RefreshError
+
+
+def send_notification(url, action):
+    try:
+        credentials = service_account.Credentials.from_service_account_file(
+            "ep.json",
+            scopes=["https://www.googleapis.com/auth/indexing"],
+        )
+
+        credentials.refresh(Request())
+
+        access_token = credentials.token
+
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {access_token}",
+        }
+
+        data = {
+            "url": url,
+            "type": action,
+        }
+
+        response = requests.post(
+            "https://indexing.googleapis.com/v3/urlNotifications:publish",
+            headers=headers,
+            json=data,
+        )
+
+        if response.status_code != 200:
+            print("Failed to send notification:", response.text)
+        else:
+            print("Notification sent to Google Indexing API...")
+    except RefreshError as e:
+        print("Failed to refresh access token:", e)
+
+# ... other code ...
+
 
 load_dotenv()
 
@@ -270,7 +312,9 @@ def main():
     # 'thinx'
     # 'fashionnova'
     # 'poshmark',
-    'disco'
+    # 'disco'
+    # 'klaviyo'
+    'grin'
     ]
 
     for board in boards:
@@ -281,6 +325,10 @@ def main():
             if not job_exists:
                 print("Inserting new job...")
                 insert_job_in_db(job)
+                
+                # Send notification to the Google Indexing API
+                job_url = f"https://www.ecomportal.co/job/{job['jobUrl']}"
+                send_notification(job_url, "URL_UPDATED")
             else:
                 print(f"Job '{job['job_position']}' already exists in database. Skipping...")
 
