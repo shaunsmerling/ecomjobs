@@ -150,7 +150,7 @@ function isImageFile(filename) {
               <div className={styles.rightContent}>
                 <img loading="lazy" src={logoImage}></img>
                 <h3>{jobs?.company_name}</h3>
-                <h6>{jobs?.salaryMin && jobs?.salaryMax !== "0" ? "$" + jobs.salaryMin + ` - ` + "$" + jobs.salaryMax : ""}</h6>
+                <h6>{jobs?.salaryMin && jobs?.salaryMax !== "0" ? `${jobs?.salaryMin === "1000" ? "" : `$${jobs?.salaryMin} - `}$${jobs?.salaryMax}` : ""}</h6>
                 <a
                   href={jobs?.application_url}
                   target="_blank"
