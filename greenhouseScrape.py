@@ -197,16 +197,16 @@ def get_job_board(board_id):
                     salary_min = int(salary_values[0])
                     salary_max = int(salary_values[1])
                 else:
-                    salary_min = 1
+                    salary_min = 0
                     salary_max = int(salary_values[0])
             else:
                 salary_min = salary_max = 0
 
 
-            if salary_min < 1000:
-                salary_min *= 1000
-            if salary_max < 1000:
-                salary_max *= 1000
+            # if salary_min < 1000:
+            #     salary_min *= 1000
+            # if salary_max < 1000:
+            #     salary_max *= 1000
 
             # Extract the city from the location string
             city = location.split(',')[0].strip()
@@ -261,8 +261,8 @@ def get_job_board(board_id):
                 'postedat': date_in_mmddyyyy,
                 'jobUrl': job_url,
                 'datets': str(unix_date),
-                'salaryMin':  str(salary_min),
-                'salaryMax': str(salary_max),
+                'salaryMin':  salary_min,
+                'salaryMax': salary_max,
                 'company_description': "",
                 'job_description': parsed_content['job_description'],
                 'job_requirements': parsed_content['job_requirements'],
@@ -314,7 +314,8 @@ def main():
     # 'poshmark',
     # 'disco'
     # 'klaviyo'
-    'grin'
+    # 'grin',
+    # 'mixpanel'
     ]
 
     for board in boards:
