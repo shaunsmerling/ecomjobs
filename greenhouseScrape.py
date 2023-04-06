@@ -260,7 +260,8 @@ def get_job_board(board_id):
                 'application_url': application_url,
                 'postedat': date_in_mmddyyyy,
                 'jobUrl': job_url,
-                'datets': str(unix_date),
+                'datets': unix_date,
+                ## If salary is int, then emails wont send.
                 'salaryMin':  str(salary_min),
                 'salaryMax': str(salary_max),
                 'company_description': "",
@@ -314,7 +315,12 @@ def main():
     # 'poshmark',
     # 'disco'
     # 'klaviyo'
-    'mixpanel'
+    # 'mixpanel'
+    # 'smsbump',
+    # "renttherunway"
+    'eucalyptus'
+
+    
     ]
 
     for board in boards:

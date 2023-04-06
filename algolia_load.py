@@ -34,8 +34,15 @@ new_items = []
 for item in mongo_query:
     if (len(initial_items) < 5000):
         item['objectID'] = str(item.pop('_id'))
-        initial_items.append(item)
 
+        # Convert salaryMin and salaryMax to integers
+        if 'salaryMin' in item and item['salaryMin'] is not None:
+            item['salaryMin'] = int(item['salaryMin'].replace(',', ''))
+        if 'salaryMax' in item and item['salaryMax'] is not None:
+            item['salaryMax'] = int(item['salaryMax'].replace(',', ''))
+
+        initial_items.append(item)
+        
 # Fetch existing objectIDs from the Algolia index
 existing_appURLs = [hit['application_url'] for hit in algolia_index.browse_objects({'attributesToRetrieve': ['application_url']})]
 
