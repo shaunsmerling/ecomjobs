@@ -264,12 +264,19 @@ function Modal() {
                 <a
                   href="/postajob"
                   title=""
-                  className="inline-flex items-center justify-center px-20 mt-4 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-btn text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+                  className="inline-flex border border-black items-center transform transition duration-300 hover:-translate-y-1 hover:shadow-lg  justify-center px-20 mt-4 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-btn text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
                   role="button"
                 >
                   Post A Job
                 </a>
+                
               </div>
+              <div className="  mb-4 -mt-4 mx-auto">
+              <a class="border border-black whitespace-nowrap transform transition duration-300 hover:-translate-y-1 hover:shadow-lg inline-flex items-center justify-center px-20 py-2.5 rounded-full text-base font-Studio6 text-white  bg-purple-500 " href="https://www.theinsightai.com/subscribe">
+InsightAI
+</a>
+</div>
+
               {/* <div className=" -mt-4 -mb-10 mx-auto">
                 <p className="text-black">  Are you an employer? Sign in&nbsp;
                 <a
