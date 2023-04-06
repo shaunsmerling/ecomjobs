@@ -4,6 +4,7 @@ import FooterEmail from "../components/Footer/footerEmail"
 import FooterCities from "../components/Footer/footerCities"
 import FooterJobs from "../components/Footer/footerJobs"
 import FooterRoles from "../components/Footer/footerRoles"
+import Link from "next/link";
 import "@stripe/stripe-js";
 import algoliasearch from "algoliasearch/lite";
 import {
@@ -85,6 +86,7 @@ export default function HomePage() {
             
 
             <div className="flex flex-col w-full gap-4">
+              <Link href="https://www.theinsightai.com">
             <div id="sponsor_1" class="mb-4 lg:ml-4 lg:mr-2 sm:mx-20 rounded-md cursor-pointer border border-solid border-purple-500 transform transition duration-300 hover:-translate-y-1 hover:shadow-lg ">
     <div class="px-2  py-2 py-md-3 ">
         <div class="flex flex-col md:flex-row justify-between">
@@ -107,6 +109,7 @@ export default function HomePage() {
         </div>
     </div>
 </div>
+</Link>
 
               <div className="p-2 lg:p-4  searchBox -mb-4 lg:mb-0.5 -mx-8 lg:-mx-0 flex flex-row justify-center items-center gap-3  ">
                 {/* Custom Search Box */}
