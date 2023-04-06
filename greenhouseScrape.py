@@ -261,8 +261,8 @@ def get_job_board(board_id):
                 'postedat': date_in_mmddyyyy,
                 'jobUrl': job_url,
                 'datets': str(unix_date),
-                'salaryMin':  salary_min,
-                'salaryMax': salary_max,
+                'salaryMin':  str(salary_min),
+                'salaryMax': str(salary_max),
                 'company_description': "",
                 'job_description': parsed_content['job_description'],
                 'job_requirements': parsed_content['job_requirements'],
@@ -314,8 +314,7 @@ def main():
     # 'poshmark',
     # 'disco'
     # 'klaviyo'
-    # 'grin',
-    # 'mixpanel'
+    'mixpanel'
     ]
 
     for board in boards:

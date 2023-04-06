@@ -126,120 +126,27 @@ fetchEmail().then((data) => {
     to: `${email}`,
     subject: ` 🚀 ${filteredData.length} New Jobs from EcomPortal`,
     html: `
-    <!DOCTYPE html>
-    <html>
-    <head>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.5;
-            background-color: #f4f4f4;
-        }
-    
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-    
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    
-        .header img {
-            max-width: 20%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-    
-        .greeting {
-            font-weight: bold;
-            color: #333333;
-        }
-    
-        .content {
-            margin-bottom: 20px;
-        }
-    
-        .jobs {
-            font-weight: bold;
-            color: #2c3e50;
-        }
-    
-        .cta {
-            color: #000000;
-        }
+    <div style="margin: 0; padding: 0; font-family: Arial, sans-serif; font-size: 14px; line-height: 1.5; text-align:center;" >
+    <img style= "max-width: 20%; height: auto;" src="www.ecomportal.co/logo.png" alt="ecomportal-logo" />
+    <div style="max-width: 600px; margin: 0 auto;">
+    <p>Hey there 👋 </p>
+    <p>
+    Firstly, thank you for subscribing to EcomPortal's weekly newsletter! 🙏🏻
+    </p>
+    <p>
+    We've got ${filteredData.length} new jobs to share with you from ecommerce brands hiring this week!
+    </p>
+    <p>
+    We've got ${filteredData.length} new jobs to share with you from ecommerce brands hiring this week!
+    </p>
+    <p style="padding-bottom: 10px;">
+    Check them out & feel free to apply via the links below! 👇🏻
+    </p>
 
-        .sponsor-section {
-          background-color: #fffcd3;
-          padding: 15px;
-          border-radius: 4px;
-          margin-bottom: 20px;
-      }
-  
-      .sponsor-title {
-          font-weight: bold;
-          color: #333333;
-          margin-bottom: 10px;
-      }
-  
-      .sponsor-text {
-          color: #333333;
-          margin-bottom: 10px;
-      }
-  
-      .sponsor-button {
-          display: inline-block;
-          background-color: #000000;
-          color: #ffffff !important;
-          text-decoration: none;
-          padding: 10px 15px;
-          border-radius: 4px;
-          font-weight: bold;
-      }
+    ${structuredData}
 
-        .footer {
-            text-align: center;
-            font-size: 12px;
-            color: #999;
-            margin-top: 20px;
-        }
-
-       
-      
-    </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="header">
-                <img src="www.ecomportal.co/logo.png" alt="ecomportal-logo" />
-            </div>
-            <div class="content">
-                <p class="greeting">Hey there 👋</p>
-                <p>Firstly, thank you for subscribing to EcomPortal's weekly newsletter! 🙏🏻</p>
-                <p class="jobs">We've got ${filteredData.length} new jobs to share with you from ecommerce brands hiring this week!</p>
-                <p class="cta">Check them out & feel free to apply via the links below! 👇🏻</p>
-            </div>
-            <div class="sponsor-section">
-            <p class="sponsor-title">Join the InsightAI Newsletter</p>
-            <p class="sponsor-text">The Latest in AI Progress, Prompt Engineering, and New AI Tools delivered to your inbox | Leverage AI to 1000x Your Productivity </p>
-            <a href="https://www.theinsightai.com" class="sponsor-button">Visit InsightAI</a>
-        </div>
-    
-            ${structuredData}
-        </div>
-        <p class="footer">EcomPortal - Helping you find the best DTC jobs</p>
-    </body>
-    </html>
-    
+    </div>
+    </div>
 
     `
   };

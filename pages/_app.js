@@ -18,21 +18,24 @@ function MyApp({
 const router = useRouter();
 const showHeader = router.pathname === '/signup' || router.pathname === "/createaccount" ? false : true;
 
+useEffect(() => {
+  router.events.on("routeChangeComplete", (path) => {
+    setTimeout(() => {
+      if (window.bento !== undefined) {
+        // Note: if the user is identified or logged in, you can identify their page view by running.
+        // Example:
+        // if (user) {
+        //  window.bento.identify(email);
+        // }
+        window.bento.view();
+      };
+    }, 0);
+  });
 
-
-// useEffect(() => {
-//   import('react-facebook-pixel')
-//     .then((x) => x.default)
-//     .then((ReactPixel) => {
-//       ReactPixel.init('XXXXXXXXXXXXXXXXXXXXX') // facebookPixelId
-//       ReactPixel.pageView()
-
-//       router.events.on('routeChangeComplete', () => {
-//         ReactPixel.pageView()
-//       })
-//     })
-// }, [router.events])
-
+  return () => {
+    router.events.off('routeChangeComplete', 0);
+  }
+}, [router]);
 
 
 
@@ -73,7 +76,7 @@ const showHeader = router.pathname === '/signup' || router.pathname === "/create
         }}
 />
 <Script strategy="afterInteractive" src="https://www.facebook.com/tr?id=242161221475139&ev=PageView&noscript=1"/>
-
+<Script id="bento-script" src={"https://fast.bentonow.com?site_uuid=b206b230c175e8efc963c7144909e9dc"} strategy="afterInteractive" />
 <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=AW-11061598180"/>
 <Script
   id="google-tag"
