@@ -92,19 +92,19 @@ export default function HomePage() {
         <div class="flex flex-col md:flex-row justify-between">
             <div class="flex items-center">
                 <img alt="SideShift.ai" class="rounded mr-0 mr-md-3 border border-solid border-purple-500 h-12" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/aa50731f-a766-408c-a022-0fc97eec3d08/thumb_ecommerce__6_.png"/>
-                <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false"  href="https://www.theinsightai.com/subscribe"></a>
+                <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false"  href="https://www.theinsightai.com"></a>
                 <div className="ml-4"> 
-                    <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="text-purple-500 hover:text-purple-600" href="https://www.theinsightai.com/subscribe">
+                    <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="text-purple-500 hover:text-purple-600" href="https://www.theinsightai.com">
                         <div class="font-bold text-lg hidden md:block text-purple-500">Leverage AI to 1000x productivity</div>
                         <div class="text-sm font-semibold  text-purple-500 md:hidden">Leverage AI to 1000x productivity</div>
                     </a>
-                    <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="block text-purple-500 text-xs mt-0 md:mt-1"  href="https://www.theinsightai.com/subscribe">by the <b>InsightAI</b> newsletter</a>
+                    <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="block text-purple-500 text-xs mt-0 md:mt-1"  href="https://www.theinsightai.com">by the <b>InsightAI</b> newsletter</a>
                 </div>
-                {/* <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="my-btn-sm text-white bg-purple-500  rounded-md px-4 md:hidden text-xs  border border-solid border-purple-500  "  href="https://www.theinsightai.com/subscribe">Learn More</a> */}
+                {/* <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="my-btn-sm text-white bg-purple-500  rounded-md px-4 md:hidden text-xs  border border-solid border-purple-500  "  href="https://www.theinsightai.com">Learn More</a> */}
             </div>
          
             <div class="my-auto md:pl-3 pl-0">
-                <a onmouseover="this.style.cssText='background-color: #be8fdb; color: black; border-style: solid; border-color: #be8fdb; box-shadow: 0px 0px 6px 3px #fe52ad;'" onmouseout="this.style.cssText='text-decoration: none; color: #be8fdb; border-style: solid; border-color: #be8fdb; box-shadow: 0px 0px 6px 3px #fe52ad;'" rel="noopener" data-turbo="false" class="my-btn-sm text-xs text-purple-500 border border-solid border-purple-500 hidden md:block hover:bg-purple-500 hover:text-white py-1 px-2 rounded-md" target="_blank" href="https://www.theinsightai.com/subscribe">Learn More</a>
+                <a onmouseover="this.style.cssText='background-color: #be8fdb; color: black; border-style: solid; border-color: #be8fdb; box-shadow: 0px 0px 6px 3px #fe52ad;'" onmouseout="this.style.cssText='text-decoration: none; color: #be8fdb; border-style: solid; border-color: #be8fdb; box-shadow: 0px 0px 6px 3px #fe52ad;'" rel="noopener" data-turbo="false" class="my-btn-sm text-xs text-purple-500 border border-solid border-purple-500 hidden md:block hover:bg-purple-500 hover:text-white py-1 px-2 rounded-md" target="_blank" href="https://www.theinsightai.com">Learn More</a>
             </div>
         </div>
     </div>
