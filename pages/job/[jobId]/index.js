@@ -133,25 +133,25 @@ function isImageFile(filename) {
                   <path d="M50 61.5L0 33L20 0L50 61.5Z" fill="#BEF8A5" />
                 </svg>
               </div> */}
-                   <Link href="https://www.theinsightai.com">
-            <div id="sponsor_1" class="mb-4 mt-8 lg:mx-0 sm:mx-20 rounded-md cursor-pointer border border-solid border-purple-500 transform transition duration-300 hover:-translate-y-1 hover:shadow-lg ">
+                       <Link href="https://www.theinsightai.com/subscribe">
+            <div id="sponsor_1" class="mb-4 mt-4 lg:ml-4 lg:mr-2 sm:mx-20 rounded-md cursor-pointer border border-solid  border-black transform transition duration-300 hover:-translate-y-1 hover:shadow-lg ">
     <div class="px-2  py-2 py-md-3 ">
         <div class="flex flex-col md:flex-row justify-between">
             <div class="flex items-center">
-                <img alt="SideShift.ai" class="rounded mr-0 mr-md-3 border border-solid border-purple-500 h-12" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/aa50731f-a766-408c-a022-0fc97eec3d08/thumb_ecommerce__6_.png"/>
-                <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false"  href="https://www.theinsightai.com"></a>
+                <img class="rounded mr-0 mr-md-3 border border-solid border-insightblue h-12" src="../images/insight.png"/>
+                <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false"  href="https://www.theinsightai.com/subscribe"></a>
                 <div className="ml-4"> 
-                    <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="text-purple-500 hover:text-purple-600" href="https://www.theinsightai.com">
-                        <div class="font-bold text-lg hidden md:block text-purple-500">Leverage AI to 1000x productivity</div>
-                        <div class="text-sm font-semibold  text-purple-500 md:hidden">Leverage AI to 1000x productivity</div>
+                    <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="text-purple-500 hover:text-purple-600" href="https://www.theinsightai.co/subscribe">
+                        <div class="font-bold text-lg hidden md:block text-insightblue">Leverage AI to 1000x productivity</div>
+                        <div class="text-sm font-semibold  text-insightblue md:hidden">Leverage AI to 1000x productivity</div>
                     </a>
-                    <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="block text-purple-500 text-xs mt-0 md:mt-1"  href="https://www.theinsightai.com">by the <b>InsightAI</b> newsletter</a>
+                    <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="block text-insightblue text-xs mt-0 md:mt-1"  href="https://www.theinsightai.com/subscribe">by the <b>InsightAI</b> newsletter</a>
                 </div>
                 {/* <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="my-btn-sm text-white bg-purple-500  rounded-md px-4 md:hidden text-xs  border border-solid border-purple-500  "  href="https://www.theinsightai.com">Learn More</a> */}
             </div>
          
             <div class="my-auto md:pl-3 pl-0">
-                <a onmouseover="this.style.cssText='background-color: #be8fdb; color: black; border-style: solid; border-color: #be8fdb; box-shadow: 0px 0px 6px 3px #fe52ad;'" onmouseout="this.style.cssText='text-decoration: none; color: #be8fdb; border-style: solid; border-color: #be8fdb; box-shadow: 0px 0px 6px 3px #fe52ad;'" rel="noopener" data-turbo="false" class="my-btn-sm text-xs text-purple-500 border border-solid border-purple-500 hidden md:block hover:bg-purple-500 hover:text-white py-1 px-2 rounded-md" target="_blank" href="https://www.theinsightai.com">Learn More</a>
+                <a onmouseover="this.style.cssText='background-color: #be8fdb; color: black; border-style: solid; border-color: #be8fdb; box-shadow: 0px 0px 6px 3px #fe52ad;'" onmouseout="this.style.cssText='text-decoration: none; color: #be8fdb; border-style: solid; border-color: #be8fdb; box-shadow: 0px 0px 6px 3px #fe52ad;'" rel="noopener" data-turbo="false" class="my-btn-sm text-xs text-white bg-insightblue border border-solid border-black hidden md:block py-1 px-2 rounded-md" target="_blank" href="https://www.theinsightai.com/subscribe">Learn More</a>
             </div>
         </div>
     </div>
