@@ -242,6 +242,22 @@ function NavBarThree({ users }) {
               >
                 <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                   <div className="py-1">
+                  <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          target="_blank"
+                          href="https://www.dtcdrive.com/podcast?utm_source=ecommportal&utm_medium=website&utm_campaign=ecommportal"
+                          className={classNames(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                        DTC Drive
+                        </a>
+                      )}
+                    </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
                         <a
@@ -813,6 +829,21 @@ Post a Job
               >
                 <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                   <div className="py-1">
+                  <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="https://www.dtcdrive.com/podcast?utm_source=ecommportal&utm_medium=website&utm_campaign=ecommportal"
+                          className={classNames(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                        DTC Drive
+                        </a>
+                      )}
+                    </Menu.Item>
                     <Menu.Item>
                       {({ active }) => (
                         <a
@@ -824,7 +855,7 @@ Post a Job
                             "block px-4 py-2 text-sm"
                           )}
                         >
-                        Salaries
+                        Salaries https://www.dtcdrive.com/podcast?utm_source=ecommportal&utm_medium=website&utm_campaign=ecommportal
                         </a>
                       )}
                     </Menu.Item>
