@@ -138,7 +138,7 @@ function isImageFile(filename) {
     <div class="px-2  py-2 py-md-3 ">
         <div class="flex flex-col md:flex-row justify-between">
             <div class="flex items-center">
-                <img class="rounded mr-0 mr-md-3 border border-solid border-insightblue h-12" src="../images/insight.png"/>
+                <img class="rounded mr-0 mr-md-3 border border-solid border-insightblue h-12" src="https://ecomportal-images.storage.googleapis.com/images/insight.png"/>
                 <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false"  href="https://www.theinsightai.com/subscribe"></a>
                 <div className="ml-4"> 
                     <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="text-purple-500 hover:text-purple-600" href="https://www.theinsightai.co/subscribe">
