@@ -17,7 +17,7 @@ export async function getServerSideProps(context) {
       throw new Error(`Failed to fetch data with status ${res.status}`);
     }
     const data = await res.json();
-    console.log(data);
+
 
     return {
       props: { jobs: data }, // will be passed to the page component as props
@@ -86,7 +86,7 @@ function isImageFile(filename) {
 
 
   const logoImage = isImageFile(logoString) ? 
-  `../images/${logoString}` : 
+  `https://ecomportal-images.storage.googleapis.com/images/${logoString}` : 
   `${logoString}`;
 
   return (
@@ -103,12 +103,12 @@ function isImageFile(filename) {
         <title>{`${jobs.job_position} | ${jobs.company_name}`}</title>
         <meta property="og:title" content={`${jobs.job_position} | ${jobs.company_name}`} key="maintitle" />
         <meta property="og:description" content={`${jobs.job_description}`}  key="description" />
-        <meta property="og:image" content={`https://ecomportal.co/images/${jobs.logo}`} key="mainimage" />
+        <meta property="og:image" content={`https://ecomportal-images.storage.googleapis.com/images/${logoString}`} key="mainimage" />
         <meta name="twitter:card" vmid="twitter:card" key="twcard" content="summary_large_image" />
         <meta name="twitter:site" vmid="twitter:site" key="twsite"  content="@ecomprtal" />
         <meta name="twitter:text:title" vmid="twitter:text:title" key="twtitle" content={`${jobs.company_name} is hiring for a ${jobs.job_position}!`} />
         <meta name="twitter:text:description" vmid="twitter:text:description" key="twdesc"  content={`${jobs.job_description}`} />
-        <meta name="twitter:image:src" vmid="twitter:image:src"  key="twimg" content={`https://ecomportal.co/images/${jobs.logo}`} />
+        <meta name="twitter:image:src" vmid="twitter:image:src"  key="twimg" content={`https://ecomportal-images.storage.googleapis.com/images/${logoString}`} />
 </Head>
       
         <div className="px-4 sm:px-6 bg-white rounded-lg font-Studio6 lg:px-8 mx-auto max-w-7xl">
@@ -186,7 +186,8 @@ function isImageFile(filename) {
                 </svg>
               </div> */}
               <div className={styles.rightContent}>
-                <img loading="lazy" src={logoImage}></img>
+                <img loading="lazy" src={`https://ecomportal-images.storage.googleapis.com/images/${logoString}`}
+              ></img>
                 <h3>{jobs?.company_name}</h3>
                 <h6>{jobs?.salaryMin && jobs?.salaryMax !== "0" ? `${jobs?.salaryMin === "1000" ? "" : `$${jobs?.salaryMin} - `}$${jobs?.salaryMax}` : ""}</h6>
                 <a

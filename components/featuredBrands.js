@@ -103,7 +103,7 @@ return (
             <div className="flex items-center font-Studio6 mt-6 justify-center">
             <p>In collaboration with </p>
             <a href="https://1800d2c.com" target="_blank" rel="noreferrer">
-            <img src="./d2c.png" class="ml-2  h-auto w-20"></img>
+            <img src="https://ecomportal-images.storage.googleapis.com/images/d2c.png" class="ml-2  h-auto w-20"></img>
             </a>
             </div>
               {/* <li class="flex items-center">

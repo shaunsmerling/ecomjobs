@@ -18,9 +18,8 @@ function index() {
             <div class="lg:-mr-4 mx-auto grid grid-cols-4 gap-4 mt-8">
                 <Link href="/united-states-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <Image
-        src="/usa.jpg"
-        alt="Picture of the author"
+                <img
+        src="https://ecomportal-images.storage.googleapis.com/images/usa.jpg"
         className="w-full rounded-lg h-52 "
         width={500}
         height={500}
@@ -32,9 +31,8 @@ function index() {
                 </Link>
                 <Link href="/australian-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <Image
-        src="/australia.jpg"
-        alt="Picture of the author"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/australia.jpg"
         className="w-full rounded-lg h-52 "
         width={500}
         height={500}
@@ -46,24 +44,23 @@ function index() {
                 </Link>
                 <Link href="/netherlands-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <Image
-        src="/netherlands.jpg"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/netherlands.jpg"
         className="w-full rounded-lg h-52 "
-        alt="Picture of the author"
         width={500}
         height={500}
         priority
       />
+      
                 {/* <img class="w-full rounded-lg h-48 " src="/netherlands.jpg" alt="office content 1"/> */}
                 <div class="absolute text-sm text-white font-bold ">Netherlands</div>
                 </div>
                 </Link>
                 <Link href="/sweden-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <Image
-        src="/sweden.jpg"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/sweden.jpg"
         className="w-full rounded-lg h-52 "
-        alt="Picture of the author"
         width={500}
         height={500}
         priority
@@ -77,10 +74,9 @@ function index() {
             <div class="-mr-4 mx-auto grid grid-cols-4 gap-4 mt-8">
             <Link href="/united-kingdom-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <Image
-        src="/uk.jpg"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/uk.jpg"
         className="w-full rounded-lg h-52 "
-        alt="Picture of the author"
         width={500}
         height={500}
         priority
@@ -91,10 +87,9 @@ function index() {
                 </Link>
                 <Link href="/vietnam-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <Image
-        src="/vietnam.jpg"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/vietnam.jpg"
         className="w-full rounded-lg h-52 "
-        alt="Picture of the author"
         width={500}
         height={500}
         priority
@@ -105,12 +100,11 @@ function index() {
                 </Link>
                 <Link href="/singapore-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <Image
-        src="/singapore.jpg"
-        alt="Picture of the author"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/singapore.jpg"
         className="w-full rounded-lg h-52 "
-        height={500}
         width={500}
+        height={500}
         priority
       />
                 {/* <img class="w-full rounded-lg h-48 " src="/singapore.jpg" alt="office content 1"/> */}
@@ -119,10 +113,9 @@ function index() {
                 </Link>
                 <Link href="/canada-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-80 hover:animate-pulse">
-                <Image
-        src="/canada.jpg"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/canada.jpg"
         className="w-full rounded-lg h-52 "
-        alt="Picture of the author"
         width={500}
         height={500}
         priority

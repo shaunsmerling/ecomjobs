@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-import logo from "../../public/logo.png";
-import Image from "next/image";
 import styles from "./styles.module.css";
 
 function Footer() {
@@ -14,14 +11,14 @@ function Footer() {
         <div className={styles.footer}>
           <div className={styles.section_left}>
             <div className={styles.logo_section}>
-              <Image className="h-30 w-48 -ml-2" loading="lazy" src={logo} alt="footer-logo" />
+            <img class="h-30 w-52 sm:h-18 sm:w-18" alt="" src="https://ecomportal-images.storage.googleapis.com/images/logo.png"/>
               
            
             </div>
             <div className="flex -mt-4 ml-3 mb-4">
             <p className="">In collaboration with </p>
             <a href="https://1800d2c.com" target="_blank" rel="noreferrer">
-            <img src="./d2c.png" class="ml-2  mt-1 h-auto w-20"></img>
+            <img src="https://ecomportal-images.storage.googleapis.com/images/d2c.png" class="ml-2  mt-1 h-auto w-20"></img>
             </a>
             </div>
             <div className={styles.socila_icons}>

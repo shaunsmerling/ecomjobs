@@ -18,9 +18,8 @@ function index() {
             <div class="lg:-mr-4 grid grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
                 <Link href="/marketing-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-100 hover:animate-pulse">
-                <Image
-        src="/marketing.jpg"
-        alt="Picture of the author"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/marketing.jpg"
         className="w-full rounded-lg h-52 "
         width={500}
         height={500}
@@ -32,23 +31,22 @@ function index() {
                 </Link>
                 <Link href="/business-operations-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-100 hover:animate-pulse">
-                <Image
-        src="/ops.jpg"
-        alt="Picture of the author"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/ops.jpg"
         className="w-full rounded-lg h-52 "
         width={500}
         height={500}
         priority
       />
+      
                 {/* <img class="w-full rounded-lg lg:mt-10 h-48" src="/ops.jpg" alt="office content 1"/> */}
                 <div class="ml-2 absolute text-md text-white font-bold ">Biz Ops</div>
                 </div>
                 </Link>
                 <Link href="/creative-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-100 hover:animate-pulse">
-                <Image
-        src="/creative.jpg"
-        alt="Picture of the author"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/creative.jpg"
         className="w-full rounded-lg h-52 "
         width={500}
         height={500}
@@ -60,9 +58,8 @@ function index() {
                 </Link>
                 <Link href="/customer-service-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-100 hover:animate-pulse">
-                <Image
-        src="/customerservice.jpg"
-        alt="Picture of the author"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/customerservice.jpg"
         className="w-full rounded-lg h-52 "
         width={500}
         height={500}
@@ -76,9 +73,8 @@ function index() {
                 <div className="flex items-center opacity-70 hover:opacity-100 hover:animate-pulse">
                 {/* <img class="w-full rounded-lg h-48 " src="/people.jpg" alt="office content 1"/> */}
 
-                <Image
-        src="/people.jpg"
-        alt="Picture of the author"
+               <img
+       src="https://ecomportal-images.storage.googleapis.com/images/people.jpg"
         className="w-full rounded-lg h-52 "
         width={500}
         height={500}
@@ -93,9 +89,8 @@ function index() {
           
                 <Link href="/web-development-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-100 hover:animate-pulse">
-                <Image
-        src="/webdev.jpg"
-        alt="Picture of the author"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/webdev.jpg"
         className="w-full rounded-lg h-52 "
         width={500}
         height={500}
@@ -109,9 +104,8 @@ function index() {
                 <Link href="/product-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-100 hover:animate-pulse">
                 {/* <img class="w-full rounded-lg lg:mt-10 h-48" src="/product.jpg" alt="office content 1"/> */}
-                <Image
-        src="/product.jpg"
-        alt="Picture of the author"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/product.jpg"
         className="w-full rounded-lg h-52 "
         width={500}
         height={500}
@@ -124,9 +118,8 @@ function index() {
                 <div className="flex items-center opacity-70 hover:opacity-100 hover:animate-pulse">
                 {/* <img class="w-full rounded-lg h-48 " src="/finance.jpg" alt="office content 1"/> */}
 
-                <Image
-        src="/finance.jpg"
-        alt="Picture of the author"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/finance.jpg"
         className="w-full rounded-lg h-52 "
         width={500}
         height={500}
@@ -138,9 +131,8 @@ function index() {
                 <Link href="/sales-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-100 hover:animate-pulse">
                 {/* <img class="w-full rounded-lg lg:mt-10 h-48" src="/sale.jpg" alt="office content 1"/> */}
-                <Image
-        src="/sale.jpg"
-        alt="Picture of the author"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/sale.jpg"
         className="w-full rounded-lg h-52 "
         width={500}
         height={500}
@@ -152,9 +144,8 @@ function index() {
                 <Link href="/people-jobs">
                 <div className="flex items-center opacity-70 hover:opacity-100 hover:animate-pulse">
                 {/* <img class="w-full rounded-lg h-48 " src="/humanresources.jpg" alt="office content 1"/> */}
-                <Image
-        src="/humanresources.jpg"
-        alt="Picture of the author"
+                <img
+       src="https://ecomportal-images.storage.googleapis.com/images/humanresources.jpg"
         className="w-full rounded-lg h-52 "
         width={500}
         height={500}

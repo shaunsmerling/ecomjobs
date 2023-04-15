@@ -97,7 +97,7 @@ const handleSubmit = (e) => {
                   </p>
                 </blockquote>
                 <div className="flex items-center mt-6">
-                  <img loading="lazy" className="object-cover rounded-full w-11 h-11 shrink-0" src="../avatar-male.png"
+                  <img loading="lazy" className="object-cover rounded-full w-11 h-11 shrink-0" src="https://ecomportal-images.storage.googleapis.com/images/avatar-male.png"
                     alt="">
                     </img>
                   <div className="ml-4">

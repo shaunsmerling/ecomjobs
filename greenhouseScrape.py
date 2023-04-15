@@ -284,23 +284,22 @@ def get_job_board(board_id):
 def main():
           # When you add company names to the board, make sure to save their logo .jpeg
     boards = [
-        # "quip", -
-        # 'harrys', -
-        # 'casper',
-        # 'gymshark',
-        # 'away',
-        # 'glossier',
-        # 'allbirds'
-        # 'commonthreadcollective'
-        # 'everlane',
-        # 'prose',
-        # 'parade'
-        # 'mejuri'
-        # 'dailyharvest',
-        # 'naadam',
-        # 'rothys',
-        # 'dollarshaveclub',
-        # 'cometeer',
+    #     "quip", 
+    #     'harrys', 
+    #     'casper',
+    #     'gymshark',
+    #     'away',
+    #     'glossier',
+    #     'allbirds'
+    #     'commonthreadcollective'
+    #     'everlane',
+    #     'prose',
+    #     'parade'
+    #     'dailyharvest',
+    #     'naadam',
+    #     'rothys',
+    #     'dollarshaveclub',
+    #     'cometeer',
     #  'ruggable',
     #  'barkbox',
     # 'bombas',
@@ -316,9 +315,9 @@ def main():
     # 'klaviyo'
     # 'mixpanel'
     # 'smsbump',
-    # "renttherunway"
-    # 'eucalyptus'
-    'g2crowd'
+    # "renttherunway",
+    # 'g2crowd'
+    'cutsclothing'
 
     
     ]
