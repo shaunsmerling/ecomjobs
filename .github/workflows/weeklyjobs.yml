@@ -1,15 +1,34 @@
-name: weekly-jobs
+name: Run job scraper and Algolia loader
+
 on:
   schedule:
-    - cron: "0 10,15 * * 2"
-  workflow_dispatch:
+    # Run the job at 8:00 AM every Monday and Thursday in UTC time
+    - cron: '0 10 * * 1,4'
+
 jobs:
-  build-node:
+  run-scripts:
     runs-on: ubuntu-latest
-    container: node:16
+
     steps:
-      - run: node --version
-      - run: npm --version
-      - uses: actions/checkout@v3
-      - run: npm install
-      - run: node emailScript
+      # Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Run the greenhouseScrape.py script
+      - name: Run greenhouseScrape.py
+        env:
+          db_url: DB_URL
+        run: python3 greenhouseScrape.py
+
+      # Run the algolia_load.py script
+      - name: Run algolia_load.py
+        run: python3 algolia_load.py
+        env:
+          ALGOLIA_APP_ID: your_algolia_app_id
+          ALGOLIA_ADMIN_KEY: your_algolia_admin_key
