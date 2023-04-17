@@ -1,10 +1,10 @@
-name: Run job scraper and Algolia loader
+name: weekly-jobs
 
 on:
   schedule:
     # Run the job at 8:00 AM every Monday and Thursday in UTC time
     - cron: '0 10 * * 1,4'
-
+  workflow_dispatch:
 jobs:
   run-scripts:
     runs-on: ubuntu-latest
