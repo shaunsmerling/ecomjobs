@@ -324,7 +324,12 @@ def main():
     ]
 
     for board in boards:
-        jobs = get_job_board(board)
+        try:
+            jobs = get_job_board(board)
+        except requests.exceptions.RequestException as e:
+            print(f"An error occurred while fetching jobs for board '{board}': {e}. Skipping...")
+            continue
+
         for job in jobs:
             application_url = job['application_url']
             job_exists = check_job_exists_in_db(application_url)
@@ -336,8 +341,7 @@ def main():
                 job_url = f"https://www.ecomportal.co/job/{job['jobUrl']}"
                 send_notification(job_url, "URL_UPDATED")
             else:
-                print(f"Job '{job['job_position']}' already exists in database. Skipping...")
-
+                print(f"Job '{job['job_position']}' already exists in database. Skipping...")    
 
 
 
