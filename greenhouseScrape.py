@@ -60,6 +60,7 @@ db_url = os.getenv("DB_URL")
 # Connect to MongoDB database
 client = MongoClient(db_url, tlsAllowInvalidCertificates=True)
 db = client["ejserver"]
+collection = db["Job"]
 
 def date_to_unix_timestamp(date_str):
     try:
