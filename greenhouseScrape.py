@@ -60,7 +60,6 @@ db_url = os.getenv("DB_URL")
 # Connect to MongoDB database
 client = MongoClient(db_url, tlsAllowInvalidCertificates=True)
 db = client["ejserver"]
-collection = db["Job"]
 
 def date_to_unix_timestamp(date_str):
     try:
@@ -284,41 +283,40 @@ def get_job_board(board_id):
 def main():
           # When you add company names to the board, make sure to save their logo .jpeg
     boards = [
-    #     "quip", 
-    #     'harrys', 
-    #     'casper',
-    #     'gymshark',
-    #     'away',
-    #     'glossier',
-    #     'allbirds'
-    #     'commonthreadcollective'
-    #     'everlane',
-    #     'prose',
-    #     'parade'
-    #     'dailyharvest',
-    #     'naadam',
-    #     'rothys',
-    #     'dollarshaveclub',
-    #     'cometeer',
-    #  'ruggable',
-    #  'barkbox',
-    # 'bombas',
-    # 'meundies',
-    # 'seed',
-    # 'billie',
-    # 'theragun'
-    # 'omaze',
-    # 'thinx'
-    # 'fashionnova'
-    # 'poshmark',
-    # 'disco'
-    # 'klaviyo'
-    # 'mixpanel'
-    # 'smsbump',
-    # "renttherunway",
-    # 'g2crowd'
+        "quip", 
+        'harrys', 
+        'casper',
+        'gymshark',
+        'away',
+        'glossier',
+        'allbirds'
+        'commonthreadcollective'
+        'everlane',
+        'prose',
+        'parade'
+        'dailyharvest',
+        'naadam',
+        'rothys',
+        'dollarshaveclub',
+        'cometeer',
+     'ruggable',
+     'barkbox',
+    'bombas',
+    'meundies',
+    'seed',
+    'billie',
+    'theragun'
+    'omaze',
+    'thinx'
+    'fashionnova'
+    'poshmark',
+    'disco'
+    'klaviyo'
+    'mixpanel'
+    'smsbump',
+    "renttherunway",
+    'g2crowd',
     'cutsclothing'
-
     
     ]
 
