@@ -173,7 +173,14 @@ def get_job_board(board_id):
 
     base_url = f'https://boards-api.greenhouse.io/v1/boards/{board_id}/jobs?content=true'
     response = requests.get(base_url)
-    jobs_data = response.json()['jobs']
+    # jobs_data = response.json()['jobs']
+
+    try:
+        jobs_data = response.json()['jobs']
+    except KeyError:
+        print("Error while getting job data from response.")
+        return []
+        
 
     formatted_data = []
 
