@@ -5,6 +5,12 @@ on:
     # Run the job at 8:00 AM every Monday and Thursday in UTC time
     - cron: '0 10 * * 1,4'
   workflow_dispatch:
+
+env:
+  DB_URL: ${{ secrets.DB_URL }}
+  ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+  ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
+
 jobs:
   run-scripts:
     runs-on: ubuntu-latest
@@ -14,6 +20,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      # Set up environment variables
+      - name: Set up environment variables
+        run: |
+          echo "DB_URL=$DB_URL" >> $GITHUB_ENV
+          echo "ALGOLIA_APP_ID=$ALGOLIA_APP_ID" >> $GITHUB_ENV
+          echo "ALGOLIA_ADMIN_KEY=$ALGOLIA_ADMIN_KEY" >> $GITHUB_ENV
+
       # Install dependencies
       - name: Install dependencies
         run: |
@@ -22,13 +35,8 @@ jobs:
 
       # Run the greenhouseScrape.py script
       - name: Run greenhouseScrape.py
-        env:
-          db_url: ${{ secrets.DB_URL }}
         run: python3 greenhouseScrape.py
 
       # Run the algolia_load.py script
       - name: Run algolia_load.py
         run: python3 algolia_load.py
-        env:
-          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
-          ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
