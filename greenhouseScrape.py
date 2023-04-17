@@ -55,7 +55,9 @@ def send_notification(url, action):
 
 load_dotenv()
 
-db_url = os.getenv("DB_URL")
+# db_url = os.getenv("DB_URL")
+
+db_url = "mongodb+srv://smerlinger:rosalina2898@ejserver0.krz3l.mongodb.net/ejserver?retryWrites=true&w=majority"
 
 # Connect to MongoDB database
 client = MongoClient(db_url, tlsAllowInvalidCertificates=True)
