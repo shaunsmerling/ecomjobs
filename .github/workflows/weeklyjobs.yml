@@ -23,12 +23,12 @@ jobs:
       # Run the greenhouseScrape.py script
       - name: Run greenhouseScrape.py
         env:
-          db_url: DB_URL
+          db_url: ${{ secrets.DB_URL }}
         run: python3 greenhouseScrape.py
 
       # Run the algolia_load.py script
       - name: Run algolia_load.py
         run: python3 algolia_load.py
         env:
-          ALGOLIA_APP_ID: your_algolia_app_id
-          ALGOLIA_ADMIN_KEY: your_algolia_admin_key
+          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
