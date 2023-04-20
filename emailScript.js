@@ -220,7 +220,7 @@ fetchEmail().then((data) => {
     <body>
         <div class="container">
             <div class="header">
-                <img src="www.ecomportal.co/logo.png" alt="ecomportal-logo" />
+                <img src="https://storage.googleapis.com/ecomportal-images/images/logo.png" alt="ecomportal-logo" />
             </div>
             <div class="content">
                 <p class="greeting">Hey there 👋</p>
@@ -231,7 +231,7 @@ fetchEmail().then((data) => {
             <div class="sponsor-section">
             <p class="sponsor-title">Join the InsightAI Newsletter</p>
             <p class="sponsor-text">The Latest in AI Progress, Prompt Engineering, and New AI Tools delivered to your inbox | Leverage AI to 1000x Your Productivity </p>
-            <a href="https://www.theinsightai.com" class="sponsor-button">Visit InsightAI</a>
+            <a href="https://insightai.beehiiv.com/subscribe" class="sponsor-button">Visit InsightAI</a>
         </div>
     
             ${structuredData}

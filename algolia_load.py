@@ -41,13 +41,22 @@ for item in mongo_query:
             item['datets'] = int(datets)
 
 
-        # Convert salaryMin and salaryMax to integers
-        if 'salaryMin' in item and item['salaryMin'] is not None:
+            # Convert salaryMin and salaryMax to integers
+    if 'salaryMin' in item and item['salaryMin'] is not None:
+        if ',' in item['salaryMin']:
             item['salaryMin'] = int(item['salaryMin'].replace(',', ''))
-        if 'salaryMax' in item and item['salaryMax'] is not None:
+        elif '.' in item['salaryMin']:
+            item['salaryMin'] = int(float(item['salaryMin']))
+        else:
+            item['salaryMin'] = int(item['salaryMin'])
+    if 'salaryMax' in item and item['salaryMax'] is not None:
+        if ',' in item['salaryMax']:
             item['salaryMax'] = int(item['salaryMax'].replace(',', ''))
+        elif '.' in item['salaryMax']:
+            item['salaryMax'] = int(float(item['salaryMax']))
+        else:
+            item['salaryMax'] = int(item['salaryMax'])
 
-        
 
         initial_items.append(item)
 

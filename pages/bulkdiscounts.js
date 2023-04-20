@@ -5,16 +5,16 @@ export default function Pricing() {
     return (
 
             <div>
-                <section class="py-12 mx-10 rounded-lg bg-white sm:py-16 lg:my-10">
+                <section class="py-12 mx-10 rounded-lg bg-white sm:py-16 lg:mb-10">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-semibold tracking-tight text-lightGreen-300 sm:text-4xl lg:text-5xl">Bulk Discounts</h2>
+            <h2 class="text-3xl font-semibold tracking-tight text-black sm:text-4xl lg:text-5xl">Bulk Discounts</h2>
             <p class="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8"> Buy job posts in bulk, save them as pre-purchased credits, and use them throughout the year (valid for 12 months). Each job will be posted on our front page & sent out to our email list.</p>
             <p class="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8">Our Highlight Addon will display your job post highlighted in yellow for extra visibility. Our Top Pinned addon will display your job post at the top of the page. Both addons are priced at $99 & are included when you purchase more than 5 jobs at once.</p>
         </div>
 
         <div class="grid grid-cols-1 gap-5 mt-12 text-center sm:grid-cols-2 xl:grid-cols-4 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 sm:mt-16 lg:mt-20">
-            <div class="bg-white border-2 border-[#17614A] rounded-2xl sm:rounded-3xl">
+            <div class="bg-white border-2 border-black rounded-2xl sm:rounded-3xl">
                 <div class="px-4 py-5 sm:px-6 sm:py-8">
                     <div class="inline-flex items-center justify-center w-16 h-16 mx-auto bg-gray-100 rounded-full">
                         <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -22,7 +22,7 @@ export default function Pricing() {
                         </svg>
                     </div>
      
-                    <p class="mt-6 text-5xl font-semibold text-lightGreen-300">5 Jobs</p>
+                    <p class="mt-6 text-5xl font-semibold text-black">5 Jobs</p>
                 
                     <ul class="mt-8 space-y-4 text-base font-normal text-left text-gray-900">
                         <li class="flex items-center">
@@ -60,6 +60,8 @@ export default function Pricing() {
                             ❌ &nbsp; Highlight Add-on
                         </li>
 
+                        
+
                         {/* <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
@@ -72,7 +74,7 @@ export default function Pricing() {
                         <a
                             href="https://buy.stripe.com/14kdTYeqI47j7Ys289"
                             title=""
-                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 border bg-[#17614A] border-gray-300 rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"
+                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 border bg-black border-gray-300 rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"
                             role="button"
                         >
                             Buy Now
@@ -83,10 +85,10 @@ export default function Pricing() {
                 </div>
             </div>
 
-            <div class="relative bg-white border-2 border-[#17614A] rounded-2xl sm:rounded-3xl">
+            <div class="relative bg-white border-2 border-black rounded-2xl sm:rounded-3xl">
                 <div class="absolute inset-x-0 top-0 transform translate-y-px">
                     <div class="flex justify-center transform -translate-y-1/2">
-                        <span class="inline-flex px-4 py-1 text-xs font-semibold tracking-widest text-white uppercase bg-[#17614A] rounded-full ring-4 ring-white"> Popular choice </span>
+                        <span class="inline-flex px-4 py-1 text-xs font-semibold tracking-widest text-white uppercase bg-black rounded-full ring-4 ring-white"> Popular choice </span>
                     </div>
                 </div>
 
@@ -101,7 +103,7 @@ export default function Pricing() {
                         </svg>
                     </div>
                     {/* <h3 class="mt-6 text-lg font-semibold text-gray-900">Standard</h3> */}
-                    <p class="mt-6 text-5xl font-semibold text-lightGreen-300">15 Jobs</p>
+                    <p class="mt-6 text-5xl font-semibold text-black">15 Jobs</p>
                     {/* <p class="mt-1 text-sm font-normal text-gray-500">per month</p> */}
                     <ul class="mt-8 space-y-4 text-base font-normal text-left text-gray-900">
                         <li class="flex items-center">
@@ -149,7 +151,7 @@ export default function Pricing() {
                         <a
                             href="https://buy.stripe.com/eVabLQgyQgU55QkfZ0"
                             title=""
-                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
+                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-black border border-transparent rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
                             role="button"
                         >
                             Buy Now
@@ -160,7 +162,7 @@ export default function Pricing() {
                 </div>
             </div>
 
-            <div class="bg-white border-2  border-[#17614A] rounded-2xl sm:rounded-3xl">
+            <div class="bg-white border-2  border-black rounded-2xl sm:rounded-3xl">
                 <div class="px-4 py-5 sm:px-6 sm:py-8">
                     <div class="inline-flex items-center justify-center w-16 h-16 mx-auto bg-gray-100 rounded-full">
                         <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -168,7 +170,7 @@ export default function Pricing() {
                         </svg>
                     </div>
                 
-                    <p class="mt-6 text-5xl font-semibold text-lightGreen-300">30 Jobs</p>
+                    <p class="mt-6 text-5xl font-semibold text-black">30 Jobs</p>
                     <ul class="mt-8 space-y-4 text-base font-normal text-left text-gray-900">
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -209,7 +211,7 @@ export default function Pricing() {
                         <a
                             href="https://buy.stripe.com/bIY7vAbewavH92w7sv"
                             title=""
-                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
+                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-black border border-transparent rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
                             role="button"
                         >
                             Buy Now
@@ -220,7 +222,7 @@ export default function Pricing() {
                 </div>
             </div>
 
-            <div class="bg-white border-2 border-[#17614A] rounded-2xl sm:rounded-3xl">
+            <div class="bg-white border-2 border-black rounded-2xl sm:rounded-3xl">
                 <div class="px-4 py-5 sm:px-6 sm:py-8">
                     <div class="inline-flex items-center justify-center w-16 h-16 mx-auto bg-gray-100 rounded-full">
                         <svg class="w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -228,7 +230,7 @@ export default function Pricing() {
                         </svg>
                     </div>
                 
-                    <p class="mt-6 text-5xl font-semibold text-lightGreen-300">50 Jobs</p>
+                    <p class="mt-6 text-5xl font-semibold text-black">50 Jobs</p>
                     <ul class="mt-8 space-y-4 text-base font-normal text-left text-gray-900">
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -270,7 +272,7 @@ export default function Pricing() {
                         <a
                             href="https://buy.stripe.com/5kAeY20zS47jdiM4gk"
                             title=""
-                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-[#17614A] border border-transparent rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
+                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-black border border-transparent rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
                             role="button"
                         >
                             Buy Now

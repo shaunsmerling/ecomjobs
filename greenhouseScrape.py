@@ -294,7 +294,7 @@ def main():
     boards = [
         "quip", 
         'harrys', 
-        'casper',
+         'casper',
         'gymshark',
         'away',
         'glossier',
@@ -326,6 +326,7 @@ def main():
     "renttherunway",
     'g2crowd',
     'cutsclothing'
+       
     
     ]
 

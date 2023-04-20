@@ -37,6 +37,11 @@ jobs:
       - name: Run greenhouseScrape.py
         run: python3 greenhouseScrape.py
 
+
+      # Run the leverScrape.py script
+      - name: Run leverscrape.py
+        run: python3 leverscrape.py
+
       # Run the algolia_load.py script
       - name: Run algolia_load.py
         run: python3 algolia_load.py
