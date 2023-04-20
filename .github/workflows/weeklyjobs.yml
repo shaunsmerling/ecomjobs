@@ -39,8 +39,8 @@ jobs:
 
 
       # Run the leverScrape.py script
-      - name: Run leverscrape.py
-        run: python3 leverscrape.py
+      - name: Run leverScrape.py
+        run: python3 leverScrape.py
 
       # Run the algolia_load.py script
       - name: Run algolia_load.py
