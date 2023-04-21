@@ -13,7 +13,7 @@ function Modal() {
               <img
                 href="../"
                 className="w-auto h-14 mt-4 -ml-2 mb-4 "
-                src="../logo.png"
+                src="https://storage.googleapis.com/ecomportal-images/images/logo.png"
                 alt=""
               ></img>
             </a>
