@@ -75,7 +75,19 @@ const CompanyData = ({ hit }) => {
                         <p className="flex flex-row items-center gap-2 ">
                           <SalaryIcon />
                           <span className="font-Studio6 font-normal text-sm text-black tracking-common opacity-60 leading-6 lg:!leading-30">
-                            {"$" + hit.salaryMin + ` - ` + "$" + hit.salaryMax}
+                            {hit?.salaryMin && hit?.salaryMax && hit.salaryMin !== "0"
+  ? hit.salaryMin === hit.salaryMax
+    ? hit.salaryMax >= 10000
+      ? `$${hit.salaryMax}/yr`
+      : ""
+    : hit.salaryMin >= 10000 && hit.salaryMax >= 10000
+      ? `$${hit.salaryMin} - $${hit.salaryMax}`
+      : hit.salaryMin >= 10000
+        ? `$${hit.salaryMin} -`
+        : hit.salaryMax >= 10000
+          ? ` - $${hit.salaryMax}`
+          : ""
+  : ""}
                           </span>
                         </p>
                       ) : (

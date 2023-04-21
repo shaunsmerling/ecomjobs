@@ -3,7 +3,6 @@ import Footer from "../components/Footer/index"
 import FooterEmail from "../components/Footer/footerEmail"
 import FooterCities from "../components/Footer/footerCities"
 import FooterJobs from "../components/Footer/footerJobs"
-import FooterRoles from "../components/Footer/footerRoles"
 import Link from "next/link";
 import "@stripe/stripe-js";
 import algoliasearch from "algoliasearch/lite";
@@ -229,10 +228,7 @@ export default function HomePage() {
           </InstantSearch>
           </div>
       )} */}
-      <FooterEmail/>
-      <Footer/>
-      <FooterCities/>
-      <FooterJobs/>
+
       {/* <FooterRoles/> */}
       </div>
       </div>

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import PublicLayout from "../../../layouts/PublicLayout";
 import styles from "./styles.module.css";
-import Footer from "../../../components/Footer";
 import { api_url } from "../../../config";
 import Link from "next/link";
 import Head from "next/head";
@@ -79,6 +78,22 @@ function Job({ jobs }) {
 }
 
 const logoString = jobs.logo;
+
+function salaryLogic(salaryMax, salaryMin) {
+  if (salaryMax >= 1 && salaryMax <= 9) {
+    salaryMax *= 10000;
+  }
+  if (salaryMin === 0) {
+    salaryMin = salaryMax;
+  }
+  return {
+    salaryMin,
+    salaryMax,
+  };
+}
+
+const { salaryMin, salaryMax } = salaryLogic(jobs?.salaryMax, jobs?.salaryMin);
+
 
 function isImageFile(filename) {
   return /\.(png|jpe?g)$/i.test(filename);
@@ -185,11 +200,26 @@ function isImageFile(filename) {
                   />
                 </svg>
               </div> */}
+
+              
               <div className={styles.rightContent}>
                 <img loading="lazy" src={`https://ecomportal-images.storage.googleapis.com/images/${logoString}`}
               ></img>
                 <h3>{jobs?.company_name}</h3>
-                <h6>{jobs?.salaryMin && jobs?.salaryMax !== "0" ? `${jobs?.salaryMin === "1000" ? "" : `$${jobs?.salaryMin} - `}$${jobs?.salaryMax}` : ""}</h6>
+                <h6>{jobs?.salaryMin && jobs?.salaryMax && jobs.salaryMin !== "0"
+  ? jobs.salaryMin === jobs.salaryMax
+    ? jobs.salaryMax >= 10000
+      ? `$${jobs.salaryMax}/yr`
+      : ""
+    : jobs.salaryMin >= 10000 && jobs.salaryMax >= 10000
+      ? `$${jobs.salaryMin} - $${jobs.salaryMax}`
+      : jobs.salaryMin >= 10000
+        ? `$${jobs.salaryMin} -`
+        : jobs.salaryMax >= 10000
+          ? ` - $${jobs.salaryMax}`
+          : ""
+  : ""}</h6>
+                {/* <h6>{jobs?.salaryMin && jobs?.salaryMax !== "0" ? `${jobs?.salaryMin === "1000" ? "" : `$${jobs?.salaryMin} - `}$${jobs?.salaryMax}` : ""}</h6> */}
                 <a
                   href={jobs?.application_url}
                   target="_blank"

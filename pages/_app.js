@@ -4,6 +4,10 @@ import Navbarthree from "../components/navBarThree"
 import Script from "next/script"
 import { SessionProvider } from "next-auth/react"; 
 import { useRouter } from "next/router";
+import Footer from "../components/Footer/index"
+import FooterEmail from "../components/Footer/footerEmail"
+import FooterCities from "../components/Footer/footerCities"
+import FooterJobs from "../components/Footer/footerJobs"
 
 
 
@@ -124,6 +128,12 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
     
       <Component {...pageProps} />
       {/* <Footer/> */}
+
+      <FooterEmail/>
+      <Footer/>
+      <FooterCities/>
+      <FooterJobs/>
+      
   </SessionProvider>
      
    </div>

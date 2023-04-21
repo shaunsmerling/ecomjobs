@@ -39,7 +39,7 @@ function NavBarThree({ users }) {
 <div class="flex justify-between items-center -mt-6 px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
 <div class="flex justify-start">
 <a href="/">
-<img class="h-30 w-52 sm:h-18 sm:w-18" alt="" src="https://ecomportal-images.storage.googleapis.com/images/logo.png"/>
+<img class="h-30 w-52 sm:h-18 sm:w-18" alt="" src="https://storage.googleapis.com/ecomportal-images/images/logo.png"/>
 </a> </div>
 
 <div className="flex ml-2 lg:hidden">
