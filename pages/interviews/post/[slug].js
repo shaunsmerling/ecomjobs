@@ -1,6 +1,7 @@
 import { sanityClient, urlFor } from "../../../sanity";
 import { NextSeo } from "next-seo"
 import PortableText from "react-portable-text";
+import EmailBar from "../../../components/EmailBar"
 
 
 function Post({post}) {
@@ -318,6 +319,7 @@ Influencer Marketing Associates are responsible for forging relationships with w
           </article>
         </div>
       </div>
+      
     </section>
     </div>
      

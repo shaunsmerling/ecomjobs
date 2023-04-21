@@ -181,7 +181,7 @@ function Modal() {
               </a>
               <a
                 class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
-                href="/blog"
+                href="/interviews"
               >
                 <div class="ml-2 flex text-base font-medium text-gray-900">
                   <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
@@ -194,12 +194,12 @@ function Modal() {
                       <path d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z" />
                     </svg>
                   </div>
-                  <div className="mt-2 ml-2 ">Blogs</div>
+                  <div className="mt-2 ml-2 ">Interviews</div>
                 </div>
               </a>
                <a
                 class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
-                href="/location"
+                href="/salaries"
               >
                 <div class="ml-2 flex text-base font-medium text-gray-900">
                   <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
@@ -214,7 +214,7 @@ function Modal() {
                     </svg>
                  
                   </div>
-                  <div className="mt-2 ml-2">Locations</div>
+                  <div className="mt-2 ml-2">Salaries</div>
                 </div>
               </a>
               <a
@@ -272,8 +272,8 @@ function Modal() {
                 
               </div>
               <div className="  mb-4 -mt-4 mx-auto">
-              <a class="border border-black whitespace-nowrap transform transition duration-300 hover:-translate-y-1 hover:shadow-lg inline-flex items-center justify-center px-20 py-2.5 rounded-full text-base font-Studio6 text-white  bg-purple-500 " href="https://www.theinsightai.com/subscribe">
-InsightAI
+              <a class="border border-black whitespace-nowrap transform transition duration-300 hover:-translate-y-1 hover:shadow-lg inline-flex items-center justify-center px-20 py-2.5 rounded-full text-base font-Studio6 text-white  bg-insightblue " href="https://insightai.beehiiv.com/subscribe">
+The Insight
 </a>
 </div>
 
