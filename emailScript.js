@@ -1,14 +1,15 @@
-var config = require('./config');
 const fetch = require('node-fetch');
 
 async function fetchData(){
-  const response = await fetch( `${config.api_url}/api/jobs`)
+    // changed from config.api_url to https://ecomportal.co/api/jobs
+  const response = await fetch( `https://ecomportal.co/api/jobs`)
   const resData = await response.json();
   return resData; 
 };
 
 async function fetchEmail() {
-  const response = await fetch (`${config.api_url}/api/emails`)
+  // changed from config.api_url to https://ecomportal.co/api/emails
+  const response = await fetch (`https://ecomportal.co//api/emails`)
   const resData = await response.json()
   return resData
 }
