@@ -37,13 +37,16 @@ function Job({ jobs }) {
 
 
   function convertToISO8601(dateString) {
+    if (!dateString) {
+        return '';
+    }
     const dateParts = dateString.split('/');
     const year = 2000 + parseInt(dateParts[2]);
     const month = dateParts[0].padStart(2, '0');
     const date = dateParts[1].padStart(2, '0');
     const isoString = `${year}-${month}-${date}T00:00:00+00:00`;
     return isoString;
-  }
+}
   
   const isoStr = convertToISO8601(jobs.postedat);
   
