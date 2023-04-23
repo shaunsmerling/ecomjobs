@@ -44,7 +44,7 @@ const CompanyData = ({ hit }) => {
                   
 
                   <img
-                    src={`../../images/${hit.logo}`}
+                    src={`https://ecomportal-images.storage.googleapis.com/images/${hit.logo}`}
                     alt=""
                     className="w-14 h-14 min-w-[56px] min-h-[56px] border border-lightGray-200 rounded-lg"
                   />

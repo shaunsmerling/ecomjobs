@@ -5,12 +5,20 @@ import Icon from "./icons/Icon";
 import World from "./icons/World";
 import Location from "./icons/Location";
 import Image from "next/image"
+import { useRouter } from "next/router"
 
 const CompanyData = ({ hit }) => {
+
+  const router = useRouter()
+
+
   // Date Calculation
   function getDate() {
     let date_1 = new Date(hit.postedat);
     let date_2 = new Date();
+
+
+
 
     let difference = date_1.getTime() - date_2.getTime();
     let TotalDays = Math.ceil((difference / (1000 * 3600 * 24)) * -1);
