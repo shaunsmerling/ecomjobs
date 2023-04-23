@@ -101,7 +101,7 @@ function isImageFile(filename) {
   `${logoString}`;
 
   return (
-    <div className="bg-d2c font-Studio6 pb-10">
+    <div className="bg-d2c font-Studio6 ">
       <NextSeo
       title={`${company.company_name} | eCommerce Jobs `}
       description={`${company.company_name} | eCommerce Jobs `}
@@ -116,9 +116,7 @@ function isImageFile(filename) {
       />
 
       <main class="profile-page">
-        <section class="relative block  h-500-px">
-          <div class="absolute top-0 w-full h-full bg-center bg-cover"></div>
-        </section>
+      
         <section class="relative">
           <div class="container mx-auto  px-4">
             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-20">
@@ -205,7 +203,7 @@ function isImageFile(filename) {
                   <div className={`flex flex-col lg:mx-20 pb-2`}>
                   <a href={`/job/${job?.jobUrl}`} target="_blank">
                 <ul className={`  -mx-10 lg:-mx-0 text-left mt-4  border-4 rounded-lg flex hover:bg-gray-100   hover:underline`}>
-                <img loading="lazy" className="z-1 mt-2 ml-4 w-12 h-12 lg:w-20 lg:h-20 rounded-full border border-2 " src={`/images/${job?.logo}`} ></img>
+                <img loading="lazy" className="z-1 mt-2 ml-4 w-12 h-12 lg:w-20 lg:h-20 rounded-full border border-2 " src={`https://ecomportal-images.storage.googleapis.com/images/${job?.logo}`} ></img>
                   <li className="w-full ml-2 my-4 box-border ">
                    
                     <div className="mt-2 mx-4">

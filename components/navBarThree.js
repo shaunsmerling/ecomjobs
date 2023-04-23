@@ -544,9 +544,9 @@ function NavBarThree({ users }) {
 <Link href="/contactus" class="whitespace-nowrap text-base rounded-full px-3 py-1 -ml-1 text-black hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
   Contact Us
 </Link>
-<a target="_blank" class="border border-black whitespace-nowrap  transform transition duration-300 hover:-translate-y-1 hover:shadow-lg inline-flex items-center  justify-center pl-3 pr-3 py-1  rounded-full shadow-sm text-base font-Studio6 text-white  bg-insightblue " href="https://insightai.beehiiv.com/subscribe">
+{/* <a target="_blank" class="border border-black whitespace-nowrap  transform transition duration-300 hover:-translate-y-1 hover:shadow-lg inline-flex items-center  justify-center pl-3 pr-3 py-1  rounded-full shadow-sm text-base font-Studio6 text-white  bg-insightblue " href="https://insightai.beehiiv.com/subscribe">
 The Insight
-</a>
+</a> */}
 <a class="border border-black whitespace-nowrap transform transition duration-300 hover:-translate-y-1 hover:shadow-lg  inline-flex items-center justify-center pl-3 pr-1 py-1 rounded-full shadow-sm text-base font-Studio6 text-black  bg-btn " href="/postajob">
 Post a Job
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-1 w-6 h-6">

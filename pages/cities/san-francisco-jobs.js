@@ -9,7 +9,6 @@ import {
 import { NextSeo } from "next-seo";
 import CustomSearchBox from "../../custom-algolia-component/CustomSearchBox";
 import CompanyData from "../../components/CompanyDataLayer";
-import Filter from "../../components/Filter";
 import FilterIcon from "../../components/icons/FilterIcon";
 import Close2 from "../../components/icons/Close2";
 import { useSession } from "next-auth/react";
@@ -22,7 +21,7 @@ export default function HomePage() {
     "RCW293MLIV",
     "bc44fb196bcec6b9602b254bc96f6e71"
   );
-  const { data: session } = useSession();
+
 
   useEffect(() => {
     if (typeof window !== undefined) {
@@ -45,7 +44,7 @@ export default function HomePage() {
           description: "Join an eCommerce brand hiring in San Francisco",
           images: [
               {
-                  url: 'https://ecomportal.co/images/logo.png',
+                  url: `https://ecomportal-images.storage.googleapis.com/images/logo.jpeg`,
                   width: 800,
                   height: 600,
                   alt: 'Og Image Alt',
@@ -67,7 +66,7 @@ export default function HomePage() {
         </div>
         <div className="flex  bg-d2c flex-row justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
           <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
-            <Configure hitsPerPage={10} filters={`city:"San Francisco, CA "`}/>
+            <Configure hitsPerPage={10} filters={`city:"San Francisco, CA"`}/>
 
             
 
