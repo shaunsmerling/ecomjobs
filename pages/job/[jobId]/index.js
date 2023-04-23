@@ -148,7 +148,7 @@ function isImageFile(filename) {
                   <path d="M50 61.5L0 33L20 0L50 61.5Z" fill="#BEF8A5" />
                 </svg>
               </div> */}
-                       <Link href="https://insightai.beehiiv.com/subscribe">
+                       {/* <Link href="https://insightai.beehiiv.com/subscribe">
             <div id="sponsor_1" class="mb-4 mt-4 lg:ml-4 lg:mr-2 sm:mx-20 rounded-md cursor-pointer border border-solid  border-black transform transition duration-300 hover:-translate-y-1 hover:shadow-lg ">
     <div class="px-2  py-2 py-md-3 ">
         <div class="flex flex-col md:flex-row justify-between">
@@ -162,7 +162,7 @@ function isImageFile(filename) {
                     </a>
                     <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="block text-insightblue text-xs mt-0 md:mt-1"  href="https://insightai.beehiiv.com/subscribe">by the <b>InsightAI</b> newsletter</a>
                 </div>
-                {/* <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="my-btn-sm text-white bg-purple-500  rounded-md px-4 md:hidden text-xs  border border-solid border-purple-500  "  href="https://www.theinsightai.com">Learn More</a> */}
+               
             </div>
          
             <div class="my-auto md:pl-3 pl-0">
@@ -171,7 +171,7 @@ function isImageFile(filename) {
         </div>
     </div>
 </div>
-</Link>
+</Link> */}
              <h1>{jobs?.job_position}</h1>
               <h5>{jobs?.company_description ? "Company Description" : ""}</h5>
               <p>{jobs?.company_description}</p>
