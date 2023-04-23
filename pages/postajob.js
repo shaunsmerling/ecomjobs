@@ -259,6 +259,24 @@ useEffect(() => {
   const [companyLogo, setCompanyLogo] = useState();
 
   return (
+    <>
+    <NextSeo
+        title="Post a job. Hire the best talent in the eCommerce industry."
+        description="Post a job on Ecomportal to reach thousands of talented applicants in the ecommerce industry"
+        openGraph={{
+          url: 'https://ecomportal.co',
+          title: "Post a job. Hire the best talent in the eCommerce industry.",
+          description: "Post a job on Ecomportal to reach thousands of talented applicants in the ecommerce industry",
+          images: [
+              {
+                  url: `https://ecomportal-images.storage.googleapis.com/images/logo.jpeg`,
+                  width: 800,
+                  height: 600,
+                  alt: 'Og Image Alt',
+              },
+          ],
+        }}
+      />
     <div className="bg-white pt-4 px-20 lg:mx-10 mx-2 rounded-lg">
       <div class="hugger">
 <div class="hugger__content">
@@ -781,7 +799,7 @@ onChange={handleChange} />
 </div>
 <div class="spinner"></div>
     </div>
-    
+    </>
   );
 }
 

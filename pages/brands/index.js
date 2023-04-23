@@ -54,31 +54,33 @@ function brands({ companies }) {
 
 const logoString = company.logo;
 
-function isImageFile(filename) {
-  return /\.(png|jpe?g)$/i.test(filename);
+function isBase64(str) {
+  if (typeof str !== 'string') return false;
+  return /^data:image\/(png|jpe?g);base64,/.test(str);
 }
 
+const logoImage = isBase64(logoString)
+  ? logoString
+  : `https://ecomportal-images.storage.googleapis.com/images/${logoString}`;
 
-  const logoImage = isImageFile(logoString) ? 
-  `./images/${logoString}` : 
-  `${logoString}`;
+return (
+  <a class="companyCard hover:bg-btn" href={`/company/${company.companyUrl}`}>
+    <div class="companyCard__logo"></div>
+    <div className="self-startlg:self-center">
+      <img
+        src={logoImage}
+        alt=""
+        className="w-14 h-14 min-w-[56px] min-h-[56px] border border-black rounded-lg"
+      />
+    </div>
+    <div class="companyCard__details ml-2">
+      <div class="companyCard__details__name ">{company.company_name}</div>
+      <div class="companyCard__details__count">{company.empcount} employees</div>
+    </div>
+  </a>
+);
 
-          return (
 
-<a class="companyCard  hover:bg-btn" href={`/company/${company.companyUrl}`}><div class="companyCard__logo"></div>
-<div className="self-startlg:self-center">
-                  <img
-                    src={logoImage}
-                    alt=""
-                    className="w-14 h-14 min-w-[56px] min-h-[56px] border border-black rounded-lg"
-                  />
-                </div>
-<div class="companyCard__details ml-2">
-<div class="companyCard__details__name ">{company.company_name}</div>
-<div class="companyCard__details__count">{company.empcount} employees</div>
-</div>
-</a>
-)
 })}
  
 
