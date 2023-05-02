@@ -11,7 +11,7 @@ export async function getServerSideProps(context) {
   const { jobId } = params;
 
   try {
-    const res = await fetch(`${api_url}/api/jobs?id=${jobId}`);
+    const res = await fetch(`${api_url}/api/jobs?jobUrl=${jobId}`);
     if (!res.ok) {
       throw new Error(`Failed to fetch data with status ${res.status}`);
     }
