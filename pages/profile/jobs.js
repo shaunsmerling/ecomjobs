@@ -4,7 +4,7 @@ import Location from "../../components/icons/Location"
 import SalaryIcon from "../../components/icons/SalaryIcon"
 import UserIcon from "../../components/icons/UserIcon"
 import Link from "next/link"
-
+import { api_url } from "../../config";
 
 export async function getServerSideProps(ctx) {
   const session = await getSession(ctx)
@@ -51,7 +51,7 @@ export default function SavedJobs({ user }) {
 
   useEffect(() => {
 
-  fetch(`/api/users?email=${user.email}`, {
+  fetch(`${api_url}/api/users?email=${user.email}`, {
   method: "GET",
   })
   .then((res) => res.json())
@@ -59,7 +59,7 @@ export default function SavedJobs({ user }) {
   }, []);
   
   useEffect(() => {
-  fetch(`/api/jobs`, {
+  fetch(`${api_url}/api/jobs`, {
   method: "GET",
   })
   .then((res) => res.json())
