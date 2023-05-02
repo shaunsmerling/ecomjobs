@@ -14,34 +14,19 @@ export async function getServerSideProps(ctx) {
     }
   }
   const { user } = session;
-
-  // Fetch user data
-  const userDataRes = await fetch(`${api_url}/api/users?email=${user.email}`);
-  const userData = await userDataRes.json();
-
-  // Get jobIDs
-  const jobIDs = userData[0]?.jobIDs || [];
-
-  // Fetch job data
-  const jobDataRes = await fetch(`${api_url}/api/jobs`);
-  const jobData = await jobDataRes.json();
-
-  // Filter jobs based on jobIDs
-  const initialData = jobData.filter((job) => jobIDs.includes(job.id));
-
   return {
-    props: { user, initialData },
+    props: { user },
   }
 }
 
-export default function SavedJobs({ user, initialData }) {
+
+export default function SavedJobs({ user }) {
 
 
-  const [userData, setUserData] = useState(user);
-  // const [jobData, setJobData] = useState([]);
-  const [newData, setNewData] = useState(initialData);
-  console.log(newData)
-console.log(initialData)
+  const [userData, setUserData] = useState([]);
+  const [jobData, setJobData] = useState([]);
+  const [newData, setNewData] = useState([]);
+
     useEffect(() => {
     // show the spinner
     showSpinner();
@@ -64,38 +49,38 @@ console.log(initialData)
   }
 
 
-  // useEffect(() => {
+  useEffect(() => {
 
-  // fetch(`${api_url}/api/users?email=${user.email}`, {
-  // method: "GET",
-  // })
-  // .then((res) => res.json())
-  // .then((data) => setUserData(data));
-  // }, []);
+  fetch(`${api_url}/api/users?email=${user.email}`, {
+  method: "GET",
+  })
+  .then((res) => res.json())
+  .then((data) => setUserData(data));
+  }, []);
   
-  // useEffect(() => {
-  //   if (userData[0]) {
-  //     const jobIDs = userData[0].jobIDs;
-  //     const jobQuery = jobIDs.map((id) => `id=${id}`).join("&");
-  //     fetch(`${api_url}/api/jobs?${jobQuery}`, {
-  //       method: "GET",
-  //     })
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         setJobData(data);
-  //       });
-  //   }
-  // }, [userData]);
+  useEffect(() => {
+    if (userData[0]) {
+      const jobIDs = userData[0].jobIDs;
+      const jobQuery = jobIDs.map((id) => `id=${id}`).join("&");
+      fetch(`${api_url}/api/jobs?${jobQuery}`, {
+        method: "GET",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setJobData(data);
+        });
+    }
+  }, [userData]);
   
-  // useEffect(() => {
-  //   if (userData[0] && jobData.length > 0) {
-  //     const jobIDs = userData[0].jobIDs;
-  //     const filteredJobs = jobData.filter((job) =>
-  //       jobIDs.includes(job.id)
-  //     );
-  //     setNewData(filteredJobs);
-  //   }
-  // }, [userData, jobData]);
+  useEffect(() => {
+    if (userData[0] && jobData.length > 0) {
+      const jobIDs = userData[0].jobIDs;
+      const filteredJobs = jobData.filter((job) =>
+        jobIDs.includes(job.id)
+      );
+      setNewData(filteredJobs);
+    }
+  }, [userData, jobData]);
 
   // fetch("/api/jobs", {
 //   method: 'DELETE',
@@ -155,6 +140,7 @@ function handleClick(event, id) {
   }
 
   console.log(userData)
+  console.log(jobData)
 
   console.log(newData)
   
