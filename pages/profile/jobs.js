@@ -8,6 +8,9 @@ import { api_url } from "../../config";
 
 export async function getServerSideProps(ctx) {
   const session = await getSession(ctx)
+  const res = await fetch(`${api_url}/api/jobs`)
+  const data = await res.json()
+
   if (!session) {
     return {
       props: {}
@@ -15,12 +18,14 @@ export async function getServerSideProps(ctx) {
   }
   const { user } = session;
   return {
-    props: { user },
+    props: { user, jobs: data },
   }
+ 
 }
 
 
-export default function SavedJobs({ user }) {
+export default function SavedJobs({ user, jobs }) {
+
 
 
   const [userData, setUserData] = useState([]);
@@ -59,13 +64,7 @@ export default function SavedJobs({ user }) {
   }, []);
   
   useEffect(() => {
-  fetch(`${api_url}/api/jobs`, {
-  method: "GET",
-  })
-  .then((res) => res.json())
-  .then((data) => {
-  setJobData(data);
-  });
+  setJobData(jobs)
   }, []);
   
   useEffect(() => {
@@ -135,10 +134,10 @@ function handleClick(event, id) {
     }
   }
 
-  console.log(userData)
-  console.log(jobData)
+  // console.log(userData)
+  // console.log(jobData)
 
-  console.log(newData)
+  // console.log(newData)
   
   return (
     <div className="text-center">
