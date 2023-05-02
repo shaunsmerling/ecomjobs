@@ -26,8 +26,8 @@ return (
         Post A Job
       </button>
     </div>
-    <p class="mt-4 text-sm text-center font-montserrat font-medium">Save up to 50% off - <a target="_blank" href="/bulkdiscounts" class="text-sky-300 underline font-bold">Buy a Bundle</a></p> 
   </div>
+  <p class="mt-4 text-sm text-center font-montserrat font-medium">Save up to 50% off - <a target="_blank" href="/bulkdiscounts" class="text-sky-300 underline font-bold">Buy a Bundle</a></p> 
   <ul class="flex flex-col  sm:flex-row items-center justify-center justify-start mt-20 space-y-6 sm:space-y-0 sm:space-x-8">
     <li class="flex items-center">
       <img src="/shopify.png" class="h-8 sm:h-10 w-auto" alt="Shopify logo" />

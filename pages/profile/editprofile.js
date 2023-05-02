@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import {useRouter} from "next/router"
 import {useSession, getSession} from "next-auth/react"
 
+
+
 export async function getServerSideProps(context) {
   const session = await getSession(context);
   const email = session?.user?.email;
@@ -162,7 +164,6 @@ function EditProfile({ userData }) {
     })
       .then((response) => response.json())
       .then((jsonResponse) => {
-        console.log(jsonResponse, "JSON");
       })
       .catch((err) => {
         console.log(err, "Error");
@@ -309,7 +310,7 @@ name="website_url" />
     
 <label for="" class="block text-sm font-medium text-gray-700 mb-1">
                     {" "}
-                    Upload a new photo
+                    Upload a new photo. WARNING: Please compress your img at <a className="text-sky-300" href="https://tinypng.com/">TingPNG</a> before uploading
                   </label>
                   <div class="relative mt-2 sm:mt-0 sm:flex-1">
                     <input
