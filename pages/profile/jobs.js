@@ -59,20 +59,17 @@ export default function SavedJobs({ user }) {
   }, []);
   
   useEffect(() => {
-    async function fetchJobData() {
-      try {
-        const response = await fetch(`${api_url}/api/jobs`, {
-          method: "GET",
-        });
-        const data = await response.json();
-        setJobData(data);
-      } catch (error) {
-        console.error(error);
-      }
+    fetch(`/api/jobs`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
     }
-    fetchJobData();
-  }, []);
-  
+    })
+    .then((res) => res.json())
+    .then((data) => {
+    setJobData(data);
+    });
+    }, []);
   
   useEffect(() => {
     if (userData[0] && jobData.length > 0) {
