@@ -135,6 +135,10 @@ function handleClick(event, id) {
     }
   }
 
+  console.log(userData)
+  console.log(jobData)
+
+  console.log(newData)
   
   return (
     <div className="text-center">
@@ -142,7 +146,7 @@ function handleClick(event, id) {
   {newData.map((data) => (
   <Link href={`/job/${data.jobUrl}`}>
   <div
-  className={` mx-20 rounded-lg  mb-4 lg:mb-7 border border-[#2c4f43] bg-[#edebea] lg:rounded-lg py-4 pl-4 hover:bg-[#dbd7d4] ${data?.featured && "bg-lightYellow-100"
+  className={`mx-4 lg:mx-20 rounded-lg  mb-4 lg:mb-7 border border-[#2c4f43] bg-[#edebea] lg:rounded-lg py-4 pl-4 hover:bg-[#dbd7d4] ${data?.featured && "bg-lightYellow-100"
     }`}
 >
   <div className="z-0" >
@@ -270,7 +274,7 @@ function handleClick(event, id) {
               <button
                 id="cancel-btn"
                 onClick={(event) => handleClick(event, data.id)}
-                className=" bg-[#2d4f42] absolute right-16  font-monteserrant text-white font-semibold text-xs leading-6 md:!leading-30 py-1.5 px-2 md:px-4 md:py-2 rounded-3xl hover:bg-[#567369]"
+                className=" bg-[#2d4f42] absolute right-2 lg:right-16  font-monteserrant text-white font-semibold text-xs leading-6 md:!leading-30 py-1.5 px-2 md:px-4 md:py-2 rounded-3xl hover:bg-[#567369]"
               >
           X
               </button>
