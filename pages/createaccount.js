@@ -66,16 +66,12 @@ const CreateAccount = () => {
       } = fields
 
     return (
-        <section className="py-10 bg-gray-50 sm:py-16 lg:pt-24 lg:pb-60">
-    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <div className="mb-10">
-            <a href="../">
-              <img className="w-auto h-24 mx-auto" src="/logo.png" alt="" />
-              </a>
-          </div>
+        <section className=" bg-gray-50 py-20 ">
+    <div className="px-4 mx-auto max-w-7xl -pt-20  mb-10 lg:px-8">
+  
         <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Find eCommerce brands that're hiring</h2>
-            <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">Join eComportal today and get access to thousands of brands hiring</p>
+            <h2 className="text-3xl font-bold font-montserrant leading-tight text-black sm:text-4xl lg:text-5xl">Create An Ecomportal Account</h2>
+            <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">Build a profile to get seen by thousands of brands & save job postings</p>
         </div>
 
         <div className="relative max-w-md mx-auto mt-8 md:mt-16">
@@ -149,23 +145,23 @@ const CreateAccount = () => {
                                     />
                                 </div>
                             </div>
-
+{/* 
                             <div className="flex items-center">
                                 <input type="checkbox" name="agree" id="agree" className="w-5 h-5 text-green-500 bg-white border-gray-200 rounded" />
 
                                 <label for="agree" className="ml-3 text-sm font-medium text-gray-500">
                                     I agree to eComportal's <a href="#" title="" className="text-blue-600 hover:text-blue-700 hover:underline">Terms of Service</a> and <a href="#" title="" className="text-blue-600 hover:text-blue-700 hover:underline">Privacy Policy</a>
                                 </label>
-                            </div>
+                            </div> */}
 
                             <div>
-                                <button type="submit" className="inline-flex items-center bg-[#17614A] justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 border border-transparent rounded-md focus:outline-none hover:bg-black focus:bg-black">
+                                <button type="submit" className="inline-flex items-center bg-[#709771] justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 border border-transparent rounded-md focus:outline-none hover:bg-[#5a795a] ">
                                     Create account
                                 </button>
                             </div>
 
                             <div className="text-center">
-                                <p className="text-base text-gray-600">Already have an account? <a href="/signup" title="" className="font-medium text-blue-500 transition-all duration-200 hover:underline hover:text-blue-500">Login here</a></p>
+                                <p className="text-base text-gray-600">Already have an account? <a href="/login" title="" className="font-medium text-blue-500 transition-all duration-200 hover:underline hover:text-blue-500">Login here</a></p>
                             </div>
                         </div>
                     </form>

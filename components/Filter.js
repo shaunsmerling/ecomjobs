@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import CustomClearRefinements from "../custom-algolia-component/CustomClearRefinements";
 import CustomRefinementList from "../custom-algolia-component/CustomRefinementList";
 import CustomMenu from "../custom-algolia-component/CustomMenu";
@@ -10,7 +9,7 @@ const Filter = ({clearFilter, setClearFilter}) => {
  
   return (
     <>
-      <div className="bg-gray-700 p-6 rounded-md w-full">
+      <div className="bg-[#2b4f43] p-6 rounded-md w-full">
         <div className="relative flex flex-col gap-5">
           <div className="flex flex-row justify-between items-center">
             <div>
@@ -18,8 +17,8 @@ const Filter = ({clearFilter, setClearFilter}) => {
                 Filter
               </h3>
             </div>
-            <div>
-              <CustomClearRefinements setClearAll={setClearFilter} />
+            <div className="mb-12 -mr-4">
+              {/* <CustomClearRefinements setClearAll={setClearFilter} /> */}
             </div>
           </div>
 
@@ -75,15 +74,18 @@ const Filter = ({clearFilter, setClearFilter}) => {
           </div> */}
 
           {/* Salary */}
-          <CustomSalarySlider attribute1="salaryMin" attribute2="salaryMax" title="Salary" clearAll={clearFilter} />
+          <CustomSalarySlider attribute1="salaryMin" attribute2="salaryMax" title="Salary" 
+          clearAll={clearFilter} 
+          setClearAll={setClearFilter}/>
           {/* Employees */}
 
           <CustomRangeSlider
             attribute="emp_count"
-            stateMin={10}
-            stateMax={3500}
+            stateMin={1}
+            stateMax={20000}
             title={"Employees"}
             clearAll={clearFilter}
+            setClearAll={setClearFilter}
           />
 
           {/* Specialities */}

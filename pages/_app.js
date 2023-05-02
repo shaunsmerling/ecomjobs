@@ -1,13 +1,14 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import '../global.css'
 import Navbarthree from "../components/navBarThree"
 import Script from "next/script"
-import { SessionProvider } from "next-auth/react"; 
+import { SessionProvider, useSession } from "next-auth/react"; 
 import { useRouter } from "next/router";
 import Footer from "../components/Footer/index"
 import FooterEmail from "../components/Footer/footerEmail"
 import FooterCities from "../components/Footer/footerCities"
 import FooterJobs from "../components/Footer/footerJobs"
+import Announce from "../components/announcementBar"
 
 
 
@@ -20,26 +21,30 @@ function MyApp({
   pageProps: { session, ...pageProps },
 }) {
 const router = useRouter();
-const showHeader = router.pathname === '/signup' || router.pathname === "/createaccount" ? false : true;
+const showHeader = router.pathname === '/login' || router.pathname === "/auth/verify-request" ? false : true;
 
-useEffect(() => {
-  router.events.on("routeChangeComplete", (path) => {
-    setTimeout(() => {
-      if (window.bento !== undefined) {
-        // Note: if the user is identified or logged in, you can identify their page view by running.
-        // Example:
-        // if (user) {
-        //  window.bento.identify(email);
-        // }
-        window.bento.view();
-      };
-    }, 0);
-  });
+    
 
-  return () => {
-    router.events.off('routeChangeComplete', 0);
-  }
-}, [router]);
+
+// useEffect(() => {
+//   router.events.on("routeChangeComplete", (path) => {
+//     setTimeout(() => {
+//       if (window.bento !== undefined) {
+//         // Note: if the user is identified or logged in, you can identify their page view by running.
+//         // Example:
+//         // if (user) {
+//         //  window.bento.identify(email);
+//         // }
+//         window.bento.view();
+//       };
+//     }, 0);
+//   });
+
+//   return () => {
+//     router.events.off('routeChangeComplete', 0);
+//   }
+// }, [router]);
+
 
 
 
@@ -80,7 +85,6 @@ useEffect(() => {
         }}
 />
 <Script strategy="afterInteractive" src="https://www.facebook.com/tr?id=242161221475139&ev=PageView&noscript=1"/>
-<Script id="bento-script" src={"https://fast.bentonow.com?site_uuid=b206b230c175e8efc963c7144909e9dc"} strategy="afterInteractive" />
 <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=AW-11061598180"/>
 <Script
   id="google-tag"
@@ -124,12 +128,13 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
 </noscript>
 
   <SessionProvider session={session}>
+<Announce/>
   {showHeader && <Navbarthree/> }
     
       <Component {...pageProps} />
       {/* <Footer/> */}
 
-      <FooterEmail/>
+      {/* <FooterEmail/> */}
       <Footer/>
       {/* <FooterCities/> */}
       <FooterJobs/>

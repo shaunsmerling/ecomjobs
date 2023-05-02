@@ -6,7 +6,7 @@ export const getAllUsers = () => {
 };
 
 export const getUserByEmail= (email) => {
-  return prisma.user.findUnique({ where: { email } });
+  return prisma.user.findMany({ where: { email } });
 };
 
 // CREATE

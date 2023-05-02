@@ -58,7 +58,7 @@ const handleSubmit = (e) => {
               </p>
             </div>
 
-            <div className="relative mt-10 overflow-hidden bg-black lg:mt-0 rounded-3xl -rotate-3">
+            <div className="relative mt-10 overflow-hidden bg-[#2c4f42] lg:mt-0 rounded-3xl -rotate-3">
               <div
                 className="absolute bottom-0 right-0 -mb-72 -mr-24 border-[6px] opacity-20 border-white rounded-full w-96 h-96">
               </div>
@@ -152,7 +152,7 @@ const handleSubmit = (e) => {
                 </div>
 
                 <button type="submit" onClick={(e)=>{handleSubmit(e)}}
-                  className="inline-flex items-center justify-center w-full px-12 py-4 text-base font-medium text-white transition-all duration-200 bg-black border border-transparent rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700">
+                  className="inline-flex items-center justify-center w-full px-12 py-4 text-base font-medium text-white transition-all duration-200 bg-[#709771] border border-transparent rounded-xl hover:bg-[#5a795a] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700">
                   Send message
                 </button>
               </form>

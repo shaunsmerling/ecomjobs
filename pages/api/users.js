@@ -1,7 +1,6 @@
 import {
     getAllUsers,
     createUser,
-    getUserById,
     updateUser,
     deleteUser,
     getUserByEmail,
@@ -56,10 +55,10 @@ export default async function handler(req, res) {
           return res.json(user);
         }
         case "GET": {
-          // Get a single user if id is provided in the query
+          // Get a single user if email is provided in the query
           const query = req.query;
-          if (query.id) {
-            const user = await getUserByEmail(query.id);
+          if (query.email) {
+            const user = await getUserByEmail(query.email);
             return res.json(user);
           }
   

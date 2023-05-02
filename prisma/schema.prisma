@@ -35,6 +35,14 @@ model Job {
   user_id             String?
   salaryMin           String?
   salaryMax           String?
+  highlight           Boolean?
+  top24               Boolean?
+  week                Boolean?
+  month               Boolean?
+  emailBlast          Boolean?
+  top24Timestamp      Int?
+  weekTimestamp       Int?
+  monthTimestamp      Int?
 }
 
 model Email {
@@ -60,9 +68,11 @@ model Company {
 
 
 
+
 model User {
   id                  String @id @default(auto()) @map("_id") @db.ObjectId
-  user_name           String?
+  user_name           String? 
+  email               String?
   website_url         String?
   profilePicture      String?
   location            String?
@@ -84,5 +94,9 @@ model User {
   degree              String?
   skills              String[]
   achievements        String?
+  jobIDs              String[]
+  salaryMin           String?
+  hourlyPay           String?
+  customURL           String?
 
 }

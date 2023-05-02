@@ -1,0 +1,12 @@
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.searchBox::placeholder {
+  animation: typing 1s steps(10, end) infinite;
+}

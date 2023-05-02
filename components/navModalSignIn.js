@@ -12,8 +12,8 @@ function Modal() {
             <a href="../">
               <img
                 href="../"
-                className="w-auto h-14 mt-4 -ml-2 mb-4 "
-                src="https://storage.googleapis.com/ecomportal-images/images/logo.png"
+                className="w-auto h-10 mt-4 -ml-4 mb-4 "
+                src="/logo10.png"
                 alt=""
               ></img>
             </a>
@@ -50,36 +50,19 @@ function Modal() {
                   <nav class="grid grid-cols-1 gap-7">
                     <a
                       class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
-                      href="/remote-jobs"
+                      href="/salaries"
                     >
                       <div class="ml-2 flex text-base font-medium text-gray-900">
                         <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
                         <img src="https://img.icons8.com/windows/32/FFFFFF/laptop-computer.png"/>
                         </div>
-                        <div className="mt-2 ml-2 ">Remote Jobs</div>
+                        <div className="mt-2 ml-2 ">Salaries</div>
                       </div>
                     </a>
-                    <a
-                      class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
-                      href="/employers/posts"
-                    >
-                      <div class="ml-2 flex text-base font-medium text-gray-900">
-                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            class="w-6 h-6"
-                          >
-                            <path d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z" />
-                          </svg>
-                        </div>
-                        <div className="mt-2 ml-2 ">Your Jobs</div>
-                      </div>
-                    </a>
+                  
                      <a
                       class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
-                      href="/bulkdiscounts"
+                      href="/interviews"
                     >
                       <div class="ml-2 flex text-base font-medium text-gray-900">
                         <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
@@ -94,12 +77,12 @@ function Modal() {
                           </svg>
                        
                         </div>
-                        <div className="mt-2 ml-2">Bulk Discounts</div>
+                        <div className="mt-2 ml-2">Interviews</div>
                       </div>
                     </a>
                     <a
                       class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
-                      href="/list-your-company"
+                      href="/profile/jobs"
                     >
                       <div class="ml-2 flex text-base font-medium text-gray-900">
                         <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
@@ -115,9 +98,28 @@ function Modal() {
                         */}
                                   <img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/sorting-answers.png"/>
                         </div>
-                        <div className="mt-2 ml-2">List Your Company</div>
+                        <div className="mt-2 ml-2">Saved Jobs</div>
                       </div>
                     </a>
+                    <a
+                      class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
+                      href="/profile"
+                    >
+                      <div class="ml-2 flex text-base font-medium text-gray-900">
+                        <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-black  text-white mr-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="w-6 h-6"
+                          >
+                            <path d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z" />
+                          </svg>
+                        </div>
+                        <div className="mt-2 ml-2 ">Your Profile</div>
+                      </div>
+                    </a>
+                    
                     <a
                       class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                       href="/contactus"
@@ -144,13 +146,13 @@ function Modal() {
                       <a
                         href="/postajob"
                         title=""
-                        className="inline-flex items-center justify-center px-20 mt-4 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-black text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+                        className="inline-flex items-center hover:bg-[#5a795a]  justify-center px-20 mt-4 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#709771] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
                         role="button"
                       >
                         Post A Job
                       </a>
                     </div>
-                    <div className=" -mt-4 -mb-10 mx-auto">
+                    <div className=" -mt-4 mb-10 mx-auto">
             
                       <a
                         href="/api/auth/signout"
@@ -264,18 +266,18 @@ function Modal() {
                 <a
                   href="/postajob"
                   title=""
-                  className="inline-flex border border-black items-center transform transition duration-300 hover:-translate-y-1 hover:shadow-lg  justify-center px-20 mt-4 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-btn text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
+                  className="inline-flex border border-black items-center transform transition duration-300 hover:bg-[#5a795a]  justify-center px-20 mt-4 py-2.5 text-base font-medium  transition-all duration-200 border border-gray-900 rounded-full bg-[#709771] text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900"
                   role="button"
                 >
                   Post A Job
                 </a>
                 
               </div>
-              <div className="  mb-4 -mt-4 mx-auto">
+              {/* <div className="  mb-4 -mt-4 mx-auto">
               <a class="border border-black whitespace-nowrap transform transition duration-300 hover:-translate-y-1 hover:shadow-lg inline-flex items-center justify-center px-20 py-2.5 rounded-full text-base font-Studio6 text-white  bg-insightblue " href="https://insightai.beehiiv.com/subscribe">
 The Insight
 </a>
-</div>
+</div> */}
 
               {/* <div className=" -mt-4 -mb-10 mx-auto">
                 <p className="text-black">  Are you an employer? Sign in&nbsp;

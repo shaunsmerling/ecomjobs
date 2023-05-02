@@ -10,7 +10,7 @@ function Footer() {
 
   return (
     <>
-      <div className="font-Studio6">
+      <div className="font-montserrant">
         <div className={styles.footer1}>
          
        

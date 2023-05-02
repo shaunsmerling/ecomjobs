@@ -5,12 +5,12 @@ export default function Pricing() {
     return (
 
             <div>
-                <section class="py-12 mx-10 rounded-lg bg-white sm:py-16 lg:mb-10">
+                <section class="font-montserrant py-12 mx-10 rounded-lg bg-white sm:py-16 lg:mb-10">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-3xl font-semibold tracking-tight text-black sm:text-4xl lg:text-5xl">Bulk Discounts</h2>
-            <p class="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8"> Buy job posts in bulk, save them as pre-purchased credits, and use them throughout the year (valid for 12 months). Each job will be posted on our front page & sent out to our email list.</p>
-            <p class="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8">Our Highlight Addon will display your job post highlighted in yellow for extra visibility. Our Top Pinned addon will display your job post at the top of the page. Both addons are priced at $99 & are included when you purchase more than 5 jobs at once.</p>
+            <p class="mt-4 text-base font-normal leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8"> Buy job posts in bulk, save them as pre-purchased credits, and use them throughout the year. Each job credit is valid for 12 months</p>
+            <p class="mt-4 text-base leading-7 text-gray-600 lg:text-lg lg:mt-6 lg:leading-8 font-bold">Upon purchase of bulk posts, you'll be given a custom account to access your saved job credits via email</p>
         </div>
 
         <div class="grid grid-cols-1 gap-5 mt-12 text-center sm:grid-cols-2 xl:grid-cols-4 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 sm:mt-16 lg:mt-20">
@@ -22,7 +22,7 @@ export default function Pricing() {
                         </svg>
                     </div>
      
-                    <p class="mt-6 text-5xl font-semibold text-black">5 Jobs</p>
+                    <p class="mt-6 text-5xl font-semibold text-black">10 Jobs</p>
                 
                     <ul class="mt-8 space-y-4 text-base font-normal text-left text-gray-900">
                         <li class="flex items-center">
@@ -32,34 +32,42 @@ export default function Pricing() {
                             15% Off 
                         </li>
 
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                           Save $150
-                        </li>
 
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
-                            Valid for 12 months
+                            Sent To Email List (4000+ Members)
                         </li>
+
+                    
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Live Chat Support
+                        </li>
+
+                        
 
                         <li class="flex items-center">
                             {/* <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
     </svg> */}
-                            ❌ &nbsp; Top Pinned 
+                            ❌ &nbsp; Top Pinned For 1 Month
                         </li>
 
                         <li class="flex items-center">
                             {/* <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg> */}
-                            ❌ &nbsp; Highlight Add-on
+                            ❌ &nbsp; Highlighted Post
                         </li>
-
+                        
+                        <li class="text-2xl">
+                        
+                         <span className="font-bold">TOTAL</span>  = $840 <br></br> <span className="text-rose-600 font-bold"> &nbsp; (Save $150) </span>
+                        </li>
                         
 
                         {/* <li class="flex items-center">
@@ -72,9 +80,9 @@ export default function Pricing() {
 
                     <div class="mt-8">
                         <a
-                            href="https://buy.stripe.com/14kdTYeqI47j7Ys289"
+                            href="https://buy.stripe.com/00gdTY96oavHceI3cU"
                             title=""
-                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 border bg-black border-gray-300 rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"
+                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 border bg-[#709771] border-gray-300 rounded-xl hover:bg-[#5a795a] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
                             role="button"
                         >
                             Buy Now
@@ -103,9 +111,9 @@ export default function Pricing() {
                         </svg>
                     </div>
                     {/* <h3 class="mt-6 text-lg font-semibold text-gray-900">Standard</h3> */}
-                    <p class="mt-6 text-5xl font-semibold text-black">15 Jobs</p>
+                    <p class="mt-6 text-5xl font-semibold text-black">20 Jobs</p>
                     {/* <p class="mt-1 text-sm font-normal text-gray-500">per month</p> */}
-                    <ul class="mt-8 space-y-4 text-base font-normal text-left text-gray-900">
+                    <ul class="mt-8 space-y-4  text-base font-normal text-left text-gray-900">
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
@@ -117,15 +125,9 @@ export default function Pricing() {
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
-                            Save $600
+                            Sent To Email List (4000+ Members)
                         </li>
 
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Valid for 12 months
-                        </li>
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
@@ -139,19 +141,28 @@ export default function Pricing() {
                             Highlight Add-On  
                         </li>
 
-                        {/* <li class="flex items-center">
+                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
                             Live Chat Support
-                        </li> */}
+                        </li>
+
+                        <li class="text-2xl">
+                        
+                         <span className="font-bold">TOTAL</span>  = $1584 <br></br> <span className="text-rose-600 font-bold"> &nbsp; (Save $550) </span>
+                        </li>
+                        
+
+                       
                     </ul>
 
                     <div class="mt-8">
                         <a
-                            href="https://buy.stripe.com/eVabLQgyQgU55QkfZ0"
+                            href="https://buy.stripe.com/9AQ3fk4Q847j2E88xf"
                             title=""
-                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-black border border-transparent rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
+                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 border bg-[#709771] border-gray-300 rounded-xl hover:bg-[#5a795a] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+
                             role="button"
                         >
                             Buy Now
@@ -170,28 +181,22 @@ export default function Pricing() {
                         </svg>
                     </div>
                 
-                    <p class="mt-6 text-5xl font-semibold text-black">30 Jobs</p>
+                    <p class="mt-6 text-5xl font-semibold text-black">35 Jobs</p>
                     <ul class="mt-8 space-y-4 text-base font-normal text-left text-gray-900">
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
-                            25% Off 
+                            30% Off 
                         </li>
 
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
-                           Save $1500
+                            Sent To Email List (4000+ Members)
                         </li>
 
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Valid for 12 Months
-                        </li>
 
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -206,12 +211,24 @@ export default function Pricing() {
                             </svg>
                             Highlight Add-on  
                         </li>
+
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Live Chat Support
+                        </li>
+
+                        <li class="text-2xl">
+                        
+                         <span className="font-bold">TOTAL</span>  = $3199 <br></br> <span className="text-rose-600 font-bold"> &nbsp; (Save $1550) </span>
+                        </li>
                     </ul>
                     <div class="mt-8">
                         <a
-                            href="https://buy.stripe.com/bIY7vAbewavH92w7sv"
+                            href="https://buy.stripe.com/cN26rw0zSeLX2E8dRA"
                             title=""
-                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-black border border-transparent rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
+                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 border bg-[#709771] border-gray-300 rounded-xl hover:bg-[#5a795a] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
                             role="button"
                         >
                             Buy Now
@@ -236,22 +253,16 @@ export default function Pricing() {
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
-                            30% Off
+                            35% Off
                         </li>
 
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                             </svg>
-                            Save $3000
+                            Sent To Email List (4000+ Members)
                         </li>
-
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Valid for 12 Months
-                        </li>
+ 
 
                         <li class="flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -266,13 +277,25 @@ export default function Pricing() {
                             </svg>
                             Highlight Add-on  
                         </li>
+
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-600 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                            Live Chat Support
+                        </li>
+
+                        <li class="text-2xl">
+                        
+                         <span className="font-bold">TOTAL</span>  = $5499 <br></br> <span className="text-rose-600 font-bold"> &nbsp; (Save $2600) </span>
+                        </li>
                     </ul>
 
                     <div class="mt-8">
                         <a
-                            href="https://buy.stripe.com/5kAeY20zS47jdiM4gk"
+                            href="https://buy.stripe.com/cN25ns6YgcDP2E86p9"
                             title=""
-                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 bg-black border border-transparent rounded-xl hover:bg-[#104233] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-700"
+                            class="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium text-white transition-all duration-200 border bg-[#709771] border-gray-300 rounded-xl hover:bg-[#5a795a] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
                             role="button"
                         >
                             Buy Now

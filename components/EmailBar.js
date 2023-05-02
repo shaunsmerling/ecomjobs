@@ -53,7 +53,7 @@ function EmailBar({props}) {
 
   return ( 
     <form  onSubmit={handleSubmit}>   
-      <div className="flex flex-wrap py-1 lg:py-0 justify-center fixed bottom-0 bg-btn items-center w-full">
+      <div className="flex flex-wrap py-1 lg:py-0 justify-center fixed bottom-0 bg-[#709771] items-center w-full">
       <p className="mb-1 text-black"> Get the newest <span className="italic font-bold">{props}</span> ecom jobs in your inbox</p>
         
         <div className=" flex flex-row items-center  mb-1 lg:mr-0 mr-4 justify-center w-full">

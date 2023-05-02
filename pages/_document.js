@@ -6,7 +6,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang="en" className="bg-[#fffcd3]">
+    <Html lang="en" className="bg-white">
       <Head>
            
             <script src="https://cdn.tailwindcss.com"></script>
@@ -14,6 +14,8 @@ export default function Document() {
             <link rel="icon" href="../assets/favicon.ico" />
             
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/reset-min.css" integrity="sha256-QlHlZdbSVxaYkUHxhMFhAj/L3pJiW1LuomSCONXBWms=" crossorigin="anonymous"/>
+           
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic"/>
 
             <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
             <meta name="facebook-domain-verification" content="4vjbzcq184y4s3u6q9h19rwp81y00l" />

@@ -103,9 +103,6 @@ function isImageFile(filename) {
 }
 
 
-  const logoImage = isImageFile(logoString) ? 
-  `https://ecomportal-images.storage.googleapis.com/images/${logoString}` : 
-  `${logoString}`;
 
   return (
     <>
@@ -206,7 +203,7 @@ function isImageFile(filename) {
 
               
               <div className={styles.rightContent}>
-                <img loading="lazy" src={`https://ecomportal-images.storage.googleapis.com/images/${logoString}`}
+                <img loading="lazy" alt=""  src={logoString?.startsWith("data:image/") ? logoString : `https://ecomportal-images.storage.googleapis.com/images/${logoString}`}
               ></img>
                 <h3>{jobs?.company_name}</h3>
                 <h6>{jobs?.salaryMin && jobs?.salaryMax && jobs.salaryMin !== "0"
@@ -226,7 +223,7 @@ function isImageFile(filename) {
                 <a
                   href={jobs?.application_url}
                   target="_blank"
-                  className={`inline-flex items-center justify-center px-6 py-2.5 text-base font-medium transition-all duration-200 border border-gray-900 rounded-full bg-btn text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring-900 ${styles.apply_btn}`}
+                  className={`inline-flex items-center justify-center px-6 py-2.5 text-base font-medium transition-all duration-200 border border-gray-900 rounded-full bg-[#709771] text-white focus:outline-none hover:bg-[#1f372f] focus:ring-2 focus:ring-offset-2 focus:ring-ring-900 ${styles.apply_btn}`}
                 >
                   Apply Now
                 </a>

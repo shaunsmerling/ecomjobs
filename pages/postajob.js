@@ -5,6 +5,9 @@ import checkout from "../checkout.js"
 import { NextSeo } from "next-seo";
 import { generateJobUrl } from "../script.js";
 import { useSession, getSession } from "next-auth/react"
+import SalePage from "../components/salePage.js"
+import Logo from "../components/logobanner"
+import TestB from "../components/testimonialBanner"
 
 export async function getServerSideProps(context) {
   return {
@@ -28,8 +31,21 @@ function PostAJob() {
     month: 0,
     email: 0,
     })
+
+
     
     const [total, setTotal] = useState(99);
+
+    const currentDate = new Date();
+    const unixDate = Math.floor(currentDate.getTime() / 1000);
+    const year = currentDate.getFullYear();
+    const month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
+    const date = ("0" + currentDate.getDate()).slice(-2);
+    const formattedDate = month + "/" + date + "/" + year;
+
+
+
+
 
 
   const [fields, setFields] = useState({
@@ -39,11 +55,11 @@ function PostAJob() {
     jobPosition: "",
     logo: "",
     jobCategory: "",
-    postedat: "",
     jobType: "",
     location: "",
     city: "",
     salaryMin: 0,
+    empcount: 0,
     salaryMax: 0,
     companyDescription: "",
     jobDescription: "",
@@ -182,6 +198,8 @@ useEffect(() => {
     document.querySelector(".spinner").classList.add("show")
 }
 
+const currentTime = new Date().getTime() 
+console.log(currentTime)
 
 
   const handleChange = ({ target }) => {
@@ -200,19 +218,29 @@ useEffect(() => {
         company_url: companyUrl,
         job_position: jobPosition,
         logo: companyLogo,
+        empcount: empcount,
         salaryMin: salaryMin,
         salaryMax: salaryMax,
         job_category: jobCategory,
-        postedat: postedat,
+        postedat: formattedDate,
+        datets: unixDate.toString(),
         job_type: jobType,
         location: location,
+        highlight: checkbox.highlight > 0,
+        top24: checkbox.top24 > 0,
+        week: checkbox.week > 0,
+        month: checkbox.month > 0 ,
+        emailBlast: checkbox.emailBlast > 0,
+        top24Timestamp: checkbox.top24 > 0 ? currentTime : "",
+        weekTimestamp: checkbox.week > 0 ? currentTime : "",
+        monthTimestamp: checkbox.month > 0 ? currentTime : "",
         city: city,
         company_description: companyDescription,
         job_description: jobDescription,
         job_requirements: jobRequirements,
         application_url: applicationUrl,
         jobUrl,
-        // datets: datets
+
       }),
     })
       .then((response) => response.json())
@@ -246,10 +274,10 @@ useEffect(() => {
     jobPosition,
     logo,
     jobCategory,
-    postedat,
     jobType,
     location,
     city,
+    empcount,
     companyDescription,
     jobDescription,
     jobRequirements,
@@ -277,83 +305,38 @@ useEffect(() => {
           ],
         }}
       />
-    <div className="bg-white pt-4 px-20 lg:mx-10 mx-2 rounded-lg">
+      <SalePage />
+   
+        <Logo/>
+        <TestB />
+ 
+    <div className="bg-white  px-20 lg:mx-10 mx-2 rounded-lg">
       <div class="hugger">
 <div class="hugger__content">
 <div class="wizard">
 <div class="max-w-5xl my-8">
-<h1 class="text-2xl md:text-4xl font-bold block md:inline text-black">Hire the best. </h1>
+<h1 id="hire-the-best" class="text-2xl md:text-4xl font-bold block md:inline text-[#2d4f42] ">Hire the best. </h1>
 <h2 class="text-xl md:text-4xl block md:inline font-normal md:font-light">Post a job & reach thousands of potential employees working in the eCommerce industry.</h2>
 </div>
 <div class="grid grid-cols-5 mb-16">
 <form class="col-span-5" onSubmit={handleSubmit} accept-charset="UTF-8">
 <div class="space-y-8 divide-y divide-gray-200">
 
-{session ? (
-<div>
-{/* <div>
-<h3 class="text-xl font-medium leading-6 text-gray-900">Interested in creating a company profile?</h3>
-<p class="mt-1 text-gray-500">Create a profile page for your brand so that future employees can learn more</p>
-</div> */}
-<div class="mt-6 grid grid-cols-1 font-Studio6 gap-y-6 gap-x-4 sm:grid-cols-6">
-
-{/* <div class="sm:col-span-3 form-field">
-<a class="whitespace-nowrap inline-flex items-center justify-center pl-3 pr-1 py-1 border border-transparent rounded-full shadow-sm text-base font-medium text-white  bg-lightGreen-300 " href="/list-your-company">
-Register Here
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-1 w-6 h-6">
-<path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-</svg>
-</a>
-</div> */}
-
-<div class="sm:col-span-4 font-Studio6 orm-field">
-<label class="block text-sm font-medium text-gray-700" >Company Name</label>
-<div class="mt-1">
-<input 
-class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
-type="text" 
-value={companyName}
-onChange={handleChange}
-name="companyName"
-/>
-</div>
-<label class="block mt-4 text-sm font-medium text-gray-700" >Website URL</label>
-<div class="mt-1">
-<input 
-class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
-type="text" 
-value={companyUrl}
-onChange={handleChange}
-name="companyUrl"
-/>
-</div>
-</div>
-
-
-
-
-</div>
-</div>
-) : (
-<div>
-{/* <div>
-<h3 class="text-xl font-medium leading-6 text-gray-900">Create an account with us</h3>
-<p class="mt-1 text-gray-500">Create an account to save your jobs, create a company page, and get alerts</p>
-</div> */}
-<div class="mt-6 grid grid-cols-1 font-Studio6 gap-y-6 gap-x-4 sm:grid-cols-6">
-
-{/* <div class="sm:col-span-3 form-field">
-<a class="whitespace-nowrap inline-flex items-center justify-center pl-3 pr-1 py-1 border border-transparent rounded-full shadow-sm text-base font-medium text-white  bg-lightGreen-300 " href="/signup">
-Sign In
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-1 w-6 h-6">
-<path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-</svg>
-</a>
-</div> */}
+<div class="mt-2 grid grid-cols-1 font-monsterrant gap-y-6 gap-x-4 sm:grid-cols-6">
 
 <div class="sm:col-span-4 form-field">
-<label class="block text-sm font-medium text-gray-700" >Company Name</label>
-<div class="mt-1">
+<label class="block mt-4 text-sm font-medium text-gray-700" >Email</label>
+<div class="mt-2">
+<input 
+class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
+type="text" 
+value={email}
+onChange={handleChange}
+name="email"
+/>
+</div>
+<label class="block text-sm mt-4 font-medium text-gray-700" >Company Name</label>
+<div class="mt-2">
 <input 
 class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
 type="text" 
@@ -363,7 +346,7 @@ name="companyName"
 />
 </div>
 <label class="block mt-4 text-sm font-medium text-gray-700" >Website URL</label>
-<div class="mt-1">
+<div class="mt-2">
 <input 
 class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
 type="text" 
@@ -380,26 +363,6 @@ name="companyUrl"
 </div>
 </div>
 
-)}
-
-{/* <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
-
-<div class="sm:col-span-3 form-field">
-<label class="block text-sm font-medium text-gray-700" for="post_company_attributes_name">Company Name</label>
-<div class="mt-1 flex rounded-md shadow-sm">
-<input autofocus="autofocus" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" type="text" name="post[company_attributes][name]" id="post_company_attributes_name"/>
-</div>
-</div>
-
-<div class="sm:col-span-3 form-field">
-<label class="block text-sm font-medium text-gray-700" for="post_company_attributes_website_url">Website</label>
-<div class="mt-1 flex rounded-md shadow-sm">
-<input class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" type="text" name="post[company_attributes][website_url]" id="post_company_attributes_website_url"/>
-</div>
-</div>
-
-
-</div> */}
 
 
 <div>
@@ -446,13 +409,37 @@ name="jobCategory"
 </div>
 </div>
 <div class="sm:col-span-4 form-field">
-<label class="block text-sm font-medium text-gray-700" >Primary Location</label>
+<label class="block text-sm font-medium text-gray-700" > Location (State & Country) </label>
 <div class="mt-1">
 <input 
 class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
 type="text"
 name="location"
 value={location}
+onChange={handleChange}
+/>
+</div>
+</div>
+<div class="sm:col-span-4 form-field">
+<label class="block text-sm font-medium text-gray-700" > City </label>
+<div class="mt-1">
+<input 
+class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
+type="text"
+name="city"
+value={city}
+onChange={handleChange}
+/>
+</div>
+</div>
+<div class="sm:col-span-4 form-field">
+<label class="block text-sm font-medium text-gray-700" > Employee # </label>
+<div class="mt-1">
+<input 
+class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
+type="number"
+name="empcount"
+value={empcount}
 onChange={handleChange}
 />
 </div>
@@ -565,92 +552,7 @@ onChange={handleChange}
 </div>
 </div>
 
-
-{/* <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
-<div class="sm:col-span-4 form-field">
-<label class="block text-sm font-medium text-gray-700" for="post_title">Location (City, State, Country)</label>
-<div class="mt-1">
-<input 
-class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
-type="text"
-name="location"
-value={location}
-onChange={handleChange} 
-/>
-</div>
-</div> */}
-{/* 
-<div class="sm:col-span-4 form-field">
-<label for="" class="block text-sm font-medium text-gray-700 mb-1">
-                    {" "}
-                    Upload a logo: (Less than 100KB. To compress your image, visit <a href="https://tinypng.com/"> https://tinypng.com/ </a>):{" "}
-                  </label>
-                  <div class="relative mt-2 sm:mt-0 sm:flex-1">
-                    <input
-                      type="file"
-                      name="logo"
-                      accept="image/*"
-                      required
-                      onChange={(e) => {
-                        if (e?.target?.files?.[0]) {
-                          const file = e.target.files[0];
-                          const reader = new FileReader();
-                          reader.onloadend = () => {
-                            setCompanyLogo(reader.result);
-                          };
-                          reader.readAsDataURL(file);
-                          handleChange;
-                        }
-                      }}
-                      class="block w-full px-4 border py-3 placeholder-gray-500 border border-gray-300 
-                     rounded-lg focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm caret-indigo-600"
-                    />
-
-                    {companyLogo && (
-                      <img loading="lazy" src={companyLogo} className="mt-4 object-cover" />
-                    )}
-                  </div>
-</div>
-
-
-
-</div>
-</div> */}
-{/* {session ? "" : (
-<div class="pt-8">
-<div>
-<h3 class="text-xl font-medium leading-6 text-gray-900">Create your account</h3>
-<p class="mt-1 text-gray-500">You'll use this to manage this and all future job listings.</p>
-</div>
-<div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
-
-<div class="sm:col-span-3 form-field">
-<label class="block text-sm font-medium text-gray-700" for="post_user_attributes_first_name">Name</label>
-<div class="mt-1 flex rounded-md shadow-sm">
-<input 
-class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
-type="text" 
-name="applicant_name"
-/>
-</div>
-</div>
-
-<div class="sm:col-span-3 form-field">
-<label class="block text-sm font-medium text-gray-700" for="post_user_attributes_email">Email</label>
-<div class="mt-1 flex rounded-md shadow-sm">
-<input 
-class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm" 
-type="email" 
-value={email}
-name="email" 
-onChange={handleChange} />
-</div>
-</div>
-</div>
-</div>
-)} */}
-</div>
-<div class="mt-6 grid grid-cols-1 font-Studio6 gap-y-6 gap-x-4 sm:grid-cols-6">
+<div class="mt-6 grid grid-cols-1 font-monsterrant gap-y-6 gap-x-4 sm:grid-cols-6">
 
 <div class="sm:col-span-3 form-field">
 <label class="block text-sm font-medium text-gray-700" for="post_user_attributes_first_name">Boost Your Job Post</label>
@@ -769,17 +671,6 @@ onChange={handleChange} />
         <p id="helper-checkbox-text" class="text-xs font-normal text-black">📢 Reach thousands subscribed to our email list</p>
     </div>
 </div>
-{/* <div class="flex mt-4 mb-4">
-    <div class="flex items-center h-5">
-    <input id="helper-checkbox" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 bg-white
-         border-black rounded focus:ring-blue-500 
-        focus:ring-2 "></input>
-    </div>
-    <div class="ml-2 text-sm">
-    <label for="helper-checkbox" class="font-bold text-black ">Free shipping via Flowbite</label>
-        <p id="helper-checkbox-text" class="text-xs font-normal text-black">For orders shipped from $25 in books or $29 in other categories</p>
-    </div>
-</div> */}
 </div>
 </div>
 <div class="pt-5">
@@ -787,7 +678,7 @@ onChange={handleChange} />
 <button
             type="submit"
             href=""
-            class="flex relative items-center w-10/12 justify-center lg:mb-4 mx-auto px-20 py-3 sm:text-sm text-base sm:py-3.5  text-white transition-all duration-200 bg-black border border-transparent rounded-lg font-Studio6 hover:bg-btn hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+            class="flex relative mt-4 items-center w-10/12 justify-center lg:mb-4 mx-auto px-20 py-3 sm:text-sm text-base sm:py-3.5  text-white transition-all duration-200 bg-[#709771] border border-transparent rounded-lg font-monsterrant hover:bg-[#5a795a]   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
           >
             Post a job for&nbsp;<span> {`${"$" + total}`}</span>
           </button>

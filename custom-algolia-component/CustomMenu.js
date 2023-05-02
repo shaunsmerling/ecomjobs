@@ -18,7 +18,7 @@ function CustomMenu(props) {
     <>
       <div>
         <div className="mb-3">
-          <p className="opacity-70 font-medium  font-Studio6 text-base leading-5 tracking-common text-white ">
+          <p className="opacity-70 font-medium  font-montserrant text-base leading-5 tracking-common text-white ">
             {props.title}
           </p>
         </div>
@@ -30,7 +30,7 @@ function CustomMenu(props) {
             >
               <div className="flex flex-row items-center gap-2.5">
                 <LocationF />
-                <span className="w-full font-Studio6 font-normal text-sm leading-30 tracking-common text-white ">
+                <span className="w-full font-montserrant font-normal text-sm leading-30 tracking-common text-white ">
                   <CustomCurrentRefinements
                     attribute={"location"}
                     setLocationSelectModel={setLocationSelectModel}
@@ -63,7 +63,7 @@ function CustomMenu(props) {
           </div>
         ) : (
           <div className="my-1">
-            <p className="text-left opacity-30 font-normal text-base leading-5 tracking-common text-white font-Studio6">
+            <p className="text-left opacity-30 font-normal text-base leading-5 tracking-common text-white font-montserrant">
               No Filter
             </p>
           </div>

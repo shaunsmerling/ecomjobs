@@ -81,7 +81,7 @@ export default async function handler(req, res) {
         return res.json(jobs);
       }
       case "PUT": {
-        const body = req.body;
+        const body = JSON.parse(req.body)
         const query = req.query;
         // Update All Jobs
         if (query.updateAll) {

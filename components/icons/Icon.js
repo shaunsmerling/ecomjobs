@@ -2,22 +2,9 @@ import React from "react";
 
 const icon = () => {
   return (
-    <svg
-      width="15"
-      height="19"
-      viewBox="0 0 15 19"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M14 18L7.5 13.2778L1 18V2.88889C1 2.38792 1.19566 1.90748 1.54394 1.55324C1.89223 1.19901 2.3646 1 2.85714 1H12.1429C12.6354 1 13.1078 1.19901 13.4561 1.55324C13.8043 1.90748 14 2.38792 14 2.88889V18Z"
-        stroke="black"
-        strokeOpacity="0.4"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+      <path d="M17.75 2H6.25C5.01 2 4 3.01 4 4.25v15.5c0 1.24 1.01 2.25 2.25 2.25h11.5c1.24 0 2.25-1.01 2.25-2.25V4.25C20 3.01 18.99 2 17.75 2zM16 18.75c0 .41-.34.75-.75.75H8.75c-.41 0-.75-.34-.75-.75V5.25c0-.41.34-.75.75-.75h6.5c.41 0 .75.34.75.75v13.5z"/>
+  </svg>
   );
 }
 

@@ -9,3 +9,4 @@ google-auth-httplib2==0.1.0
 google-api-python-client==2.22.0
 algoliasearch==2.0.0
 pymongo[srv]
+node-fetch==2.6.9

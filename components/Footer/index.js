@@ -11,7 +11,7 @@ function Footer() {
         <div className={styles.footer}>
           <div className={styles.section_left}>
             <div className={styles.logo_section}>
-            <img class="h-30 w-52 sm:h-18 sm:w-18" alt="" src="https://ecomportal-images.storage.googleapis.com/images/logo.png"/>
+            <img class="-ml-4 h-30 w-52 sm:h-18 sm:w-18" alt="" src="/logo10.png"/>
               
            
             </div>
@@ -43,7 +43,7 @@ function Footer() {
                 />
               </svg>
               </a>
-            <a href="https://twitter.com/smerlinger" target="_blank" rel="noreferrer">
+            <a href="https://twitter.com/ecomprtal" target="_blank" rel="noreferrer">
               <svg
                 width="44"
                 height="44"

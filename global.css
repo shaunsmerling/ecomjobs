@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,6 +9,15 @@
 
 #logo {
   width: 100%;
+}
+
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
@@ -340,12 +350,12 @@
 
 .loading {
   opacity: 0;
-  transition: all 0.1s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .loaded {
   opacity: 1;
-  transition: all 0.1s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 #card {
@@ -391,9 +401,9 @@
   @apply focus:ring-0 outline-none border-lightGray-100;
 }
 .ais-InfiniteHits .ais-InfiniteHits-loadMore {
-  @apply bg-btn font-Poppins px-8 rounded-3xl py-3 text-base font-normal flex justify-center items-center mx-auto hover:scale-105 duration-150;
-  color: black;
-  font-weight: 600;
+  @apply bg-[#709771] font-Poppins px-8 rounded-3xl py-3 text-base hover:bg-[#5a795a] font-normal flex justify-center items-center mx-auto;
+  color: white;
+
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -865,5 +875,55 @@ color: #2F604B;
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+
+.typewriter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typewriter input {
+  width: 300px;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+}
+
+.typewriter input:focus {
+  border-color: #0cbaba;
+}
+
+.typewriter button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #0cbaba;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.typewriter button:hover {
+  background-color: #089696;
+}
+
+.typewriter::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 20px;
+  margin-left: 10px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
 }

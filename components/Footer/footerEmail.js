@@ -35,8 +35,8 @@ function FooterEmail() {
       <div className="">
         <div className={styles.footerEmail}>
         <div className="text-center mx-auto">
-        <h1 class="mb-4 text-3xl lg:-mx-0 -mx-4 font-Studio6 tracking-tight leading-none text-black">New Job Alerts</h1>
-        <p class="mb-8 text-md font-Studio6 text-black lg:text-md sm:px-16 xl:px-48 ">Subscribe to our email list to get new jobs sent <span className="italic font-bold">directly to your inbox </span></p>
+        <h1 class="mb-4 text-3xl lg:-mx-0 -mx-4 font-montserrant tracking-tight leading-none text-black">New Job Alerts</h1>
+        <p class="mb-8 text-md font-montserrant text-black lg:text-md sm:px-16 xl:px-48 ">Subscribe to our email list to get new jobs sent <span className="italic font-bold">directly to your inbox </span></p>
         <form
               action="#"
               onSubmit={handleSubmit}

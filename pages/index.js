@@ -20,6 +20,7 @@ import Filter from "../components/Filter";
 import FilterIcon from "../components/icons/FilterIcon";
 import Close2 from "../components/icons/Close2";
 import { useSession } from "next-auth/react";
+import { Autocomplete }from "../components/AutoComplete.js"
 
 
 export default function HomePage() {
@@ -30,6 +31,55 @@ export default function HomePage() {
     "bc44fb196bcec6b9602b254bc96f6e71"
   );
   const { data: session } = useSession();
+
+
+  const fetchUser = async () => {
+    if (session) {
+      // Make a GET request to check if the user exists in your database
+      const res = await fetch(`/api/users`);
+      const data = await res.json();
+      let userExists = false;
+
+      // Check if the user already exists in the database
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].email === session.user.email) {
+          userExists = true;
+          break;
+        }
+      }
+
+      // If the user does not exist, make the POST request
+      if (!userExists) {
+        await fetch('/api/users', {
+          method: 'POST',
+          body: JSON.stringify({
+            email: session.user.email,
+            website_url: "",
+            profilePicture: "",
+            location: "",
+            job_category: "",
+            primary_role: "",
+            years_of_exp: "",
+            open_to_roles: "",
+            bio: "",
+            linkedin: "",
+            twitter: "",
+            github: "",
+            work_exp_1: "",
+            school_name: "",
+            grad_year: "",
+            degree: "",
+            skills: [],
+            achievements: "",
+            jobIDs: [],
+          })
+        });
+      }
+    }
+  };
+
+  fetchUser()
+
 
   useEffect(() => {
     if (typeof window !== undefined) {
@@ -63,7 +113,7 @@ export default function HomePage() {
     <div>
       {/* {!session ? ( */}
         <div>
-        <div className="relative font-Studio6">
+        <div className="relative font-montserrant">
           <FeaturedBrands/>
           {/* <HeroBanner /> */}
        
@@ -71,7 +121,7 @@ export default function HomePage() {
             <LogoBanner />
           </div> */}
         </div>
-        <div className="flex flex-row justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
+        <div className="flex flex-row -mt-2 justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
           <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
             <Configure hitsPerPage={10} />
 
@@ -84,7 +134,7 @@ export default function HomePage() {
             </div>
             
 
-            <div className="flex font-Studio6 flex-col w-full gap-4">
+            <div className="flex font-montserrant flex-col w-full gap-4">
               {/* <Link href="https://insightai.beehiiv.com/subscribe">
             <div id="sponsor_1" class="mb-4 lg:ml-4 lg:mr-2 sm:mx-20 rounded-md cursor-pointer border border-solid  border-black transform transition duration-300 hover:-translate-y-1 hover:shadow-lg ">
     <div class="px-2  py-2 py-md-3 ">
@@ -110,10 +160,13 @@ export default function HomePage() {
 </div>
 </Link> */}
 
-              <div className="p-2 lg:p-4  searchBox -mb-4 lg:mb-0.5 -mx-8 lg:-mx-0 flex flex-row justify-center items-center gap-3  ">
+              <div className="p-2 lg:p-4  searchBox -mb-4 lg:mb-0.5 -mx-7 lg:-mx-0 flex flex-row justify-center items-center gap-3  ">
                 {/* Custom Search Box */}
                 <div className="w-full">
-                  <CustomSearchBox clearFilter={clearFilter} />
+                
+                  <CustomSearchBox  clearFilter={clearFilter}
+                setClearFilter={setClearFilter} 
+                searchClient={searchClient} />
                 </div>
                 {/* Filter Button For Mobile Filter Open */}
                 <div className="h-12 self-end lg:hidden">
@@ -122,14 +175,15 @@ export default function HomePage() {
                     onClick={() => setFilterModelMobile(!filterModelMobile)}
                   >
                     <FilterIcon className="text-lightGreen-300" />
-                    <span className="font-Studio6 font-medium text-sm leading-30 text-lightGreen-300 hidden md:inline-block">
+                    <span className="font-montserrant font-medium text-sm leading-30 text-lightGreen-300 hidden md:inline-block">
                       Filter
                     </span>
                   </button>
                 </div>
               </div>
               {/* View Data Section */}
-              <div className="-mx-10 mt-6 lg:-mx-0">
+              <div className="-mx-6
+               mt-6 lg:-mx-0">
                 <InfiniteHits hitComponent={CompanyData} showPrevious={false} />
               </div>
               <div>
@@ -139,7 +193,7 @@ export default function HomePage() {
 
             {/* Filter Model For Mobile View */}
             <div
-              className={`lg:hidden filterModelAnimation bg-white w-full overflow-y-auto h-screen py-4 fixed top-0 left-0 ${filterModelMobile ? "block" : "hidden"
+              className={`lg:hidden filterModelAnimation bg-white w-full overflow-y-auto h-full py-4 fixed top-0 left-0 ${filterModelMobile ? "block" : "hidden"
                 }`}
             >
               <div className="flex justify-end items-center max-w-md mx-auto mb-5 pr-5">
@@ -163,73 +217,7 @@ export default function HomePage() {
             </div>
           </InstantSearch>
         </div>
-        {/* </div> )  :  (   */}
-        {/* <div className="flex flex-row justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
-          <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
-            <Configure hitsPerPage={10} />
 
-   
-            <div className="max-w-xs w-full hidden lg:block">
-              <Filter
-                clearFilter={clearFilter}
-                setClearFilter={setClearFilter}
-              />
-            </div>
-
-            <div className="flex flex-col w-full gap-4">
-              <div className="p-2 lg:p-4 border rounded-md border-lightGray-100 searchBox mb-0.5 flex flex-row justify-center items-center gap-3 lg:gap-5">
-          
-                <div className="w-full">
-                  <CustomSearchBox clearFilter={clearFilter} />
-                </div>
-              
-                <div className="h-12 self-end lg:hidden">
-                  <button
-                    className="h-full flex flex-row justify-center items-center gap-2 border border-lightGreen-300 rounded-md px-4 w-auto"
-                    onClick={() => setFilterModelMobile(!filterModelMobile)}
-                  >
-                    <FilterIcon className="text-white" />
-                    <span className="font-Poppins font-medium text-sm leading-30 text-white hidden md:inline-block">
-                      Filter
-                    </span>
-                  </button>
-                </div>
-              </div>
-       
-              <div className="border border-lightGray-100 rounded-md p-6 min-h-[500px]">
-                <InfiniteHits hitComponent={CompanyData} showPrevious={false} />
-              </div>
-            </div>
-
-         
-            <div
-              className={`lg:hidden filterModelAnimation bg-lightGreen-50 w-full overflow-y-auto h-screen py-4 fixed top-0 left-0 ${filterModelMobile ? "block" : "hidden"
-                }`}
-            >
-              <div className="flex justify-end items-center max-w-md mx-auto mb-5 pr-5">
-                <div>
-                  <button
-                    onClick={() => setFilterModelMobile(false)}
-                    className="border border-lightGray-100 bg-white rounded-full p-1 shadow-md"
-                  >
-                    <Close2 />
-                  </button>
-                </div>
-              </div>
-              <div>
-                <div className="max-w-xs mx-auto">
-                  <Filter
-                    clearFilter={clearFilter}
-                    setClearFilter={setClearFilter}
-                  />
-                </div>
-              </div>
-            </div>
-          </InstantSearch>
-          </div>
-      )} */}
-
-      {/* <FooterRoles/> */}
       </div>
       </div>
     </>

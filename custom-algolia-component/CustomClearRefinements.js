@@ -2,7 +2,7 @@ import React from "react";
 import { useClearRefinements } from "react-instantsearch-hooks-web";
 import Close from "../components/icons/Close";
 
-function CustomClearRefinements({ setClearAll }) {
+function CustomClearRefinements({handleClear, setClearAll }) {
   const res = useClearRefinements({
     includedAttributes: [
       "location",
@@ -20,19 +20,20 @@ function CustomClearRefinements({ setClearAll }) {
   return (
     <>
       <button
-        className="flex flex-row justify-center items-center gap-3 cursor-pointer select-none"
+        className="absolute pt-4 -ml-10 gap-3 cursor-pointer select-none"
         onClick={() => {
           refine();
           setTimeout(() => {
             setClearAll(true);
           }, 500);
           setClearAll(false);
+          handleClear()
         }}
         // disabled={!canRefine}
       >
-        <span className="font-Studio6 font-normal text-sm leading-30 tracking-common text-white opacity-100 ">
+        {/* <span className="font-montserrant font-normal text-sm leading-30 tracking-common text-white opacity-100 ">
           Clear All
-        </span>
+        </span> */}
         <Close className="opacity-100" />
       </button>
     </>
