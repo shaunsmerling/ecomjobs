@@ -59,18 +59,14 @@ export default function SavedJobs({ user }) {
   }, []);
   
   useEffect(() => {
-    if (userData[0]) {
-      const jobIDs = userData[0].jobIDs;
-      const jobQuery = jobIDs.map((id) => `id=${id}`).join("&");
-      fetch(`${api_url}/api/jobs?${jobQuery}`, {
-        method: "GET",
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          setJobData(data);
-        });
-    }
-  }, [userData]);
+    fetch(`${api_url}/api/jobs`, {
+    method: "GET",
+    })
+    .then((res) => res.json())
+    .then((data) => {
+    setJobData(data);
+    });
+    }, []);
   
   useEffect(() => {
     if (userData[0] && jobData.length > 0) {
@@ -82,19 +78,6 @@ export default function SavedJobs({ user }) {
     }
   }, [userData, jobData]);
 
-  // fetch("/api/jobs", {
-//   method: 'DELETE',
-//   body: JSON.stringify({
-//     id: '632f1aa0bfa79724cbab00f2'
-//   })
-// });
-
-// fetching userdata specific to the user via email, storying it in userData
-// fettching total job data, storing it in jobData
-// taking all userData, and parse through userData[0].jobIDs & storing it in jobIDs
-// creating filteredJobs which is filtering through jobIDs to see if any of them match job.id located in jobData
-// if its a match, add it to filitered jobs
-// setNewData to house the data that matches IDs
 
 
 
@@ -138,6 +121,7 @@ function handleClick(event, id) {
       return "3 months ago";
     }
   }
+  
 
   console.log(userData)
   console.log(jobData)
