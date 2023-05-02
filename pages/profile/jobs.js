@@ -59,14 +59,20 @@ export default function SavedJobs({ user }) {
   }, []);
   
   useEffect(() => {
-    fetch(`${api_url}/api/jobs`, {
-    method: "GET",
-    })
-    .then((res) => res.json())
-    .then((data) => {
-    setJobData(data);
-    });
-    }, []);
+    async function fetchJobData() {
+      try {
+        const response = await fetch(`${api_url}/api/jobs`, {
+          method: "GET",
+        });
+        const data = await response.json();
+        setJobData(data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchJobData();
+  }, []);
+  
   
   useEffect(() => {
     if (userData[0] && jobData.length > 0) {
@@ -78,6 +84,19 @@ export default function SavedJobs({ user }) {
     }
   }, [userData, jobData]);
 
+  // useEffect(() => {
+  //   if (userData[0] && userData[0].jobIDs.length > 0) {
+  //     const jobIDs = userData[0].jobIDs;
+
+  //     Promise.all(jobIDs.map(jobID => 
+  //       fetch(`${api_url}/api/jobs?id=${jobID}`)
+  //         .then(response => response.json())
+  //         .catch(error => console.error(error))
+  //   ))
+  //   .then(jobs => jobs.map(job => job))
+  //   .then(filteredJobs => setNewData(filteredJobs));
+  //   }
+  // }, [userData]);
 
 
 
@@ -124,7 +143,6 @@ function handleClick(event, id) {
   
 
   console.log(userData)
-  console.log(jobData)
 
   console.log(newData)
   

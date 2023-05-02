@@ -7,6 +7,9 @@ export const getAllJobs = () => {
 export const getJobByJobUrl = (jobUrl) => {
   return prisma.job.findMany({ where: { jobUrl } });
 };
+export const getJobByJobID = (id) => {
+  return prisma.job.findMany({ where: { id } });
+};
 
 export const getJobsByCompanyUrl = (companyUrl) => {
   return prisma.job.findMany({ where: { companyUrl }});
