@@ -305,12 +305,14 @@ console.log(currentTime)
           ],
         }}
       />
+
       <SalePage />
    
         <Logo/>
         <TestB />
  
-    <div className="bg-white  px-20 lg:mx-10 mx-2 rounded-lg">
+
+    <div className="bg-white  px-4 lg:px-20 lg:mx-10  rounded-lg">
       <div class="hugger">
 <div class="hugger__content">
 <div class="wizard">
