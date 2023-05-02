@@ -59,41 +59,21 @@ export default function SavedJobs({ user }) {
   }, []);
   
   useEffect(() => {
-    fetch(`/api/jobs`, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    }
-    })
-    .then((res) => res.json())
-    .then((data) => {
-    setJobData(data);
-    });
-    }, []);
-  
-  useEffect(() => {
-    if (userData[0] && jobData.length > 0) {
+    if (userData[0] && userData[0].jobIDs.length > 0) {
       const jobIDs = userData[0].jobIDs;
-      const filteredJobs = jobData.filter((job) =>
-        jobIDs.includes(job.id)
-      );
-      setNewData(filteredJobs);
+      
+      Promise.all(jobIDs.map(jobID => 
+        fetch(`${api_url}/api/jobs?id=${jobID}`)
+          .then(response => response.json())
+          .catch(error => console.error(error))
+      ))
+      .then(jobs => setNewData(jobs.flat()));
     }
-  }, [userData, jobData]);
+  }, [userData]);
+  
+  
 
-  // useEffect(() => {
-  //   if (userData[0] && userData[0].jobIDs.length > 0) {
-  //     const jobIDs = userData[0].jobIDs;
 
-  //     Promise.all(jobIDs.map(jobID => 
-  //       fetch(`${api_url}/api/jobs?id=${jobID}`)
-  //         .then(response => response.json())
-  //         .catch(error => console.error(error))
-  //   ))
-  //   .then(jobs => jobs.map(job => job))
-  //   .then(filteredJobs => setNewData(filteredJobs));
-  //   }
-  // }, [userData]);
 
 
 
