@@ -290,7 +290,7 @@ const pinnedStatus = checkPinned();
               <button
                 id="save-btn"
                 onClick={handleClick}
-                className=" bg-[#2d4f42] absolute right-9 font-monteserrant text-white md:ml-20 font-semibold text-xs leading-6 md:!leading-30 py-1.5 px-2 md:px-4 md:py-2 rounded-3xl hover:bg-[#567369]"
+                className=" bg-[#2d4f42] absolute right-12 font-monteserrant text-white md:ml-20 font-semibold text-xs leading-6 md:!leading-30 py-1.5 px-2 md:px-4 md:py-2 rounded-3xl hover:bg-[#567369]"
               >
            Save 
               </button>
@@ -430,7 +430,7 @@ const pinnedStatus = checkPinned();
               <button
                 id="save-btn"
                 onClick={handleClick}
-                className=" bg-[#2d4f42] absolute right-9  font-monteserrant text-white font-semibold text-xs leading-6 md:!leading-30 py-1.5 px-2 md:px-4 md:py-2 rounded-3xl hover:bg-[#567369]"
+                className=" bg-[#2d4f42] absolute right-12  font-monteserrant text-white font-semibold text-xs leading-6 md:!leading-30 py-1.5 px-2 md:px-4 md:py-2 rounded-3xl hover:bg-[#567369]"
               >
            {isSaved ? "✓" : "Save"}
               </button>

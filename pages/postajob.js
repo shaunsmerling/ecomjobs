@@ -676,11 +676,11 @@ onChange={handleChange}
 </div>
 </div>
 <div class="pt-5">
-<div class="flex fixed w-full bottom-0 left-0 mb-4 right-0 z-10 py-1 justify-center bg-white border-t sm:justify-end sm:relative sm:w-auto sm:p-0 sm:border-none">
+<div class="flex fixed w-full bottom-0 left-0 right-0 z-10 pt-1 justify-center bg-white border-t sm:justify-end sm:relative sm:w-auto sm:p-0 sm:border-none">
 <button
             type="submit"
             href=""
-            class="flex relative mt-4 items-center w-10/12 justify-center lg:mb-4 mx-auto px-20 py-3 sm:text-sm text-base sm:py-3.5  text-white transition-all duration-200 bg-[#709771] border border-transparent rounded-lg font-monsterrant hover:bg-[#5a795a]   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
+            class="flex relative mt-4 items-center w-10/12 justify-center mb-4 lg:mb-4 mx-auto px-20 py-3 sm:text-sm text-base sm:py-3.5  text-white transition-all duration-200 bg-[#709771] border border-transparent rounded-lg font-monsterrant hover:bg-[#5a795a]   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600"
           >
             Post a job for&nbsp;<span> {`${"$" + total}`}</span>
           </button>
