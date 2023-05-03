@@ -34,7 +34,7 @@ export default function SavedJobs({ user }) {
     // hide the spinner after 3 seconds
     const timer = setTimeout(() => {
       hideSpinner();
-    }, 3000);
+    }, 6000);
 
     // clean up the timer on unmount
     return () => clearTimeout(timer);

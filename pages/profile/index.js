@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import {useSession} from "next-auth/react"
-
+import { api_url } from "../../config";
 
 
 
@@ -19,7 +19,7 @@ function EditProfile() {
     // hide the spinner after 3 seconds
     const timer = setTimeout(() => {
       hideSpinner();
-    }, 3000);
+    }, 6000);
 
     // clean up the timer on unmount
     return () => clearTimeout(timer);

@@ -73,7 +73,7 @@ function EditProfile({ userData }) {
     // hide the spinner after 3 seconds
     const timer = setTimeout(() => {
       hideSpinner();
-    }, 3000);
+    }, 6000);
   
   
     return () => clearTimeout(timer);
