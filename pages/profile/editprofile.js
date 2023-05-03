@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import {useRouter} from "next/router"
 import {useSession, getSession} from "next-auth/react"
+import { api_url } from "../../config";
 
 
 
@@ -9,8 +10,9 @@ export async function getServerSideProps(context) {
   const session = await getSession(context);
   const email = session?.user?.email;
   
-  const res = await fetch(`http://localhost:3000/api/users?email=${email}`);
+  const res = await fetch(`${api_url}/api/users?email=${email}`);
   const data = await res.json();
+  
   
   return {
     props: {
@@ -23,10 +25,14 @@ export async function getServerSideProps(context) {
 
 function EditProfile({ userData }) {
 
+  console.log(userData)
 
   const router = useRouter()
   // const [userData, setUserData] = useState([]);
   const { data: session } = useSession();
+
+  
+
 
  
   const [fields, setFields] = useState({
@@ -58,6 +64,7 @@ function EditProfile({ userData }) {
     setTags(userData[0]?.skills || []);
   }, []);
 
+  
 
   useEffect(() => {
     // show the spinner
