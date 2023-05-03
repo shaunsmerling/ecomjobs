@@ -4,7 +4,6 @@ import Link from "next/link"
 import { useSession } from "next-auth/react";
 import ModalSignIn from "./navModalSignIn";
 import { useState, useEffect } from "react"
-import { api_url } from "../config";
 import { signOut } from "next-auth/react"
 import { signIn } from "next-auth/react"
 import { useRouter } from "next/router"

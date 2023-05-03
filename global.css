@@ -11,6 +11,27 @@
   width: 100%;
 }
 
+  /* Styles for desktop */
+  .desktop-only {
+    display: inline-block; /* show only on desktop */
+  }
+
+  /* Styles for mobile */
+  .mobile-only {
+    display: none; /* hide on desktop */
+  }
+
+  @media screen and (max-width: 767px) {
+    /* Styles for mobile */
+    .desktop-only {
+      display: none; /* hide on mobile */
+    }
+
+    /* Styles for desktop */
+    .mobile-only {
+      display: inline-block; /* show only on mobile */
+    }
+  }
 
 
 @font-face {
