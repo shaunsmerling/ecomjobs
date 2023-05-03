@@ -310,7 +310,7 @@ name="website_url" />
     
 <label for="" class="block text-sm font-medium text-gray-700 mb-1">
                     {" "}
-                    Upload a new photo. WARNING: Please compress your img at <a className="text-sky-300" href="https://tinypng.com/">TingPNG</a> before uploading
+                    Upload a new photo. WARNING: Please compress your img at <a className="text-sky-300" href="https://tinypng.com/">TingPNG</a> before uploading or else my website will nuke
                   </label>
                   <div class="relative mt-2 sm:mt-0 sm:flex-1">
                     <input

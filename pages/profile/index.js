@@ -91,7 +91,7 @@ function EditProfile() {
             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg mt-20 border border-gray-200">
             <a href="/profile/editprofile" class="gear-icon hover:text-[#709771] text-md font-montserrant absolute italic top-0 right-0 p-4">
   {/* <span class="desktop-only">⚙️ Edit Profile</span> */}
-  <span class="mobile-only">⚙️</span>
+  <span class="">⚙️</span>
 </a>
               <div className="mx-10 lg:mx-0">
                 <div className="flex flex-wrap justify-center">
