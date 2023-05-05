@@ -168,7 +168,7 @@ def parse_info(location):
 
 
 def collect_jobs(company_name):
-    url = f'https://jobs.lever.co/{company_name}'
+    url = f'https://jobs.lever.co/grove'
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
     job_listings = soup.select(".posting")
@@ -264,6 +264,7 @@ def main():
         'sundaysfordogs',
         'boldcommerce',
         'milliondollarbabyco',
+        'grove'
     ]
 
     for company in company_name:
