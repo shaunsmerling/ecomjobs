@@ -168,7 +168,8 @@ def parse_info(location):
 
 
 def collect_jobs(company_name):
-    url = f'https://jobs.lever.co/grove'
+    print(f"Collecting jobs for {company_name}...")
+    url = f'https://jobs.lever.co/{company_name}'
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
     job_listings = soup.select(".posting")
@@ -191,7 +192,7 @@ def collect_jobs(company_name):
             job_soup_no_text = BeautifulSoup(job_page.content, "html.parser")
             location = job.find("span", class_="sort-by-location posting-category small-category-label location").text.strip()
 
-            print(parse_info(location))
+            
                         # define regular expression pattern
             pattern = r"[A-Z][a-zA-Z\s-]+:"
 
@@ -264,7 +265,8 @@ def main():
         'sundaysfordogs',
         'boldcommerce',
         'milliondollarbabyco',
-        'grove'
+        'grove',
+        'attentive'
     ]
 
     for company in company_name:

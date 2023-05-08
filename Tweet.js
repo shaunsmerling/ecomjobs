@@ -1,29 +1,39 @@
- const rwClient = require("./TwitterClient.js");
+const rwClient = require("./TwitterClient.js");
 const CronJob = require("cron").CronJob;
 const fetch = require("node-fetch");
-const api_url = require("./config.js")
 
-async function fetchData(){
-  const response = await fetch(`https://ecomportal.co/api/jobs`)
-  const resData = response.json();
-  console.log(resData);
-  return resData; 
+let daysAgo = 7;
+
+async function fetchData() {
+  const dateAgo = new Date();
+  dateAgo.setDate(dateAgo.getDate() - daysAgo);
+  const timestamp = Math.floor(dateAgo.getTime() / 1000);
+
+  const response = await fetch(`https://ecomportal.co/api/jobs?datets=${timestamp}`);
+  
+  try {
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    daysAgo -= 1;
+    console.log(error);
+    if (daysAgo < 1) {
+      console.log("no jobs on that date were added");
+      process.exit(1);
+    } else {
+      return fetchData();
+    }
+  }
 };
 
-
 const tweet = async () => {
+  const data = await fetchData();
 
-fetchData().then(async (data) => {
-// the network request is completed
-// take the latest job on the list, use it, and then make sure that if its 
-// still the latest job that you go to the next latest job (no duplicates)
+  const rand = Math.floor((Math.random() * 300) + 1);
+  const job = data[data.length - rand];
 
-let rand = Math.floor((Math.random() * 300) + 1)
-
-let job = data[data.length - rand];
   try {
-    await rwClient.v1.tweet(
-`${job.company_name} is hiring a ${job.job_position}! 
+    await rwClient.v1.tweet(`${job.company_name} is hiring a ${job.job_position}! 
 
 📍 ${job.location}
 💼 ${job.job_type}
@@ -34,28 +44,23 @@ www.ecomportal.co/job/${job.jobUrl}
        
 #ecommerce #shopify #jobs #hiring`
     );
+    console.log("Tweet successful");
+    process.exit(0);
   } catch (e) {
     console.log(e);
-  } });
-} 
-
+  }
+};
 
 const job = new CronJob("* * * * * *", () => {
-  // seconds, mins, hour, day, month, year
-
   console.log("Tweeting...");
-  tweet()
-  
+  tweet();
 });
 
-job.start()
+job.start();
 
 function stopProgram() {
   job.stop();
   console.log("Stopped");
 }
 
-
-
-setTimeout(stopProgram, 10000)
-
+setTimeout(stopProgram, 10000);

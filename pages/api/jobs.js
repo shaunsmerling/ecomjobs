@@ -6,6 +6,7 @@ import {
   updateJob,
   deleteJob,
   getJobsByCompanyUrl,
+  getJobByDate
 } from "../../prisma/job";
 import { generateJobUrl } from "../../script";
 
@@ -83,6 +84,12 @@ export default async function handler(req, res) {
           const jobs = await getJobsByCompanyUrl(query.companyUrl);
           return res.json(jobs);
         }
+
+        if (query.datets) {
+          const job = await getJobByDate(query.datets);
+          return res.json(job)
+        }
+        
 
         // Otherwise, fetch all jobs
         const jobs = await getAllJobs();
