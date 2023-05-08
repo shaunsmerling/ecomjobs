@@ -2,22 +2,23 @@ const rwClient = require("./TwitterClient.js");
 const CronJob = require("cron").CronJob;
 const fetch = require("node-fetch");
 
-let daysAgo = 7;
+let daysAgo = 10;
 
 async function fetchData() {
   const dateAgo = new Date();
   dateAgo.setDate(dateAgo.getDate() - daysAgo);
-  const timestamp = Math.floor(dateAgo.getTime() / 1000);
-  console.log(timestamp)
-  console.log(timestamp === 1683475200 ? true : false)
-
-  const response = await fetch(`https://ecomportal.co/api/jobs?datets=${timestamp}`);
+  const month = (dateAgo.getMonth() + 1).toString().padStart(2, '0');
+  const day = dateAgo.getDate().toString().padStart(2, '0');
+  const year = dateAgo.getFullYear();
+  const dateFormatted = `${month}/${day}/${year}`;
+  console.log(dateFormatted);
+  const response = await fetch(`https://ecomportal.co/api/jobs?postedat=${dateFormatted}`);
   
   try {
     const data = await response.json();
     if (data.length === 0 && daysAgo > 0) {
       daysAgo -= 1;
-      console.log(`No jobs on ${dateAgo.toISOString().split('T')[0]}. Trying ${daysAgo} days ago...`);
+      console.log(`No jobs on ${dateFormatted}. Trying ${daysAgo} days ago...`);
       setTimeout(fetchData, 5000);
     } else {
       return data;
@@ -35,27 +36,32 @@ async function fetchData() {
   }
 }
 
+
 const tweet = async () => {
   const data = await fetchData();
-  console.log("data:", data)
   if (!data) return;
   const randomIndex = Math.floor(Math.random() * data.length);
   const job = data[randomIndex];
+  let salaryMaxFormatted = "";
+if (job.salaryMax && job.salaryMax !== 0) {
+  if (job.salaryMax < 1000) {
+    salaryMaxFormatted = `$${job.salaryMax * 1000}`;
+  } else {
+    salaryMaxFormatted = `$${job.salaryMax}`;
+  }
+}
+
 
   try {
-    await rwClient.v1.tweet(`${job.company_name} is hiring a ${job.job_position}! 
+await rwClient.v1.tweet(`${job.company_name} is hiring a ${job.job_position}!
 
-    ${job.location ? `📍 ${job.location}` : ``}
-    ${job.job_type ? `🧳 ${job.job_type}` : ``}
-    ${job.category ? `📖 ${job.category}` : ``}
-    ${job.salaryMax ? `💰 ${job.salaryMax}` : ``}
-    
+${job.location ? `📍\t${job.location}\n` : ''}${job.job_type ? `🧳\t${job.job_type}\n` : ''}${job.category ? `📖\t${job.category}\n` : ''}${salaryMaxFormatted !== "0" ? `💰\t${salaryMaxFormatted}\n` : ''}
+
 Check below to apply 👇🏼
-      
-www.ecomportal.co/job/${job.jobUrl} 
-       
-#ecommerce #shopify #jobs #hiring`
-    );
+
+www.ecomportal.co/job/${job.jobUrl}
+
+#ecommerce #shopify #jobs #hiring`);
     console.log("Tweet successful");
     process.exit(0);
   } catch (e) {
