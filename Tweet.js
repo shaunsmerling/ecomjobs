@@ -8,36 +8,48 @@ async function fetchData() {
   const dateAgo = new Date();
   dateAgo.setDate(dateAgo.getDate() - daysAgo);
   const timestamp = Math.floor(dateAgo.getTime() / 1000);
+  console.log(timestamp)
+  console.log(timestamp === 1683475200 ? true : false)
 
   const response = await fetch(`https://ecomportal.co/api/jobs?datets=${timestamp}`);
   
   try {
     const data = await response.json();
-    return data;
+    if (data.length === 0 && daysAgo > 0) {
+      daysAgo -= 1;
+      console.log(`No jobs on ${dateAgo.toISOString().split('T')[0]}. Trying ${daysAgo} days ago...`);
+      setTimeout(fetchData, 5000);
+    } else {
+      return data;
+    }
   } catch (error) {
     daysAgo -= 1;
     console.log(error);
     if (daysAgo < 1) {
-      console.log("no jobs on that date were added");
+      console.log("No jobs found.");
       process.exit(1);
     } else {
-      return fetchData();
+      console.log(`Retrying in 5 seconds...`);
+      setTimeout(fetchData, 5000);
     }
   }
-};
+}
 
 const tweet = async () => {
   const data = await fetchData();
-
-  const rand = Math.floor((Math.random() * 300) + 1);
-  const job = data[data.length - rand];
+  console.log("data:", data)
+  if (!data) return;
+  const randomIndex = Math.floor(Math.random() * data.length);
+  const job = data[randomIndex];
 
   try {
     await rwClient.v1.tweet(`${job.company_name} is hiring a ${job.job_position}! 
 
-📍 ${job.location}
-💼 ${job.job_type}
-
+    ${job.location ? `📍 ${job.location}` : ``}
+    ${job.job_type ? `🧳 ${job.job_type}` : ``}
+    ${job.category ? `📖 ${job.category}` : ``}
+    ${job.salaryMax ? `💰 ${job.salaryMax}` : ``}
+    
 Check below to apply 👇🏼
       
 www.ecomportal.co/job/${job.jobUrl} 

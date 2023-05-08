@@ -85,8 +85,8 @@ export default async function handler(req, res) {
           return res.json(jobs);
         }
 
-        if (query.datets) {
-          const job = await getJobByDate(query.datets);
+        if (query.postedat) {
+          const job = await getJobByDate(query.postedat);
           return res.json(job)
         }
         

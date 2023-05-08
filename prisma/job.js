@@ -12,8 +12,8 @@ export const getJobByJobID = (id) => {
   return prisma.job.findMany({ where: { id } });
 };
 
-export const getJobByDate = (datets) => {
-  return prisma.job.findMany({ where: { datets } });
+export const getJobByDate = (postedat) => {
+  return prisma.job.findMany({ where: { postedat } });
 };
 
 export const getJobsByCompanyUrl = (companyUrl) => {
