@@ -204,6 +204,10 @@ def get_job_board(board_id):
                 if len(salary_values) == 2:
                     salary_min = int(salary_values[0])
                     salary_max = int(salary_values[1])
+                    if salary_values[1]:
+                        salary_max = int(salary_values[1])
+                    else:
+                        salary_max = None
                 else:
                     salary_min = 0
                     salary_max = int(salary_values[0])

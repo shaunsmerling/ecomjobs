@@ -266,7 +266,7 @@ def main():
         'boldcommerce',
         'milliondollarbabyco',
         'grove',
-        'attentive'
+        'attentive',
     ]
 
     for company in company_name:

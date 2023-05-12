@@ -126,7 +126,7 @@ fetchEmail().then((data) => {
       const mailOptions = {
         from: "shaun@ecomportal.co",
         to: `${email}`,
-        subject: ` EcomPortal V2 is OUT: Create Profiles, Save Jobs, & Share Links + New Jobs Daily`,
+        subject: `⚡️ ${filteredData.length} New Jobs on Ecomportal`,
         html: `
         <!DOCTYPE html>
         <html>
@@ -226,28 +226,10 @@ fetchEmail().then((data) => {
                 </div>
                 <div class="content">
                     <p class="greeting">Hey everyone 👋</p>
-                    <p>So Ecomportal Version 2.0 is finally here! I apologize for the delay. But here are the key features we've introduced: </p>
-                    <p class="jobs"> 
-                    - Applicant profile creation + sharing link <br></br>
-                    - Ability to saved DTC jobs <br></br>
-                    - New DTC jobs updated daily <br></br>
-                    - Bundle upsell option for hiring brands <br></br>
-                    - Improved UI <br></br>
-                    - Refined filter options <br></br>
-                    </p>
-                    <p class="cta"> All these features are a culmination of improvements given to me by users & taken from bigger job portals in different niches
-                    </p>
                     <p class="cta">
-                    My goal was and is always to continually make it easier for applicants to find jobs within eCommerce but also allow employees to find talent best suited for their role. I hope you enjoy it and please
-                    let me know if you have any questions
-                    </p>
-                    <p class="cta">
-                    Lastly, it would mean the world to mean if you are able to share EP with a friend, coworker, or family member. But ONLY if you found value from it. A little goes a long way, and i'm planning to primarily
-                    grow this through word of mouth.
-                    </p>
-                    <p class="cta">
-                   Now.... JOBS! For today, we've got ${filteredData.length} new jobs to share with you from ecommerce brands hiring this week!</p>
-                    <p class="cta">Check them out & feel free to apply via the links below! </p>
+                    Hope everyone has been doing well. For today, we've got ${filteredData.length} new jobs to share with you from ecommerce brands hiring this week!</p>
+                    <p class="cta">Check them out & feel free to apply via the links below. </p>
+                    <p class="cta">And as always, if you enjoy the Ecomportal platform - consider telling a friend or two about us. We really appreciate it! </p>
                     <p class="cta"> - Shaun 🤖 </p>
                 </div>
                

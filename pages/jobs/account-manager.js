@@ -75,7 +75,7 @@ export default function HomePage() {
                   <CustomSearchBox clearFilter={clearFilter} />
                 </div>
                 {/* Filter Button For Mobile Filter Open */}
-                <div className="h-12 self-end lg:hidden">
+                {/* <div className="h-12 self-end lg:hidden">
                   <button
                     className="h-full flex flex-row justify-center items-center gap-2 border border-lightGreen-300 rounded-md px-4 w-auto"
                     onClick={() => setFilterModelMobile(!filterModelMobile)}
@@ -85,7 +85,7 @@ export default function HomePage() {
                       Filter
                     </span>
                   </button>
-                </div>
+                </div> */}
               </div>
               {/* View Data Section */}
               <div className=" -mx-10 p-4 md:p-6 min-h-[500px]">
