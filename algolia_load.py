@@ -53,13 +53,16 @@ for item in mongo_query:
             item['salaryMin'] = int(float(item['salaryMin']))
         else:
             item['salaryMin'] = int(item['salaryMin'])
-    if 'salaryMax' in item and item['salaryMax'] is not None:
-        if ',' in item['salaryMax']:
+    if 'salaryMax' in item:
+        if item['salaryMax'] is None:
+            item['salaryMax'] = 0
+        elif ',' in item['salaryMax']:
             item['salaryMax'] = int(item['salaryMax'].replace(',', ''))
         elif '.' in item['salaryMax']:
             item['salaryMax'] = int(float(item['salaryMax']))
         else:
             item['salaryMax'] = int(item['salaryMax'])
+
 
 
         initial_items.append(item)
