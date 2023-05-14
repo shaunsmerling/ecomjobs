@@ -4,7 +4,10 @@ import PortableText from "react-portable-text";
 import EmailBar from "../../../components/EmailBar"
 
 
+
 function Post({post}) {
+
+
 
     return (
   <div>
@@ -68,7 +71,8 @@ function Post({post}) {
         <div className="mt-8 sm:mt-12 lg:mt-10 mb-4 mx-auto aspect-w-16 aspect-h-9 lg:aspect-h-6">
           <img loading="lazy" className="object-cover mx-auto w-1/2 h-1/2" src={urlFor(post.mainImage).url()} alt="">
           </img>
-          
+        
+
         </div>
         <div className="grid grid-cols-1 mt-8 sm:mt-12 lg:mt-16 lg:grid-cols-12 lg:gap-x-12 gap-y-8">
           <div className="lg:col-span-2 lg:self-start lg:sticky lg:top-6 lg:order-last">

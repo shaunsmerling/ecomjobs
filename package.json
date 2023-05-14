@@ -54,6 +54,7 @@
         "react-helmet": "^6.1.0",
         "react-instantsearch-dom": "^6.38.1",
         "react-instantsearch-hooks-web": "^6.33.0",
+        "react-markdown": "^8.0.7",
         "react-portable-text": "^0.5.1",
         "react-router-dom": "^6.4.4",
         "react-table": "^7.8.0",

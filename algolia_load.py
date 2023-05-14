@@ -60,8 +60,7 @@ for item in mongo_query:
             item['salaryMax'] = int(item['salaryMax'].replace(',', ''))
         elif '.' in item['salaryMax']:
             item['salaryMax'] = int(float(item['salaryMax']))
-        else:
-            item['salaryMax'] = int(item['salaryMax'])
+      
 
 
 
