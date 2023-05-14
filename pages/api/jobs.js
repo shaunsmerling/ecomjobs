@@ -55,6 +55,8 @@ import { generateJobUrl } from "../../script";
 //     body: JSON.stringify({})
 //   })
 
+
+
 export default async function handler(req, res) {
   try {
     switch (req.method) {
@@ -131,6 +133,9 @@ export default async function handler(req, res) {
         const { id } = body;
         const job = await deleteJob(id);
         return res.json(job);
+      }
+      default: {
+        return res.status(405).json({ message: "Method Not Allowed" });
       }
     }
   } catch (error) {

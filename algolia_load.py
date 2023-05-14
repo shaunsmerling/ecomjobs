@@ -8,8 +8,12 @@ load_dotenv(find_dotenv())
 algolia_app_id = os.getenv("ALGOLIA_APP_ID")
 algolia_admin_key = os.getenv("ALGOLIA_ADMIN_KEY")
 
+
 algolia_client = SearchClient.create(algolia_app_id, algolia_admin_key)
 algolia_index = algolia_client.init_index('ecomjobs_index')
+
+
+
 
 db_host = 'ejserver0.krz3l.mongodb.net'
 db_name = 'ejserver'

@@ -5,8 +5,6 @@ import Script from "next/script"
 import { SessionProvider, useSession } from "next-auth/react"; 
 import { useRouter } from "next/router";
 import Footer from "../components/Footer/index"
-import FooterEmail from "../components/Footer/footerEmail"
-import FooterCities from "../components/Footer/footerCities"
 import FooterJobs from "../components/Footer/footerJobs"
 import Announce from "../components/announcementBar"
 
@@ -132,11 +130,9 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
   {showHeader && <Navbarthree/> }
     
       <Component {...pageProps} />
-      {/* <Footer/> */}
-
-      {/* <FooterEmail/> */}
+     
       <Footer/>
-      {/* <FooterCities/> */}
+
       <FooterJobs/>
       
   </SessionProvider>
