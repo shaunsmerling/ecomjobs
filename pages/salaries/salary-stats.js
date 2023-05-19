@@ -12,7 +12,7 @@ import {
 } from 'chart.js';
 import { api_url } from "../../config";
 import Link from "next/link";
-import NextSeo from 'next-seo';
+import { NextSeo } from 'next-seo';
 
 
 
