@@ -2,7 +2,7 @@ import { sanityClient, urlFor } from "../../../sanity";
 import { NextSeo } from "next-seo"
 import PortableText from "react-portable-text";
 import React, {useState, useEffect} from 'react';
-import { useScroll } from "framer-motion";
+import EmailBox from "../../../components/emailBox"
 
 
 
@@ -98,7 +98,7 @@ function Post({post}) {
             className="prose lg:col-span-8 max-w-none prose-gray prose-blockquote:px-8 prose-blockquote:py-3 prose-blockquote:lg:text-xl prose-blockquote:font-medium prose-blockquote:text-gray-900 prose-blockquote:border-gray-900 prose-blockquote:border-l-2 prose-blockquote:lg:leading-9 prose-blockquote:not-italic prose-blockquote:bg-gray-100 prose-blockquote:text-2xl prose-blockquote:leading-8">
             
     <div>
-      
+    <EmailBox />
         <PortableText 
         dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
         projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
@@ -115,6 +115,7 @@ function Post({post}) {
               return (
                 <h2 id={id} className="text-3xl font-bold " {...props}>{props.children} </h2>
             )
+            
               },
             h3: (props) => (
                 <h2 className="text-xl " {...props}>{props.children} </h2>

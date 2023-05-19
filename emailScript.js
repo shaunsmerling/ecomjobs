@@ -30,8 +30,8 @@ dotenv.config();
 
 function getTimestampInSeconds() {
   const now = new Date();
-  const sevenDaysAgo = new Date(now.getTime() - (7 * 24 * 60 * 60 * 1000));
-  const timestampInSeconds = Math.floor(sevenDaysAgo.getTime() / 1000);
+  const threeDaysAgo = new Date(now.getTime() - (3 * 24 * 60 * 60 * 1000));
+  const timestampInSeconds = Math.floor(threeDaysAgo.getTime() / 1000);
   return timestampInSeconds;
 }
 
@@ -126,7 +126,7 @@ fetchEmail().then((data) => {
       const mailOptions = {
         from: "shaun@ecomportal.co",
         to: `${email}`,
-        subject: `⚡️ ${filteredData.length} New Jobs on Ecomportal`,
+        subject: `⚡️ ${filteredData.length} New Jobs + Salary Stats Now Live ⚡️`,
         html: `
         <!DOCTYPE html>
         <html>
@@ -227,7 +227,24 @@ fetchEmail().then((data) => {
                 <div class="content">
                     <p class="greeting">Hey everyone 👋</p>
                     <p class="cta">
-                    Hope everyone has been doing well. For today, we've got ${filteredData.length} new jobs to share with you from ecommerce brands hiring this week!</p>
+                    We recently released employment data based on the vast amount of jobs we have on site. This includes information regarding:
+                    </p>
+                    <br></br>
+                    - Highest Paying Jobs
+                    <br></br>
+                    - Lowest Paying Jobs
+                    <br></br>
+                    - Most In-Demand Job Categories
+                    <br></br>
+                    - Most In-Demand Job Roles
+                    <br></br>
+                    <p class="cta">
+                    We'll be updating this page with my data shortly. To view it, head over to Salary Stats. Additionally, we'll be curating the release of a "State of eCommerce" report quarterly. Check out for the Q2 release in a months time. 
+                    </p>
+                    <p class="cta">
+                    Now for that beautiful 4 letter word. You're thinking about it, we dream about it. Yup, JOBS!
+                    </p>
+                    <p class="cta">For today, we've got ${filteredData.length} new jobs to share with you from ecommerce brands hiring this week!</p>
                     <p class="cta">Check them out & feel free to apply via the links below. </p>
                     <p class="cta">And as always, if you enjoy the Ecomportal platform - consider telling a friend or two about us. We really appreciate it! </p>
                     <p class="cta"> - Shaun 🤖 </p>

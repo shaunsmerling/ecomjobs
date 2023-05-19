@@ -5,6 +5,7 @@ import {sanityClient, urlFor} from "../../sanity"
 
 
 
+
 export const getServerSideProps = async () => {
   const query = `*[_type == "post" &&  "Interviews" in categories[]->title] {
     _id,  
