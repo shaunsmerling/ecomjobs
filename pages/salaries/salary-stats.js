@@ -12,6 +12,7 @@ import {
 } from 'chart.js';
 import { api_url } from "../../config";
 import Link from "next/link";
+import NextSeo from 'next-seo';
 
 
 
@@ -271,6 +272,30 @@ export default function DataTableExample({ jobs }) {
 
   return (
     <div className="flex-1 mx-20 font-montserrant mb-20">
+      <NextSeo
+   title="Salary Stats | eComPortal"
+   description="Salary Stats for all Ecomportal Jobs" 
+   openGraph={{
+     url: 'https://www.ecomportal.co/salaries/salary-stats',
+     title: 'Salary Stats | eComPortal',
+     description: "Salary Stats for all Ecomportal Jobs" ,
+     images: [
+       {
+         url: 'https://www.ecomportal.co/ll.png',
+         width: 800,
+         height: 600,
+         alt: 'Og Image Alt',
+         type: 'image/jpeg',
+       },
+     ],
+     siteName: 'Ecomportal',
+   }}
+   twitter={{
+     site: '@ecomptral',
+     cardType: 'summary',
+     image: "/ll.png"
+   }}
+ />
   <div className="text-right mb-10">
     <Link href={"/salaries"} className="cursor-pointer">
       <span className="cursor-pointer hover:text-sky-300">Read our salary blog &#62;</span>
