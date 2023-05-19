@@ -37,18 +37,6 @@ function NavBarThree() {
   
 
 
-  // function showAlert() {
-  //   if (userData[0].job_position !== "" && userData[0].location !== "") {
-  //     return "🚨 33% Completed" 
-  //   } else if (userData[0].bio !== "" && userData[0].degree !== "") {
-  //     return "🚨 75% Completed" 
-  //   } else {
-  //     return "" 
-  //     } 
-  //    }
-  
-
- 
     return (
 <div className={`${!session && status === "loading" ? 'loading' : 'loaded'}`}>
       {!session  ? (
@@ -114,8 +102,8 @@ function NavBarThree() {
 <nav class="hidden md:flex space-x-4">
 <div class="relative" data-controller="transition" data-action="keyup@window->transition#hideWithKeyboard click@window->transition#hideBackground">
 </div>
-<Link href="/salaries" class="whitespace-nowrap font-montserrant  rounded-full px-3 py-1  text-black hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
-  Salaries
+<Link href="/salaries/salary-stats" class="whitespace-nowrap font-montserrant  rounded-full px-3 py-1  text-black hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
+  Salary Stats
 </Link>
 <Link href="/interviews" class="whitespace-nowrap text-base font-montserrant  rounded-full px-3 py-1 -ml-1 text-black hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
   Interviews
@@ -414,8 +402,8 @@ Post a Job
         <nav class="hidden md:flex space-x-4">
         <div class="relative" data-controller="transition" data-action="keyup@window->transition#hideWithKeyboard click@window->transition#hideBackground">
         </div>
-        <Link href="/salaries" class="whitespace-nowrap font-montserrant  rounded-full px-3 py-1  text-black hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
-          Salaries
+        <Link href="/salaries/salary-stats" class="whitespace-nowrap font-montserrant  rounded-full px-3 py-1  text-black hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
+          Salary Stats
         </Link>
         <Link href="/interviews" class="whitespace-nowrap text-base font-montserrant  rounded-full px-3 py-1 -ml-1 text-black hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
           Interviews

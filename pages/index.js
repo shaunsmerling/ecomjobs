@@ -131,30 +131,7 @@ export default function HomePage() {
             
 
             <div className="flex font-montserrant flex-col w-full gap-4">
-              {/* <Link href="https://insightai.beehiiv.com/subscribe">
-            <div id="sponsor_1" class="mb-4 lg:ml-4 lg:mr-2 sm:mx-20 rounded-md cursor-pointer border border-solid  border-black transform transition duration-300 hover:-translate-y-1 hover:shadow-lg ">
-    <div class="px-2  py-2 py-md-3 ">
-        <div class="flex flex-col md:flex-row justify-between">
-            <div class="flex items-center">
-                <img class="rounded mr-0 mr-md-3 border border-solid border-insightblue h-12" src="https://ecomportal-images.storage.googleapis.com/images/insight.png"/>
-                <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false"  href="https://www.theinsightai.com"></a>
-                <div className="ml-4"> 
-                    <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="text-purple-500 hover:text-purple-600" href="https://insightai.beehiiv.com/subscribe">
-                        <div class="font-bold text-lg hidden md:block text-insightblue">Leverage AI to 1000x productivity</div>
-                        <div class="text-sm font-semibold  text-insightblue md:hidden">Leverage AI to 1000x productivity</div>
-                    </a>
-                    <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="block text-insightblue text-xs mt-0 md:mt-1"  href="https://insightai.beehiiv.com/subscribe">by the <b>InsightAI</b> newsletter</a>
-                </div>
-            
-            </div>
-         
-            <div class="my-auto md:pl-3 pl-0">
-                <a onmouseover="this.style.cssText='background-color: #be8fdb; color: black; border-style: solid; border-color: #be8fdb; box-shadow: 0px 0px 6px 3px #fe52ad;'" onmouseout="this.style.cssText='text-decoration: none; color: #be8fdb; border-style: solid; border-color: #be8fdb; box-shadow: 0px 0px 6px 3px #fe52ad;'" rel="noopener" data-turbo="false" class="my-btn-sm text-xs text-white bg-insightblue border border-solid border-black hidden md:block py-1 px-2 rounded-md" target="_blank" href="https://insightai.beehiiv.com/subscribe">Learn More</a>
-            </div>
-        </div>
-    </div>
-</div>
-</Link> */}
+  
 
               <div className="p-2 lg:p-4  searchBox -mb-4 lg:mb-0.5 -mx-7 lg:-mx-0 flex flex-row justify-center items-center gap-3  ">
                 {/* Custom Search Box */}
@@ -183,7 +160,6 @@ export default function HomePage() {
                 <InfiniteHits hitComponent={CompanyData} showPrevious={false} />
               </div>
               <div>
-                {/* <Grid arrOfObj={arrOfObj}/> */}
               </div>
             </div>
 

@@ -6,7 +6,7 @@ import {
   updateJob,
   deleteJob,
   getJobsByCompanyUrl,
-  getJobByDate
+  getJobByDate,
 } from "../../prisma/job";
 import { generateJobUrl } from "../../script";
 
@@ -92,10 +92,10 @@ export default async function handler(req, res) {
           return res.json(job)
         }
         
-
-        // Otherwise, fetch all jobs
+        // Retrieve all jobs
         const jobs = await getAllJobs();
-        return res.json(jobs);
+        return res.json(jobs.map(({ salaryMin, salaryMax, job_position, job_category }) => ({ salaryMin, salaryMax, job_position, job_category })));
+
       }
       case "PUT": {
         const body = JSON.parse(req.body)

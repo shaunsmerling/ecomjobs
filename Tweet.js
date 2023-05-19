@@ -2,7 +2,7 @@ const rwClient = require("./TwitterClient.js");
 const CronJob = require("cron").CronJob;
 const fetch = require("node-fetch");
 
-let daysAgo = 10;
+let daysAgo = 6;
 
 async function fetchData() {
   const dateAgo = new Date();

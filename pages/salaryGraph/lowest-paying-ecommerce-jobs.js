@@ -59,6 +59,7 @@ const data = [
  
 ]
 
+
 function lowestSalaries() {
     return (
         <div>

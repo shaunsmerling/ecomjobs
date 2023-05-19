@@ -132,46 +132,7 @@ function isImageFile(filename) {
               <Link href={"/"} className="cursor-pointer">
                 <span className="cursor-pointer"> &#60; Back to all jobs </span>
               </Link>
-              {/* <div className={styles.spahes}>
-                <svg
-                  width="58"
-                  height="70"
-                  viewBox="0 0 58 70"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M56.5 68.5L6.5 40L26.5 7L56.5 68.5Z"
-                    stroke="#BEF8A5"
-                    stroke-linecap="round"
-                  />
-                  <path d="M50 61.5L0 33L20 0L50 61.5Z" fill="#BEF8A5" />
-                </svg>
-              </div> */}
-                       {/* <Link href="https://insightai.beehiiv.com/subscribe">
-            <div id="sponsor_1" class="mb-4 mt-4 lg:ml-4 lg:mr-2 sm:mx-20 rounded-md cursor-pointer border border-solid  border-black transform transition duration-300 hover:-translate-y-1 hover:shadow-lg ">
-    <div class="px-2  py-2 py-md-3 ">
-        <div class="flex flex-col md:flex-row justify-between">
-            <div class="flex items-center">
-                <img class="rounded mr-0 mr-md-3 border border-solid border-insightblue h-12" src="https://ecomportal-images.storage.googleapis.com/images/insight.png"/>
-                <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false"  href="https://insightai.beehiiv.com/subscribe"></a>
-                <div className="ml-4"> 
-                    <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="text-purple-500 hover:text-purple-600" href="https://insightai.beehiiv.com/subscribe">
-                        <div class="font-bold text-lg hidden md:block text-insightblue">Leverage AI to 1000x productivity</div>
-                        <div class="text-sm font-semibold  text-insightblue md:hidden">Leverage AI to 1000x productivity</div>
-                    </a>
-                    <a aria-label="Open SideShift.ai website" rel="noopener" data-turbo="false" class="block text-insightblue text-xs mt-0 md:mt-1"  href="https://insightai.beehiiv.com/subscribe">by the <b>InsightAI</b> newsletter</a>
-                </div>
-               
-            </div>
-         
-            <div class="my-auto md:pl-3 pl-0">
-                <a onmouseover="this.style.cssText='background-color: #be8fdb; color: black; border-style: solid; border-color: #be8fdb; box-shadow: 0px 0px 6px 3px #fe52ad;'" onmouseout="this.style.cssText='text-decoration: none; color: #be8fdb; border-style: solid; border-color: #be8fdb; box-shadow: 0px 0px 6px 3px #fe52ad;'" rel="noopener" data-turbo="false" class="my-btn-sm text-xs text-white bg-insightblue border border-solid border-black hidden md:block py-1 px-2 rounded-md" target="_blank" href="https://insightai.beehiiv.com/subscribe">Learn More</a>
-            </div>
-        </div>
-    </div>
-</div>
-</Link> */}
+           
              <h1>{jobs?.job_position}</h1>
               <h5>{jobs?.company_description ? "Company Description" : ""}</h5>
               <p>{jobs?.company_description}</p>
@@ -181,26 +142,7 @@ function isImageFile(filename) {
               <p>{jobs?.job_requirements}</p>
             </div>
             <div className={styles.rightside}>
-              {/* <div className={styles.shapesImg}>
-                <svg
-                  width="84"
-                  height="79"
-                  viewBox="0 0 84 79"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2.00035 33.9235L49.2314 59.2292L65.3438 27.1185L2.00035 33.9235Z"
-                    stroke="#94D743"
-                    stroke-linecap="round"
-                  />
-                  <path
-                    d="M10.7381 35.5814L57.9692 60.8872L74.0816 28.7765L10.7381 35.5814Z"
-                    fill="#94D743"
-                  />
-                </svg>
-              </div> */}
-
+     
               
               <div className={styles.rightContent}>
                 <img loading="lazy" alt=""  src={logoString?.startsWith("data:image/") ? logoString : `https://ecomportal-images.storage.googleapis.com/images/${logoString}`}
