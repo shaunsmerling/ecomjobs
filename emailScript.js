@@ -30,10 +30,11 @@ dotenv.config();
 
 function getTimestampInSeconds() {
   const now = new Date();
-  const threeDaysAgo = new Date(now.getTime() - (3 * 24 * 60 * 60 * 1000));
-  const timestampInSeconds = Math.floor(threeDaysAgo.getTime() / 1000);
+  const fourDaysAgo = new Date(now.getTime() - (4 * 24 * 60 * 60 * 1000));
+  const timestampInSeconds = Math.floor(fourDaysAgo.getTime() / 1000);
   return timestampInSeconds;
 }
+
 
 const timestampInSeconds = getTimestampInSeconds();
 
@@ -229,7 +230,6 @@ fetchEmail().then((data) => {
                     <p class="cta">
                     We recently released employment data based on the vast amount of jobs we have on site. This includes information regarding:
                     </p>
-                    <br></br>
                     - Highest Paying Jobs
                     <br></br>
                     - Lowest Paying Jobs
@@ -239,7 +239,7 @@ fetchEmail().then((data) => {
                     - Most In-Demand Job Roles
                     <br></br>
                     <p class="cta">
-                    We'll be updating this page with my data shortly. To view it, head over to Salary Stats. Additionally, we'll be curating the release of a "State of eCommerce" report quarterly. Check out for the Q2 release in a months time. 
+                    We'll be updating this page with more data shortly. To view it, head over to <a href="www.ecomportal.co/salaries/salary-stats">Salary Stats </a>. Additionally, we'll be curating the release of a "State of eCommerce" report quarterly. Check out for the Q2 release in a months time. 
                     </p>
                     <p class="cta">
                     Now for that beautiful 4 letter word. You're thinking about it, we dream about it. Yup, JOBS!

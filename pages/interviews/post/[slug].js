@@ -1,7 +1,7 @@
 import { sanityClient, urlFor } from "../../../sanity";
 import { NextSeo } from "next-seo"
 import PortableText from "react-portable-text";
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect,  useRef} from 'react';
 import EmailBox from "../../../components/emailBox"
 
 
@@ -9,7 +9,19 @@ import EmailBox from "../../../components/emailBox"
 
 
 function Post({post}) {
+  const headingsRef = useRef(null);
+  const [tableOfContents, setTableOfContents] = useState([]);
 
+  useEffect(() => {
+    if (headingsRef.current) {
+      const headings = Array.from(headingsRef.current.querySelectorAll("h2[id]"));
+      const toc = headings.map((heading) => ({
+        id: heading.id,
+        text: heading.innerText
+      }));
+      setTableOfContents(toc);
+    }
+  }, [post]); 
 
 
     return (
@@ -80,16 +92,15 @@ function Post({post}) {
         <div className="grid grid-cols-1 mt-8 sm:mt-12 lg:mt-16 lg:grid-cols-12 lg:gap-x-12 gap-y-8">
         <aside class="lg:col-span-4 lg:order-last lg:self-start lg:sticky lg:top-32"><div class="overflow-hidden bg-white border border-gray-200"><div itemscope="itemscope" itemtype="https://schema.org/TableOfContents" class="px-4 py-5 sm:p-6"><h4 class="text-xs font-bold tracking-widest text-gray-400 uppercase">
       Table of Contents:
-                </h4> <ul class="mt-8 space-y-5"><li><a href="#introduction"  class="flex text-base font-bold text-gray-500 hover:underline" itemprop="associatedMedia" title="">
-                      Introduction
-                    </a></li><li><a href="#applying" class="flex text-base font-bold text-gray-500" itemprop="associatedMedia" title="">
-                      Applying
-                    </a></li><li><a class="flex text-base font-bold text-gray-500 hover:underline" itemprop="associatedMedia" title="">
-                      Interview Process
-                    </a></li><li><a  class="flex text-base font-bold text-gray-500 hover:underline" itemprop="associatedMedia" title="">
-                     Getting Hired
-                    </a></li>
-                    </ul></div></div></aside>
+                </h4>  <ul className="mt-8 space-y-5">
+                {tableOfContents.map((item) => (
+                  <li key={item.id}>
+                    <a href={`#${item.id}`} className="flex text-base font-bold text-gray-500 hover:underline">
+                      {item.text}
+                    </a>
+                  </li>
+                ))}
+              </ul></div></div></aside>
           
 
    
@@ -97,7 +108,7 @@ function Post({post}) {
           <article
             className="prose lg:col-span-8 max-w-none prose-gray prose-blockquote:px-8 prose-blockquote:py-3 prose-blockquote:lg:text-xl prose-blockquote:font-medium prose-blockquote:text-gray-900 prose-blockquote:border-gray-900 prose-blockquote:border-l-2 prose-blockquote:lg:leading-9 prose-blockquote:not-italic prose-blockquote:bg-gray-100 prose-blockquote:text-2xl prose-blockquote:leading-8">
             
-    <div>
+    <div ref={headingsRef} >
     <EmailBox />
         <PortableText 
         dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
@@ -108,18 +119,23 @@ function Post({post}) {
             h1: (props) => (
                 <h1 className="text-3xl align-left font-bold " {...props}>{props.children}</h1>
             ),
-            h2: (props) => {
-              
-               const id = props.children
-               console.log(id)
-              return (
-                <h2 id={id} className="text-3xl font-bold " {...props}>{props.children} </h2>
-            )
+             h2: (props) => {
+        
+          return (
+            <h2 className="text-3xl font-bold" {...props}>{props.children}</h2>
+          );
+        },
             
+            h3: (props) => {
+              const id = props.children[0].key;
+
+              return (
+                
+              
+                <h2 id={id} className="text-xl " {...props}>{props.children} </h2>
+
+              )
               },
-            h3: (props) => (
-                <h2 className="text-xl " {...props}>{props.children} </h2>
-            ),
             p: (props) => (
                 <p className="text-md" {...props}>{props.children}</p>
             ),
