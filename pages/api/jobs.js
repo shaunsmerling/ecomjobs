@@ -94,7 +94,7 @@ export default async function handler(req, res) {
         
         // Retrieve all jobs
         const jobs = await getAllJobs();
-        return res.json(jobs.map(({ salaryMin, salaryMax, job_position, job_category, company_name, location, job_type, datets, postedat }) => ({ salaryMin, salaryMax, job_position, job_category, company_name, location, job_type, datets, postedat })));
+        return res.json(jobs.map(({ salaryMin, salaryMax, job_position, job_category, company_name, location, job_type, datets, postedat, jobUrl,  }) => ({ salaryMin, jobUrl, salaryMax, job_position, job_category, company_name, location, job_type, datets, postedat })));
 
       }
       case "PUT": {

@@ -127,7 +127,7 @@ fetchEmail().then((data) => {
       const mailOptions = {
         from: "shaun@ecomportal.co",
         to: `${email}`,
-        subject: `⚡️ ${filteredData.length} New Jobs + Salary Stats Now Live ⚡️`,
+        subject: `⚡️ Apologize For Last Email. Here is the updated ${filteredData.length} New Jobs`,
         html: `
         <!DOCTYPE html>
         <html>
@@ -228,7 +228,8 @@ fetchEmail().then((data) => {
                 <div class="content">
                     <p class="greeting">Hey everyone 👋</p>
                     <p class="cta">
-                    We recently released employment data based on the vast amount of jobs we have on site. This includes information regarding:
+                    The last email we sent out did not have the proper job links. If you tried clicking and got an undefined, we apologize! This email has the proper links. Here is the updated information:
+                     We recently released employment data based on the vast amount of jobs we have on site. This includes information regarding:
                     </p>
                     - Highest Paying Jobs
                     <br></br>

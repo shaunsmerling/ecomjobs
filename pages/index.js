@@ -117,7 +117,10 @@ export default function HomePage() {
             <LogoBanner />
           </div> */}
         </div>
+
+ 
         <div className="flex flex-row -mt-2 justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
+  
           <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
             <Configure hitsPerPage={10} />
 
@@ -131,10 +134,28 @@ export default function HomePage() {
             
 
             <div className="flex font-montserrant flex-col w-full gap-4">
-  
+  {/* Sponsorship Section */}
+  <div className={`lg:mx-auto border border-1 border-black w-full rounded-md lg:rounded-full lg:py-2 py-6 lg:flex items-center bg-[#edebea]`}>
+    {/* Sponsorship Logo */}
+    <img src="/spotlight.png" alt="Sponsor Logo" className="lg:flex w-10 h-10 ml-4 rounded-full" />
+    
+    <div className="lg:flex lg:flex-col justify-center ml-4 mb-4 lg:mb-0">
+      {/* Sponsorship Heading */}
+      <h1 className="mt-2 lg:mt-0 text-xl font-bold">The Spotlight</h1>
+      {/* Sponsorship Text */}
+      <p className="text-sm text-gray-500 mt-1">The latest developments in artificial intelligence, in less than 5 minutes per day</p>
+    </div>
+
+  {/* Sponsorship Call to Action Button */}
+  <a href="https://thespotlight.beehiiv.com/subscribe" target="_blank" rel="noopener noreferrer" className=" bg-black text-white px-4 py-2 ml-4 lg:ml-auto lg:mr-10 rounded-lg transition duration-300 ease-in-out hover:bg-gray-800 hover:text-gray-200">
+    Join 3000+ readers
+  </a>
+  </div>
+
 
               <div className="p-2 lg:p-4  searchBox -mb-4 lg:mb-0.5 -mx-7 lg:-mx-0 flex flex-row justify-center items-center gap-3  ">
                 {/* Custom Search Box */}
+                
                 <div className="w-full">
                 
                   <CustomSearchBox  clearFilter={clearFilter}

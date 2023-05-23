@@ -127,11 +127,29 @@ function isImageFile(filename) {
 </Head>
       
         <div className="px-4 sm:px-6 bg-white rounded-lg font-Studio6 lg:px-8 mx-auto max-w-7xl">
+         {/* Sponsorship Section */}
+  <div className={`lg:mx-auto border border-1 border-black w-full rounded-md lg:rounded-full lg:py-2 py-6 lg:flex items-center bg-[#edebea]`}>
+    {/* Sponsorship Logo */}
+    <img src="/spotlight.png" alt="Sponsor Logo" className="lg:flex w-10 h-10 ml-4 rounded-full" />
+    
+    <div className="lg:flex lg:flex-col justify-center ml-4 mb-4 lg:mb-0">
+      {/* Sponsorship Heading */}
+      <h1 className="mt-2 lg:mt-0 text-xl font-bold">The Spotlight</h1>
+      {/* Sponsorship Text */}
+      <p className="text-sm text-gray-500 mt-1">The latest developments in artificial intelligence, in less than 5 minutes per day</p>
+    </div>
+
+  {/* Sponsorship Call to Action Button */}
+  <a href="https://thespotlight.beehiiv.com/subscribe" target="_blank" rel="noopener noreferrer" className=" bg-black text-white px-4 py-2 ml-4 lg:ml-auto lg:mr-10 rounded-lg transition duration-300 ease-in-out hover:bg-gray-800 hover:text-gray-200">
+    Join 3000+ readers
+  </a>
+  </div>
           <div className={styles.main_section}>
             <div className={styles.leftSide}>
               <Link href={"/"} className="cursor-pointer">
                 <span className="cursor-pointer"> &#60; Back to all jobs </span>
               </Link>
+            
            
              <h1>{jobs?.job_position}</h1>
               <h5>{jobs?.company_description ? "Company Description" : ""}</h5>
