@@ -54,18 +54,14 @@ export default function HomePage() {
         }}
       />
     <div>
-        <div>
-        <div className="relative">
+    <div className="relative">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-        <a href="#" class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-black hover:bg-gray-200 dark:hover:bg-gray-700" role="alert">
-            <span class="text-xs bg-btn rounded-full text-black px-4 py-1.5 mr-3">New</span> <span class="text-sm text-white font-medium">0 jobs from Gold Coast have been uploaded this week</span> 
-            <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-        </a>
-        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-black">eCommerce Jobs in Gold Coast</h1>
-        <p class="mb-8 text-lg font-normal text-black lg:text-xl sm:px-16 xl:px-48 ">Browse our curated list of eCommerce brands hiring within <span className="font-bold text-black italic">Gold Coast</span></p>
+       
+        <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-black"> Jobs in Gold Coast</h1>
+        <p class="mb-8 text-lg font-normal text-black lg:text-xl sm:px-16 xl:px-48 ">Browse our curated list of eCommerce brands hiring <span className="font-bold text-black italic">in Gold Coast</span></p>
         </div>
         </div>
-        <div className="flex  bg-d2cflex-row justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
+        <div className="flex mx-4 lg:mx-20 flex-row justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
           <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
             <Configure hitsPerPage={10} filters={`city:"Gold Coast, Queensland"`}/>
 
@@ -78,7 +74,7 @@ export default function HomePage() {
                   <CustomSearchBox clearFilter={clearFilter} />
                 </div>
                 {/* Filter Button For Mobile Filter Open */}
-                <div className="h-12 self-end lg:hidden">
+                {/* <div className="h-12 self-end lg:hidden">
                   <button
                     className="h-full flex flex-row justify-center items-center gap-2 border border-lightGreen-300 rounded-md px-4 w-auto"
                     onClick={() => setFilterModelMobile(!filterModelMobile)}
@@ -88,7 +84,7 @@ export default function HomePage() {
                       Filter
                     </span>
                   </button>
-                </div>
+                </div> */}
               </div>
               {/* View Data Section */}
               <div className=" -mx-10 p-4 md:p-6 min-h-[500px]">
@@ -127,7 +123,6 @@ export default function HomePage() {
         </div>
         <EmailBar props="Gold Coast"/>
         </div> 
-        </div>
     </>
   );
 }

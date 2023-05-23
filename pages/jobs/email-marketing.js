@@ -64,7 +64,7 @@ export default function HomePage() {
         </div>
         <div className="flex mx-4 lg:mx-20 flex-row justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
           <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
-            <Configure hitsPerPage={10} filters={`job_position:"Email and SMS Specialist" OR job_position:"Head of Email and SMS" OR job_position:"Email Designer" OR job_position:"Head of Email and SMS Marketing Manager" OR job_position:"Email Marketing Specialist" OR job_position:"Email Marketing Coordinator"`}/>
+            <Configure hitsPerPage={10} filters={`job_position:"Email Marketing Manager\r" OR job_position:"Email Marketing Operations Manager\r" OR job_position:"Email and SMS Specialist" OR job_position:"Head of Email and SMS" OR job_position:"Email Designer" OR job_position:"Head of Email and SMS Marketing Manager" OR job_position:"Email Marketing Specialist" OR job_position:"Email Marketing Coordinator"`}/>
 
             
 

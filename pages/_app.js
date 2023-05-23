@@ -6,6 +6,7 @@ import { SessionProvider, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import Footer from "../components/Footer/index"
 import FooterJobs from "../components/Footer/footerJobs"
+import FooterCities from "../components/Footer/footerCities"
 import Announce from "../components/announcementBar"
 
 
@@ -134,6 +135,7 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
       <Footer/>
 
       <FooterJobs/>
+      <FooterCities/>
       
   </SessionProvider>
      

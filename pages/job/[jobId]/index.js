@@ -5,6 +5,7 @@ import { api_url } from "../../../config";
 import Link from "next/link";
 import Head from "next/head";
 import Helmet from 'react-helmet';
+import JobEmail from "../../../components/jobEmail"
 
 export async function getServerSideProps(context) {
   const { params } = context;
@@ -212,7 +213,9 @@ function isImageFile(filename) {
                       {jobs?.job_category}
                     </button>
                   </li>
+                  <JobEmail />
                 </ul>
+
               </div>
             </div>
           </div>

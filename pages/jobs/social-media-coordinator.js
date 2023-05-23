@@ -64,7 +64,7 @@ export default function HomePage() {
         </div>
         <div className="flex mx-4 lg:mx-20 flex-row justify-between items-start px-7 xl:px-10 2xl:px-32 gap-6 mb-5">
           <InstantSearch searchClient={searchClient} indexName="ecomjobs_index">
-            <Configure hitsPerPage={10} filters={`job_position:"Social Media Coordinator" OR job_position:"Social Media Manager"`}/>
+            <Configure hitsPerPage={10} filters={`job_position:"Social Media Coordinator" OR job_position:"Coordinator, Social Media & Digital Content (Freelance)" OR job_position:"Social Media & Influencer Partnerships Coordinator"OR job_position:"Social Media Manager"`}/>
 
             
 
@@ -75,7 +75,7 @@ export default function HomePage() {
                   <CustomSearchBox clearFilter={clearFilter} />
                 </div>
                 {/* Filter Button For Mobile Filter Open */}
-                <div className="h-12 self-end lg:hidden">
+                {/* <div className="h-12 self-end lg:hidden">
                   <button
                     className="h-full flex flex-row justify-center items-center gap-2 border border-lightGreen-300 rounded-md px-4 w-auto"
                     onClick={() => setFilterModelMobile(!filterModelMobile)}
@@ -85,7 +85,7 @@ export default function HomePage() {
                       Filter
                     </span>
                   </button>
-                </div>
+                </div> */}
               </div>
               {/* View Data Section */}
               <div className=" -mx-10 p-4 md:p-6 min-h-[500px]">

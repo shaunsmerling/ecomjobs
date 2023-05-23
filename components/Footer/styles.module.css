@@ -109,20 +109,28 @@
   opacity: 0.4;
 }
 @media only screen and (max-width: 600px) {
-.ul_content1 li {
-  font-weight: 400;
-  font-size: 8px;
-  line-height: 34px;
-  letter-spacing: -0.01em;
-  color: #000000;
-  opacity: 0.4;
+  .ul_content1 ul {
+    padding-bottom: 20px; /* Add padding-bottom to create spacing between list items */
+  }
+  
+  .ul_content1 li {
+    font-weight: 500;
+    margin-bottom: 10px;
+
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: #000000;
+    opacity: 0.4;
+  }
 }
-}
+
+
 
 @media only screen and (max-width: 600px) {
   .ul_content1 h2 {
     font-weight: 500;
-  font-size: 26px;
+  font-size: 30px;
   line-height: 34px;
   letter-spacing: -0.01em;
   color: #000000;
@@ -164,21 +172,13 @@
     font-size: 16px;
     line-height: 30px;
   }
-  .ul_content h2 {
-    font-size: 20px;
-  }
-  .ul_content li {
-    font-size: 16px;
-  }
+
 }
 @media only screen and (max-width: 767px) {
   .footer {
     flex-direction: column;
   }
-  .ul_content {
-    width: 100%;
-    margin-top: 30px;
-  }
+
   .socila_icons {
     margin-top: 10px;
   }
