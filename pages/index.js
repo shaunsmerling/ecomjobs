@@ -135,7 +135,7 @@ export default function HomePage() {
 
             <div className="flex font-montserrant flex-col w-full gap-4">
   {/* Sponsorship Section */}
-  <div className={`lg:mx-auto border border-1 border-black w-full rounded-md lg:rounded-full lg:py-2 py-6 lg:flex items-center bg-[#edebea]`}>
+  <div className={`hidden lg:mx-auto border border-1 border-black w-full rounded-md lg:rounded-full lg:py-2 py-6 lg:flex items-center bg-[#edebea]`}>
     {/* Sponsorship Logo */}
     <img src="/spotlight.png" alt="Sponsor Logo" className="lg:flex w-10 h-10 ml-4 rounded-full" />
     

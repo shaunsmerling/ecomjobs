@@ -127,7 +127,7 @@ fetchEmail().then((data) => {
       const mailOptions = {
         from: "shaun@ecomportal.co",
         to: `${email}`,
-        subject: `⚡️ Apologize For Last Email. Here is the updated ${filteredData.length} New Jobs`,
+        subject: `⚡️ ${filteredData.length} New Jobs at Ecomportal`,
         html: `
         <!DOCTYPE html>
         <html>
@@ -228,19 +228,10 @@ fetchEmail().then((data) => {
                 <div class="content">
                     <p class="greeting">Hey everyone 👋</p>
                     <p class="cta">
-                    The last email we sent out did not have the proper job links. If you tried clicking and got an undefined, we apologize! This email has the proper links. Here is the updated information:
-                     We recently released employment data based on the vast amount of jobs we have on site. This includes information regarding:
+                    We've got a lot of new jobs to share with you today. I want to add that if any of you would like to see jobs from a specific company, please reply to this email with that company name and we'll add it to our list!
                     </p>
-                    - Highest Paying Jobs
-                    <br></br>
-                    - Lowest Paying Jobs
-                    <br></br>
-                    - Most In-Demand Job Categories
-                    <br></br>
-                    - Most In-Demand Job Roles
-                    <br></br>
                     <p class="cta">
-                    We'll be updating this page with more data shortly. To view it, head over to <a href="www.ecomportal.co/salaries/salary-stats">Salary Stats </a>. Additionally, we'll be curating the release of a "State of eCommerce" report quarterly. Check out for the Q2 release in a months time. 
+                    Keep in mind that the company you suggest has to be a DTC or eCommerce native brand
                     </p>
                     <p class="cta">
                     Now for that beautiful 4 letter word. You're thinking about it, we dream about it. Yup, JOBS!
