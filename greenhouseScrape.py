@@ -322,7 +322,15 @@ def main():
     'smsbump',
     "renttherunway",
     'g2crowd',
-    'cutsclothing'
+    'cutsclothing',
+    'liquiddeath',
+    'tenthousand',
+    'rapha',
+    'goop',
+    'drsquatch',
+    'bruntworkwear',
+    'olipop',
+    'studsinc'
        
     
     ]

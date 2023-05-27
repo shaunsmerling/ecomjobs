@@ -267,6 +267,8 @@ def main():
         'milliondollarbabyco',
         'grove',
         'attentive',
+        'buckmason',
+        'amourvert'
     ]
 
     for company in company_name:
