@@ -1,6 +1,42 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react';
 import { api_url } from "../../config";
 import { NextSeo } from 'next-seo';
+
+const locations = [
+  {
+    continent: 'North America',
+    countries: [
+      { name: 'United States', cities: ['New York', 'Los Angeles', 'Chicago', 'Houston', "Austin", "Portland", "San Fransisco"] },
+      { name: 'Canada', cities: ['Toronto', 'Vancouver', 'Montreal', 'Calgary', 'Ottawa', 'Ontario'] },
+    ],
+  },
+  {
+    continent: 'Oceanic',
+    countries: [
+      { name: 'Australia', cities: ['Sydney', 'Melbourne', 'Brisbane', 'Perth']}, 
+      { name: 'New Zealand', cities: ['Christchurch', 'Auckland', 'Wellington'] },
+    ],
+  },
+  {
+    continent: 'Europe',
+    countries: [
+      { name: 'United Kingdom', cities: ['London', 'Manchester', 'Birmingham', 'Edinburgh'] },
+      { name: 'Germany', cities: ['Berlin', 'Munich', 'Hamburg', 'Frankfurt'] },
+      { name: 'Spain', cities: ['Barcelona', 'Madrid'] },
+      { name: 'France', cities: ['Paris'] },
+    ],
+  },
+  {
+    continent: 'Asia',
+    countries: [
+      { name: 'China', cities: ['Shanghai', 'Beijing', 'Guangzhou', 'Shenzhen'] },
+      { name: 'Japan', cities: ['Tokyo', 'Osaka', 'Kyoto', 'Yokohama'] },
+      { name: 'South Korea', cities: ['Seoul'] },
+      { name: 'Malaysia', cities: ['Kuala Lumpur'] },
+      { name: 'Singapore', cities: ['Singapore'] },
+    ],
+  },
+];
 
 export async function getServerSideProps() {
   const res = await fetch(`${api_url}/api/company`);
@@ -11,94 +47,95 @@ export async function getServerSideProps() {
   }
 }
 
-
 function brands({ companies }) {
-
-
-    return (
-    
-        <section>
-          <NextSeo
-      title="Brands | Ecomportal"
-      description="Browse our list of eCommerce brands hiring on Ecomportal" 
-      openGraph={{
-        url: 'https://www.ecomportal.co/brands',
-        title: 'Brand List | Ecomportal',
-        description: "Browse our list of eCommerce brands hiring on Ecomportal" ,
-        images: [
-          {
-            url: 'https://www.ecomportal.co/logo.png',
-            width: 800,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          },
-        ],
-        siteName: 'Ecomportal',
-      }}
-      twitter={{
-        site: '@ecomprtal',
-        cardType: 'summary',
-        image: "/logo.png"
-      }}
+  return (
+    <section>
+      <NextSeo
+        title="Brands | Ecomportal"
+        description="Browse our list of eCommerce brands hiring on Ecomportal"
+        openGraph={{
+          url: 'https://www.ecomportal.co/brands',
+          title: 'Brand List | Ecomportal',
+          description: "Browse our list of eCommerce brands hiring on Ecomportal",
+          images: [
+            {
+              url: 'https://www.ecomportal.co/logo.png',
+              width: 800,
+              height: 600,
+              alt: 'Og Image Alt',
+              type: 'image/jpeg',
+            },
+          ],
+          siteName: 'Ecomportal',
+        }}
+        twitter={{
+          site: '@ecomprtal',
+          cardType: 'summary',
+          image: "/logo.png"
+        }}
       />
-        <section class="content-wrapper"><div class="content ">
-        <div class="py-8 px-4 mx-auto font-Studio6 max-w-screen-xl text-center lg:py-16 lg:px-12">
-       
-       <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-black md:text-5xl lg:text-6xl ">Join a brand.</h1>
-       {/* <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Search our directory of eCommerce brands to find a job you'll love. </p> */}
-       </div>
-</div></section>
-        <section class="content-wrapper"><div class="content "><div class="companyCards ">
-        {companies.map((company) => {
+      <section className="content-wrapper">
+        <div className="content ">
+          <div className="py-8 px-4 mx-auto font-Studio6 max-w-screen-xl text-center lg:py-8 lg:px-12">
+            <h1 className="mb-4 text-2xl font-extrabold tracking-tight leading-none text-black md:text-5xl lg:text-3xl ">Brand By Location</h1>
+          </div>
+        </div>
+      </section>
+      <section className="content-wrapper">
+        <div className="content ">
+          <div className="companyCards">
+            {locations.map((location) => (
+              <div key={location.continent}>
+                <h2 className="text-2xl underline m-4 font-bold">{location.continent}</h2>
+                {location.countries.map((country) => (
+                  <div key={country.name}>
+                    <h3 className="text-lg m-4 font-medium">{country.name}</h3>
+                    <div className="flex flex-wrap">
+                    {country.cities.map((city) => (
+                        <a
+                          key={city}
+                          className="companyCard m-2 hover:text-white hover:bg-[#2d4f42] "
+                          href={`/location/${location.continent}/${country.name}/${city}`}
+                        >
+                          {/* Your company card content goes here */}
+                          <div className="companyCard__details__name">{city}</div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
 
-const logoString = company.logo;
-
-function isBase64(str) {
-  if (typeof str !== 'string') return false;
-  return /^data:image\/(png|jpe?g);base64,/.test(str);
+        <div className="flex justify-center mt-20 mb-10">
+          <a
+            className="whitespace-nowrap inline-flex items-center justify-center pl-3 pr-1 py-1 border border-transparent rounded-full shadow-sm text-base font-Studio6 text-white bg-[#2d4f42]  "
+            href="/list-your-company"
+          >
+            Don't See Your Brand? Sign Up Here
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="ml-1 w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </section>
+  );
 }
 
-const logoImage = isBase64(logoString)
-  ? logoString
-  : `https://ecomportal-images.storage.googleapis.com/images/${logoString}`;
+export default brands;
 
-return (
-  <a class="companyCard hover:bg-btn" href={`/company/${company.companyUrl}`}>
-    <div class="companyCard__logo"></div>
-    <div className="self-startlg:self-center">
-      <img
-        src={logoImage}
-        alt=""
-        className="w-14 h-14 min-w-[56px] min-h-[56px] border border-black rounded-lg"
-      />
-    </div>
-    <div class="companyCard__details ml-2">
-      <div class="companyCard__details__name ">{company.company_name}</div>
-      <div class="companyCard__details__count">{company.empcount} employees</div>
-    </div>
-  </a>
-);
-
-
-})}
- 
-
-</div>
-</div>
-
-<div className="flex justify-center mt-10 mb-10">
-<a class="whitespace-nowrap inline-flex items-center justify-center pl-3 pr-1 py-1 border border-transparent rounded-full shadow-sm text-base font-Studio6 text-black  bg-btn " href="/list-your-company">
-Don't See Your Brand? Sign Up Here
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-1 w-6 h-6">
-<path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-</svg>
-</a>
-</div>
-
-</section>
-</section>
-    )
-}
-
-export default brands
+                     

@@ -219,7 +219,7 @@ def collect_jobs(company_name):
                 else:
                     salary_min = salary_max = int(salary_values[0])
             else:
-                salary_min = salary_max = 1000000
+                salary_min = salary_max = 0
 
 
             

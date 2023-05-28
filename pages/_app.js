@@ -63,8 +63,10 @@ const showHeader = router.pathname === '/login' || router.pathname === "/auth/ve
     });
     `,
   }}
-  
+ 
 />
+<Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4143368668652668"
+     crossorigin="anonymous"/>
 <Script
         id="fb-pixel"
         strategy="afterInteractive"

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Html, Head, Main, NextScript } from 'next/document';
+import Script from "next/script"
 
 
 
@@ -8,7 +9,8 @@ export default function Document() {
   return (
     <Html lang="en" className="bg-white">
       <Head>
-           
+            <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4143368668652668"
+     crossorigin="anonymous"/>
             <script src="https://cdn.tailwindcss.com"></script>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/reset-min.css" integrity="sha256-QlHlZdbSVxaYkUHxhMFhAj/L3pJiW1LuomSCONXBWms=" crossorigin="anonymous"/> 
             <link rel="icon" href="../assets/favicon.ico" />

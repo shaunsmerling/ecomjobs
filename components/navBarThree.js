@@ -108,6 +108,9 @@ function NavBarThree() {
 <Link href="/interviews" class="whitespace-nowrap text-base font-montserrant  rounded-full px-3 py-1 -ml-1 text-black hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
   Interviews
 </Link>
+<Link href="/brands" class="whitespace-nowrap text-base font-montserrant  rounded-full px-3 py-1 -ml-1 text-black hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
+  Brand List
+</Link>
 
 
 <div class="relative" data-controller="transition" data-action="keyup@window->transition#hideWithKeyboard click@window->transition#hideBackground">
@@ -408,6 +411,9 @@ Post a Job
         <Link href="/interviews" class="whitespace-nowrap text-base font-montserrant  rounded-full px-3 py-1 -ml-1 text-black hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
           Interviews
         </Link>
+        <Link href="/brands" class="whitespace-nowrap text-base font-montserrant  rounded-full px-3 py-1 mx-1 text-black hover:text-bold hover:outline-none hover:ring-2  hover:ring-offset-2 hover:ring-blue-500" >
+  Brand List
+</Link>
       
         
         <div class="relative" data-controller="transition" data-action="keyup@window->transition#hideWithKeyboard click@window->transition#hideBackground">
