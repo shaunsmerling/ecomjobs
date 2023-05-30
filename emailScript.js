@@ -228,13 +228,13 @@ fetchEmail().then((data) => {
                 <div class="content">
                     <p class="greeting">Hey everyone 👋</p>
                     <p class="cta">
-                    We've got a lot of new jobs to share with you today. I want to add that if any of you would like to see jobs from a specific company, please reply to this email with that company name and we'll add it to our list!
+                    Hope all is well for you in this life! We've got a lot of new jobs to share with you today. 
                     </p>
                     <p class="cta">
-                    Keep in mind that the company you suggest has to be a DTC or eCommerce native brand
+                    But first, a quick update on Ecomportal. We've been working hard to add brands that you've suggested so thank you for that! If you have any more you'd love to see, just reply to this email.
                     </p>
                     <p class="cta">
-                    Now for that beautiful 4 letter word. You're thinking about it, we dream about it. Yup, JOBS!
+                    Now for that beautiful 4 letter word. Yup, JOBS!
                     </p>
                     <p class="cta">For today, we've got ${filteredData.length} new jobs to share with you from ecommerce brands hiring this week!</p>
                     <p class="cta">Check them out & feel free to apply via the links below. </p>
