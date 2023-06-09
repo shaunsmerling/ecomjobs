@@ -14,21 +14,16 @@ algolia_index = algolia_client.init_index('ecomjobs_index')
 
 
 
+load_dotenv()
 
-db_host = 'ejserver0.krz3l.mongodb.net'
-db_name = 'ejserver'
-db_user = 'smerlinger'
-db_password = 'rosalina2898'
-collection_name = 'Job'
-
-connection_string = f'mongodb+srv://{db_user}:{db_password}@{db_host}/{db_name}?retryWrites=true&w=majority'
+connection_string = os.getenv("DB_URL")
 
 # Create MongoDB Client
 mongo_client = MongoClient(connection_string, tlsAllowInvalidCertificates=True)
 # Get database instance
-mongo_database = mongo_client[db_name]
+mongo_database = mongo_client["EJServer"]
 # Get collection instance
-mongo_collection = mongo_database[collection_name]
+mongo_collection = mongo_database["Job"]
 
 # Retrieve the first 5000 records from collection items
 mongo_query = mongo_collection.find()

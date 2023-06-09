@@ -21,7 +21,7 @@ db_url = os.getenv("DB_URL")
 
 # Connect to MongoDB database
 client = MongoClient(db_url, tlsAllowInvalidCertificates=True)
-db = client["ejserver"]
+db = client["EJServer"]
 collection = db["Job"]
 
 def convert_date_format(date_str):
@@ -141,7 +141,7 @@ def parse_info(location):
     if country not in ['USA', 'UK', 'CA', 'AUS'] and city_state:
         geolocator = geopy.geocoders.Nominatim(user_agent='my_app')
         try:
-            location = geolocator.geocode(city_state, addressdetails=True, exactly_one=True)
+            location = geolocator.geocode(city_state, addressdetails=True, exactly_one=True, timeout=10)
             if location:
                 address = location.raw['address']
                 country = address.get('country', 'N/A')
