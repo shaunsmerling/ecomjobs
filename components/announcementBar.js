@@ -7,7 +7,7 @@ const AnnouncementBar = () => {
 
   return (
     <div className="bg-[#2d4f42]  text-white py-4 px-4 text-sm font-medium text-center">
-       <span> I'm sorry about the ads. I'll turn them off when we make more money 😔 </span>
+       <span> New Jobs From DTC Brands Uploaded Daily! </span>
 
 
 
