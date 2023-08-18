@@ -286,7 +286,7 @@ const pinnedStatus = checkPinned();
      
         </div>
       </div>
-      <div className="w-full invisible lg:visible ">
+      {/* <div className="w-full invisible lg:visible ">
               <button
                 id="save-btn"
                 onClick={handleClick}
@@ -294,7 +294,7 @@ const pinnedStatus = checkPinned();
               >
            Save 
               </button>
-            </div>
+            </div> */}
       </div> 
     </> :  <>
       <div
