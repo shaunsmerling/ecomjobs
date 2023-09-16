@@ -53,7 +53,7 @@ if (job.salaryMax && job.salaryMax !== 0) {
 
 
   try {
-await rwClient.v1.tweet(`${job.company_name} is hiring a ${job.job_position}!
+await rwClient.v2.tweet(`${job.company_name} is hiring a ${job.job_position}!
 
 ${job.location ? `📍\t${job.location}\n` : ''}${job.job_type ? `🧳\t${job.job_type}\n` : ''}${job.category ? `📖\t${job.category}\n` : ''}${salaryMaxFormatted !== "0" ? `💰\t${salaryMaxFormatted}\n` : ''}
 
