@@ -16,10 +16,8 @@ function Footer() {
            
             </div>
             <div className="flex -mt-4 ml-3 mb-4">
-            <p className="">In collaboration with </p>
-            <a href="https://1800d2c.com" target="_blank" rel="noreferrer">
-            <img src="https://ecomportal-images.storage.googleapis.com/images/d2c.png" class="ml-2  mt-1 h-auto w-20"></img>
-            </a>
+            <p className="italic" >The #1 Job Board for D2C Brands</p>
+
             </div>
             <div className={styles.socila_icons}>
               <a href="https://www.facebook.com/ecomprtal"  target="_blank">

@@ -78,10 +78,10 @@ return (
       </div>
     </form>
     <div class="flex items-center font-montserrat mb-20 mt-6 justify-center">
-      <p>In collaboration with</p>
-      <a href="https://1800d2c.com" target="_blank" rel="noreferrer">
+      <p>The #1 Job Board For D2C Brands</p>
+      {/* <a href="https://1800d2c.com" target="_blank" rel="noreferrer">
         <img src="https://ecomportal-images.storage.googleapis.com/images/d2c.png" class="ml-2 h-auto w-20" alt="D2C logo"></img>
-      </a>
+      </a> */}
     </div>
    
   </div>

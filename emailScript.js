@@ -10,6 +10,7 @@ async function fetchData(){
 async function fetchEmail() {
   const response = await fetch (`${config.api_url}/api/emails`)
   const resData = await response.json()
+
   return resData
 }
 
@@ -108,6 +109,7 @@ fetchEmail().then((data) => {
   }
 
   let emailList = removeDuplicatesAndEmptyEmails(mockEmails)
+  console.log(emailList.length)
 
   const structuredData = filteredData.map((job) => `
       <a href=${`www.ecomportal.co/job/${job.jobUrl}`}><h2>${job.job_position}</h2></a> <p style="margin-top: 0px"> ${job.company_name && job.location && job.job_type ? job.company_name + " | " + job.location + " | " + job.job_type : job.company_name + " | " + job.location }</p>
