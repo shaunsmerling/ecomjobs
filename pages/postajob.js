@@ -199,7 +199,7 @@ useEffect(() => {
 }
 
 const currentTime = new Date().getTime() 
-console.log(currentTime)
+// console.log(currentTime)
 
 
   const handleChange = ({ target }) => {
