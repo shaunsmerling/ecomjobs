@@ -332,7 +332,6 @@ const currentTime = new Date().getTime()
 
       }),
 
-      // Fetching Stripe checkout session
 
     })
       .then((response) => response.json())
@@ -340,14 +339,14 @@ const currentTime = new Date().getTime()
         console.log(jsonResponse, "JSON");
         console.log(total)
 
-        // checkout({
-        //   lineItems: [
-        //     {
-        //       price: total,
-        //       quantity: 1,
-        //     },
-        //   ],
-        // });
+        checkout({
+          lineItems: [
+            {
+              price: total,
+              quantity: 1,
+            },
+          ],
+        });
       })
       .catch((err) => {
         console.log(err, "Error");
