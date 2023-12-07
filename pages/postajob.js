@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import checkout from "../checkout.js"
@@ -8,6 +7,12 @@ import { useSession, getSession } from "next-auth/react"
 import SalePage from "../components/salePage.js"
 import Logo from "../components/logobanner"
 import TestB from "../components/testimonialBanner"
+import { loadStripe } from "@stripe/stripe-js";
+
+require("dotenv").config()
+
+const stripeKey = process.env.stripe_publishable_key
+
 
 export async function getServerSideProps(context) {
   return {
@@ -207,8 +212,92 @@ const currentTime = new Date().getTime()
     // console.log(fields)
   };
 
-  const handleSubmit = (e) => {
+  async function createJobOnPaymentSuccess(jobData) {
+    try {
+      const response = await fetch("/api/jobs", {
+        method: "POST",
+        body: JSON.stringify(jobData)
+      })
+  
+      const jsonResponse = await response.json()
+      console.log(jsonResponse, "JSON after payment success")
+      // Additional logic if needed after job creation
+    } catch (err) {
+      console.log(err, "Error creating job")
+    }
+  }
+
+
+// async function handleSubmit(e){
+//       e.preventDefault();
+
+//       try {
+//         // Create the jobUrl using job data given in forms
+//         const jobUrl = generateJobUrl(companyName, jobPosition, jobType);
+//         // Extracting necessary job data
+//         const jobData = {
+//           email: email,
+//           company_name: companyName,
+//           company_url: companyUrl,
+//           job_position: jobPosition,
+//           logo: companyLogo,
+//           empcount: empcount,
+//           salaryMin: salaryMin,
+//           salaryMax: salaryMax,
+//           job_category: jobCategory,
+//           postedat: formattedDate,
+//           datets: unixDate.toString(),
+//           job_type: jobType,
+//           location: location,
+//           highlight: checkbox.highlight > 0,
+//           top24: checkbox.top24 > 0,
+//           week: checkbox.week > 0,
+//           month: checkbox.month > 0 ,
+//           emailBlast: checkbox.emailBlast > 0,
+//           top24Timestamp: checkbox.top24 > 0 ? currentTime : null,
+//           weekTimestamp: checkbox.week > 0 ? currentTime : null,
+//           monthTimestamp: checkbox.month > 0 ? currentTime : null,
+//           city: city,
+//           company_description: companyDescription,
+//           job_description: jobDescription,
+//           job_requirements: jobRequirements,
+//           application_url: applicationUrl,
+//           jobUrl,
+//         }
+      
+//         // Fetching Stripe checkout session
+//       const session = await fetch("/api/create-checkout-session", {
+//         method: "POST",
+//         body: JSON.stringify({
+//           amount: total * 100, // convert total to cents
+//           // ... (other relevant data for Stripe session created)
+//         }),
+//         headers: {
+//           "Content-Type": "application/json"
+//         }
+//       }).then((res) => res.json())
+
+//       // Redirect to Stripe checkout page
+//       const stripe = await loadStripe(stripeKey)  
+//       const { error } = await stripe.redirectToCheckout({ sessionId: session.id})
+
+//       if (error) {
+//         console.log("Error redirecting to checkout:", error.message)
+//         // handle error scenario during redirection
+//       } else {
+//         // On succesful payment completion, call the function to create the job
+//         await createJobOnPaymentSuccess(jobData)
+//       }
+
+// } catch (error) {
+//   console.error("Error handling checkout:", error);
+//   // Handle error scenarios during checkout and payment processing
+//   }
+// }
+
+  async function handleSubmit(e) {
     e.preventDefault();
+
     const jobUrl = generateJobUrl(companyName, jobPosition, jobType);
     fetch("/api/jobs", {
       method: "POST",
@@ -242,6 +331,9 @@ const currentTime = new Date().getTime()
         jobUrl,
 
       }),
+
+      // Fetching Stripe checkout session
+
     })
       .then((response) => response.json())
       .then((jsonResponse) => {
@@ -262,7 +354,11 @@ const currentTime = new Date().getTime()
       });
 
       delayLoad()
+
+
+      
   };
+
 
 
   const {

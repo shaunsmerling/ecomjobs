@@ -165,6 +165,12 @@ def parse_info(location):
 
     return (city_state, country, job_type)
 
+def safe_get_text(soup_element):
+    try:
+        return soup_element.get_text().strip()
+    except AttributeError:
+        return "Unknown"
+
 
 
 def collect_jobs(company_name):
@@ -176,12 +182,16 @@ def collect_jobs(company_name):
 
 
     formatted_data = []
-
+        
     for job in job_listings:
         try:
             job_title = job.select_one("[data-qa='posting-name']").get_text().strip()
             job_info = job.select_one(".posting-categories").get_text().strip()
-            job_team = job.select_one("div.posting-categories span.sort-by-team").get_text().strip()
+            job_team_element = job.select_one("div.posting-categories span.sort-by-team")
+            if job_team_element:
+                job_team = job_team_element.get_text().strip()
+            else:
+                job_team = "None"
             app_url = job.select_one(".posting-apply .posting-btn-submit")["href"]
             job_page = requests.get(app_url)
             posted_at = datetime.today().date()
