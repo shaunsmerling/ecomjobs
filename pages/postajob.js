@@ -9,9 +9,8 @@ import Logo from "../components/logobanner"
 import TestB from "../components/testimonialBanner"
 import { loadStripe } from "@stripe/stripe-js";
 
-require("dotenv").config()
 
-const stripeKey = process.env.stripe_publishable_key
+
 
 
 export async function getServerSideProps(context) {
