@@ -221,15 +221,27 @@ def collect_jobs(company_name):
             job_req = job_req[:job_req.find("Apply for this job")]
             
             salary_range = re.findall(r'\$[\d,]+-?\$?[\d,]*', job_soup_no_text.select_one(".content").get_text())
+            # if salary_range:
+            #     salary_values = salary_range[0].replace('$', '').replace(',', '').split('-')
+            #     if len(salary_values) == 2:
+            #         salary_min = int(salary_values[0])
+            #         salary_max = int(salary_values[1])
+            #     else:
+            #         salary_min = salary_max = int(salary_values[0])
+            # else:
+            #     salary_min = salary_max = 0
             if salary_range:
                 salary_values = salary_range[0].replace('$', '').replace(',', '').split('-')
                 if len(salary_values) == 2:
-                    salary_min = int(salary_values[0])
-                    salary_max = int(salary_values[1])
-                else:
+                    salary_min = int(salary_values[0]) if salary_values[0] else 0
+                    salary_max = int(salary_values[1]) if salary_values[1] else 0
+                elif len(salary_values) == 1 and salary_values[0]:
                     salary_min = salary_max = int(salary_values[0])
+                else:
+                    salary_min = salary_max = 0
             else:
                 salary_min = salary_max = 0
+
 
 
             
